@@ -26,13 +26,6 @@
         <li><a href="#alerts"><i class="icon-chevron-right"></i> Alerts</a></li>
         <li><a href="#progress"><i class="icon-chevron-right"></i> Progress bars</a></li>
         <li><a href="#tables"><i class="icon-chevron-right"></i> Tables</a></li>
-        <li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
-        <li><a href="#select2"><i class="icon-chevron-right"></i> Select2</a></li>
-        <li><a href="#editable"><i class="icon-chevron-right"></i> Editable</a></li>
-        <li><a href="#rangeslider"><i class="icon-chevron-right"></i> JQRangeSlider</a></li>
-        <li><a href="#misc"><i class="icon-chevron-right"></i> Misc</a></li>
-        <li><a href="#wizard"><i class="icon-chevron-right"></i> Wizard</a></li>
-        <li><a href="#tags"><i class="icon-chevron-right"></i> Tags</a></li>
     </ul>
 </div>
 
