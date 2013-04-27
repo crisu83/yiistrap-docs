@@ -48,48 +48,48 @@
 
     <div class="bs-docs-example">
         <?php echo TbHtml::button('Default'); ?>
-        <?php echo TbHtml::button('Primary', array('style' => 'primary')); ?>
-        <?php echo TbHtml::button('Danger', array('style' => 'danger')); ?>
-        <?php echo TbHtml::button('Warning', array('style' => 'warning')); ?>
-        <?php echo TbHtml::button('Success', array('style' => 'success')); ?>
-        <?php echo TbHtml::button('Info', array('style' => 'info')); ?>
-        <?php echo TbHtml::button('Inverse', array('style' => 'inverse')); ?>
-        <?php echo TbHtml::button('Link', array('style' => 'link')); ?>
+        <?php echo TbHtml::button(TbHtml::STYLE_PRIMARY, array('style' => TbHtml::STYLE_PRIMARY)); ?>
+        <?php echo TbHtml::button(TbHtml::STYLE_DANGER, array('style' => TbHtml::STYLE_DANGER)); ?>
+        <?php echo TbHtml::button(TbHtml::STYLE_WARNING, array('style' => TbHtml::STYLE_WARNING)); ?>
+        <?php echo TbHtml::button(TbHtml::STYLE_SUCCESS, array('style' => TbHtml::STYLE_SUCCESS)); ?>
+        <?php echo TbHtml::button(TbHtml::STYLE_INFO, array('style' => TbHtml::STYLE_INFO)); ?>
+        <?php echo TbHtml::button(TbHtml::STYLE_INVERSE, array('style' => TbHtml::STYLE_INVERSE)); ?>
+        <?php echo TbHtml::button(TbHtml::STYLE_LINK, array('style' => TbHtml::STYLE_LINK)); ?>
     </div>
 	<pre class="prettyprint linenums">
 &lt;?php echo TbHtml::button('Default'); ?&gt;
-&lt;?php echo TbHtml::button('Primary', array('style' =&gt; 'primary')); ?&gt;
-&lt;?php echo TbHtml::button('Danger', array('style' =&gt; 'danger')); ?&gt;
-&lt;?php echo TbHtml::button('Warning', array('style' =&gt; 'warning')); ?&gt;
-&lt;?php echo TbHtml::button('Success', array('style' =&gt; 'success')); ?&gt;
-&lt;?php echo TbHtml::button('Info', array('style' =&gt; 'info')); ?&gt;
-&lt;?php echo TbHtml::button('Inverse', array('style' =&gt; 'inverse')); ?&gt;
-&lt;?php echo TbHtml::button('Link', array('style' =&gt; 'link')); ?&gt;
+&lt;?php echo TbHtml::button(TbHtml::STYLE_PRIMARY, array('style' =&gt; TbHtml::STYLE_PRIMARY)); ?&gt;
+&lt;?php echo TbHtml::button(TbHtml::STYLE_DANGER, array('style' =&gt; TbHtml::STYLE_DANGER)); ?&gt;
+&lt;?php echo TbHtml::button(TbHtml::STYLE_WARNING, array('style' =&gt; TbHtml::STYLE_WARNING)); ?&gt;
+&lt;?php echo TbHtml::button(TbHtml::STYLE_SUCCESS, array('style' =&gt; TbHtml::STYLE_SUCCESS)); ?&gt;
+&lt;?php echo TbHtml::button(TbHtml::STYLE_INFO, array('style' =&gt; TbHtml::STYLE_INFO)); ?&gt;
+&lt;?php echo TbHtml::button(TbHtml::STYLE_INVERSE, array('style' =&gt; TbHtml::STYLE_INVERSE)); ?&gt;
+&lt;?php echo TbHtml::button(TbHtml::STYLE_LINK, array('style' =&gt; TbHtml::STYLE_LINK)); ?&gt;
 	</pre>
     <h2>Sizes</h2>
 
     <p>You can use different type of sizes by setting its <code>size</code> attribute to <code>large</code>,
         <code>small</code>, or <code>mini</code>.</p>
 
-    <p><?php echo TbHtml::button('Large button', array('style' => 'primary', 'size' => 'large')); ?>
+    <p><?php echo TbHtml::button('Large button', array('style' => TbHtml::STYLE_PRIMARY, 'size' => 'large')); ?>
         <?php echo TbHtml::button('Large button', array('size' => 'large')); ?></p>
 
-    <p><?php echo TbHtml::button('Default button', array('style' => 'primary')); ?>
+    <p><?php echo TbHtml::button('Default button', array('style' => TbHtml::STYLE_PRIMARY)); ?>
         <?php echo TbHtml::button('Default button'); ?></p>
 
-    <p><?php echo TbHtml::button('Small button', array('style' => 'primary', 'size' => 'small')); ?>
+    <p><?php echo TbHtml::button('Small button', array('style' => TbHtml::STYLE_PRIMARY, 'size' => 'small')); ?>
         <?php echo TbHtml::button('Small button', array('size' => 'small')); ?></p>
 
-    <p><?php echo TbHtml::button('Mini button', array('style' => 'primary', 'size' => 'mini')); ?>
+    <p><?php echo TbHtml::button('Mini button', array('style' => TbHtml::STYLE_PRIMARY, 'size' => 'mini')); ?>
         <?php echo TbHtml::button('Mini button', array('size' => 'mini')); ?></p>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::button('Large button', array('style' =&gt; 'primary', 'size' =&gt; TbHtml::SIZE_LARGE)); ?&gt;
+&lt;?php echo TbHtml::button('Large button', array('style' =&gt; TbHtml::STYLE_PRIMARY, 'size' =&gt; TbHtml::SIZE_LARGE)); ?&gt;
 &lt;?php echo TbHtml::button('Large button', array('size' =&gt; 'large')); ?&gt;
-&lt;?php echo TbHtml::button('Default button', array('style' =&gt; 'primary')); ?&gt;
+&lt;?php echo TbHtml::button('Default button', array('style' =&gt; TbHtml::STYLE_PRIMARY)); ?&gt;
 &lt;?php echo TbHtml::button('Default button'); ?&gt;
-&lt;?php echo TbHtml::button('Small button', array('style' =&gt; 'primary', 'size' =&gt; TbHtml::SIZE_SMALL)); ?&gt;
+&lt;?php echo TbHtml::button('Small button', array('style' =&gt; TbHtml::STYLE_PRIMARY, 'size' =&gt; TbHtml::SIZE_SMALL)); ?&gt;
 &lt;?php echo TbHtml::button('Small button', array('size' =&gt; 'small')); ?&gt;
-&lt;?php echo TbHtml::button('Mini button', array('style' =&gt; 'primary', 'size' =&gt; TbHtml::SIZE_MINI)); ?&gt;
+&lt;?php echo TbHtml::button('Mini button', array('style' =&gt; TbHtml::STYLE_PRIMARY, 'size' =&gt; TbHtml::SIZE_MINI)); ?&gt;
 &lt;?php echo TbHtml::button('Mini button', array('size' =&gt; 'mini')); ?&gt;
     </pre>
 
@@ -102,13 +102,13 @@
         <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
             <?php echo TbHtml::button(
                 'Block button',
-                array('block' => true, 'style' => 'primary', 'size' => TbHtml::SIZE_LARGE)
+                array('block' => true, 'style' => TbHtml::STYLE_PRIMARY, 'size' => TbHtml::SIZE_LARGE)
             ); ?>
             <?php echo TbHtml::button('Block button', array('block' => true, 'size' => TbHtml::SIZE_LARGE)); ?>
         </div>
     </div>
 	<pre class="prettyprint linenums">
-&lt;?php echo TbHtml::button('Block button', array('block' =&gt; true, 'style' =&gt; 'primary', 'size'=&gt;TbHtml::SIZE_LARGE)); ?&gt;
+&lt;?php echo TbHtml::button('Block button', array('block' =&gt; true, 'style' =&gt; TbHtml::STYLE_PRIMARY, 'size'=&gt;TbHtml::SIZE_LARGE)); ?&gt;
 &lt;?php echo TbHtml::button('Block button', array('block' =&gt; true, 'size' =&gt; TbHtml::SIZE_LARGE)); ?&gt;
 	</pre>
     <h2>Disabled state</h2>
@@ -125,12 +125,12 @@
     <div class="bs-docs-example">
         <?php echo TbHtml::button(
             'Block button',
-            array('disabled' => true, 'style' => 'primary', 'size' => 'large')
+            array('disabled' => true, 'style' => TbHtml::STYLE_PRIMARY, 'size' => 'large')
         ); ?>
         <?php echo TbHtml::button('Block button', array('disabled' => true)); ?>
     </div>
 	<pre class="prettyprint linenums">
-&lt;?php echo TbHtml::button('Block button', array('disabled' =&gt; true, 'style' =&gt; 'primary', 'size'=&gt;'large')); ?&gt;
+&lt;?php echo TbHtml::button('Block button', array('disabled' =&gt; true, 'style' =&gt; TbHtml::STYLE_PRIMARY, 'size'=&gt;'large')); ?&gt;
 &lt;?php echo TbHtml::button('Block button', array('disabled' =&gt; true)); ?&gt;
 	</pre>
 </section>
@@ -155,7 +155,7 @@
                 array('label' => 'Middle'),
                 array('label' => 'Right'),
             ),
-            array('style' => 'primary')
+            array('style' => TbHtml::STYLE_PRIMARY)
         );
         ?>
     </div>
@@ -167,7 +167,7 @@ echo TbHtml::buttonGroup(
         array('label' =&gt; 'Middle'),
         array('label' =&gt; 'Right'),
     ),
-    array('style' =&gt; 'primary')
+    array('style' =&gt; TbHtml::STYLE_PRIMARY)
 );
 ?&gt;
 	</pre>
@@ -182,9 +182,9 @@ echo TbHtml::buttonGroup(
                         array('label' => '1'),
                         array('label' => '2'),
                         array('label' => '3'),
-                        array('label' => '4', 'htmlOptions' => array('style' => 'danger')),
+                        array('label' => '4', 'htmlOptions' => array('style' => TbHtml::STYLE_DANGER)),
                     ),
-                    'htmlOptions' => array('style' => 'warning')
+                    'htmlOptions' => array('style' => TbHtml::STYLE_WARNING)
                 ),
                 array(
                     'items' => array(
@@ -199,7 +199,7 @@ echo TbHtml::buttonGroup(
                     )
                 ),
             ),
-            array('style' => 'inverse')
+            array('style' => TbHtml::STYLE_INVERSE)
         ); ?>
     </div>
 	<pre class="prettyprint linenums">
@@ -208,8 +208,8 @@ echo TbHtml::buttonGroup(
         array('label' =&gt; '1'),
         array('label' =&gt; '2'),
         array('label' =&gt; '3'),
-        array('label' =&gt; '4', 'htmlOptions' =&gt; array('style' =&gt; 'danger')),
-    ), 'htmlOptions' =&gt; array('style' =&gt; 'warning')),
+        array('label' =&gt; '4', 'htmlOptions' =&gt; array('style' =&gt; TbHtml::STYLE_DANGER)),
+    ), 'htmlOptions' =&gt; array('style' =&gt; TbHtml::STYLE_WARNING)),
     array('items' =&gt; array(
         array('label' =&gt; '5'),
         array('label' =&gt; '6'),
@@ -218,7 +218,7 @@ echo TbHtml::buttonGroup(
     array('items' =&gt; array(
         array('label' =&gt; '8'),
     )),
-), array('style' =&gt; 'inverse')); ?&gt;
+), array('style' =&gt; TbHtml::STYLE_INVERSE)); ?&gt;
 	</pre>
 
     <h3>Vertical button groups</h3>
@@ -300,120 +300,53 @@ echo TbHtml::buttonGroup(
 
 <h2>Overview and examples</h2>
 
-<p>Use any button to trigger a dropdown menu by placing it within a <code>.btn-group</code> and providing the proper
-    menu markup.</p>
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    <div class="btn-toolbar" style="margin: 0;">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'size' => 'large',
-//                'buttons' => array(
-//                    array('label' => 'Action', 'items' => array(
-//                        array('label' => 'Action', 'url' => '#'),
-//                        array('label' => 'Another action', 'url' => '#'),
-//                        array('label' => 'Something else', 'url' => '#'),
-//                        '---',
-//                        array('label' => 'More options', 'items' => array(
-//                            array('label' => 'Second level link', 'url' => '#'),
-//                            array('label' => 'Second level link', 'url' => '#'),
-//                            array('label' => 'Second level link', 'url' => '#'),
-//                            array('label' => 'Second level link', 'items' => array(
-//                                array('label' => 'Third level link', 'url' => '#'),
-//                            )),
-//                        )),
-//                    )),
-//                ),
-//            ));
-?>
-<!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'size' => 'large',
-//                'type' => 'primary',
-//                'buttons' => array(
-//                    array('label' => 'Action', 'items' => array(
-//                        array('label' => 'Action', 'url' => '#'),
-//                        array('label' => 'Another action', 'url' => '#'),
-//                        array('label' => 'Something else', 'url' => '#'),
-//                        '---',
-//                        array('label' => 'Separate link', 'url' => '#'),
-//                    )),
-//                ),
-//            ));
-?>
-<!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'size' => 'large',
-//                'type' => 'danger',
-//                'buttons' => array(
-//                    array('label' => 'Danger', 'items' => array(
-//                        array('label' => 'Action', 'url' => '#'),
-//                        array('label' => 'Another action', 'url' => '#'),
-//                        array('label' => 'Something else', 'url' => '#'),
-//                        '---',
-//                        array('label' => 'Separate link', 'url' => '#'),
-//                    )),
-//                ),
-//            ));
-?>
-<!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'size' => 'large',
-//                'type' => 'success',
-//                'buttons' => array(
-//                    array('label' => 'Success', 'items' => array(
-//                        array('label' => 'Action', 'url' => '#'),
-//                        array('label' => 'Another action', 'url' => '#'),
-//                        array('label' => 'Something else', 'url' => '#'),
-//                        '---',
-//                        array('label' => 'Separate link', 'url' => '#'),
-//                    )),
-//                ),
-//            ));
-?>
-<!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'size' => 'large',
-//                'type' => 'info',
-//                'buttons' => array(
-//                    array('label' => 'Info', 'items' => array(
-//                        array('label' => 'Action', 'url' => '#'),
-//                        array('label' => 'Another action', 'url' => '#'),
-//                        array('label' => 'Something else', 'url' => '#'),
-//                        '---',
-//                        array('label' => 'Separate link', 'url' => '#'),
-//                    )),
-//                ),
-//            ));
-?>
-<!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'size' => 'large',
-//                'type' => 'inverse',
-//                'buttons' => array(
-//                    array('label' => 'Inverse', 'items' => array(
-//                        array('label' => 'Action', 'url' => '#'),
-//                        array('label' => 'Another action', 'url' => '#'),
-//                        array('label' => 'Something else', 'url' => '#'),
-//                        '---',
-//                        array('label' => 'Separate link', 'url' => '#'),
-//                    )),
-//                ),
-//            ));
-?>
-<!--        <!-- /btn-group -->-->
-<!--    </div>-->
-<!--    <!-- /btn-toolbar -->-->
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbButtonGroup', array(-->
-<!--	'size'=>'large',-->
-<!--    'type'=>'inverse', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'-->
-<!--    'buttons'=>array(-->
-<!--       array('label'=>'Inverse', 'items'=>array(-->
-<!--       array('label'=>'Action', 'url'=>'#'),-->
-<!--       array('label'=>'Another action', 'url'=>'#'),-->
-<!--       array('label'=>'Something else', 'url'=>'#'),-->
-<!--       '---',-->
-<!--       array('label'=>'Separate link', 'url'=>'#'),-->
-<!--    )),-->
-<!--    ),-->
-<!--));-->
-<!--	</pre>-->
+
+<div class="bs-docs-example">
+    <div class="btn-toolbar" style="margin: 0;">
+        <?php $dropdownConfig = array(
+            array('label' => 'Action', 'url' => '#'),
+            array('label' => 'Another action', 'url' => '#'),
+            array('label' => 'Something else here', 'url' => '#'),
+            TbHtml::menuDivider(),
+            array('label' => 'Separate link', 'url' => '#'),
+        ); ?>
+
+        <h5>Default dropdown</h5>
+
+        <div style="margin-bottom: 20px;">
+            <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig); ?>
+            <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' => TbHtml::STYLE_PRIMARY)); ?>
+            <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' => TbHtml::STYLE_DANGER)); ?>
+            <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' => TbHtml::STYLE_WARNING)); ?>
+            <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' => TbHtml::STYLE_SUCCESS)); ?>
+            <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' => TbHtml::STYLE_INFO)); ?>
+            <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' => TbHtml::STYLE_INVERSE)); ?>
+        </div>
+
+    </div>
+    <!-- /btn-toolbar -->
+</div>
+	<pre class="prettyprint linenums">
+&lt;?php $dropdownConfig = array(
+    array('label' =&gt; 'Action', 'url' =&gt; '#'),
+    array('label' =&gt; 'Another action', 'url' =&gt; '#'),
+    array('label' =&gt; 'Something else here', 'url' =&gt; '#'),
+    TbHtml::menuDivider(),
+    array('label' =&gt; 'Separate link', 'url' =&gt; '#'),
+); ?&gt;
+
+&lt;h5&gt;Default dropdown&lt;/h5&gt;
+
+&lt;div style=&quot;margin-bottom: 20px;&quot;&gt;
+    &lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig); ?&gt;
+    &lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' =&gt; TbHtml::PRIMARY)); ?&gt;
+    &lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' =&gt; TbHtml::STYLE_DANGER)); ?&gt;
+    &lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' =&gt; TbHtml::STYLE_WARNING)); ?&gt;
+    &lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' =&gt; TbHtml::STYLE_SUCCESS)); ?&gt;
+    &lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' =&gt; TbHtml::STYLE_INFO)); ?&gt;
+    &lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' =&gt; TbHtml::STYLE_INVERSE)); ?&gt;
+&lt;/div&gt;
+	</pre>
 <!---->
 <!--<h3>Works with all button sizes</h3>-->
 <!---->
@@ -500,7 +433,7 @@ echo TbHtml::buttonGroup(
 <!--    <div class="btn-toolbar" style="margin: 0;">-->
 <!---->
 <!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'type' => 'primary', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+//                'type' => TbHtml::STYLE_PRIMARY, // '', TbHtml::STYLE_PRIMARY, TbHtml::STYLE_INFO, TbHtml::STYLE_SUCCESS, TbHtml::STYLE_WARNING, TbHtml::STYLE_DANGER or TbHtml::STYLE_INVERSE
 //                'buttons' => array(
 //                    array('label' => 'Action', 'url' => '#'),
 //                    array('items' => array(
@@ -514,7 +447,7 @@ echo TbHtml::buttonGroup(
 //            ));
 ?>
 <!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'type' => 'danger',
+//                'type' => TbHtml::STYLE_DANGER,
 //                'buttons' => array(
 //                    array('label' => 'Action', 'url' => '#'),
 //                    array('items' => array(
@@ -528,7 +461,7 @@ echo TbHtml::buttonGroup(
 //            ));
 ?>
 <!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'type' => 'warning',
+//                'type' => TbHtml::STYLE_WARNING,
 //                'buttons' => array(
 //                    array('label' => 'Action', 'url' => '#'),
 //                    array('items' => array(
@@ -542,7 +475,7 @@ echo TbHtml::buttonGroup(
 //            ));
 ?>
 <!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'type' => 'success',
+//                'type' => TbHtml::STYLE_SUCCESS,
 //                'buttons' => array(
 //                    array('label' => 'Action', 'url' => '#'),
 //                    array('items' => array(
@@ -556,7 +489,7 @@ echo TbHtml::buttonGroup(
 //            ));
 ?>
 <?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'type' => 'info',
+//                'type' => TbHtml::STYLE_INFO,
 //                'buttons' => array(
 //                    array('label' => 'Action', 'url' => '#'),
 //                    array('items' => array(
@@ -570,7 +503,7 @@ echo TbHtml::buttonGroup(
 //            ));
 ?>
 <?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'type' => 'inverse',
+//                'type' => TbHtml::STYLE_INVERSE,
 //                'buttons' => array(
 //                    array('label' => 'Action', 'url' => '#'),
 //                    array('items' => array(
@@ -588,7 +521,7 @@ echo TbHtml::buttonGroup(
 </div>
 	<pre class="prettyprint linenums">
 $this->widget('bootstrap.widgets.TbButtonGroup', array(
-	'type' => 'primary', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+	'type' => TbHtml::STYLE_PRIMARY, // '', TbHtml::STYLE_PRIMARY, TbHtml::STYLE_INFO, TbHtml::STYLE_SUCCESS, TbHtml::STYLE_WARNING, TbHtml::STYLE_DANGER or TbHtml::STYLE_INVERSE
 	'buttons' => array(
 		array('label' => 'Action', 'url' => '#'), // this makes it split :)
 		array('items' => array(
@@ -769,7 +702,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 //                'headerButtons' => array(
 //                    array(
 //                        'class' => 'bootstrap.widgets.TbButtonGroup',
-//                        'type' => 'primary', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+//                        'type' => TbHtml::STYLE_PRIMARY, // '', TbHtml::STYLE_PRIMARY, TbHtml::STYLE_INFO, TbHtml::STYLE_SUCCESS, TbHtml::STYLE_WARNING, TbHtml::STYLE_DANGER or TbHtml::STYLE_INVERSE
 //                        'buttons' => array(
 //                            array('label' => 'Action', 'url' => '#'), // this makes it split :)
 //                            array('items' => array(
@@ -1115,8 +1048,8 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 //                    'class' => 'bootstrap.widgets.TbMenu',
 //                    'items' => array(
 //                        array('label' => 'Home', 'url' => '#', 'active' => true),
-//                        array('label' => 'Link', 'url' => '#'),
-//                        array('label' => 'Link', 'url' => '#'),
+//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
+//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
 //                    )
 //                )
 //            )
@@ -1131,8 +1064,8 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--			'class' => 'bootstrap.widgets.TbMenu',-->
 <!--			'items' => array(-->
 <!--				array('label'=>'Home', 'url'=>'#', 'active'=>true),-->
-<!--				array('label'=>'Link', 'url'=>'#'),-->
-<!--				array('label'=>'Link', 'url'=>'#'),-->
+<!--				array('label'=>TbHtml::STYLE_LINK, 'url'=>'#'),-->
+<!--				array('label'=>TbHtml::STYLE_LINK, 'url'=>'#'),-->
 <!--			)-->
 <!--		)-->
 <!--	)-->
@@ -1217,7 +1150,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 //                    'class' => 'bootstrap.widgets.TbMenu',
 //                    'items' => array(
 //                        array('label' => 'Home', 'url' => '#', 'active' => true),
-//                        array('label' => 'Link', 'url' => '#'),
+//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
 //                        array('label' => 'Dropdown', 'items' => array(
 //                            array('label' => 'Item1', 'url' => '#')
 //                        )),
@@ -1235,7 +1168,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--			'class' => 'bootstrap.widgets.TbMenu',-->
 <!--			'items' => array(-->
 <!--				array('label'=>'Home', 'url'=>'#', 'active'=>true),-->
-<!--				array('label'=>'Link', 'url'=>'#'),-->
+<!--				array('label'=>TbHtml::STYLE_LINK, 'url'=>'#'),-->
 <!--				array('label'=>'Dropdown', 'items'=> array(-->
 <!--				     array('label'=>'Item1', 'url'=>'#')-->
 <!--				)),-->
@@ -1275,8 +1208,8 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 //                    'class' => 'bootstrap.widgets.TbMenu',
 //                    'items' => array(
 //                        array('label' => 'Home', 'url' => '#', 'active' => true),
-//                        array('label' => 'Link', 'url' => '#'),
-//                        array('label' => 'Link', 'url' => '#'),
+//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
+//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
 //                    )
 //                )
 //            )
@@ -1294,8 +1227,8 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--			'class' => 'bootstrap.widgets.TbMenu',-->
 <!--			'items' => array(-->
 <!--				array('label' => 'Home', 'url' => '#', 'active' => true),-->
-<!--				array('label' => 'Link', 'url' => '#'),-->
-<!--				array('label' => 'Link', 'url' => '#'),-->
+<!--				array('label' => TbHtml::STYLE_LINK, 'url' => '#'),-->
+<!--				array('label' => TbHtml::STYLE_LINK, 'url' => '#'),-->
 <!--			)-->
 <!--		)-->
 <!--	)-->
@@ -1316,8 +1249,8 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 //                    'class' => 'bootstrap.widgets.TbMenu',
 //                    'items' => array(
 //                        array('label' => 'Home', 'url' => '#', 'active' => true),
-//                        array('label' => 'Link', 'url' => '#'),
-//                        array('label' => 'Link', 'url' => '#'),
+//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
+//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
 //                    )
 //                )
 //            )
@@ -1343,7 +1276,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!---->
 <!--<div class="bs-docs-example">-->
 <!--    --><?php //$this->widget('bootstrap.widgets.TbNavbar', array(
-//            'type' => null, // null or 'inverse'
+//            'type' => null, // null or TbHtml::STYLE_INVERSE
 //            'brand' => 'Project name',
 //            'brandUrl' => '#',
 //            'collapse' => true, // requires bootstrap-responsive.css
@@ -1353,7 +1286,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 //                    'class' => 'bootstrap.widgets.TbMenu',
 //                    'items' => array(
 //                        array('label' => 'Home', 'url' => '#', 'active' => true),
-//                        array('label' => 'Link', 'url' => '#'),
+//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
 //                        array('label' => 'Dropdown', 'url' => '#', 'items' => array(
 //                            array('label' => 'Action', 'url' => '#'),
 //                            array('label' => 'Another action', 'url' => '#'),
@@ -1370,7 +1303,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 //                    'class' => 'bootstrap.widgets.TbMenu',
 //                    'htmlOptions' => array('class' => 'pull-right'),
 //                    'items' => array(
-//                        array('label' => 'Link', 'url' => '#'),
+//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
 //                        '---',
 //                        array('label' => 'Dropdown', 'url' => '#', 'items' => array(
 //                            array('label' => 'Action', 'url' => '#'),
@@ -1387,7 +1320,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--</div>-->
 <!--	<pre class="prettyprint linenums">-->
 <!--$this->widget('bootstrap.widgets.TbNavbar', array(-->
-<!--	'type'=>null, // null or 'inverse'-->
+<!--	'type'=>null, // null or TbHtml::STYLE_INVERSE-->
 <!--	'brand'=>'Project name',-->
 <!--	'brandUrl'=>'#',-->
 <!--	'collapse'=>true, // requires bootstrap-responsive.css-->
@@ -1396,7 +1329,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--			'class'=>'bootstrap.widgets.TbMenu',-->
 <!--			'items'=>array(-->
 <!--				array('label'=>'Home', 'url'=>'#', 'active'=>true),-->
-<!--				array('label'=>'Link', 'url'=>'#'),-->
+<!--				array('label'=>TbHtml::STYLE_LINK, 'url'=>'#'),-->
 <!--				array('label'=>'Dropdown', 'url'=>'#', 'items'=>array(-->
 <!--					array('label'=>'Action', 'url'=>'#'),-->
 <!--					array('label'=>'Another action', 'url'=>'#'),-->
@@ -1413,7 +1346,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--			'class'=>'bootstrap.widgets.TbMenu',-->
 <!--			'htmlOptions'=>array('class'=>'pull-right'),-->
 <!--			'items'=>array(-->
-<!--				array('label'=>'Link', 'url'=>'#'),-->
+<!--				array('label'=>TbHtml::STYLE_LINK, 'url'=>'#'),-->
 <!--				'---',-->
 <!--				array('label'=>'Dropdown', 'url'=>'#', 'items'=>array(-->
 <!--					array('label'=>'Action', 'url'=>'#'),-->
@@ -1437,7 +1370,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!---->
 <!--<div class="bs-docs-example">-->
 <!--    --><?php //$this->widget('bootstrap.widgets.TbNavbar', array(
-//            'type' => 'inverse',
+//            'type' => TbHtml::STYLE_INVERSE,
 //            'brand' => 'Project name',
 //            'brandUrl' => '#',
 //            'collapse' => true, // requires bootstrap-responsive.css
@@ -1447,7 +1380,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 //                    'class' => 'bootstrap.widgets.TbMenu',
 //                    'items' => array(
 //                        array('label' => 'Home', 'url' => '#', 'active' => true),
-//                        array('label' => 'Link', 'url' => '#'),
+//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
 //                        array('label' => 'Dropdown', 'url' => '#', 'items' => array(
 //                            array('label' => 'Action', 'url' => '#'),
 //                            array('label' => 'Another action', 'url' => '#'),
@@ -1464,7 +1397,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 //                    'class' => 'bootstrap.widgets.TbMenu',
 //                    'htmlOptions' => array('class' => 'pull-right'),
 //                    'items' => array(
-//                        array('label' => 'Link', 'url' => '#'),
+//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
 //                        '---',
 //                        array('label' => 'Dropdown', 'url' => '#', 'items' => array(
 //                            array('label' => 'Action', 'url' => '#'),
@@ -1482,7 +1415,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--</div>-->
 <!--	<pre class="prettyprint linenums">-->
 <!--...-->
-<!--'type' => 'inverse'-->
+<!--'type' => TbHtml::STYLE_INVERSE-->
 <!--...-->
 <!--	</pre>-->
 <!---->
@@ -1592,8 +1525,8 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--    </table>-->
 <!--<pre class="prettyprint linenums">-->
 <!--$this->widget('bootstrap.widgets.TbLabel', array(-->
-<!--     'type'=>'success', // 'success', 'warning', 'important', 'info' or 'inverse'-->
-<!--     'label'=>'Success',-->
+<!--     'type'=>TbHtml::STYLE_SUCCESS, // TbHtml::STYLE_SUCCESS, TbHtml::STYLE_WARNING, 'important', TbHtml::STYLE_INFO or TbHtml::STYLE_INVERSE-->
+<!--     'label'=>TbHtml::STYLE_SUCCESS,-->
 <!--));-->
 <!-- </pre>-->
 <!--    <h3>Badges</h3>-->
@@ -1676,7 +1609,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--    </table>-->
 <!--<pre class="prettyprint linenums">-->
 <!--$this->widget('bootstrap.widgets.TbBadge', array(-->
-<!--     'type'=>'success', // 'success', 'warning', 'important', 'info' or 'inverse'-->
+<!--     'type'=>TbHtml::STYLE_SUCCESS, // TbHtml::STYLE_SUCCESS, TbHtml::STYLE_WARNING, 'important', TbHtml::STYLE_INFO or TbHtml::STYLE_INVERSE-->
 <!--     'label'=>'2',-->
 <!--));-->
 <!-- </pre>-->
@@ -1705,7 +1638,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--            content or information.</p>-->
 <!---->
 <!--        <p>--><?php //$this->widget('bootstrap.widgets.TbButton', array(
-//                    'type' => 'primary',
+//                    'type' => TbHtml::STYLE_PRIMARY,
 //                    'size' => 'large',
 //                    'label' => 'Learn more',
 //                )); ?><!--</p>-->
@@ -1720,7 +1653,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--&lt;p&gt;This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.&lt;/p&gt;-->
 <!--&lt;p&gt;-->
 <!--	&lt;?php $this->widget('bootstrap.widgets.TbButton', array(-->
-<!--    'type'=>'primary',-->
+<!--    'type'=>TbHtml::STYLE_PRIMARY,-->
 <!--    'size'=>'large',-->
 <!--    'label'=>'Learn more',-->
 <!--)); ?&gt;-->
@@ -1796,31 +1729,31 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!---->
 <!--    <div class="bs-docs-example">-->
 <!--        --><?php
-//        Yii::app()->user->setFlash('success', '<strong>Well done!</strong> You successfully read this important alert message.');
+//        Yii::app()->user->setFlash(TbHtml::STYLE_SUCCESS, '<strong>Well done!</strong> You successfully read this important alert message.');
 //        $this->widget('bootstrap.widgets.TbAlert', array(
 //                'block' => true, // display a larger alert block?
 //                'fade' => true, // use transitions?
 //                'closeText' => '&times;', // close link text - if set to false, no close link is displayed
 //                'alerts' => array( // configurations per alert type
-//                    'success' => array('block' => true, 'fade' => true, 'closeText' => '&times;'), // success, info, warning, error or danger
+//                    TbHtml::STYLE_SUCCESS => array('block' => true, 'fade' => true, 'closeText' => '&times;'), // success, info, warning, error or danger
 //                ),
 //            ));
-//        Yii::app()->user->setFlash('info', '<strong>Heads up!</strong> This alert needs your attention, but it\'s not super important.');
+//        Yii::app()->user->setFlash(TbHtml::STYLE_INFO, '<strong>Heads up!</strong> This alert needs your attention, but it\'s not super important.');
 //        $this->widget('bootstrap.widgets.TbAlert', array(
 //                'block' => true, // display a larger alert block?
 //                'fade' => true, // use transitions?
 //                'closeText' => '&times;', // close link text - if set to false, no close link is displayed
 //                'alerts' => array( // configurations per alert type
-//                    'info' => array('block' => true, 'fade' => true, 'closeText' => '&times;'), // success, info, warning, error or danger
+//                    TbHtml::STYLE_INFO => array('block' => true, 'fade' => true, 'closeText' => '&times;'), // success, info, warning, error or danger
 //                ),
 //            ));
-//        Yii::app()->user->setFlash('warning', '<strong>Warning!</strong> Best check yo self, you\'re not looking too good.');
+//        Yii::app()->user->setFlash(TbHtml::STYLE_WARNING, '<strong>Warning!</strong> Best check yo self, you\'re not looking too good.');
 //        $this->widget('bootstrap.widgets.TbAlert', array(
 //                'block' => true, // display a larger alert block?
 //                'fade' => true, // use transitions?
 //                'closeText' => '&times;', // close link text - if set to false, no close link is displayed
 //                'alerts' => array( // configurations per alert type
-//                    'warning' => array('block' => true, 'fade' => true, 'closeText' => '&times;'), // success, info, warning, error or danger
+//                    TbHtml::STYLE_WARNING => array('block' => true, 'fade' => true, 'closeText' => '&times;'), // success, info, warning, error or danger
 //                ),
 //            ));
 //        Yii::app()->user->setFlash('error', '<strong>Oh snap!</strong> Change a few things up and try submitting again.');
@@ -1835,13 +1768,13 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 ?>
 <!--    </div>-->
 <!--	<pre class="prettyprint linenums">-->
-<!--Yii::app()->user->setFlash('success', '&lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.');-->
+<!--Yii::app()->user->setFlash(TbHtml::STYLE_SUCCESS, '&lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.');-->
 <!--$this->widget('bootstrap.widgets.TbAlert', array(-->
 <!--    'block'=>true, // display a larger alert block?-->
 <!--    'fade'=>true, // use transitions?-->
 <!--    'closeText'=>'&times;', // close link text - if set to false, no close link is displayed-->
 <!--    'alerts'=>array( // configurations per alert type-->
-<!--	    'success'=>array('block'=>true, 'fade'=>true, 'closeText'=>'&times;'), // success, info, warning, error or danger
+<!--	    TbHtml::STYLE_SUCCESS=>array('block'=>true, 'fade'=>true, 'closeText'=>'&times;'), // success, info, warning, error or danger
 -->
 <!--    ),-->
 <!--));-->
@@ -1866,14 +1799,14 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!---->
 <!--    <div class="bs-docs-example">-->
 <!--        --><?php //$this->widget('bootstrap.widgets.TbProgress', array(
-//                'type' => 'success', // 'info', 'success' or 'danger'
+//                'type' => TbHtml::STYLE_SUCCESS, // TbHtml::STYLE_INFO, TbHtml::STYLE_SUCCESS or TbHtml::STYLE_DANGER
 //                'percent' => 60,
 //            ));
 ?>
 <!--    </div>-->
 <!--	<pre class="prettyprint linenums">-->
 <!--$this->widget('bootstrap.widgets.TbProgress', array(-->
-<!--    'type'=>'success', // 'info', 'success' or 'danger'-->
+<!--    'type'=>TbHtml::STYLE_SUCCESS, // TbHtml::STYLE_INFO, TbHtml::STYLE_SUCCESS or TbHtml::STYLE_DANGER-->
 <!--    'percent'=>60,-->
 <!--));-->
 <!--	</pre>-->
@@ -1884,7 +1817,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!---->
 <!--    <div class="bs-docs-example">-->
 <!--        --><?php //$this->widget('bootstrap.widgets.TbProgress', array(
-//                'type' => 'danger', // 'info', 'success' or 'danger'
+//                'type' => TbHtml::STYLE_DANGER, // TbHtml::STYLE_INFO, TbHtml::STYLE_SUCCESS or TbHtml::STYLE_DANGER
 //                'percent' => 40, // the progress
 //                'striped' => true,
 //            ));
@@ -1892,7 +1825,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--    </div>-->
 <!--	<pre class="prettyprint linenums">-->
 <!--$this->widget('bootstrap.widgets.TbProgress', array(-->
-<!--    'type'=>'success', // 'info', 'success' or 'danger'-->
+<!--    'type'=>TbHtml::STYLE_SUCCESS, // TbHtml::STYLE_INFO, TbHtml::STYLE_SUCCESS or TbHtml::STYLE_DANGER-->
 <!--    'percent'=>60,-->
 <!--	'stripped'=>true-->
 <!--));-->
@@ -1926,18 +1859,18 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--    <div class="bs-docs-example">-->
 <!--        --><?php //$this->widget('bootstrap.widgets.TbProgress', array(
 //                'stacked' => array(
-//                    array('type' => 'success', 'percent' => 30, 'htmlOptions' => array('title' => 'Hey! I am a title here.')),
-//                    array('type' => 'warning', 'percent' => 35),
-//                    array('type' => 'danger', 'percent' => 30),
+//                    array('type' => TbHtml::STYLE_SUCCESS, 'percent' => 30, 'htmlOptions' => array('title' => 'Hey! I am a title here.')),
+//                    array('type' => TbHtml::STYLE_WARNING, 'percent' => 35),
+//                    array('type' => TbHtml::STYLE_DANGER, 'percent' => 30),
 //                )));
 ?>
 <!--    </div>-->
 <!--	<pre class="prettyprint linenums">-->
 <!--$this->widget('bootstrap.widgets.TbProgress', array(-->
 <!--    'stacked'=>array(-->
-<!--	    array('type'=>'success', 'percent'=>30, 'htmlOptions'=>array('title'=>'Hey! I am a title here.')),-->
-<!--	    array('type'=>'warning', 'percent'=>35),-->
-<!--	    array('type'=>'danger', 'percent'=>30),-->
+<!--	    array('type'=>TbHtml::STYLE_SUCCESS, 'percent'=>30, 'htmlOptions'=>array('title'=>'Hey! I am a title here.')),-->
+<!--	    array('type'=>TbHtml::STYLE_WARNING, 'percent'=>35),-->
+<!--	    array('type'=>TbHtml::STYLE_DANGER, 'percent'=>30),-->
 <!--)));-->
 <!--	</pre>-->
 <!---->
@@ -2289,7 +2222,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--    </fieldset>-->
 <!---->
 <!--    <div class="form-actions">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submit', 'type' => 'primary', 'label' => 'Submit')); ?>
+<!--        --><?php //$this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submit', 'type' => TbHtml::STYLE_PRIMARY, 'label' => 'Submit')); ?>
 <!--        --><?php //$this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'reset', 'label' => 'Reset')); ?>
 <!--    </div>-->
 <!---->
@@ -2354,7 +2287,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--    &lt;/fieldset&gt;-->
 <!---->
 <!--    &lt;div class="form-actions">-->
-<!--        &lt;?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>'primary', 'label'=>'Submit')); ?&gt;-->
+<!--        &lt;?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>TbHtml::STYLE_PRIMARY, 'label'=>'Submit')); ?&gt;-->
 <!--        &lt;?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'reset', 'label'=>'Reset')); ?&gt;-->
 <!--    &lt;/div&gt;-->
 <!---->
@@ -2441,7 +2374,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--            'buttons' => array(-->
 <!--                'submit' => array(-->
 <!--                    'type' => 'submit',-->
-<!--                    'layoutType' => 'primary',-->
+<!--                    'layoutType' => TbHtml::STYLE_PRIMARY,-->
 <!--                    'label' => 'Submit',-->
 <!--                ),-->
 <!--                'reset' => array(-->
