@@ -64,26 +64,42 @@
     <p>You can use different type of sizes by setting its <code>size</code> attribute to <code>large</code>,
         <code>small</code>, or <code>mini</code>.</p>
 
-    <p><?php echo TbHtml::button('Large button', array('style' => TbHtml::STYLE_PRIMARY, 'size' => 'large')); ?>
-        <?php echo TbHtml::button('Large button', array('size' => 'large')); ?></p>
+    <p><?php echo TbHtml::button(
+            'Large button',
+            array('style' => TbHtml::STYLE_PRIMARY, 'size' => TbHtml::SIZE_LARGE)
+        ); ?>
+        <?php echo TbHtml::button('Large button', array('size' => TbHtml::SIZE_LARGE)); ?></p>
 
     <p><?php echo TbHtml::button('Default button', array('style' => TbHtml::STYLE_PRIMARY)); ?>
         <?php echo TbHtml::button('Default button'); ?></p>
 
-    <p><?php echo TbHtml::button('Small button', array('style' => TbHtml::STYLE_PRIMARY, 'size' => 'small')); ?>
-        <?php echo TbHtml::button('Small button', array('size' => 'small')); ?></p>
+    <p><?php echo TbHtml::button(
+            'Small button',
+            array('style' => TbHtml::STYLE_PRIMARY, 'size' => TbHtml::SIZE_SMALL)
+        ); ?>
+        <?php echo TbHtml::button('Small button', array('size' => TbHtml::SIZE_SMALL)); ?></p>
 
-    <p><?php echo TbHtml::button('Mini button', array('style' => TbHtml::STYLE_PRIMARY, 'size' => 'mini')); ?>
-        <?php echo TbHtml::button('Mini button', array('size' => 'mini')); ?></p>
+    <p><?php echo TbHtml::button(
+            'Mini button',
+            array('style' => TbHtml::STYLE_PRIMARY, 'size' => TbHtml::SIZE_MINI)
+        ); ?>
+        <?php echo TbHtml::button('Mini button', array('size' => TbHtml::SIZE_MINI)); ?></p>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::button('Large button', array('style' =&gt; TbHtml::STYLE_PRIMARY, 'size' =&gt; TbHtml::SIZE_LARGE)); ?&gt;
-&lt;?php echo TbHtml::button('Large button', array('size' =&gt; 'large')); ?&gt;
-&lt;?php echo TbHtml::button('Default button', array('style' =&gt; TbHtml::STYLE_PRIMARY)); ?&gt;
+&lt;?php echo TbHtml::button('Large button', array(
+        'style' =&gt; TbHtml::STYLE_PRIMARY, 'size' =&gt; TbHtml::SIZE_LARGE)); ?&gt;
+&lt;?php echo TbHtml::button('Large button', array(
+        'size' =&gt; TbHtml::SIZE_LARGE)); ?&gt;
+&lt;?php echo TbHtml::button('Default button', array(
+        'style' =&gt; TbHtml::STYLE_PRIMARY)); ?&gt;
 &lt;?php echo TbHtml::button('Default button'); ?&gt;
-&lt;?php echo TbHtml::button('Small button', array('style' =&gt; TbHtml::STYLE_PRIMARY, 'size' =&gt; TbHtml::SIZE_SMALL)); ?&gt;
-&lt;?php echo TbHtml::button('Small button', array('size' =&gt; 'small')); ?&gt;
-&lt;?php echo TbHtml::button('Mini button', array('style' =&gt; TbHtml::STYLE_PRIMARY, 'size' =&gt; TbHtml::SIZE_MINI)); ?&gt;
-&lt;?php echo TbHtml::button('Mini button', array('size' =&gt; 'mini')); ?&gt;
+&lt;?php echo TbHtml::button('Small button', array(
+        'style' =&gt; TbHtml::STYLE_PRIMARY, 'size' =&gt; TbHtml::SIZE_SMALL)); ?&gt;
+&lt;?php echo TbHtml::button('Small button', array(
+        'size' =&gt; TbHtml::SIZE_SMALL)); ?&gt;
+&lt;?php echo TbHtml::button('Mini button', array(
+        'style' =&gt; TbHtml::STYLE_PRIMARY, 'size' =&gt; TbHtml::SIZE_MINI)); ?&gt;
+&lt;?php echo TbHtml::button('Mini button', array(
+        'size' =&gt; TbHtml::SIZE_MINI)); ?&gt;
     </pre>
 
     <h2>Block Buttons</h2>
@@ -118,12 +134,13 @@
     <div class="bs-docs-example">
         <?php echo TbHtml::button(
             'Block button',
-            array('disabled' => true, 'style' => TbHtml::STYLE_PRIMARY, 'size' => 'large')
+            array('disabled' => true, 'style' => TbHtml::STYLE_PRIMARY, 'size' => TbHtml::SIZE_LARGE)
         ); ?>
         <?php echo TbHtml::button('Block button', array('disabled' => true)); ?>
     </div>
 	<pre class="prettyprint linenums">
-&lt;?php echo TbHtml::button('Block button', array('disabled' =&gt; true, 'style' =&gt; TbHtml::STYLE_PRIMARY, 'size'=&gt;'large')); ?&gt;
+&lt;?php echo TbHtml::button('Block button', array(
+        'disabled' =&gt; true, 'style' =&gt; TbHtml::STYLE_PRIMARY, 'size'=&gt;TbHtml::SIZE_LARGE)); ?&gt;
 &lt;?php echo TbHtml::button('Block button', array('disabled' =&gt; true)); ?&gt;
 	</pre>
 </section>
@@ -171,7 +188,7 @@ echo TbHtml::buttonGroup(
         <?php echo TbHtml::buttonToolbar(
             array(
                 array(
-                    'items'       => array(
+                    'items' => array(
                         array('label' => '1'),
                         array('label' => '2'),
                         array('label' => '3'),
@@ -241,7 +258,7 @@ echo TbHtml::buttonGroup(
 
     <p>
         In order to display one or the other, add <code>'data-toggle'=>'buttons-checkbox'</code> or
-        code>'data-toggle'=>'buttons-radio'</code> - will soon be changed -.
+        <code>'data-toggle'=>'buttons-radio'</code> - will soon be changed -.
     </p>
 
     <div class="bs-docs-example">
@@ -343,7 +360,7 @@ echo TbHtml::buttonGroup(
 <!---->
 <!--<h3>Works with all button sizes</h3>-->
 <!---->
-<!--<p>Button dropdowns work at any size: <code>'size'=>'large'</code>, <code>'size'=>'small'</code>, or <code>'size'=>'mini'</code>.-->
+<!--<p>Button dropdowns work at any size: <code>'size'=>TbHtml::SIZE_LARGE</code>, <code>'size'=>TbHtml::SIZE_SMALL</code>, or <code>'size'=>TbHtml::SIZE_MINI</code>.-->
 <!--</p>-->
 <!---->
 <!--<div class="bs-docs-example">-->
@@ -369,7 +386,7 @@ echo TbHtml::buttonGroup(
 ?>
 <!--        <!-- /btn-group -->-->
 <!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'size' => 'small',
+//                'size' => TbHtml::SIZE_SMALL,
 //                'buttons' => array(
 //                    array('label' => 'Action', 'items' => array(
 //                        array('label' => 'Action', 'url' => '#'),
@@ -390,7 +407,7 @@ echo TbHtml::buttonGroup(
 ?>
 <!--        <!-- /btn-group -->-->
 <!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'size' => 'mini',
+//                'size' => TbHtml::SIZE_MINI,
 //                'buttons' => array(
 //                    array('label' => 'Action', 'items' => array(
 //                        array('label' => 'Action', 'url' => '#'),
@@ -1632,7 +1649,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!---->
 <!--        <p>--><?php //$this->widget('bootstrap.widgets.TbButton', array(
 //                    'type' => TbHtml::STYLE_PRIMARY,
-//                    'size' => 'large',
+//                    'size' => TbHtml::SIZE_LARGE,
 //                    'label' => 'Learn more',
 //                )); ?><!--</p>-->
 <!---->
@@ -1647,7 +1664,7 @@ $this->widget('bootstrap.widgets.TbButtonGroup', array(
 <!--&lt;p&gt;-->
 <!--	&lt;?php $this->widget('bootstrap.widgets.TbButton', array(-->
 <!--    'type'=>TbHtml::STYLE_PRIMARY,-->
-<!--    'size'=>'large',-->
+<!--    'size'=>TbHtml::SIZE_LARGE,-->
 <!--    'label'=>'Learn more',-->
 <!--)); ?&gt;-->
 <!--&lt;/p&gt;-->
