@@ -325,12 +325,28 @@ echo TbHtml::buttonGroup(
 
         <div style="margin-bottom: 20px;">
             <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig); ?>
-            <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' => TbHtml::STYLE_PRIMARY)); ?>
+            <?php echo TbHtml::buttonDropdown(
+                'Action',
+                $dropdownConfig,
+                array('style' => TbHtml::STYLE_PRIMARY)
+            ); ?>
             <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' => TbHtml::STYLE_DANGER)); ?>
-            <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' => TbHtml::STYLE_WARNING)); ?>
-            <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' => TbHtml::STYLE_SUCCESS)); ?>
+            <?php echo TbHtml::buttonDropdown(
+                'Action',
+                $dropdownConfig,
+                array('style' => TbHtml::STYLE_WARNING)
+            ); ?>
+            <?php echo TbHtml::buttonDropdown(
+                'Action',
+                $dropdownConfig,
+                array('style' => TbHtml::STYLE_SUCCESS)
+            ); ?>
             <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' => TbHtml::STYLE_INFO)); ?>
-            <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' => TbHtml::STYLE_INVERSE)); ?>
+            <?php echo TbHtml::buttonDropdown(
+                'Action',
+                $dropdownConfig,
+                array('style' => TbHtml::STYLE_INVERSE)
+            ); ?>
         </div>
 
     </div>
@@ -357,401 +373,197 @@ echo TbHtml::buttonGroup(
     &lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' =&gt; TbHtml::STYLE_INVERSE)); ?&gt;
 &lt;/div&gt;
 	</pre>
-<!---->
-<!--<h3>Works with all button sizes</h3>-->
-<!---->
-<!--<p>Button dropdowns work at any size: <code>'size'=>TbHtml::SIZE_LARGE</code>, <code>'size'=>TbHtml::SIZE_SMALL</code>, or <code>'size'=>TbHtml::SIZE_MINI</code>.-->
-<!--</p>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    <div class="btn-toolbar" style="margin: 0;">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'buttons' => array(
-//                    array('label' => 'Action', 'items' => array(
-//                        array('label' => 'Action', 'url' => '#'),
-//                        array('label' => 'Another action', 'url' => '#'),
-//                        array('label' => 'Something else', 'url' => '#'),
-//                        '---',
-//                        array('label' => 'More options', 'items' => array(
-//                            array('label' => 'Second level link', 'url' => '#'),
-//                            array('label' => 'Second level link', 'url' => '#'),
-//                            array('label' => 'Second level link', 'url' => '#'),
-//                            array('label' => 'Second level link', 'items' => array(
-//                                array('label' => 'Third level link', 'url' => '#'),
-//                            )),
-//                        )),
-//                    )),
-//                ),
-//            ));
-?>
-<!--        <!-- /btn-group -->-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'size' => TbHtml::SIZE_SMALL,
-//                'buttons' => array(
-//                    array('label' => 'Action', 'items' => array(
-//                        array('label' => 'Action', 'url' => '#'),
-//                        array('label' => 'Another action', 'url' => '#'),
-//                        array('label' => 'Something else', 'url' => '#'),
-//                        '---',
-//                        array('label' => 'More options', 'items' => array(
-//                            array('label' => 'Second level link', 'url' => '#'),
-//                            array('label' => 'Second level link', 'url' => '#'),
-//                            array('label' => 'Second level link', 'url' => '#'),
-//                            array('label' => 'Second level link', 'items' => array(
-//                                array('label' => 'Third level link', 'url' => '#'),
-//                            )),
-//                        )),
-//                    )),
-//                ),
-//            ));
-?>
-<!--        <!-- /btn-group -->-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'size' => TbHtml::SIZE_MINI,
-//                'buttons' => array(
-//                    array('label' => 'Action', 'items' => array(
-//                        array('label' => 'Action', 'url' => '#'),
-//                        array('label' => 'Another action', 'url' => '#'),
-//                        array('label' => 'Something else', 'url' => '#'),
-//                        '---',
-//                        array('label' => 'More options', 'items' => array(
-//                            array('label' => 'Second level link', 'url' => '#'),
-//                            array('label' => 'Second level link', 'url' => '#'),
-//                            array('label' => 'Second level link', 'url' => '#'),
-//                            array('label' => 'Second level link', 'items' => array(
-//                                array('label' => 'Third level link', 'url' => '#'),
-//                            )),
-//                        )),
-//                    )),
-//                ),
-//            ));
-?>
-<!--        <!-- /btn-group -->-->
-<!--    </div>-->
-<!--    <!-- /btn-toolbar -->-->
-<!--</div>-->
-<!---->
-<!--<hr class="bs-docs-separator">-->
-<!---->
-<!---->
-<!--<h2>Split button dropdowns</h2>-->
-<!---->
-<!--<p>Building on the button group styles and markup, we can easily create a split button. Split buttons feature a standard-->
-<!--    action on the left and a dropdown toggle on the right with contextual links.</p>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    <div class="btn-toolbar" style="margin: 0;">-->
-<!---->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'type' => TbHtml::STYLE_PRIMARY, // '', TbHtml::STYLE_PRIMARY, TbHtml::STYLE_INFO, TbHtml::STYLE_SUCCESS, TbHtml::STYLE_WARNING, TbHtml::STYLE_DANGER or TbHtml::STYLE_INVERSE
-//                'buttons' => array(
-//                    array('label' => 'Action', 'url' => '#'),
-//                    array('items' => array(
-//                        array('label' => 'Action', 'url' => '#'),
-//                        array('label' => 'Another action', 'url' => '#'),
-//                        array('label' => 'Something else', 'url' => '#'),
-//                        '---',
-//                        array('label' => 'Separate link', 'url' => '#'),
-//                    )),
-//                ),
-//            ));
-?>
-<!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'type' => TbHtml::STYLE_DANGER,
-//                'buttons' => array(
-//                    array('label' => 'Action', 'url' => '#'),
-//                    array('items' => array(
-//                        array('label' => 'Action', 'url' => '#'),
-//                        array('label' => 'Another action', 'url' => '#'),
-//                        array('label' => 'Something else', 'url' => '#'),
-//                        '---',
-//                        array('label' => 'Separate link', 'url' => '#'),
-//                    )),
-//                ),
-//            ));
-?>
-<!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'type' => TbHtml::STYLE_WARNING,
-//                'buttons' => array(
-//                    array('label' => 'Action', 'url' => '#'),
-//                    array('items' => array(
-//                        array('label' => 'Action', 'url' => '#'),
-//                        array('label' => 'Another action', 'url' => '#'),
-//                        array('label' => 'Something else', 'url' => '#'),
-//                        '---',
-//                        array('label' => 'Separate link', 'url' => '#'),
-//                    )),
-//                ),
-//            ));
-?>
-<!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'type' => TbHtml::STYLE_SUCCESS,
-//                'buttons' => array(
-//                    array('label' => 'Action', 'url' => '#'),
-//                    array('items' => array(
-//                        array('label' => 'Action', 'url' => '#'),
-//                        array('label' => 'Another action', 'url' => '#'),
-//                        array('label' => 'Something else', 'url' => '#'),
-//                        '---',
-//                        array('label' => 'Separate link', 'url' => '#'),
-//                    )),
-//                ),
-//            ));
-?>
-<?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'type' => TbHtml::STYLE_INFO,
-//                'buttons' => array(
-//                    array('label' => 'Action', 'url' => '#'),
-//                    array('items' => array(
-//                        array('label' => 'Action', 'url' => '#'),
-//                        array('label' => 'Another action', 'url' => '#'),
-//                        array('label' => 'Something else', 'url' => '#'),
-//                        '---',
-//                        array('label' => 'Separate link', 'url' => '#'),
-//                    )),
-//                ),
-//            ));
-?>
-<?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-//                'type' => TbHtml::STYLE_INVERSE,
-//                'buttons' => array(
-//                    array('label' => 'Action', 'url' => '#'),
-//                    array('items' => array(
-//                        array('label' => 'Action', 'url' => '#'),
-//                        array('label' => 'Another action', 'url' => '#'),
-//                        array('label' => 'Something else', 'url' => '#'),
-//                        '---',
-//                        array('label' => 'Separate link', 'url' => '#'),
-//                    )),
-//                ),
-//            ));
-?>
+
+<h3>Works with all button sizes</h3>
+
+<p>Button dropdowns work at any size: <code>'size'=>TbHtml::SIZE_LARGE</code>,
+    <code>'size'=>TbHtml::SIZE_SMALL</code>, or <code>'size'=>TbHtml::SIZE_MINI</code>.
+</p>
+
+<div class="bs-docs-example">
+    <div class="btn-toolbar" style="margin: 0;">
+        <div style="margin-bottom: 20px;">
+            <?php echo TbHtml::buttonDropdown(
+                'Action',
+                $dropdownConfig,
+                array('style' => TbHtml::STYLE_PRIMARY, 'size' => TbHtml::SIZE_LARGE)
+            ); ?>
+            <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('style' => TbHtml::STYLE_DANGER)); ?>
+            <?php echo TbHtml::buttonDropdown(
+                'Action',
+                $dropdownConfig,
+                array('style' => TbHtml::STYLE_WARNING, 'size' => TbHtml::SIZE_SMALL)
+            ); ?>
+            <?php echo TbHtml::buttonDropdown(
+                'Action',
+                $dropdownConfig,
+                array('style' => TbHtml::STYLE_SUCCESS, 'size' => TbHtml::SIZE_MINI)
+            ); ?>
+        </div>
+    </div>
 </div>
-<!-- /btn-toolbar -->
+<pre class="prettyprint linenums">
+&lt;?php $dropdownConfig = array(
+    array('label' =&gt; 'Action', 'url' =&gt; '#'),
+    array('label' =&gt; 'Another action', 'url' =&gt; '#'),
+    array('label' =&gt; 'Something else here', 'url' =&gt; '#'),
+    TbHtml::menuDivider(),
+    array('label' =&gt; 'Separate link', 'url' =&gt; '#'),
+); ?&gt;
+
+&lt;div style=&quot;margin-bottom: 20px;&quot;&gt;
+    &lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array(
+        'style' =&gt; TbHtml::STYLE_PRIMARY, 'size'=&gt;TbHtml::SIZE_LARGE)); ?&gt;
+    &lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array(
+        'style' =&gt; TbHtml::STYLE_DANGER)); ?&gt;
+    &lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array(
+        'style' =&gt; TbHtml::STYLE_WARNING, 'size'=&gt;TbHtml::SIZE_SMALL)); ?&gt;
+    &lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array(
+        'style' =&gt; TbHtml::STYLE_SUCCESS, 'size'=&gt;TbHtml::SIZE_MINI)); ?&gt;
+&lt;/div&gt;
+	</pre>
+<hr class="bs-docs-separator">
+
+
+<h2>Split button dropdowns</h2>
+
+<p>Building on the button group styles and markup, we can easily create a split button. Split buttons feature a
+    standard
+    action on the left and a dropdown toggle on the right with contextual links.</p>
+
+<div class="bs-docs-example">
+    <div class="btn-toolbar" style="margin: 0;">
+        <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('split' => true)); ?>
+        <?php echo TbHtml::buttonDropdown(
+            'Action',
+            $dropdownConfig,
+            array('style' => TbHtml::STYLE_PRIMARY, 'split' => true)
+        ); ?>
+        <?php echo TbHtml::buttonDropdown(
+            'Action',
+            $dropdownConfig,
+            array('style' => TbHtml::STYLE_DANGER, 'split' => true)
+        ); ?>
+        <?php echo TbHtml::buttonDropdown(
+            'Action',
+            $dropdownConfig,
+            array('style' => TbHtml::STYLE_WARNING, 'split' => true)
+        ); ?>
+        <?php echo TbHtml::buttonDropdown(
+            'Action',
+            $dropdownConfig,
+            array('style' => TbHtml::STYLE_SUCCESS, 'split' => true)
+        ); ?>
+        <?php echo TbHtml::buttonDropdown(
+            'Action',
+            $dropdownConfig,
+            array('style' => TbHtml::STYLE_INFO, 'split' => true)
+        ); ?>
+        <?php echo TbHtml::buttonDropdown(
+            'Action',
+            $dropdownConfig,
+            array('style' => TbHtml::STYLE_INVERSE, 'split' => true)
+        ); ?>
+    </div>
+    <!-- /btn-toolbar -->
 </div>
 	<pre class="prettyprint linenums">
-$this->widget('bootstrap.widgets.TbButtonGroup', array(
-	'type' => TbHtml::STYLE_PRIMARY, // '', TbHtml::STYLE_PRIMARY, TbHtml::STYLE_INFO, TbHtml::STYLE_SUCCESS, TbHtml::STYLE_WARNING, TbHtml::STYLE_DANGER or TbHtml::STYLE_INVERSE
-	'buttons' => array(
-		array('label' => 'Action', 'url' => '#'), // this makes it split :)
-		array('items' => array(
-			array('label' => 'Action', 'url' => '#'),
-			array('label' => 'Another action', 'url' => '#'),
-			array('label' => 'Something else', 'url' => '#'),
-			'---',
-			array('label' => 'Separate link', 'url' => '#'),
-		)),
-	),
-));
+&lt;?php $dropdownConfig = array(
+    array('label' =&gt; 'Action', 'url' =&gt; '#'),
+    array('label' =&gt; 'Another action', 'url' =&gt; '#'),
+    array('label' =&gt; 'Something else here', 'url' =&gt; '#'),
+    TbHtml::menuDivider(),
+    array('label' =&gt; 'Separate link', 'url' =&gt; '#'),
+); ?&gt;
+
+&lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array(
+        'split' =&gt; true)); ?&gt;
+&lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array(
+        'style' =&gt; TbHtml::STYLE_PRIMARY, 'split' =&gt; true)); ?&gt;
+&lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array(
+        'style' =&gt; TbHtml::STYLE_DANGER, 'split' =&gt; true)); ?&gt;
+&lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array(
+        'style' =&gt; TbHtml::STYLE_WARNING, 'split' =&gt; true)); ?&gt;
+&lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array(
+        'style' =&gt; TbHtml::STYLE_SUCCESS, 'split' =&gt; true)); ?&gt;
+&lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array(
+        'style' =&gt; TbHtml::STYLE_INFO, 'split' =&gt; true)); ?&gt;
+&lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array(
+        'style' =&gt; TbHtml::STYLE_INVERSE, 'split' =&gt; true)); ?&gt;
 	</pre>
-
-<h3>Sizes</h3>
-
-<p>Utilize the <code>size</code> property <code>mini</code>, <code>small</code>, or <code>large</code> for
-    sizing.</p>
 
 <h3>Dropup menus</h3>
 
-<p>Dropdown menus can also be toggled from the bottom up by adding a single class to the <code>htmlOptions</code>
+<p>Dropdown menus can also be toggled from the bottom up by adding a single class to the
+    <code>groupOptions</code> special key of <code>htmlOptions</code>
     attribute.</p>
 
 <div class="bs-docs-example">
     <div class="btn-toolbar" style="margin: 0;">
-        <!--        --><?php //$this->widget('bootstrap.widgets.TbButtonGroup', array(
-        //                'htmlOptions' => array('class' => 'dropup'),
-        //                'buttons' => array(
-        //                    array('label' => 'Action', 'url' => '#'),
-        //                    array('items' => array(
-        //                        array('label' => 'Action', 'url' => '#'),
-        //                        array('label' => 'Another action', 'url' => '#'),
-        //                        array('label' => 'Something else', 'url' => '#'),
-        //                        '---',
-        //                        array('label' => 'Separate link', 'url' => '#'),
-        //                    )),
-        //                ),
-        //            ));
-        ?>
+        <?php echo TbHtml::buttonDropdown(
+            'Action',
+            $dropdownConfig,
+            array('split' => true, 'groupOptions' => array('class' => 'dropup'))
+        ); ?>
+        <?php echo TbHtml::buttonDropdown(
+            'Action',
+            $dropdownConfig,
+            array('style' => TbHtml::STYLE_PRIMARY, 'split' => true, 'groupOptions' => array('class' => 'dropup'))
+        ); ?>
+        <?php echo TbHtml::buttonDropdown(
+            'Action',
+            $dropdownConfig,
+            array('style' => TbHtml::STYLE_DANGER, 'split' => true, 'groupOptions' => array('class' => 'dropup'))
+        ); ?>
+        <?php echo TbHtml::buttonDropdown(
+            'Action',
+            $dropdownConfig,
+            array('style' => TbHtml::STYLE_WARNING, 'split' => true, 'groupOptions' => array('class' => 'dropup'))
+        ); ?>
+        <?php echo TbHtml::buttonDropdown(
+            'Action',
+            $dropdownConfig,
+            array('style' => TbHtml::STYLE_SUCCESS, 'split' => true, 'groupOptions' => array('class' => 'dropup'))
+        ); ?>
+        <?php echo TbHtml::buttonDropdown(
+            'Action',
+            $dropdownConfig,
+            array('style' => TbHtml::STYLE_INFO, 'split' => true, 'groupOptions' => array('class' => 'dropup'))
+        ); ?>
+        <?php echo TbHtml::buttonDropdown(
+            'Action',
+            $dropdownConfig,
+            array('style' => TbHtml::STYLE_INVERSE, 'split' => true, 'groupOptions' => array('class' => 'dropup'))
+        ); ?>
     </div>
 </div>
 	<pre class="prettyprint linenums">
-$this->widget('bootstrap.widgets.TbButtonGroup', array(
-    'htmlOptions' => array('class'=>'dropup'),  // easy stuff
-    'buttons' => array(
-	    array('label' => 'Action', 'url' => '#'),
-	    array('items' => array(
-		    array('label' => 'Action', 'url' => '#'),
-		    array('label' => 'Another action', 'url' => '#'),
-		    array('label' => 'Something else', 'url' => '#'),
-		    '---',
-		    array('label' => 'Separate link', 'url' => '#'),
-	    )),
-    ),
-));
+&lt;!-- using the same $dropdownConfig variable on top --&gt;
+&lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig,
+    array('split' =&gt; true,
+        'groupOptions'=&gt; array('class'=&gt;'dropup'))); ?&gt;
+&lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig,
+    array('style' =&gt; TbHtml::STYLE_PRIMARY,
+        'split' =&gt; true,
+        'groupOptions'=&gt; array('class'=&gt;'dropup'))); ?&gt;
+&lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig,
+    array('style' =&gt; TbHtml::STYLE_DANGER,
+        'split' =&gt; true, 'groupOptions'=&gt; array('class'=&gt;'dropup'))); ?&gt;
+&lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig,
+    array('style' =&gt; TbHtml::STYLE_WARNING,
+        'split' =&gt; true, 'groupOptions'=&gt; array('class'=&gt;'dropup'))); ?&gt;
+&lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig,
+    array('style' =&gt; TbHtml::STYLE_SUCCESS,
+        'split' =&gt; true, 'groupOptions'=&gt; array('class'=&gt;'dropup'))); ?&gt;
+&lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig,
+    array('style' =&gt; TbHtml::STYLE_INFO,
+        'split' =&gt; true, 'groupOptions'=&gt; array('class'=&gt;'dropup'))); ?&gt;
+&lt;?php echo TbHtml::buttonDropdown('Action', $dropdownConfig,
+    array('style' =&gt; TbHtml::STYLE_INVERSE,
+        'split' =&gt; true, 'groupOptions'=&gt; array('class'=&gt;'dropup'))); ?&gt;
 	</pre>
 
 </section>
-<!---->
-<!--<!-- Boxes-->
-<!--	================================================== -->-->
-<!--<section id="boxes">-->
-<!--    <div class="page-header">-->
-<!--        <h1>Boxes</h1>-->
-<!--    </div>-->
-<!---->
-<!--    <h3>Basic Box</h3>-->
-<!---->
-<!--    <p>You use boxes to wrap up elements with a nice window effect. Boxes is a CPorlet type widget with the beauty of-->
-<!--        Bootstrap</p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbBox', array(
-//                'title' => 'Basic Box',
-//                'headerIcon' => 'icon-home',
-//                'content' => 'My Basic Content (you can use renderPartial here too :))'
-//            ));
-?>
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbBox', array(-->
-<!--    'title' => 'Basic Box',-->
-<!--    'headerIcon' => 'icon-home',-->
-<!--    'content' => 'My Basic Content (you can use renderPartial here too :))' // $this->renderPartial('_view')-->
-<!--));-->
-<!--</pre>-->
-<!--    <h3>Advanced Content</h3>-->
-<!---->
-<!--    <p>We can also wrap up content differently.</p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$box = $this->beginWidget('bootstrap.widgets.TbBox', array(
-//                'title' => 'Advanced Box',
-//                'headerIcon' => 'icon-th-list',
-//                'htmlOptions' => array('class' => 'bootstrap-widget-table')
-//            ));
-?>
-<!--        <table class="table">-->
-<!--            <thead>-->
-<!--            <tr>-->
-<!--                <th>#</th>-->
-<!--                <th>First name</th>-->
-<!--                <th>Last name</th>-->
-<!--                <th>Language</th>-->
-<!--                <th>Hours worked</th>-->
-<!--            </tr>-->
-<!--            </thead>-->
-<!--            <tbody>-->
-<!--            <tr class="odd">-->
-<!--                <td style="width: 60px">1</td>-->
-<!--                <td>Mark</td>-->
-<!--                <td>Otto</td>-->
-<!--                <td>CSS</td>-->
-<!--                <td>10</td>-->
-<!--            </tr>-->
-<!--            <tr class="even">-->
-<!--                <td style="width: 60px">2</td>-->
-<!--                <td>Jacob</td>-->
-<!--                <td>Thornton</td>-->
-<!--                <td>JavaScript</td>-->
-<!--                <td>20</td>-->
-<!--            </tr>-->
-<!--            <tr class="odd">-->
-<!--                <td style="width: 60px">3</td>-->
-<!--                <td>Stu</td>-->
-<!--                <td>Dent</td>-->
-<!--                <td>HTML</td>-->
-<!--                <td>15</td>-->
-<!--            </tr>-->
-<!--            </tbody>-->
-<!--        </table>-->
-<!--        --><?php //$this->endWidget();?>
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--&lt;?php $box = $this-&gt;beginWidget('bootstrap.widgets.TbBox', array(-->
-<!--	'title' =&gt; 'Advanced Box',-->
-<!--	'headerIcon' =&gt; 'icon-th-list',-->
-<!--	// when displaying a table, if we include bootstra-widget-table class-->
-<!--	// the table will be 0-padding to the box-->
-<!--	'htmlOptions' =&gt; array('class'=&gt;'bootstrap-widget-table')-->
-<!--));?&gt;-->
-<!--&lt;table class=&quot;table&quot;&gt;-->
-<!--	&lt;thead&gt;-->
-<!--	&lt;tr&gt;-->
-<!--		&lt;th&gt;#&lt;/th&gt;-->
-<!--		&lt;th&gt;First name&lt;/th&gt;-->
-<!--		&lt;th&gt;Last name&lt;/th&gt;-->
-<!--		&lt;th&gt;Language&lt;/th&gt;-->
-<!--		&lt;th&gt;Hours worked&lt;/th&gt;-->
-<!--	&lt;/tr&gt;-->
-<!--	&lt;/thead&gt;-->
-<!--	&lt;tbody&gt;-->
-<!--		&lt;tr class=&quot;odd&quot;&gt;-->
-<!--		&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Mark&lt;/td&gt;&lt;td&gt;Otto&lt;/td&gt;&lt;td&gt;CSS&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;-->
-<!--		&lt;/tr&gt;-->
-<!--		&lt;tr class=&quot;even&quot;&gt;-->
-<!--		&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Jacob&lt;/td&gt;&lt;td&gt;Thornton&lt;/td&gt;&lt;td&gt;JavaScript&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;-->
-<!--		&lt;/tr&gt;-->
-<!--		&lt;tr class=&quot;odd&quot;&gt;-->
-<!--		&lt;td&gt;3&lt;/td&gt;&lt;td&gt;Stu&lt;/td&gt;&lt;td&gt;Dent&lt;/td&gt;&lt;td&gt;HTML&lt;/td&gt;&lt;td&gt;15&lt;/td&gt;-->
-<!--		&lt;/tr&gt;-->
-<!--	&lt;/tbody&gt;-->
-<!--&lt;/table&gt;-->
-<!--&lt;?php $this-&gt;endWidget();?&gt;-->
-<!--</pre>-->
-<!---->
-<!--    <h2>Box with Actions</h2>-->
-<!---->
-<!--    <p>You can also set actions to a box, so they can nicely display on its right corner as a dropdown button -<i>icon-->
-<!--            actions on the way :)</i></p>-->
-<!--    <p><span class="label label-important">Heads Up!</span> Now you can add <b>any type</b> of buttons to boxes</p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php
-//        $this->widget('bootstrap.widgets.TbBox', array(
-//                'title' => 'test',
-//                'headerIcon' => 'icon-home',
-//                'headerButtons' => array(
-//                    array(
-//                        'class' => 'bootstrap.widgets.TbButtonGroup',
-//                        'type' => TbHtml::STYLE_PRIMARY, // '', TbHtml::STYLE_PRIMARY, TbHtml::STYLE_INFO, TbHtml::STYLE_SUCCESS, TbHtml::STYLE_WARNING, TbHtml::STYLE_DANGER or TbHtml::STYLE_INVERSE
-//                        'buttons' => array(
-//                            array('label' => 'Action', 'url' => '#'), // this makes it split :)
-//                            array('items' => array(
-//                                array('label' => 'Action', 'url' => '#'),
-//                                array('label' => 'Another action', 'url' => '#'),
-//                                array('label' => 'Something else', 'url' => '#'),
-//                                '---',
-//                                array('label' => 'Separate link', 'url' => '#'),
-//                            )),
-//                        )
-//                    ),
-//                    array(
-//                        'class' => 'bootstrap.widgets.TbButtonGroup',
-//                        'buttons'=>array(
-//                            array('label'=>'Left', 'url'=>'#'),
-//                            array('label'=>'Middel', 'url'=>'#'),
-//                            array('label'=>'Right', 'url'=>'#')
-//                        ),
-//                    ),
-//                )));
-//
-?>
-<!--    </div>-->
-<!--    <pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbBox', array(-->
-<!--    'title' => 'Basic Box',-->
-<!--    'headerIcon' => 'icon-home',-->
-<!--    'content' => 'So this box has actions, isn\'t that cool?',-->
-<!--    'headerButtonActionsLabel' => 'My actions',-->
-<!--    'headerActions' => array(-->
-<!--	    array('label'=>'first action', 'url'=>'#', 'icon'=>'icon-music'),-->
-<!--	    array('label'=>'second action', 'url'=>'#', 'icon'=>'icon-headphones'),-->
-<!--	    '---',-->
-<!--	    array('label'=>'third action', 'url'=>'#', 'icon'=>'icon-facetime-video')-->
-<!--    )-->
-<!--));-->
-<!--</pre>-->
-<!---->
-<!--</section>-->
 <!---->
 <!--<!-- Nav, Tabs, & Pills-->
 <!--	================================================== -->-->
