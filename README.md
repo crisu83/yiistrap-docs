@@ -1,4 +1,4 @@
 Yiistrap
 ========
 
-Twitter Bootstrap for Yii.
+Twitter Bootstrap for Yii Demo site.
