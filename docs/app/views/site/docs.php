@@ -26,11 +26,13 @@
         <li><a href="#alerts"><i class="icon-chevron-right"></i> Alerts</a></li>
         <li><a href="#progress"><i class="icon-chevron-right"></i> Progress bars</a></li>
         <li><a href="#tables"><i class="icon-chevron-right"></i> Tables</a></li>
+        <li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
+        <li><a href="#media"><i class="icon-chevron-right"></i> Media Objects</a></li>
     </ul>
 </div>
 
 <div class="span9">
-<!-- Dropdowns
+<!-- Buttons
 	================================================== -->
 <section id="buttons">
     <div class="page-header">
@@ -1827,65 +1829,80 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 
     &lt;?php $this-&gt;endWidget(); ?&gt;
 </pre>
-<!--<h3>Search Form</h3>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php ///** @var BootActiveForm $form */
-//    $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-//            'id' => 'searchForm',
-//            'type' => 'search',
-//            'htmlOptions' => array('class' => 'well'),
-//        ));
-?>
-<!--    --><?php //echo $form->textFieldRow($model, 'textField', array('class' => 'input-medium', 'prepend' => '<i class="icon-search"></i>')); ?>
-<!--    --><?php //$this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submit', 'label' => 'Go')); ?>
-<!---->
-<!--    --><?php //$this->endWidget(); ?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--&lt;?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(-->
-<!--	'id'=>'searchForm',-->
-<!--	'type'=>'search',-->
-<!--	'htmlOptions'=>array('class'=>'well'),-->
-<!--)); ?&gt;-->
-<!--&lt;?php-->
-<!--	echo $form->textFieldRow($model, 'textField',-->
-<!--		array('class'=>'input-medium', 'prepend'=>'&lt;i class="icon-search">&lt;/i&gt;'));-->
-<!--?&gt;-->
-<!--&lt;?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Go')); ?&gt;-->
-<!---->
-<!--&lt;?php $this->endWidget(); ?&gt;-->
-<!--	</pre>-->
-<!--<h3>Inline Form</h3>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php ///** @var BootActiveForm $form */
-//    $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-//            'id' => 'inlineForm',
-//            'type' => 'inline',
-//            'htmlOptions' => array('class' => 'well'),
-//        ));
-?>
-<!---->
-<!--    --><?php //echo $form->textFieldRow($model, 'textField', array('class' => 'input-small')); ?>
-<!--    --><?php //echo $form->passwordFieldRow($model, 'password', array('class' => 'input-small')); ?>
-<!--    --><?php //$this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submit', 'label' => 'Log in')); ?>
-<!---->
-<!--    --><?php //$this->endWidget(); ?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--&lt;?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(-->
-<!--	'id'=>'inlineForm',-->
-<!--	'type'=>'inline',-->
-<!--	'htmlOptions'=>array('class'=>'well'),-->
-<!--)); ?&gt;-->
-<!---->
-<!--&lt;?php echo $form->textFieldRow($model, 'textField', array('class'=>'input-small')); ?&gt;-->
-<!--&lt;?php echo $form->passwordFieldRow($model, 'password', array('class'=>'input-small')); ?&gt;-->
-<!--&lt;?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Log in')); ?&gt;-->
-<!---->
-<!--&lt;?php $this->endWidget(); ?&gt;-->
-<!--	</pre>-->
+<h3>Search Form</h3>
+
+<div class="bs-docs-example">
+    <?php /** @var BootActiveForm $form */
+    $form = $this->beginWidget(
+        'bootstrap.widgets.TbActiveForm',
+        array(
+            'id'          => 'searchForm',
+            'type'        => 'search',
+            'htmlOptions' => array('class' => 'well'),
+        )
+    );
+    ?>
+    <?php echo $form->textFieldRow(
+        $model,
+        'textField',
+        array(
+            'class'   => 'input-medium',
+            'prepend' => '<i class="icon-search"></i>',
+            'append'  => TbHtml::resetButton('Go')
+        )
+    ); ?>
+
+    <?php $this->endWidget(); ?>
+</div>
+	<pre class="prettyprint linenums">
+echo $form-&gt;textFieldRow(
+        $model,
+        'textField', array(
+        'class' =&gt; 'input-medium',
+        'prepend' =&gt; '&lt;i class=&quot;icon-search&quot;&gt;&lt;/i&gt;',
+        'append'=&gt;TbHtml::resetButton('Go')
+));
+	</pre>
+<h3>Inline Form</h3>
+
+<div class="bs-docs-example">
+    <?php /** @var BootActiveForm $form */
+    $form = $this->beginWidget(
+        'bootstrap.widgets.TbActiveForm',
+        array(
+            'id'          => 'inlineForm',
+            'type'        => TbHtml::FORM_INLINE,
+            'htmlOptions' => array('class' => 'well'),
+        )
+    );?>
+    <?php echo $form->textFieldRow(
+        $model,
+        'textField',
+        array('class' => 'input-small', 'placeholder' => 'textField')
+    ); ?>
+    <?php echo $form->passwordFieldRow(
+        $model,
+        'password',
+        array('class' => 'input-small', 'placeholder' => 'password')
+    ); ?>
+    <?php echo TbHtml::button('Login'); ?>
+    <?php $this->endWidget(); ?>
+</div>
+	<pre class="prettyprint linenums">
+&lt;?php /** @var BootActiveForm $form */
+$form = $this-&gt;beginWidget('bootstrap.widgets.TbActiveForm', array(
+    'id' =&gt; 'inlineForm',
+    'type' =&gt; TbHtml::FORM_INLINE,
+    'htmlOptions' =&gt; array('class' =&gt; 'well'),
+));?&gt;
+&lt;?php echo $form-&gt;textFieldRow(
+        $model, 'textField',
+        array('class' =&gt; 'input-small', 'placeholder'=&gt;'textField')); ?&gt;
+&lt;?php echo $form-&gt;passwordFieldRow(
+        $model, 'password',
+        array('class' =&gt; 'input-small', 'placeholder'=&gt;'password')); ?&gt;
+&lt;?php echo TbHtml::button('Login'); ?&gt;
+	</pre>
 <h2>Horizontal</h2>
 
 <div class="bs-docs-example">
@@ -1894,7 +1911,7 @@ $this->widget('bootstrap.widgets.TbGridView', array(
         'bootstrap.widgets.TbActiveForm',
         array(
             'id'   => 'horizontalForm',
-            'type' => 'horizontal',
+            'type' => TbHtml::FORM_HORIZONTAL,
         )
     );
     ?>
@@ -1940,7 +1957,7 @@ $form = $this-&gt;beginWidget(
     'bootstrap.widgets.TbActiveForm',
     array(
         'id'   =&gt; 'horizontalForm',
-        'type' =&gt; 'horizontal',
+        'type' =&gt; TbHtml::FORM_HORIZONTAL,
     )
 );
 ?&gt;
@@ -1982,793 +1999,6 @@ $form = $this-&gt;beginWidget(
 
 &lt;?php $this-&gt;endWidget(); ?&gt;
 </pre>
-<!--<h3>Support For Yii Formbuilder-->
-<!--    <small>Thanks to Joe Blocher</small>-->
-<!--</h3>-->
-<!--<p>The community starts to add gems to the library. Now, YiiBooster has full support for-->
-<!--    <a href="http://www.yiiframework.com/doc/guide/1.1/en/form.builder" target="_blank">yii's Form Builder</a>.-->
-<!--</p>-->
-<!---->
-<!--<p>Example</p>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php
-//    Yii::import('bootstrap.widgets.TbForm');
-//    $formBuilderModel = new TestFormBuilder();
-//
-//    $form = TbForm::createForm($formBuilderModel->getFormConfig(), $formBuilderModel,
-//        array( //@see TbActiveForm attributes
-//            'htmlOptions' => array('class' => 'well'),
-//            'type' => 'horizontal',
-//        ));
-//
-//    //no need for an extra view file for testing
-//    echo $form->render();
-//
-?>
-<!--</div>-->
-<!--<pre class="prettyprint linenums">-->
-<!--// the TestFormBuilder model-->
-<!--class TestFormBuilder extends CFormModel-->
-<!--{-->
-<!--    public $search;-->
-<!--    public $agree;-->
-<!--    public $radiolist;-->
-<!---->
-<!--    public function rules()-->
-<!--    {-->
-<!--        return array(-->
-<!--            array('search', 'required'),-->
-<!--            array('agree,radiolist', 'boolean'),-->
-<!--            array('agree', 'compare', 'compareValue' => true,-->
-<!--                'message' => 'You must agree...'),-->
-<!---->
-<!--        );-->
-<!--    }-->
-<!---->
-<!--    // Change the labels here-->
-<!--    public function attributeLabels()-->
-<!--    {-->
-<!--        return array(-->
-<!--            'search' => 'Text search',-->
-<!--            'selectlist' => 'I agree',-->
-<!--        );-->
-<!--    }-->
-<!---->
-<!--    // return the formbuilder config-->
-<!--    public function getFormConfig()-->
-<!--    {-->
-<!--        return array(-->
-<!--            'title' => 'Formbuilder test form',-->
-<!--            'showErrorSummary' => true,-->
-<!--            'elements' => array(-->
-<!--                'search' => array(-->
-<!--                    'type' => 'text',-->
-<!--                       'maxlength' => 32,-->
-<!--                       'hint' => 'This is a hint',-->
-<!--                    'placeholder' => 'title',-->
-<!--                    'class' => 'input-large',-->
-<!--                    'append' => '&lt;i class="icon-search"&gt;&lt;/i&gt;',-->
-<!--                ),-->
-<!--                'agree' => array(-->
-<!--                    'type' => 'checkbox',-->
-<!--                    // 'hint' => 'Agree to terms and conditions',-->
-<!--                ),-->
-<!--                'radiolist' => array(-->
-<!--                    'type' => 'radiolistinline',-->
-<!--                    'items' => array('item1' => '1', 'item2' => '2', 'item3' => '3'),-->
-<!--                ),-->
-<!--            ),-->
-<!---->
-<!--            'buttons' => array(-->
-<!--                'submit' => array(-->
-<!--                    'type' => 'submit',-->
-<!--                    'layoutType' => TbHtml::STYLE_PRIMARY,-->
-<!--                    'label' => 'Submit',-->
-<!--                ),-->
-<!--                'reset' => array(-->
-<!--                    'type' => 'reset',-->
-<!--                    'label' => 'Reset',-->
-<!--                ),-->
-<!--            ),-->
-<!--        );-->
-<!--    }-->
-<!--}-->
-<!---->
-<!--// rendering form-->
-<!--Yii::import('bootstrap.widgets.TbForm');-->
-<!--$formBuilderModel = new TestFormBuilder();-->
-<!---->
-<!--$form = TbForm::createForm($formBuilderModel->getFormConfig(),$formBuilderModel,-->
-<!--array(-->
-<!--    'htmlOptions'=>array('class'=>'well'),-->
-<!--    'type'=>'horizontal',-->
-<!--));-->
-<!---->
-<!--echo $form->render();-->
-<!--</pre>-->
-<!--</section>-->
-<!---->
-<!--<!-- Select2-->
-<!--	================================================== -->-->
-<!--<section id="select2">-->
-<!--    <div class="page-header">-->
-<!--        <h1>Select2 Widget</h1>-->
-<!--    </div>-->
-<!--    <p>-->
-<!--        We have included the <a href="http://ivaynberg.github.com/select2/" target="_blank">Select2 on roids plugin</a>-->
-<!--        of Igor Vaynberg.-->
-<!--        The following is a simple example of the amount of possible features that this plugin can do. For further-->
-<!--        information on its use,-->
-<!--        please visit <a href="http://ivaynberg.github.com/select2/" target="_blank">plugin docs</a>.-->
-<!--    </p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbSelect2', array(
-//                'asDropDownList' => false,
-//                'name' => 'clevertech',
-//                'options' => array(
-//                    'tags' => array('clever', 'is', 'better', 'clevertech'),
-//                    'placeholder' => 'type clever, or is, or just type!',
-//                    'width' => '40%',
-//                    'tokenSeparators' => array(',', ' ')
-//                )));
-?>
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbSelect2', array(-->
-<!--	'asDropDownList' => false,-->
-<!--	'name' => 'clevertech',-->
-<!--	'options' => array(-->
-<!--		'tags' => array('clever','is', 'better', 'clevertech'),-->
-<!--		'placeholder' => 'disciplines',-->
-<!--		'width' => '40%',-->
-<!--		'tokenSeparators' => array(',', ' ')-->
-<!--)));	</pre>-->
-<!--</section>-->
-<!--<!-- Editable-->
-<!--	================================================== -->-->
-<!--<section id="editable">-->
-<?php
-//$region = new Region();
-//$region->id = 1;   // trick editable
-//
-?>
-<!--<div class="page-header">-->
-<!--    <h1>Editable Widgets</h1>-->
-<!--</div>-->
-<!--<p>The amazing work from <a target="_blank" href="http://www.yiiframework.com/user/56359/">Vitaliy Potapov</a>,-->
-<!--    <a target="_blank" href="http://ybe.demopage.ru">Yii-Boostrap-Editable</a>, is also part of YiiBooster thanks to-->
-<!--    the generosity of its author.</p>-->
-<!---->
-<!--<p><span class="label label-info">Note</span>: For a deeper understanding of the possibilities and configuration-->
-<!--    options of this widget, we highly recommend that you-->
-<!--    visit <a href="http://vitalets.github.com/bootstrap-editable/#options" target="_blank">Bootstrap-editable-->
-<!--        documentation</a> and-->
-<!--    <a target="_blank" href="http://ybe.demopage.ru/#EditableField">Yii-Boostrap-Editable</a></p>-->
-<!---->
-<!--<p>-->
-<!--    <span class="label label-important">New: </span> TbEditable has been updated to work with-->
-<!--    <a href="http://vitalets.github.com/x-editable/docs.html" target="_blank">X-Editable</a>.-->
-<!--    Thanks <a target="_blank" href="http://www.yiiframework.com/user/56359/">Vitaliy</a>!.-->
-<!--</p>-->
-<!---->
-<!--<h2>TbEditableField</h2>-->
-<!---->
-<!--<p>Makes editable single attribute of model. Attribute should be safe (e.g. defined in <code>rules()</code> method-->
-<!--    of model)-->
-<!--    It can be one of several types:</p>-->
-<!---->
-<!--<h3>1. Text</h3>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbEditableField', array(
-//            'type' => 'text',
-//            'model' => $region,
-//            'attribute' => 'textField',
-//            'url' => $this->createUrl('site/editable'), //url for submit data
-//            'enabled' => true
-//        ));
-?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('ext.editable.TbEditableField', array(-->
-<!--   'type'      => 'text',-->
-<!--   'model'     => $model,-->
-<!--   'attribute' => 'textField',-->
-<!--   'url'       => $this->createUrl('site/editable'),  //url for submit data-->
-<!--   'enabled'   => true-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!--<h3>2. TextArea</h3>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbEditableField', array(
-//            'type' => 'textarea',
-//            'model' => $region,
-//            'attribute' => 'textArea',
-//            'url' => $this->createUrl('site/editable'), //url for submit data
-//            'placement' => 'right',
-//            'enabled' => true
-//        ));
-?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('ext.editable.TbEditableField', array(-->
-<!--   'type'      => 'textarea',-->
-<!--   'model'     => $model,-->
-<!--   'attribute' => 'textArea',-->
-<!--   'url'       => $this->createUrl('site/editable'),  //url for submit data-->
-<!--   'placement' => 'right',-->
-<!--   'enabled'   => true-->
-<!--));-->
-<!--	</pre>-->
-<!--<h3>3. Select</h3>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbEditableField', array(
-//            'type' => 'select',
-//            'model' => $region,
-//            'attribute' => 'dropDown',
-//            'url' => $this->createUrl('site/editable'), //url for submit data
-//            'source' => array('Antonio', 'Ramirez', 'Cobos', 'Works', 'At', 'Clevertech'),
-//            'enabled' => true
-//        ));
-?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('ext.editable.TbEditableField', array(-->
-<!--   'type'      => 'select',-->
-<!--   'model'     => $model,-->
-<!--   'attribute' => 'dropDown',-->
-<!--   'url'       => $this->createUrl('site/editable'),  //url for submit data-->
-<!--   'source'    => array('Antonio', 'Ramirez', 'Cobos', 'Works', 'At', 'Clevertech'),-->
-<!--   'enabled'   => true-->
-<!--));	</pre>-->
-<!--<h3>4. Date</h3>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbEditableField', array(
-//            'type' => 'date',
-//            'model' => $region,
-//            'attribute' => 'dateField',
-//            'url' => $this->createUrl('site/editable'), //url for submit data
-//            'format' => 'dd-mm-yyyy',
-//            'viewformat' => 'dd/mm/yyyy',
-//            'placement' => 'right',
-//            'enabled' => true
-//        ));
-?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('ext.editable.TbEditableField', array(-->
-<!--   'type'      => 'date',-->
-<!--   'model'     => $model,-->
-<!--   'attribute' => 'dateField',-->
-<!--   'url'       => $this->createUrl('site/editable'),  //url for submit data-->
-<!--   'format' => 'dd-mm-yyyy',-->
-<!--   'viewformat' => 'dd/mm/yyyy',-->
-<!--   'placement'    => 'right',-->
-<!--   'enabled' => true-->
-<!--));	</pre>-->
-<!---->
-<!--<h2>TbEditableDetailView</h2>-->
-<!---->
-<!--<p>-->
-<!--    Makes editable several attributes of single model, shown as name-value table. Just define <code>editable</code>-->
-<!--    section inside attribute config. Only safe attributes become editable.-->
-<!--</p>-->
-<!---->
-<!--<p><span class="label label-info">For more information</span>: please visit <a target="_blank"-->
-<!--                                                                               href="http://www.ybe.demopage.ru/#EditableDetailView">EditableDetailView</a>-->
-<!--</p>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbEditableDetailView', array(
-//            'id' => 'region-details',
-//            'data' => Region::model()->findByPk(1),
-//            'url' => $this->createUrl('site/editable'), //common submit url for all editables
-//            'attributes' => array(
-//                'country_code',
-//                'name',
-//            )
-//        ));
-?>
-<!--    <div style="clear:both"></div>-->
-<!--</div>-->
-<!--<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbEditableDetailView', array(-->
-<!--    'id' => 'region-details',-->
-<!--    'data' => Region::model()->findByPk(1),-->
-<!--    'url' => $this->createUrl('site/editable'),  //common submit url for all editables-->
-<!--    'attributes'=>array(-->
-<!--	    'country_code',-->
-<!--	    'name',-->
-<!--    )-->
-<!--));-->
-<!--</pre>-->
-<!--<h2>TbEditableColumn</h2>-->
-<!---->
-<!--<p>-->
-<!--    Do not get confused with TbJEditableColumn, this is the-->
-<!--    <a targer="_blank" href="http://ybe.demopage.ru/#EditableColumn">EditableColumn</a> widget from-->
-<!--    <a target="_blank" href="http://www.yiiframework.com/user/56359/">Vitaliy Potapov</a>.-->
-<!--</p>-->
-<!---->
-<!--<p>-->
-<!--    <span class="label label-important">Important</span>: Choose between TbJEditableColumn or TbEditableColum, both-->
-<!--    types-->
-<!--    have conflicts if you are trying to use them together.-->
-<!--</p>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbGridView', array(
-//            'type' => 'striped bordered',
-//            'dataProvider' => new CActiveDataProvider('Region', array('criteria' => array('condition' => 'id < 4'))),
-//            'template' => "{items}",
-//            'columns' => array(
-//                'country_code',
-//                array(
-//                    'class' => 'bootstrap.widgets.TbEditableColumn',
-//                    'name' => 'name',
-//                    'sortable' => true,
-//                    'editable' => array(
-//                        'url' => $this->createUrl('site/editable'),
-//                        'placement' => 'right',
-//                        'inputclass' => 'span3'
-//                    )
-//                )),
-//        ));
-?>
-<!--    <div style="clear:both"></div>-->
-<!--</div>-->
-<!--<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbGridView', array(-->
-<!--	'type' => 'striped bordered',-->
-<!--	'dataProvider' => new CActiveDataProvider('Region',array(-->
-<!--		'criteria'=>array('condition'=>'id < 5'))-->
-<!--	),-->
-<!--	'template' => "{items}",-->
-<!--	'columns' => array(-->
-<!--		'country_code',-->
-<!--		array(-->
-<!--			'class' => 'bootstrap.widgets.TbEditableColumn',-->
-<!--			'name' => 'name',-->
-<!--			'sortable'=>false,-->
-<!--			'editable' => array(-->
-<!--				'url' => $this->createUrl('site/editable'),-->
-<!--				'placement' => 'right',-->
-<!--				'inputclass' => 'span3'-->
-<!--			)-->
-<!--		)),-->
-<!--));-->
-<!--</pre>-->
-<!--</section>-->
-<!---->
-<!--<!-- Editable-->
-<!--	================================================== -->-->
-<!--<section id="rangeslider">-->
-<!--    --><?php
-//    $testFormSlider = new TestForm();
-//
-//
-?>
-<!--    <div class="page-header">-->
-<!--        <h1>JQRangeSlider Widget</h1>-->
-<!--    </div>-->
-<!--    <p>Antoher great work out there, the-->
-<!--        <a target="_blank" href="http://ghusse.github.com/jQRangeSlider/index.html">JQRangeSlider</a>, one of the smoothest sliders we have ever seen.</p>-->
-<!---->
-<!--    <p>-->
-<!--        Among its great features we encounter:-->
-<!--    <ul>-->
-<!--        <li>jQRangeSlider supports both numerical values and date and time.</li>-->
-<!--        <li>jQRangeSlider supports touch devices: tested with iOS and Android. </li>-->
-<!--        <li>jQRangeSlider supports steps for both numerical and date values. Select values 5 by 5 or month by month, simply by changing an option. </li>-->
-<!--        <li>jQRangeSlider comes by default with two themes to demonstrate its ability to be restyled.</li>-->
-<!--        <li>jQRangeSlider exposes events you can use for refreshing your UI. </li>-->
-<!--    </ul>-->
-<!--    </p>-->
-<!---->
-<!--    <p>-->
-<!--        When used with a form, the widget renders a hidden input field that will be filled with the minimum and maximum-->
-<!--        values of the range slider (ie: 50.7878373,40.89389834). It is up to you how you handle that on the background.-->
-<!--    </p>-->
-<!---->
-<!--    <h2>Examples</h2>-->
-<!---->
-<!--    <h3>Range Slider Example</h3>-->
-<!--    <p>It cannot get easier that this... :)</p>-->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbJqRangeSlider', array(
-//                'model' => $testFormSlider,
-//                'attribute' => 'rangeSlider',
-//            ));
-?>
-<!--        <div style="height:40px;display:block"></div>-->
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbJqRangeSlider', array(-->
-<!--	'model' => $testFormSlider,-->
-<!--	'attribute' => 'rangeSlider',-->
-<!--));-->
-<!--	</pre>-->
-<!--    <h3>Date Range Slider type Example</h3>-->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbJqRangeSlider', array(
-//                'name' => 'dateRangeSample',
-//                'type' => 'dateRange', // accepts: 'range','dateRange','editRange'
-//                'minValue' => 'js:(new Date(2012, 0, 1))',
-//                'maxValue' => 'js:(new Date(2012, 11, 31))',
-//                'minDefaultValue' => 'js:(new Date(2012, 0, 1))',
-//                'maxDefaultValue' => 'js:(new Date(2012, 11, 31))',
-//                'step' => array('days'=>1)
-//            ));
-?>
-<!--        <div style="height:40px;display:block"></div>-->
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbJqRangeSlider', array(-->
-<!--	'name' => 'dateRangeSample',-->
-<!--	'type' => 'dateRange', // accepts: 'range','dateRange','editRange'-->
-<!--	'minValue' => 'js:(new Date(2012, 0, 1))',-->
-<!--	'maxValue' => 'js:(new Date(2012, 11, 31))',-->
-<!--	'step' => array('days'=>1)-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!--    <h3>Edit Range Slider type Example</h3>-->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbJqRangeSlider', array(
-//                'name' => 'editRangeSample',
-//                'type' => 'editRange', // accepts: 'range','dateRange','editRange'
-//                'inputType' => 'number',
-//                'events' => array(
-//                    'valuesChanged' => 'js:function(e, data){console.log(data.values.min);}'
-//                )
-//            ));
-?>
-<!--        <div style="height:40px;display:block"></div>-->
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbJqRangeSlider', array(-->
-<!--    'name' => 'editRangeSample',-->
-<!--    'type' => 'editRange', // accepts: 'range','dateRange','editRange'-->
-<!--    'inputType' => 'number'-->
-<!--));-->
-<!--	</pre>-->
-<!--</section>-->
-<!---->
-<!--<!-- Miscellaneous-->
-<!--	================================================== -->-->
-<!--<section id="misc">-->
-<!--    <div class="page-header">-->
-<!--        <h1>Miscellaneous-->
-<!--            <small>Lightweight utility Bootstrap CSS components</small>-->
-<!--        </h1>-->
-<!--    </div>-->
-<!---->
-<!--    <h2>Wells</h2>-->
-<!---->
-<!--    <p>Use the well as a simple effect on an element to give it an inset effect.</p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        <div class="well">-->
-<!--            Look, I'm in a well!-->
-<!--        </div>-->
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--	&lt;div class="well"&gt;-->
-<!--	  ...-->
-<!--	&lt;/div&gt;-->
-<!--	</pre>-->
-<!--    <h3>Optional classes</h3>-->
-<!---->
-<!--    <p>Control padding and rounded corners with two optional modifier classes.</p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        <div class="well well-large">-->
-<!--            Look, I'm in a well!-->
-<!--        </div>-->
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--	&lt;div class="well well-large"&gt;-->
-<!--	  ...-->
-<!--	&lt;/div&gt;-->
-<!--	</pre>-->
-<!--    <div class="bs-docs-example">-->
-<!--        <div class="well well-small">-->
-<!--            Look, I'm in a well!-->
-<!--        </div>-->
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--	&lt;div class="well well-small"&gt;-->
-<!--	  ...-->
-<!--	&lt;/div&gt;-->
-<!--	</pre>-->
-<!---->
-<!--    <h2>Close icon</h2>-->
-<!---->
-<!--    <p>Use the generic close icon for dismissing content like modals and alerts.</p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        <p>-->
-<!--            <button class="close" style="float: none;">&times;</button>-->
-<!--        </p>-->
-<!--    </div>-->
-<!--    <pre class="prettyprint linenums">&lt;button class="close"&gt;&amp;times;&lt;/button&gt;</pre>-->
-<!--    <p>iOS devices require an href="#" for click events if you rather use an anchor.</p>-->
-<!--    <pre class="prettyprint linenums">&lt;a class="close" href="#"&gt;&amp;times;&lt;/a&gt;</pre>-->
-<!---->
-<!--    <h2>Helper classes</h2>-->
-<!---->
-<!--    <p>Simple, focused classes for small display or behavior tweaks.</p>-->
-<!---->
-<!--    <h4>.pull-left</h4>-->
-<!---->
-<!--    <p>Float an element left</p>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--	class="pull-left"-->
-<!--	</pre>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--	.pull-left {-->
-<!--	  float: left;-->
-<!--	}-->
-<!--	</pre>-->
-<!---->
-<!--    <h4>.pull-right</h4>-->
-<!---->
-<!--    <p>Float an element right</p>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--	class="pull-right"-->
-<!--	</pre>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--	.pull-right {-->
-<!--	  float: right;-->
-<!--	}-->
-<!--	</pre>-->
-<!---->
-<!--    <h4>.muted</h4>-->
-<!---->
-<!--    <p>Change an element's color to <code>#999</code></p>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--	class="muted"-->
-<!--	</pre>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--	.muted {-->
-<!--	  color: #999;-->
-<!--	}-->
-<!--	</pre>-->
-<!---->
-<!--    <h4>.clearfix</h4>-->
-<!---->
-<!--    <p>Clear the <code>float</code> on any element</p>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--	class="clearfix"-->
-<!--	</pre>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--	.clearfix {-->
-<!--	  *zoom: 1;-->
-<!--	  &:before,-->
-<!--	  &:after {-->
-<!--	    display: table;-->
-<!--	    content: "";-->
-<!--	  }-->
-<!--	  &:after {-->
-<!--	    clear: both;-->
-<!--	  }-->
-<!--	}-->
-<!--	</pre>-->
-<!---->
-<!--</section>-->
-<!---->
-<!--<!-- Bootstrap Wizard-->
-<!--	================================================== -->-->
-<!--<section id="wizard">-->
-<!--    <div class="page-header">-->
-<!--        <h1>Wizard</h1>-->
-<!--    </div>-->
-<!---->
-<!--    <p>Create a wizard using the same settings and configuration as the <a-->
-<!--            href="javascript:void(window.location ='#tabs');">Tabs</a> component with minor additions to actually build-->
-<!--        a wizard.</p>-->
-<!---->
-<!--    <h3>Basic Wizard</h3>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbWizard', array(
-//                'type' => 'tabs', // 'tabs' or 'pills'
-//                'tabs' => array(
-//                    array('label' => 'Home', 'content' => 'Home Content', 'active' => true),
-//                    array('label' => 'Profile', 'content' => 'Profile Content'),
-//                    array('label' => 'Messages', 'content' => 'Messages Content'),
-//                ),
-//            ));
-?>
-<!--    </div>-->
-<!---->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbWizard', array(-->
-<!--	'type' => 'tabs', // 'tabs' or 'pills'-->
-<!--	'tabs' => array(-->
-<!--		array('label' => 'Home', 'content' => 'Home Content', 'active' => true),-->
-<!--		array('label' => 'Profile', 'content' => 'Profile Content'),-->
-<!--		array('label' => 'Messages', 'content' => 'Messages Content'),-->
-<!--	),-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!--    <p>As described above same configuration as the tabs widget apply to the wizard widget with the following-->
-<!--        additions:</p>-->
-<!---->
-<!--    <table class="items table table-striped">-->
-<!--        </thead>-->
-<!--        <tr>-->
-<!--            <td>options</td>-->
-<!--            <td>List of the wizard plugin JS options. See <a href="https://github.com/VinceG/twitter-bootstrap-wizard"-->
-<!--                                                             target="_blank">Wizard Github Page</a> for a list of the-->
-<!--                available options-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>addTabsNavBar</td>-->
-<!--            <td>Adds extra div with navbar classes to change the appearance of the tab navigation</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>pagerContent</td>-->
-<!--            <td>The Next & Previous buttons displayed at the bottom of each tab content to move to the next and previous-->
-<!--                steps.-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--    </table>-->
-<!---->
-<!--    <p>Wizard has 8 different events that it fires when certain actions are performed. <code>onInit</code>,-->
-<!--        <code>onShow</code>, <code>onNext</code>, <code>onPrevious</code>, <code>onFirst</code>, <code>onLast</code>,-->
-<!--        <code>onTabShow</code>, <code>onTabClick</code></p>-->
-<!---->
-<!--    <p>Example usage with events callbacks</p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbWizard', array(
-//                'type' => 'tabs', // 'tabs' or 'pills'
-//                'options' => array(
-//                    'class' => '',
-//                    'onTabShow' => 'js:function(tab, navigation, index) { if((index+1) > 1) {alert("Tab #" + (index+1));} }',
-//                    'onTabClick' => 'js:function(tab, navigation, index) {alert("Tab Click Disabled");return false;}',
-//                ),
-//                'tabs' => array(
-//                    array('label' => 'Home', 'content' => 'Home Content', 'active' => true),
-//                    array('label' => 'Profile', 'content' => 'Profile Content'),
-//                    array('label' => 'Messages', 'content' => 'Messages Content'),
-//                ),
-//            ));
-?>
-<!--    </div>-->
-<!---->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbWizard', array(-->
-<!--	'type' => 'tabs', // 'tabs' or 'pills'-->
-<!--	'options' => array(-->
-<!--		'onTabShow' => 'js:function(tab, navigation, index) { if((index+1) > 1) {alert("Tab #" + (index+1));} }',-->
-<!--		'onTabClick' => 'js:function(tab, navigation, index) {alert("Tab Click Disabled");return false;}',-->
-<!--	),-->
-<!--	'tabs' => array(-->
-<!--		array('label' => 'Home', 'content' => 'Home Content', 'active' => true),-->
-<!--		array('label' => 'Profile', 'content' => 'Profile Content'),-->
-<!--		array('label' => 'Messages', 'content' => 'Messages Content'),-->
-<!--	),-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!--    <p>Custom Next, Previous, First, Last Buttons & Progress Bar</p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbWizard', array(
-//                'type' => 'tabs', // 'tabs' or 'pills'
-//                'pagerContent' => '<div style="float:right">
-//					<input type="button" class="btn button-next" name="next" value="Next" />
-//					<input type="button" class="btn button-last" name="last" value="Last" />
-//				</div>
-//				<div style="float:left">
-//					<input type="button" class="btn button-first" name="first" value="First" />
-//					<input type="button" class="btn button-previous" name="previous" value="Previous" />
-//				</div><br /><br />',
-//                'options' => array(
-//                    'nextSelector' => '.button-next',
-//                    'previousSelector' => '.button-previous',
-//                    'firstSelector' => '.button-first',
-//                    'lastSelector' => '.button-last',
-//                    'onTabShow' => 'js:function(tab, navigation, index) {
-//						var $total = navigation.find("li").length;
-//						var $current = index+1;
-//						var $percent = ($current/$total) * 100;
-//						$("#wizard-bar > .bar").css({width:$percent+"%"});
-//			}',
-//                    'onTabClick' => 'js:function(tab, navigation, index) {alert("Tab Click Disabled");return false;}',
-//                ),
-//                'tabs' => array(
-//                    array('label' => 'Home', 'content' => 'Home Content', 'active' => true),
-//                    array('label' => 'Profile', 'content' => 'Profile Content'),
-//                    array('label' => 'Messages', 'content' => 'Messages Content'),
-//                ),
-//            ));
-?>
-<!--        <div id="wizard-bar" class="progress progress-striped active">-->
-<!--            <div class="bar"></div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!---->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbWizard', array(-->
-<!--	'type' => 'tabs', // 'tabs' or 'pills'-->
-<!--	'pagerContent' => '&lt;div style="float:right">-->
-<!--		&lt;input type="button" class="btn button-next" name="next" value="Next" />-->
-<!--		&lt;input type="button" class="btn button-last" name="last" value="Last" />-->
-<!--		&lt;/div>-->
-<!--		&lt;div style="float:left">-->
-<!--			&lt;input type="button" class="btn button-first" name="first" value="First" />-->
-<!--			&lt;input type="button" class="btn button-previous" name="previous" value="Previous" />-->
-<!--		&lt;/div>&lt;br />&lt;br />',-->
-<!--	'options' => array(-->
-<!--		'nextSelector' => '.button-next',-->
-<!--		'previousSelector' => '.button-previous',-->
-<!--		'firstSelector' => '.button-first',-->
-<!--		'lastSelector' => '.button-last',	-->
-<!--		'onTabShow' => 'js:function(tab, navigation, index) {-->
-<!--			var $total = navigation.find("li").length;-->
-<!--			var $current = index+1;-->
-<!--			var $percent = ($current/$total) * 100;-->
-<!--			$("#wizard-bar > .bar").css({width:$percent+"%"});-->
-<!--		}',-->
-<!--		'onTabClick' => 'js:function(tab, navigation, index) {-->
-<!--			alert("Tab Click Disabled");return false;-->
-<!--		}',-->
-<!--	),-->
-<!--	'tabs' => array(-->
-<!--		array('label' => 'Home', 'content' => 'Home Content', 'active' => true),-->
-<!--		array('label' => 'Profile', 'content' => 'Profile Content'),-->
-<!--		array('label' => 'Messages', 'content' => 'Messages Content'),-->
-<!--	),-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!--</section>-->
-<!---->
-<!--<!-- Boxes-->
-<!--	================================================== -->-->
-<!--<section id="tags">-->
-<!--    <div class="page-header">-->
-<!--        <h1>Tags</h1>-->
-<!--    </div>-->
-<!--    <p>We have included the excellent job of <a href="https://github.com/maxwells/bootstrap-tags" target="_blank">Bootstrap tags</a>-->
-<!--        that is a lightweight jQuery plugin meant to extend the Twitter Bootstrap UI to include tagging.</p>-->
-<!--    <p>-->
-<!--        <span class="label label-important">Important: </span> Even though the widget is adapted to work with a form, we have not included-->
-<!--        the component into <code>TbActiveForm</code> due that <code>TbSelect2</code> is already adapted and also includes the "tabs" option.</p>-->
-<!--    <h3>Basic Usage</h3>-->
-<!---->
-<!--    <p>Using TbTags for simple tagging</p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbTags', array(
-//                'name'=>'tagSample',
-//                'tagData' => array('This','is','clevertech'),
-//                'popoverData' => array('"This" is a popover', 'This "is" as popover', 'Clevertech!'),
-//                'suggestions' => array('and','you','can','add','tags','as','suggestions'),
-//                'exclude' => array('not','these','ones','please')
-//            ));
-?>
-<!--    </div>-->
-<!--<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbTags', array(-->
-<!--	'tagData' => array('This','is','clevertech'),-->
-<!--    'popoverData' => array('"This" is a popover', 'This "is" as popover', 'Clevertech!'),-->
-<!--	'suggestions' => array('and','you','can','add','tags','as','suggestions'),-->
-<!--	'excludes' => array('not','these','ones','please')-->
-<!--));-->
-<!--</pre>-->
-<!--</section>-->
 
 </div>
 </div>
