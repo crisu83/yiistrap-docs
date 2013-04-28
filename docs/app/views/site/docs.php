@@ -1999,7 +1999,98 @@ $form = $this-&gt;beginWidget(
 
 &lt;?php $this-&gt;endWidget(); ?&gt;
 </pre>
+<!-- Media Objects
+	================================================== -->
+<section id="medio">
+    <div class="page-header">
+        <h1>Media Objects</h1>
+    </div>
 
+    <h2>Example</h2>
+
+    <div class="bs-docs-example">
+        <?php
+        // media object arrays should be always extracted from DB
+        echo TbHtml::mediaObjects(
+            array(
+                array(
+                    'image'       => "holder.js/64x64",
+                    'heading'     => "Media heading",
+                    'content'     => "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus
+            odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
+            Donec lacinia congue felis in faucibus.",
+                    'htmlOptions' => array(
+                        'items' => array(
+                            array(
+                                'image'       => "holder.js/64x64",
+                                'heading'     => "Media heading",
+                                'content'     => "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus
+                            odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
+                            Donec lacinia congue felis in faucibus.",
+                                'htmlOptions' => array(
+                                    'items' => array(
+                                        array(
+                                            'image'   => "holder.js/64x64",
+                                            'heading' => "Media heading",
+                                            'content' => "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus
+                                        odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
+                                        Donec lacinia congue felis in faucibus."
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
+                array(
+                    'image'   => "holder.js/64x64",
+                    'heading' => "Media heading",
+                    'content' => "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus
+            odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
+            Donec lacinia congue felis in faucibus."
+                )
+            )
+        );
+        ?>
+    </div>
+	<pre class="prettyprint linenums">
+&lt;?php
+// media object arrays should be always extracted from DB
+echo TbHtml::mediaObjects(
+    array(
+        array(
+            'image'       =&gt; &quot;holder.js/64x64&quot;,
+            'heading'     =&gt; &quot;Media heading&quot;,
+            'content'     =&gt; &quot;Cras sit amet nibh libero, ...&quot;,
+            'htmlOptions' =&gt; array(
+                'items' =&gt; array(
+                    array(
+                        'image'       =&gt; &quot;holder.js/64x64&quot;,
+                        'heading'     =&gt; &quot;Media heading&quot;,
+                        'content'     =&gt; &quot;Cras sit amet nibh libero, ...&quot;,
+                        'htmlOptions' =&gt; array(
+                            'items' =&gt; array(
+                                array(
+                                    'image'   =&gt; &quot;holder.js/64x64&quot;,
+                                    'heading' =&gt; &quot;Media heading&quot;,
+                                    'content' =&gt; &quot;Cras sit amet nibh libero, ...&quot;
+                                )
+                            )
+                        )
+                    )
+                )
+            )
+        ),
+        array(
+            'image'   =&gt; &quot;holder.js/64x64&quot;,
+            'heading' =&gt; &quot;Media heading&quot;,
+            'content' =&gt; &quot;Cras sit amet nibh libero, ....&quot;
+        )
+    )
+);
+?&gt;
+	</pre>
+</section>
 </div>
 </div>
 
