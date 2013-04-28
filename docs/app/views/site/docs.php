@@ -2001,7 +2001,7 @@ $form = $this-&gt;beginWidget(
 </pre>
 <!-- Media Objects
 	================================================== -->
-<section id="medio">
+<section id="media">
     <div class="page-header">
         <h1>Media Objects</h1>
     </div>
