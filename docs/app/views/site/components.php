@@ -17,6 +17,7 @@
         <li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
         <li><a href="#buttonGroups"><i class="icon-chevron-right"></i> Button groups</a></li>
         <li><a href="#buttonDropdowns"><i class="icon-chevron-right"></i> Button dropdowns</a></li>
+        <li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li>
         <li><a href="#navs"><i class="icon-chevron-right"></i> Navs</a></li>
         <li><a href="#navbar"><i class="icon-chevron-right"></i> Navbar</a></li>
         <li><a href="#breadcrumbs"><i class="icon-chevron-right"></i> Breadcrumbs</a></li>
@@ -565,6 +566,46 @@ echo TbHtml::buttonGroup(
         'split' =&gt; true, 'groupOptions'=&gt; array('class'=&gt;'dropup'))); ?&gt;
 	</pre>
 
+</section>
+
+<section id="images">
+    <div class="page-header">
+        <a name="images"></a>
+
+        <h1>Images</small></h1>
+    </div>
+    <div class="bs-docs-example">
+        <div class="row-fluid" style="text-align: center; width: 450px;">
+            <div class="span4">
+                <?php echo TbHtml::imageRounded('holder.js/140x140'); ?>
+                <h5>Rounded</h5>
+            </div>
+            <div class="span4">
+                <?php echo TbHtml::imageCircle('holder.js/140x140'); ?>
+                <h5>Circle</h5>
+            </div>
+            <div class="span4">
+                <?php echo TbHtml::imagePolaroid('holder.js/140x140'); ?>
+                <h5>Polaroid</h5>
+            </div>
+        </div>
+    </div>
+    <pre class="prettyprint linenums">
+ &lt;div class=&quot;row-fluid&quot; style=&quot;text-align: center; width: 450px;&quot;&gt;
+    &lt;div class=&quot;span4&quot;&gt;
+        &lt;?php echo TbHtml::imageRounded('holder.js/140x140'); ?&gt;
+        &lt;h5&gt;Rounded&lt;/h5&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;span4&quot;&gt;
+        &lt;?php echo TbHtml::imageCircle('holder.js/140x140'); ?&gt;
+        &lt;h5&gt;Circle&lt;/h5&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;span4&quot;&gt;
+        &lt;?php echo TbHtml::imagePolaroid('holder.js/140x140'); ?&gt;
+        &lt;h5&gt;Polaroid&lt;/h5&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+	</pre>
 </section>
 
 <!-- Nav, Tabs, & Pills
