@@ -63,10 +63,9 @@
                     array('label' => 'Get started', 'url' => array('site/started')),
                     array('label' => 'Components', 'url' => array('site/components')),
                     array('label' => 'Javascript', 'url' => array('site/javascript')),
-                    array('label' => 'API', 'url' => array('site/api'))
+                    array('label' => 'API', 'url' => $this->createUrl('/api'))
                 ),
             ),
-
         ),
     )
 );

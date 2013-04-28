@@ -1822,6 +1822,49 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 	'columns'=>$gridColumns,
 ));
 </pre>
+
+<h3>EditView</h3>
+
+<div class="bs-docs-example">
+    <?php
+    $person = new Person();
+    $person->firstName = 'Antonio';
+    $person->lastName = 'Ramirez';
+    $person->hours = 40;
+
+    $this->widget(
+        'bootstrap.widgets.TbDetailView',
+        array(
+            'type'       => array(TbHtml::GRID_BORDERED, TbHtml::GRID_STRIPED),
+            'data'       => $person,
+            'attributes' => array(
+                'firstName',
+                'lastName',
+                'hours'
+            )
+        )
+    );
+    ?>
+</div>
+<pre class="prettyprint linenums">
+$person = new Person();
+$person->firstName = 'Antonio';
+$person->lastName = 'Ramirez';
+$person->hours = 40;
+
+$this->widget(
+    'bootstrap.widgets.TbDetailView',
+    array(
+        'type'       => array(TbHtml::GRID_BORDERED, TbHtml::GRID_STRIPED),
+        'data'       => $person,
+        'attributes' => array(
+            'firstName',
+            'lastName',
+            'hours'
+        )
+    )
+);
+</pre>
 </section>
 
 <!-- Forms
