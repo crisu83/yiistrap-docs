@@ -8,7 +8,7 @@
               onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 1.0.0']);">Download
                 YiiStrap</a></p>
         <ul class="masthead-links">
-            <li><a href="http://github.com/clevertech/yiibooster"
+            <li><a href="http://github.com/yii-twbs/yiistrap"
                    onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'GitHub project']);">GitHub
                     project</a></li>
             <li>Version 1.0.1</li>
