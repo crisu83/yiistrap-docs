@@ -39,11 +39,19 @@ class SiteController extends Controller
     }
 
     /**
-     * Renders the docs
+     * Renders the components docs
      */
-    public function actionDocs()
+    public function actionComponents()
     {
-        $this->render('docs');
+        $this->render('components');
+    }
+
+    /**
+     * Renders the javascript docs
+     */
+    public function actionJavascript()
+    {
+        $this->render('javascript');
     }
 
     /**

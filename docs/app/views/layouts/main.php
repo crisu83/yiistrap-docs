@@ -61,7 +61,8 @@
                 'items' => array(
                     array('label' => 'Home', 'url' => array('site/index')),
                     array('label' => 'Get started', 'url' => array('site/started')),
-                    array('label' => 'Docs', 'url' => array('site/docs')),
+                    array('label' => 'Components', 'url' => array('site/components')),
+                    array('label' => 'Javascript', 'url' => array('site/javascript')),
                     array('label' => 'API', 'url' => array('site/api'))
                 ),
             ),
