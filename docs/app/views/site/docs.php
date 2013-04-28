@@ -188,7 +188,7 @@ echo TbHtml::buttonGroup(
         <?php echo TbHtml::buttonToolbar(
             array(
                 array(
-                    'items' => array(
+                    'items'       => array(
                         array('label' => '1'),
                         array('label' => '2'),
                         array('label' => '3'),
@@ -564,1365 +564,1269 @@ echo TbHtml::buttonGroup(
 	</pre>
 
 </section>
-<!---->
-<!--<!-- Nav, Tabs, & Pills-->
-<!--	================================================== -->-->
-<!--<section id="navs">-->
-<!--<div class="page-header">-->
-<!--    <a name="tabs"></a>-->
-<!---->
-<!--    <h1>Nav: tabs, pills, and lists</small></h1>-->
-<!--</div>-->
-<!---->
-<!--<h2>Lightweight defaults</h2>-->
-<!---->
-<!--<p>Create tabs with easy.</p>-->
-<!---->
-<!--<h3>Basic tabs</h3>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbTabs', array(
-//            'type' => 'tabs', // 'tabs' or 'pills'
-//            'tabs' => array(
-//                array('label' => 'Home', 'content' => 'Home Content', 'active' => true),
-//                array('label' => 'Profile', 'content' => 'Profile Content'),
-//                array('label' => 'Messages', 'content' => 'Messages Content'),
-//            ),
-//        ));
-?>
-<!--</div>-->
-<!--<p>You can change the position of the tabs by setting its <code>placement</code> property: <code>above</code>, <code>right</code>,-->
-<!--    <code>bellow</code>, or <code>left</code></p>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbTabs', array(-->
-<!--	'type'=>'tabs', // 'tabs' or 'pills'-->
-<!--	'tabs'=>array(-->
-<!--		array('label'=>'Home', 'content'=>'Home Content', 'active'=>true),-->
-<!--		array('label'=>'Profile', 'content'=>'Profile Content'),-->
-<!--		array('label'=>'Messages', 'content'=>'Messages Content'),-->
-<!--	),-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!--<h3>Basic pills</h3>-->
-<!---->
-<!--<p>Just change its <code>type</code> property to <code>pills</code> instead:</p>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbTabs', array(
-//            'type' => 'pills', // 'tabs' or 'pills'
-//            'tabs' => array(
-//                array('label' => 'Home', 'content' => 'Home Content', 'active' => true),
-//                array('label' => 'Profile', 'content' => 'Profile Content'),
-//                array('label' => 'Messages', 'content' => 'Messages Content'),
-//            ),
-//        ));
-?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbTabs', array(-->
-<!--	'type'=>'pills',-->
-<!--	'tabs'=>array(-->
-<!--		array('label'=>'Home', 'content'=>'Home Content', 'active'=>true),-->
-<!--		array('label'=>'Profile', 'content'=>'Profile Content'),-->
-<!--		array('label'=>'Messages', 'content'=>'Messages Content'),-->
-<!--	),-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!--<h3>Disabled state</h3>-->
-<!---->
-<!--<p>For any nav component (tabs, pills, or list), add <code>.disabled</code> for <strong>gray links and no hover-->
-<!--        effects</strong>. Links will remain <strong>clickable</strong>, however, unless custom javascript is implemented to-->
-<!--    prevent those-->
-<!--    clicks.</p>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbTabs', array(
-//            'type' => 'pills', // 'tabs', 'pills', or 'list'
-//            'tabs' => array(
-//                array('label' => 'Home', 'content' => 'Home Content'),
-//                array('label' => 'Profile', 'content' => 'Profile Content'),
-//                array('label' => 'Messages', 'content' => 'Messages Content', 'itemOptions' => array('class' => 'disabled')),
-//            ),
-//        ));
-?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbTabs', array(-->
-<!--	'type'=>'pills',-->
-<!--	'tabs'=>array(-->
-<!--		array('label'=>'Home', 'content'=>'Home Content'),-->
-<!--		array('label'=>'Profile', 'content'=>'Profile Content'),-->
-<!--		array('label'=>'Messages',-->
-<!--			'content'=>'Messages Content',-->
-<!--			'itemOptions'=>array('class'=>'disabled')),-->
-<!--	),-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!--<h3>Component alignment</h3>-->
-<!---->
-<!--<p>To align nav links, use the bootstrap <code>.pull-left</code> or <code>.pull-right</code> utility classes on its-->
-<!--    <code>htmlOptions</code> attribute. Both classes will-->
-<!--    add a CSS float in the specified direction.</p>-->
-<!---->
-<!---->
-<!--<hr class="bs-docs-separator">-->
-<!---->
-<!---->
-<!--<h2>Stackable</h2>-->
-<!---->
-<!--<p>As tabs and pills are horizontal by default, just add a second class, <code>.nav-stacked</code>, to make them appear-->
-<!--    vertically stacked.</p>-->
-<!---->
-<!--<h3>Stacked tabs</h3>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbTabs', array(
-//            'type' => 'tabs',
-//            'stacked' => true,
-//            'tabs' => array(
-//                array('label' => 'Home', 'content' => 'Home Content', 'active' => true),
-//                array('label' => 'Profile', 'content' => 'Profile Content'),
-//                array('label' => 'Messages', 'content' => 'Messages Content'),
-//            ),
-//        ));
-?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbTabs', array(-->
-<!--	'type'=>'tabs',-->
-<!--	'stacked'=>true,-->
-<!--	'tabs'=>array(-->
-<!--		array('label'=>'Home', 'content'=>'Home Content', 'active'=>true),-->
-<!--		array('label'=>'Profile', 'content'=>'Profile Content'),-->
-<!--		array('label'=>'Messages', 'content'=>'Messages Content'),-->
-<!--	),-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!--<h3>Stacked pills</h3>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbTabs', array(
-//            'type' => 'pills',
-//            'stacked' => true,
-//            'tabs' => array(
-//                array('label' => 'Home', 'content' => 'Home Content', 'active' => true),
-//                array('label' => 'Profile', 'content' => 'Profile Content'),
-//                array('label' => 'Messages', 'content' => 'Messages Content'),
-//            ),
-//        ));
-?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbTabs', array(-->
-<!--	'type'=>'pills',-->
-<!--	'stacked'=>true,-->
-<!--	'tabs'=>array(-->
-<!--		array('label'=>'Home', 'content'=>'Home Content', 'active'=>true),-->
-<!--		array('label'=>'Profile', 'content'=>'Profile Content'),-->
-<!--		array('label'=>'Messages', 'content'=>'Messages Content'),-->
-<!--	),-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!---->
-<!--<hr class="bs-docs-separator">-->
-<!---->
-<!---->
-<!--<h2>Dropdowns</h2>-->
-<!---->
-<!--<h3>Tabs with dropdowns</h3>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbTabs', array(
-//            'type' => 'tabs',
-//            'tabs' => array(
-//                array('label' => 'Home', 'content' => 'Home Content', 'active' => true),
-//                array('label' => 'Profile', 'content' => 'Profile Content'),
-//                array('label' => 'DropDown', 'items' => array(
-//                    array('label' => 'Item1', 'content' => 'Item1 Content'),
-//                    array('label' => 'Item2', 'content' => 'Item2 Content')
-//                )),
-//            )));
-?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbTabs', array(-->
-<!--	'type' => 'tabs',-->
-<!--	'tabs' => array(-->
-<!--		array('label' => 'Home', 'content' => 'Home Content', 'active' => true),-->
-<!--		array('label' => 'Profile', 'content' => 'Profile Content'),-->
-<!--		array('label' => 'DropDown', 'items' => array(-->
-<!--			array('label' => 'Item1', 'content' => 'Item1 Content'),-->
-<!--			array('label' => 'Item2', 'content' => 'Item2 Content')-->
-<!--		)),-->
-<!--	))-->
-<!--);-->
-<!--	</pre>-->
-<!---->
-<!--<h3>Pills with dropdowns</h3>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbTabs', array(
-//            'type' => 'pills',
-//            'tabs' => array(
-//                array('label' => 'Home', 'content' => 'Home Content', 'active' => true),
-//                array('label' => 'Profile', 'content' => 'Profile Content'),
-//                array('label' => 'DropDown', 'items' => array(
-//                    array('label' => 'Item1', 'content' => 'Item1 Content'),
-//                    array('label' => 'Item2', 'content' => 'Item2 Content')
-//                )),
-//            )));
-?>
-<!--</div>-->
-<!--<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbTabs', array(-->
-<!--	'type' => 'pills',-->
-<!--	'tabs' => array(-->
-<!--		array('label' => 'Home', 'content' => 'Home Content', 'active' => true),-->
-<!--		array('label' => 'Profile', 'content' => 'Profile Content'),-->
-<!--		array('label' => 'DropDown', 'items' => array(-->
-<!--			array('label' => 'Item1', 'content' => 'Item1 Content'),-->
-<!--			array('label' => 'Item2', 'content' => 'Item2 Content')-->
-<!--		)),-->
-<!--	))-->
-<!--);-->
-<!--</pre>-->
-<!---->
-<!---->
-<!--<hr class="bs-docs-separator">-->
-<!---->
-<!---->
-<!--<h2>Nav lists</h2>-->
-<!---->
-<!--<p>A simple and easy way to build groups of nav links with optional headers. They're best used in sidebars like the-->
-<!--    Finder in OS X.</p>-->
-<!---->
-<!--<h3>Example nav list</h3>-->
-<!---->
-<!--<p>Create a TbMenu widget and set its <code>type</code> to <code>list</code>:</p>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    <div class="well" style="max-width: 340px; padding: 8px 0;">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbMenu', array(
-//                'type' => 'list',
-//                'items' => array(
-//                    array('label' => 'List header', 'itemOptions' => array('class' => 'nav-header')),
-//                    array('label' => 'Home', 'url' => '#', 'itemOptions' => array('class' => 'active')),
-//                    array('label' => 'Library', 'url' => '#'),
-//                    array('label' => 'Applications', 'url' => '#'),
-//                    array('label' => 'Another list header', 'itemOptions' => array('class' => 'nav-header')),
-//                    array('label' => 'Profile', 'url' => '#'),
-//                    array('label' => 'Settings', 'url' => '#'),
-//                    '',
-//                    array('label' => 'Help', 'url' => '#'),
-//                )
-//            ));
-?>
-<!--    </div>-->
-<!--    <!-- /well -->-->
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbMenu', array(-->
-<!--    'type'=>'list',-->
-<!--    'items' => array(-->
-<!--	    array('label'=>'List header', 'itemOptions'=>array('class'=>'nav-header')),-->
-<!--	    array('label'=>'Home', 'url'=>'#', 'itemOptions'=>array('class'=>'active')),-->
-<!--	    array('label'=>'Library', 'url'=>'#'),-->
-<!--	    array('label'=>'Applications', 'url'=>'#'),-->
-<!--	    array('label'=>'Another list header', 'itemOptions'=>array('class'=>'nav-header')),-->
-<!--	    array('label'=>'Profile', 'url'=>'#'),-->
-<!--	    array('label'=>'Settings', 'url'=>'#'),-->
-<!--	    '',-->
-<!--	    array('label'=>'Help', 'url'=>'#'),-->
-<!--    )-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!--<h3>Horizontal dividers</h3>-->
-<!---->
-<!--<p>Add a horizontal divider by creating an empty list item in the <code>items</code> array.</p>-->
-<!---->
-<!--<hr class="bs-docs-separator">-->
-<!---->
-<!--</section>-->
-<!---->
-<!---->
-<!--<!-- Navbar-->
-<!--	================================================== -->-->
-<!--<section id="navbar">-->
-<!--<div class="page-header">-->
-<!--    <h1>Navbar</h1>-->
-<!--</div>-->
-<!---->
-<!---->
-<!--<h2>Basic navbar</h2>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbNavbar', array(
-//            'brand' => 'Title',
-//            'fixed' => false,
-//            'items' => array(
-//                array(
-//                    'class' => 'bootstrap.widgets.TbMenu',
-//                    'items' => array(
-//                        array('label' => 'Home', 'url' => '#', 'active' => true),
-//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
-//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
-//                    )
-//                )
-//            )
-//        ));
-?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbNavbar', array(-->
-<!--	'brand' => 'Title',-->
-<!--	'items' => array(-->
-<!--		array(-->
-<!--			'class' => 'bootstrap.widgets.TbMenu',-->
-<!--			'items' => array(-->
-<!--				array('label'=>'Home', 'url'=>'#', 'active'=>true),-->
-<!--				array('label'=>TbHtml::STYLE_LINK, 'url'=>'#'),-->
-<!--				array('label'=>TbHtml::STYLE_LINK, 'url'=>'#'),-->
-<!--			)-->
-<!--		)-->
-<!--	)-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!---->
-<!--<hr class="bs-docs-separator">-->
-<!---->
-<!--<h3>Forms</h3>-->
-<!---->
-<!--<p><code>TbNavbar</code> allows you to include HTML text too, so to include forms in the navigation bar is quite an easy-->
-<!--    task.</p>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbNavbar', array(
-//            'brand' => 'Title',
-//            'fixed' => false,
-//            'items' => array(
-//                '<form class="navbar-form pull-left">
-//                        <input type="text" class="span2">
-//                        <button type="submit" class="btn">Submit</button>
-//                    </form>'
-//            )
-//        ));
-?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbNavbar', array(-->
-<!--    'brand' => 'Title',-->
-<!--    'fixed' => false,-->
-<!--    'items' => array(-->
-<!--        '&lt;form class="navbar-form pull-left"&gt;-->
-<!--        &lt;input type="text" class="span2"&gt;-->
-<!--        &lt;button type="submit" class="btn">Submit&lt;/button&gt;-->
-<!--        &lt;/form&gt;'-->
-<!--    )-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!--<h3>Search form</h3>-->
-<!---->
-<!--<p>Check this alternative search form.</p>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbNavbar', array(
-//            'brand' => 'Title',
-//            'fixed' => false,
-//            'items' => array(
-//                '<form class="navbar-search pull-left">
-//                        <input type="text" class="search-query" placeholder="search">
-//                    </form>'
-//            )
-//        ));
-?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbNavbar', array(-->
-<!--    'brand' => 'Title',-->
-<!--    'fixed' => false,-->
-<!--    'items' => array(-->
-<!--        '&lt;form class="navbar-search pull-left"&gt;-->
-<!--        &lt;input type="text" class="search-query" placeholder="search"&gt;-->
-<!--        &lt;button type="submit" class="btn">Submit&lt;/button&gt;-->
-<!--        &lt;/form&gt;'-->
-<!--    )-->
-<!--));	</pre>-->
-<!---->
-<!--<h3>Component alignment</h3>-->
-<!---->
-<!--<p>Align nav links, search form, or text, use the <code>.pull-left</code> or <code>.pull-right</code> utility classes.-->
-<!--    Both classes will add a CSS float in the specified direction.</p>-->
-<!---->
-<!--<h3>Using dropdowns</h3>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbNavbar', array(
-//            'brand' => 'Title',
-//            'fixed' => false,
-//            'items' => array(
-//                array(
-//                    'class' => 'bootstrap.widgets.TbMenu',
-//                    'items' => array(
-//                        array('label' => 'Home', 'url' => '#', 'active' => true),
-//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
-//                        array('label' => 'Dropdown', 'items' => array(
-//                            array('label' => 'Item1', 'url' => '#')
-//                        )),
-//                    )
-//                )
-//            )
-//        ));
-?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbNavbar', array(-->
-<!--	'brand' => 'Title',-->
-<!--	'items' => array(-->
-<!--		array(-->
-<!--			'class' => 'bootstrap.widgets.TbMenu',-->
-<!--			'items' => array(-->
-<!--				array('label'=>'Home', 'url'=>'#', 'active'=>true),-->
-<!--				array('label'=>TbHtml::STYLE_LINK, 'url'=>'#'),-->
-<!--				array('label'=>'Dropdown', 'items'=> array(-->
-<!--				     array('label'=>'Item1', 'url'=>'#')-->
-<!--				)),-->
-<!--			)-->
-<!--		)-->
-<!--	)-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!---->
-<!--<h3>Text</h3>-->
-<!---->
-<!--<p>Wrap strings of text in an element with <code>.navbar-text</code>, usually on a <code>&lt;p&gt;</code> tag for proper-->
-<!--    leading and color.</p>-->
-<!---->
-<!---->
-<!--<hr class="bs-docs-separator">-->
-<!---->
-<!---->
-<!--<h2>Optional display variations</h2>-->
-<!---->
-<!--<p>Fix the navbar to the top or bottom of the viewport by seeting property-->
-<!--    <code>fixed</code>.</p>-->
-<!---->
-<!--<h3>Fixed to top</h3>-->
-<!---->
-<!--<p>Add <code>'fixed'=>'top'</code> to position the navigration bar to the top.</p>-->
-<!---->
-<!--<div class="bs-docs-example bs-navbar-top-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbNavbar', array(
-//            'brand' => 'Title',
-//            'brandOptions' => array('style' => 'width:auto;margin-left: 0px;'),
-//            'fixed' => 'top',
-//            'htmlOptions' => array('style' => 'position:absolute'),
-//            'items' => array(
-//                array(
-//                    'class' => 'bootstrap.widgets.TbMenu',
-//                    'items' => array(
-//                        array('label' => 'Home', 'url' => '#', 'active' => true),
-//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
-//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
-//                    )
-//                )
-//            )
-//        ));
-?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbNavbar', array(-->
-<!--	'brand' => 'Title',-->
-<!--	'brandOptions' => array('style'=>'width:auto;margin-left: 0px;'),-->
-<!--	'fixed' => 'top',-->
-<!--	'htmlOptions' => array('style' => 'position:absolute'),-->
-<!--	'items' => array(-->
-<!--		array(-->
-<!--			'class' => 'bootstrap.widgets.TbMenu',-->
-<!--			'items' => array(-->
-<!--				array('label' => 'Home', 'url' => '#', 'active' => true),-->
-<!--				array('label' => TbHtml::STYLE_LINK, 'url' => '#'),-->
-<!--				array('label' => TbHtml::STYLE_LINK, 'url' => '#'),-->
-<!--			)-->
-<!--		)-->
-<!--	)-->
-<!--));	</pre>-->
-<!---->
-<!--<h3>Fixed to bottom</h3>-->
-<!---->
-<!--<p>Add <code>'fixed'=>'bottom'</code> instead.</p>-->
-<!---->
-<!--<div class="bs-docs-example bs-navbar-bottom-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbNavbar', array(
-//            'brand' => 'Title',
-//            'brandOptions' => array('style' => 'width:auto;margin-left: 0px;'),
-//            'fixed' => 'bottom',
-//            'htmlOptions' => array('style' => 'position:absolute'),
-//            'items' => array(
-//                array(
-//                    'class' => 'bootstrap.widgets.TbMenu',
-//                    'items' => array(
-//                        array('label' => 'Home', 'url' => '#', 'active' => true),
-//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
-//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
-//                    )
-//                )
-//            )
-//        ));
-?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--...-->
-<!--'fixed' => 'bottom',-->
-<!--...-->
-<!--	</pre>-->
-<!---->
-<!--<h3>Static top navbar</h3>-->
-<!---->
-<!--<p>Setting the property <code>fixed</code> to false will make the navbar static..</p>-->
-<!---->
-<!--<hr class="bs-docs-separator">-->
-<!---->
-<!---->
-<!--<h2>Responsive navbar</h2>-->
-<!---->
-<!--<p>To implement a collapsing responsive navbar, just set the <code>collapse</code> property to true.</p>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbNavbar', array(
-//            'type' => null, // null or TbHtml::STYLE_INVERSE
-//            'brand' => 'Project name',
-//            'brandUrl' => '#',
-//            'collapse' => true, // requires bootstrap-responsive.css
-//            'fixed' => false,
-//            'items' => array(
-//                array(
-//                    'class' => 'bootstrap.widgets.TbMenu',
-//                    'items' => array(
-//                        array('label' => 'Home', 'url' => '#', 'active' => true),
-//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
-//                        array('label' => 'Dropdown', 'url' => '#', 'items' => array(
-//                            array('label' => 'Action', 'url' => '#'),
-//                            array('label' => 'Another action', 'url' => '#'),
-//                            array('label' => 'Something else here', 'url' => '#'),
-//                            '---',
-//                            array('label' => 'NAV HEADER'),
-//                            array('label' => 'Separated link', 'url' => '#'),
-//                            array('label' => 'One more separated link', 'url' => '#'),
-//                        )),
-//                    ),
-//                ),
-//                '<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
-//                array(
-//                    'class' => 'bootstrap.widgets.TbMenu',
-//                    'htmlOptions' => array('class' => 'pull-right'),
-//                    'items' => array(
-//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
-//                        '---',
-//                        array('label' => 'Dropdown', 'url' => '#', 'items' => array(
-//                            array('label' => 'Action', 'url' => '#'),
-//                            array('label' => 'Another action', 'url' => '#'),
-//                            array('label' => 'Something else here', 'url' => '#'),
-//                            '---',
-//                            array('label' => 'Separated link', 'url' => '#'),
-//                        )),
-//                    ),
-//                ),
-//            ),
-//        ));
-?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbNavbar', array(-->
-<!--	'type'=>null, // null or TbHtml::STYLE_INVERSE-->
-<!--	'brand'=>'Project name',-->
-<!--	'brandUrl'=>'#',-->
-<!--	'collapse'=>true, // requires bootstrap-responsive.css-->
-<!--	'items'=>array(-->
-<!--		array(-->
-<!--			'class'=>'bootstrap.widgets.TbMenu',-->
-<!--			'items'=>array(-->
-<!--				array('label'=>'Home', 'url'=>'#', 'active'=>true),-->
-<!--				array('label'=>TbHtml::STYLE_LINK, 'url'=>'#'),-->
-<!--				array('label'=>'Dropdown', 'url'=>'#', 'items'=>array(-->
-<!--					array('label'=>'Action', 'url'=>'#'),-->
-<!--					array('label'=>'Another action', 'url'=>'#'),-->
-<!--					array('label'=>'Something else here', 'url'=>'#'),-->
-<!--					'---',-->
-<!--					array('label'=>'NAV HEADER'),-->
-<!--					array('label'=>'Separated link', 'url'=>'#'),-->
-<!--					array('label'=>'One more separated link', 'url'=>'#'),-->
-<!--				)),-->
-<!--			),-->
-<!--		),-->
-<!--		'&lt;form class="navbar-search pull-left" action=""&gt;&lt;input type="text" class="search-query span2" placeholder="Search">&lt;/form&gt;',-->
-<!--		array(-->
-<!--			'class'=>'bootstrap.widgets.TbMenu',-->
-<!--			'htmlOptions'=>array('class'=>'pull-right'),-->
-<!--			'items'=>array(-->
-<!--				array('label'=>TbHtml::STYLE_LINK, 'url'=>'#'),-->
-<!--				'---',-->
-<!--				array('label'=>'Dropdown', 'url'=>'#', 'items'=>array(-->
-<!--					array('label'=>'Action', 'url'=>'#'),-->
-<!--					array('label'=>'Another action', 'url'=>'#'),-->
-<!--					array('label'=>'Something else here', 'url'=>'#'),-->
-<!--					'---',-->
-<!--					array('label'=>'Separated link', 'url'=>'#'),-->
-<!--				)),-->
-<!--			),-->
-<!--		),-->
-<!--	),-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!--<hr class="bs-docs-separator">-->
-<!---->
-<!---->
-<!--<h2>Inverted variation</h2>-->
-<!---->
-<!--<p>Modify the look of the navbar by setting it <code>type</code> property to <code>inverse</code>.</p>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php //$this->widget('bootstrap.widgets.TbNavbar', array(
-//            'type' => TbHtml::STYLE_INVERSE,
-//            'brand' => 'Project name',
-//            'brandUrl' => '#',
-//            'collapse' => true, // requires bootstrap-responsive.css
-//            'fixed' => false,
-//            'items' => array(
-//                array(
-//                    'class' => 'bootstrap.widgets.TbMenu',
-//                    'items' => array(
-//                        array('label' => 'Home', 'url' => '#', 'active' => true),
-//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
-//                        array('label' => 'Dropdown', 'url' => '#', 'items' => array(
-//                            array('label' => 'Action', 'url' => '#'),
-//                            array('label' => 'Another action', 'url' => '#'),
-//                            array('label' => 'Something else here', 'url' => '#'),
-//                            '---',
-//                            array('label' => 'NAV HEADER'),
-//                            array('label' => 'Separated link', 'url' => '#'),
-//                            array('label' => 'One more separated link', 'url' => '#'),
-//                        )),
-//                    ),
-//                ),
-//                '<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
-//                array(
-//                    'class' => 'bootstrap.widgets.TbMenu',
-//                    'htmlOptions' => array('class' => 'pull-right'),
-//                    'items' => array(
-//                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
-//                        '---',
-//                        array('label' => 'Dropdown', 'url' => '#', 'items' => array(
-//                            array('label' => 'Action', 'url' => '#'),
-//                            array('label' => 'Another action', 'url' => '#'),
-//                            array('label' => 'Something else here', 'url' => '#'),
-//                            '---',
-//                            array('label' => 'Separated link', 'url' => '#'),
-//                        )),
-//                    ),
-//                ),
-//            ),
-//        ));
-?>
-<!---->
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--...-->
-<!--'type' => TbHtml::STYLE_INVERSE-->
-<!--...-->
-<!--	</pre>-->
-<!---->
-<!--</section>-->
-<!---->
-<!---->
-<!--<!-- Breadcrumbs-->
-<!--	================================================== -->-->
-<!--<section id="breadcrumbs">-->
-<!--    <div class="page-header">-->
-<!--        <h1>Breadcrumbs-->
-<!--            <small></small>-->
-<!--        </h1>-->
-<!--    </div>-->
-<!---->
-<!--    <h2>Examples</h2>-->
-<!---->
-<!--    <p>A single example shown as it might be displayed across multiple pages.</p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
-//                'homeLink' => 'Home',
-//                'links' => array('')
-//            ));
-?>
-<!--        --><?php //$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
-//                'links' => array('Library'),
-//            ));
-?>
-<!--        --><?php //$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
-//                'links' => array('Library' => '#', 'Data'),
-//            ));
-?>
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbBreadcrumbs', array(-->
-<!--    'links'=>array('Library'=>'#', 'Data'),-->
-<!--));-->
-<!--</pre>-->
-<!---->
-<!--</section>-->
-<!---->
-<!--<!-- Labels and badges-->
-<!--	================================================== -->-->
-<!--<section id="labels-badges">-->
-<!--    <div class="page-header">-->
-<!--        <h1>Labels and badges</h1>-->
-<!--    </div>-->
-<!--    <h3>Labels</h3>-->
-<!--    <table class="table table-bordered table-striped">-->
-<!--        <thead>-->
-<!--        <tr>-->
-<!--            <th>Labels</th>-->
-<!--            <th>Markup</th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody>-->
-<!--        <tr>-->
-<!--            <td>-->
-<!--                <span class="label">Default</span>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <code>&lt;span class="label"&gt;Default&lt;/span&gt;</code>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>-->
-<!--                <span class="label label-success">Success</span>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <code>&lt;span class="label label-success"&gt;Success&lt;/span&gt;</code>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>-->
-<!--                <span class="label label-warning">Warning</span>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <code>&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;</code>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>-->
-<!--                <span class="label label-important">Important</span>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <code>&lt;span class="label label-important"&gt;Important&lt;/span&gt;</code>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>-->
-<!--                <span class="label label-info">Info</span>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <code>&lt;span class="label label-info"&gt;Info&lt;/span&gt;</code>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>-->
-<!--                <span class="label label-inverse">Inverse</span>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <code>&lt;span class="label label-inverse"&gt;Inverse&lt;/span&gt;</code>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        </tbody>-->
-<!--    </table>-->
-<!--<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbLabel', array(-->
-<!--     'type'=>TbHtml::STYLE_SUCCESS, // TbHtml::STYLE_SUCCESS, TbHtml::STYLE_WARNING, 'important', TbHtml::STYLE_INFO or TbHtml::STYLE_INVERSE-->
-<!--     'label'=>TbHtml::STYLE_SUCCESS,-->
-<!--));-->
-<!-- </pre>-->
-<!--    <h3>Badges</h3>-->
-<!--    <table class="table table-bordered table-striped">-->
-<!--        <thead>-->
-<!--        <tr>-->
-<!--            <th>Name</th>-->
-<!--            <th>Example</th>-->
-<!--            <th>Markup</th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody>-->
-<!--        <tr>-->
-<!--            <td>-->
-<!--                Default-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <span class="badge">1</span>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <code>&lt;span class="badge"&gt;1&lt;/span&gt;</code>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>-->
-<!--                Success-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <span class="badge badge-success">2</span>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <code>&lt;span class="badge badge-success"&gt;2&lt;/span&gt;</code>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>-->
-<!--                Warning-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <span class="badge badge-warning">4</span>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <code>&lt;span class="badge badge-warning"&gt;4&lt;/span&gt;</code>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>-->
-<!--                Important-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <span class="badge badge-important">6</span>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <code>&lt;span class="badge badge-important"&gt;6&lt;/span&gt;</code>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>-->
-<!--                Info-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <span class="badge badge-info">8</span>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <code>&lt;span class="badge badge-info"&gt;8&lt;/span&gt;</code>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>-->
-<!--                Inverse-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <span class="badge badge-inverse">10</span>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <code>&lt;span class="badge badge-inverse"&gt;10&lt;/span&gt;</code>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        </tbody>-->
-<!--    </table>-->
-<!--<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbBadge', array(-->
-<!--     'type'=>TbHtml::STYLE_SUCCESS, // TbHtml::STYLE_SUCCESS, TbHtml::STYLE_WARNING, 'important', TbHtml::STYLE_INFO or TbHtml::STYLE_INVERSE-->
-<!--     'label'=>'2',-->
-<!--));-->
-<!-- </pre>-->
-<!--</section>-->
-<!---->
-<!---->
-<!--<!-- Typographic components-->
-<!--	================================================== -->-->
-<!--<section id="typography">-->
-<!--    <div class="page-header">-->
-<!--        <h1>Typographic components</h1>-->
-<!--    </div>-->
-<!---->
-<!--    <h2>Hero unit</h2>-->
-<!---->
-<!--    <p>A lightweight, flexible component to showcase key content on your site. It works well on marketing and-->
-<!--        content-heavy sites.</p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->beginWidget('bootstrap.widgets.TbHeroUnit', array(
-//                'heading' => 'Hello, world!',
-//            ));
-?>
-<!---->
-<!--        <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured-->
-<!--            content or information.</p>-->
-<!---->
-<!--        <p>--><?php //$this->widget('bootstrap.widgets.TbButton', array(
-//                    'type' => TbHtml::STYLE_PRIMARY,
-//                    'size' => TbHtml::SIZE_LARGE,
-//                    'label' => 'Learn more',
-//                )); ?><!--</p>-->
-<!---->
-<!--        --><?php //$this->endWidget(); ?>
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--&lt;?php $this->beginWidget('bootstrap.widgets.TbHeroUnit', array(-->
-<!--	'heading'=>'Hello, world!',-->
-<!--)); ?&gt;-->
-<!---->
-<!--&lt;p&gt;This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.&lt;/p&gt;-->
-<!--&lt;p&gt;-->
-<!--	&lt;?php $this->widget('bootstrap.widgets.TbButton', array(-->
-<!--    'type'=>TbHtml::STYLE_PRIMARY,-->
-<!--    'size'=>TbHtml::SIZE_LARGE,-->
-<!--    'label'=>'Learn more',-->
-<!--)); ?&gt;-->
-<!--&lt;/p&gt;-->
-<!---->
-<!--&lt;?php $this->endWidget(); ?&gt;-->
-<!--</pre>-->
-<!---->
-<!--    <h2>Page header</h2>-->
-<!---->
-<!--    <p>Not part of any widget but worth to know: A simple shell for an <code>h1</code> to appropriately space out and-->
-<!--        segment sections of content on a page. It-->
-<!--        can utilize the <code>h1</code>'s default <code>small</code>, element as well most other components (with-->
-<!--        additional styles).</p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        <div class="page-header">-->
-<!--            <h1>Example page header-->
-<!--                <small>Subtext for header</small>-->
-<!--            </h1>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--	&lt;div class="page-header"&gt;-->
-<!--	  &lt;h1&gt;Example page header &lt;small&gt;Subtext for header&lt;/small&gt;&lt;/h1&gt;-->
-<!--	&lt;/div&gt;-->
-<!--	</pre>-->
-<!---->
-<!--</section>-->
-<!---->
-<!---->
-<!--<!-- Thumbnails-->
-<!--	================================================== -->-->
-<!--<section id="thumbnails">-->
-<!--    <div class="page-header">-->
-<!--        <h1>Thumbnails-->
-<!--            <small>Grids of images, videos, text, and more</small>-->
-<!--        </h1>-->
-<!--    </div>-->
-<!---->
-<!--    <h2>Default thumbnails</h2>-->
-<!---->
-<!--    <p>By default, Bootstrap's thumbnails are designed to showcase linked images with minimal required markup.</p>-->
-<!---->
-<!--    <div class="row-fluid">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbThumbnails', array(
-//                'dataProvider' => $thumbDataProvider,
-//                'template' => "{items}\n{pager}",
-//                'itemView' => '_thumb',
-//            ));
-?>
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbThumbnails', array(-->
-<!--	'dataProvider'=>$thumbDataProvider,-->
-<!--	'template'=>"{items}\n{pager}",-->
-<!--	'itemView'=>'_thumb',-->
-<!--));-->
-<!--	</pre>-->
-<!--</section>-->
-<!---->
-<!---->
-<!--<!-- Alerts-->
-<!--	================================================== -->-->
-<!--<section id="alerts">-->
-<!--    <div class="page-header">-->
-<!--        <h1>Alerts-->
-<!--            <small>Styles for success, warning, and error messages</small>-->
-<!--        </h1>-->
-<!--    </div>-->
-<!---->
-<!--    <h2>Default alert</h2>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php
-//        Yii::app()->user->setFlash(TbHtml::STYLE_SUCCESS, '<strong>Well done!</strong> You successfully read this important alert message.');
-//        $this->widget('bootstrap.widgets.TbAlert', array(
-//                'block' => true, // display a larger alert block?
-//                'fade' => true, // use transitions?
-//                'closeText' => '&times;', // close link text - if set to false, no close link is displayed
-//                'alerts' => array( // configurations per alert type
-//                    TbHtml::STYLE_SUCCESS => array('block' => true, 'fade' => true, 'closeText' => '&times;'), // success, info, warning, error or danger
-//                ),
-//            ));
-//        Yii::app()->user->setFlash(TbHtml::STYLE_INFO, '<strong>Heads up!</strong> This alert needs your attention, but it\'s not super important.');
-//        $this->widget('bootstrap.widgets.TbAlert', array(
-//                'block' => true, // display a larger alert block?
-//                'fade' => true, // use transitions?
-//                'closeText' => '&times;', // close link text - if set to false, no close link is displayed
-//                'alerts' => array( // configurations per alert type
-//                    TbHtml::STYLE_INFO => array('block' => true, 'fade' => true, 'closeText' => '&times;'), // success, info, warning, error or danger
-//                ),
-//            ));
-//        Yii::app()->user->setFlash(TbHtml::STYLE_WARNING, '<strong>Warning!</strong> Best check yo self, you\'re not looking too good.');
-//        $this->widget('bootstrap.widgets.TbAlert', array(
-//                'block' => true, // display a larger alert block?
-//                'fade' => true, // use transitions?
-//                'closeText' => '&times;', // close link text - if set to false, no close link is displayed
-//                'alerts' => array( // configurations per alert type
-//                    TbHtml::STYLE_WARNING => array('block' => true, 'fade' => true, 'closeText' => '&times;'), // success, info, warning, error or danger
-//                ),
-//            ));
-//        Yii::app()->user->setFlash('error', '<strong>Oh snap!</strong> Change a few things up and try submitting again.');
-//        $this->widget('bootstrap.widgets.TbAlert', array(
-//                'block' => true, // display a larger alert block?
-//                'fade' => true, // use transitions?
-//                'closeText' => '&times;', // close link text - if set to false, no close link is displayed
-//                'alerts' => array( // configurations per alert type
-//                    'error' => array('block' => true, 'fade' => true, 'closeText' => '&times;'), // success, info, warning, error or danger
-//                ),
-//            ));
-?>
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--Yii::app()->user->setFlash(TbHtml::STYLE_SUCCESS, '&lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.');-->
-<!--$this->widget('bootstrap.widgets.TbAlert', array(-->
-<!--    'block'=>true, // display a larger alert block?-->
-<!--    'fade'=>true, // use transitions?-->
-<!--    'closeText'=>'&times;', // close link text - if set to false, no close link is displayed-->
-<!--    'alerts'=>array( // configurations per alert type-->
-<!--	    TbHtml::STYLE_SUCCESS=>array('block'=>true, 'fade'=>true, 'closeText'=>'&times;'), // success, info, warning, error or danger
--->
-<!--    ),-->
-<!--));-->
-<!--	</pre>-->
-<!--</section>-->
-<!---->
-<!---->
-<!--<!-- Progress bars-->
-<!--	================================================== -->-->
-<!--<section id="progress">-->
-<!--    <div class="page-header">-->
-<!--        <h1>Progress bars-->
-<!--            <small>For loading, redirecting, or action status</small>-->
-<!--        </h1>-->
-<!--    </div>-->
-<!---->
-<!--    <h2>Examples</h2>-->
-<!---->
-<!--    <h3>Basic</h3>-->
-<!---->
-<!--    <p>Default progress bar with a vertical gradient.</p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbProgress', array(
-//                'type' => TbHtml::STYLE_SUCCESS, // TbHtml::STYLE_INFO, TbHtml::STYLE_SUCCESS or TbHtml::STYLE_DANGER
-//                'percent' => 60,
-//            ));
-?>
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbProgress', array(-->
-<!--    'type'=>TbHtml::STYLE_SUCCESS, // TbHtml::STYLE_INFO, TbHtml::STYLE_SUCCESS or TbHtml::STYLE_DANGER-->
-<!--    'percent'=>60,-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!--    <h3>Striped</h3>-->
-<!---->
-<!--    <p>Uses a gradient to create a striped effect. Not available in IE7-8.</p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbProgress', array(
-//                'type' => TbHtml::STYLE_DANGER, // TbHtml::STYLE_INFO, TbHtml::STYLE_SUCCESS or TbHtml::STYLE_DANGER
-//                'percent' => 40, // the progress
-//                'striped' => true,
-//            ));
-?>
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbProgress', array(-->
-<!--    'type'=>TbHtml::STYLE_SUCCESS, // TbHtml::STYLE_INFO, TbHtml::STYLE_SUCCESS or TbHtml::STYLE_DANGER-->
-<!--    'percent'=>60,-->
-<!--	'stripped'=>true-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!--    <h3>Animated</h3>-->
-<!---->
-<!--    <p>Set <code>animated</code> to <code>true</code> to animate the stripes right to left. Not available in-->
-<!--        all versions of IE.</p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbProgress', array(
-//                'percent' => 40, // the progress
-//                'striped' => true,
-//                'animated' => true,
-//            ));
-?>
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbProgress', array(-->
-<!--    'percent'=>40, // the progress-->
-<!--    'striped'=>true,-->
-<!--    'animated'=>true,-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!--    <h3>Stacked</h3>-->
-<!---->
-<!--    <p>Place multiple bars into the same <code>.progress</code> to stack them.</p>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbProgress', array(
-//                'stacked' => array(
-//                    array('type' => TbHtml::STYLE_SUCCESS, 'percent' => 30, 'htmlOptions' => array('title' => 'Hey! I am a title here.')),
-//                    array('type' => TbHtml::STYLE_WARNING, 'percent' => 35),
-//                    array('type' => TbHtml::STYLE_DANGER, 'percent' => 30),
-//                )));
-?>
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbProgress', array(-->
-<!--    'stacked'=>array(-->
-<!--	    array('type'=>TbHtml::STYLE_SUCCESS, 'percent'=>30, 'htmlOptions'=>array('title'=>'Hey! I am a title here.')),-->
-<!--	    array('type'=>TbHtml::STYLE_WARNING, 'percent'=>35),-->
-<!--	    array('type'=>TbHtml::STYLE_DANGER, 'percent'=>30),-->
-<!--)));-->
-<!--	</pre>-->
-<!---->
-<!---->
-<!--    <hr class="bs-docs-separator">-->
-<!---->
-<!--    <h2>Browser support</h2>-->
-<!---->
-<!--    <p>Progress bars use CSS3 gradients, transitions, and animations to achieve all their effects. These features are-->
-<!--        not supported in IE7-9 or older versions of Firefox.</p>-->
-<!---->
-<!--    <p>Versions earlier than Internet Explorer 10 and Opera 12 do not support animations.</p>-->
-<!---->
-<!--</section>-->
-<!---->
-<!--<!-- Tables-->
-<!--	================================================== -->-->
-<!--<section id="tables">-->
-<!--    <div class="page-header">-->
-<!--        <h1>Tables</h1>-->
-<!--    </div>-->
-<!---->
-<!--    <h2>Detail Views</h2>-->
-<!---->
-<!--    <h3>Basic Stuff</h3>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbDetailView', array(
-//                'data' => array('id' => 1, 'firstName' => 'Mark', 'lastName' => 'Otto', 'language' => 'CSS'),
-//                'attributes' => array(
-//                    array('name' => 'firstName', 'label' => 'First name'),
-//                    array('name' => 'lastName', 'label' => 'Last name'),
-//                    array('name' => 'language', 'label' => 'Language'),
-//                ),
-//            ));
-?>
-<!--    </div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbDetailView', array(-->
-<!--    'data'=>array('id'=>1, 'firstName'=>'Mark', 'lastName'=>'Otto', 'language'=>'CSS'),-->
-<!--    'attributes'=>array(-->
-<!--	    array('name'=>'firstName', 'label'=>'First name'),-->
-<!--	    array('name'=>'lastName', 'label'=>'Last name'),-->
-<!--	    array('name'=>'language', 'label'=>'Language'),-->
-<!--    ),-->
-<!--));-->
-<!--	</pre>-->
-<!---->
-<!--    <h2>Grid Views</h2>-->
-<!---->
-<!--    <p>In order to test the Grid Views we make use of the following data:</p>-->
-<!--<pre class="prettyprint linenums">-->
-<!--// $gridDataProvider-->
-<!--$mark = new Person();-->
-<!--$mark->id = 1;-->
-<!--$mark->firstName = 'Mark';-->
-<!--$mark->lastName = 'Otto';-->
-<!--$mark->language = 'CSS';-->
-<!--$mark->hours = 10;-->
-<!---->
-<!--$jacob = new Person();-->
-<!--$jacob->id = 2;-->
-<!--$jacob->firstName = 'Jacob';-->
-<!--$jacob->lastName = 'Thornton';-->
-<!--$jacob->language = 'JavaScript';-->
-<!--$jacob->hours = 20;-->
-<!---->
-<!--$stu = new Person();-->
-<!--$stu->id = 3;-->
-<!--$stu->firstName = 'Stu';-->
-<!--$stu->lastName = 'Dent';-->
-<!--$stu->language = 'HTML';-->
-<!--$stu->hours = 10;-->
-<!---->
-<!--$persons = array($mark, $jacob, $stu);-->
-<!---->
-<!--$gridDataProvider = new CArrayDataProvider($persons);-->
-<!---->
-<!--// $gridColumns-->
-<!--$gridColumns = array(-->
-<!--	array('name'=>'id', 'header'=>'#', 'htmlOptions'=>array('style'=>'width: 60px')),-->
-<!--	array('name'=>'firstName', 'header'=>'First name'),-->
-<!--	array('name'=>'lastName', 'header'=>'Last name'),-->
-<!--	array('name'=>'language', 'header'=>'Language'),-->
-<!--	array('name'=>'hours', 'header'=>'Hours worked'),-->
-<!--	array(-->
-<!--		'htmlOptions' => array('nowrap'=>'nowrap'),-->
-<!--		'class'=>'bootstrap.widgets.TbButtonColumn',-->
-<!--		'viewButtonUrl'=>null,-->
-<!--		'updateButtonUrl'=>null,-->
-<!--		'deleteButtonUrl'=>null,-->
-<!--	)-->
-<!--);-->
-<!--</pre>-->
-<!--    <h3>Default</h3>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbGridView', array(
-//                'dataProvider' => $gridDataProvider,
-//                'template' => "{items}",
-//                'columns' => $gridColumns,
-//            ));
-?>
-<!--    </div>-->
-<!--<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbGridView', array(-->
-<!--	'dataProvider'=>$gridDataProvider,-->
-<!--	'template'=>"{items}",-->
-<!--	'columns'=>$gridColumns,-->
-<!--));-->
-<!--</pre>-->
-<!--    <h3>Striped</h3>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbGridView', array(
-//                'type' => 'striped',
-//                'dataProvider' => $gridDataProvider,
-//                'template' => "{items}",
-//                'columns' => $gridColumns,
-//            ));
-?>
-<!--    </div>-->
-<!--<pre class="prettyprint linenums">-->
-<!--this->widget('bootstrap.widgets.TbGridView', array(-->
-<!--	'type'=>'striped',-->
-<!--	'dataProvider'=>$gridDataProvider,-->
-<!--	'template'=>"{items}",-->
-<!--	'columns'=>$gridColumns,-->
-<!--));-->
-<!--</pre>-->
-<!--    <h3>Bordered</h3>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbGridView', array(
-//                'type' => 'bordered',
-//                'dataProvider' => $gridDataProvider,
-//                'template' => "{items}",
-//                'columns' => $gridColumns,
-//            ));
-?>
-<!--    </div>-->
-<!--<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbGridView', array(-->
-<!--	'type'=>'bordered',-->
-<!--	'dataProvider'=>$gridDataProvider,-->
-<!--	'template'=>"{items}",-->
-<!--	'columns'=>$gridColumns,-->
-<!--));-->
-<!--</pre>-->
-<!--    <h3>Condensed</h3>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbGridView', array(
-//                'type' => 'condensed',
-//                'dataProvider' => $gridDataProvider,
-//                'template' => "{items}",
-//                'columns' => $gridColumns,
-//            ));
-?>
-<!--    </div>-->
-<!--<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbGridView', array(-->
-<!--	'type'=>'condensed',-->
-<!--	'dataProvider'=>$gridDataProvider,-->
-<!--	'template'=>"{items}",-->
-<!--	'columns'=>$gridColumns,-->
-<!--));-->
-<!--</pre>-->
-<!--    <h3>Striped, bordered and condensed</h3>-->
-<!---->
-<!--    <div class="bs-docs-example">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbGridView', array(
-//                'type' => 'striped bordered condensed',
-//                'dataProvider' => $gridDataProvider,
-//                'template' => "{items}",
-//                'filter' => $person->search(),
-//                'columns' => $gridColumns,
-//            ));
-?>
-<!--    </div>-->
-<!--<pre class="prettyprint linenums">-->
-<!--$this->widget('bootstrap.widgets.TbGridView', array(-->
-<!--	'type'=>'striped bordered condensed',-->
-<!--	'dataProvider'=>$gridDataProvider,-->
-<!--	'template'=>"{items}",-->
-<!--	'filter'=>$person->search(),-->
-<!--	'columns'=>$gridColumns,-->
-<!--));-->
-<!--</pre>-->
-<!--</section>-->
-<!---->
-<!--<!-- Forms-->
-<!--	================================================== -->-->
-<!--<section id="forms">-->
-<!--<div class="page-header">-->
-<!--    <h1>Forms</h1>-->
-<!--</div>-->
-<!---->
-<!--<h2>Vertical</h2>-->
-<!---->
-<!--<p>Use the well as a simple effect on an element to give it an inset effect.</p>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php ///** @var BootActiveForm $form */
-//    $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-//            'id' => 'verticalForm',
-//            'htmlOptions' => array('class' => 'well'),
-//        ));
-?>
-<!---->
-<!--    --><?php //echo $form->textFieldRow($model, 'textField', array('class' => 'span3')); ?>
-<!--    --><?php //echo $form->passwordFieldRow($model, 'password', array('class' => 'span3')); ?>
-<!--    --><?php //echo $form->checkboxRow($model, 'checkbox'); ?>
-<!--    --><?php //$this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submit', 'label' => 'Login')); ?>
-<!---->
-<!--    --><?php //$this->endWidget(); ?>
-<!--</div>-->
-<!--	<pre class="prettyprint linenums">-->
-<!--&lt;?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(-->
-<!--    'id'=>'verticalForm',-->
-<!--    'htmlOptions'=>array('class'=>'well'),-->
-<!--)); ?&gt;-->
-<!---->
-<!--&lt;?php echo $form->textFieldRow($model, 'textField', array('class'=>'span3')); ?&gt;-->
-<!--&lt;?php echo $form->passwordFieldRow($model, 'password', array('class'=>'span3')); ?&gt;-->
-<!--&lt;?php echo $form->checkboxRow($model, 'checkbox'); ?&gt;-->
-<!--&lt;?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Login')); ?&gt;-->
-<!---->
-<!--&lt;?php $this->endWidget(); ?&gt;-->
-<!--</pre>-->
+
+<!-- Nav, Tabs, & Pills
+	================================================== -->
+<section id="navs">
+<div class="page-header">
+    <a name="tabs"></a>
+
+    <h1>Nav: tabs, pills, and lists</small></h1>
+</div>
+
+<h2>Lightweight defaults</h2>
+
+<p>Create tabs with easy.</p>
+
+<h3>Basic tabs</h3>
+
+<div class="bs-docs-example">
+    <?php $this->widget(
+        'bootstrap.widgets.TbTabs',
+        array(
+            'type' => 'tabs', // 'tabs' or 'pills'
+            'tabs' => array(
+                array('label' => 'Home', 'content' => 'Home Content', 'active' => true),
+                array('label' => 'Profile', 'content' => 'Profile Content'),
+                array('label' => 'Messages', 'content' => 'Messages Content'),
+            ),
+        )
+    );
+    ?>
+</div>
+<p>You can change the position of the tabs by setting its <code>placement</code> property: <code>above</code>, <code>right</code>,
+    <code>bellow</code>, or <code>left</code></p>
+	<pre class="prettyprint linenums">
+$this->widget('bootstrap.widgets.TbTabs', array(
+	'type'=>'tabs', // 'tabs' or 'pills'
+	'tabs'=>array(
+		array('label'=>'Home', 'content'=>'Home Content', 'active'=>true),
+		array('label'=>'Profile', 'content'=>'Profile Content'),
+		array('label'=>'Messages', 'content'=>'Messages Content'),
+	),
+));
+	</pre>
+
+<h3>Basic pills</h3>
+
+<p>Just change its <code>type</code> property to <code>pills</code> instead:</p>
+
+<div class="bs-docs-example">
+    <?php $this->widget(
+        'bootstrap.widgets.TbTabs',
+        array(
+            'type' => 'pills', // 'tabs' or 'pills'
+            'tabs' => array(
+                array('label' => 'Home', 'content' => 'Home Content', 'active' => true),
+                array('label' => 'Profile', 'content' => 'Profile Content'),
+                array('label' => 'Messages', 'content' => 'Messages Content'),
+            ),
+        )
+    );
+    ?>
+</div>
+	<pre class="prettyprint linenums">
+$this->widget('bootstrap.widgets.TbTabs', array(
+	'type'=>'pills',
+	'tabs'=>array(
+		array('label'=>'Home', 'content'=>'Home Content', 'active'=>true),
+		array('label'=>'Profile', 'content'=>'Profile Content'),
+		array('label'=>'Messages', 'content'=>'Messages Content'),
+	),
+));
+	</pre>
+
+<h3>Disabled state</h3>
+
+<p>For any nav component (tabs, pills, or list), add <code>.disabled</code> for <strong>gray links and no hover
+        effects</strong>. Links will remain <strong>clickable</strong>, however, unless custom javascript is implemented
+    to
+    prevent those
+    clicks.</p>
+
+<div class="bs-docs-example">
+    <?php $this->widget(
+        'bootstrap.widgets.TbTabs',
+        array(
+            'type' => 'pills', // 'tabs', 'pills', or 'list'
+            'tabs' => array(
+                array('label' => 'Home', 'content' => 'Home Content'),
+                array('label' => 'Profile', 'content' => 'Profile Content'),
+                array(
+                    'label'       => 'Messages',
+                    'content'     => 'Messages Content',
+                    'itemOptions' => array('class' => 'disabled')
+                ),
+            ),
+        )
+    );
+    ?>
+</div>
+	<pre class="prettyprint linenums">
+$this->widget('bootstrap.widgets.TbTabs', array(
+	'type'=>'pills',
+	'tabs'=>array(
+		array('label'=>'Home', 'content'=>'Home Content'),
+		array('label'=>'Profile', 'content'=>'Profile Content'),
+		array('label'=>'Messages',
+			'content'=>'Messages Content',
+			'itemOptions'=>array('class'=>'disabled')),
+	),
+));
+	</pre>
+
+<h3>Component alignment</h3>
+
+<p>To align nav links, use the bootstrap <code>.pull-left</code> or <code>.pull-right</code> utility classes on its
+    <code>htmlOptions</code> attribute. Both classes will
+    add a CSS float in the specified direction.</p>
+
+
+<hr class="bs-docs-separator">
+
+<h3>Stacked tabs</h3>
+
+<div class="bs-docs-example">
+    <?php $navItems = array(
+        array('icon' => 'home', 'url' => array('/site/index')),
+        array(
+            'label'       => 'Profile',
+            'url'         => '#',
+            'itemOptions' => array('class' => 'active'),
+            'linkOptions' => array('class' => 'bar')
+        ),
+        array('label' => 'Messages', 'url' => '#'),
+        array(
+            'label' => 'Dropdown',
+            'items' => array(
+                array('label' => 'Header'),
+                array('label' => 'Action', 'url' => '#'),
+                array('label' => 'Another action', 'url' => '#'),
+                array('label' => 'Something else here', 'url' => '#'),
+                TbHtml::menuDivider(),
+                array('label' => 'Separate link', 'url' => '#'),
+            )
+        ),
+    ); ?>
+    <?php $this->widget(
+        'bootstrap.widgets.TbNav',
+        array(
+            'style'   => TbHtml::NAV_TABS,
+            'stacked' => true,
+            'items'   => $navItems
+        )
+    );
+    ?>
+</div>
+	<pre class="prettyprint linenums">
+&lt;?php
+// This items will be used on the following next examples!!!
+$navItems = array(
+    array('icon' =&gt; 'home', 'url' =&gt; array('/site/index')),
+    array(
+        'label'       =&gt; 'Profile',
+        'url'         =&gt; '#',
+        'itemOptions' =&gt; array('class' =&gt; 'active'),
+        'linkOptions' =&gt; array('class' =&gt; 'bar')
+    ),
+    array('label' =&gt; 'Messages', 'url' =&gt; '#'),
+    array(
+        'label' =&gt; 'Dropdown',
+        'items' =&gt; array(
+            array('label' =&gt; 'Header'),
+            array('label' =&gt; 'Action', 'url' =&gt; '#'),
+            array('label' =&gt; 'Another action', 'url' =&gt; '#'),
+            array('label' =&gt; 'Something else here', 'url' =&gt; '#'),
+            TbHtml::menuDivider(),
+            array('label' =&gt; 'Separate link', 'url' =&gt; '#'),
+        )
+    ),
+); ?&gt;
+
+&lt;?php $this-&gt;widget('bootstrap.widgets.TbNav', array(
+        'style' =&gt; TbHtml::NAV_TABS,
+        'stacked' =&gt; true,
+        'items' =&gt;$navItems
+    ));
+?&gt;
+	</pre>
+
+<h3>Stacked pills</h3>
+
+<div class="bs-docs-example">
+    <?php $this->widget(
+        'bootstrap.widgets.TbNav',
+        array(
+            'style'   => TbHtml::NAV_PILLS,
+            'stacked' => true,
+            'items'   => $navItems
+        )
+    );
+    ?>
+</div>
+	<pre class="prettyprint linenums">
+$this->widget('bootstrap.widgets.TbNav', array(
+    'style' => TbHtml::NAV_PILLS,
+    'stacked' => true,
+    'items' =>$navItems
+));
+	</pre>
+
+<hr class="bs-docs-separator">
+
+
+<h2>Nav lists</h2>
+
+<p>A simple and easy way to build groups of nav links with optional headers. They're best used in sidebars like the
+    Finder in OS X.</p>
+
+<h3>Example nav list</h3>
+
+<p>Create a TbMenu widget and set its <code>type</code> to <code>list</code>:</p>
+
+<div class="bs-docs-example">
+    <div class="well" style="max-width: 340px; padding: 8px 0;">
+        <?php $this->widget(
+            'bootstrap.widgets.TbNav',
+            array(
+                'style' => TbHtml::NAV_LIST,
+                'items' => array(
+                    array('label' => 'List header', 'itemOptions' => array('class' => 'nav-header')),
+                    array('label' => 'Home', 'url' => '#', 'itemOptions' => array('class' => 'active')),
+                    array('label' => 'Library', 'url' => '#'),
+                    array('label' => 'Applications', 'url' => '#'),
+                    array('label' => 'Another list header', 'itemOptions' => array('class' => 'nav-header')),
+                    array('label' => 'Profile', 'url' => '#'),
+                    array('label' => 'Settings', 'url' => '#'),
+                    '',
+                    array('label' => 'Help', 'url' => '#'),
+                )
+            )
+        );
+        ?>
+    </div>
+    <!-- /well -->
+</div>
+	<pre class="prettyprint linenums">
+$this->widget('bootstrap.widgets.TbNav', array(
+    'style' => TbHtml::NAV_LIST,
+    'items' => array(
+        array('label' => 'List header', 'itemOptions' => array('class' => 'nav-header')),
+        array('label' => 'Home', 'url' => '#', 'itemOptions' => array('class' => 'active')),
+        array('label' => 'Library', 'url' => '#'),
+        array('label' => 'Applications', 'url' => '#'),
+        array('label' => 'Another list header', 'itemOptions' => array('class' => 'nav-header')),
+        array('label' => 'Profile', 'url' => '#'),
+        array('label' => 'Settings', 'url' => '#'),
+        '',
+        array('label' => 'Help', 'url' => '#'),
+    )
+));
+	</pre>
+
+<h3>Horizontal dividers</h3>
+
+<p>Add a horizontal divider by creating an empty list item in the <code>items</code> array.</p>
+
+<hr class="bs-docs-separator">
+
+</section>
+
+
+<!-- Navbar
+	================================================== -->
+<section id="navbar">
+<div class="page-header">
+    <h1>Navbar</h1>
+</div>
+
+
+<h2>Basic navbar</h2>
+
+<div class="bs-docs-example">
+    <?php $this->widget(
+        'bootstrap.widgets.TbNavbar',
+        array(
+            'brandLabel' => 'Title',
+            'position'   => null,
+            'items'      => array(
+                array(
+                    'class' => 'bootstrap.widgets.TbNav',
+                    'items' => array(
+                        array('label' => 'Home', 'url' => '#', 'active' => true),
+                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
+                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
+                    )
+                )
+            )
+        )
+    );
+    ?>
+</div>
+	<pre class="prettyprint linenums">
+$this->widget(
+    'bootstrap.widgets.TbNavbar',
+    array(
+        'brandLabel' => 'Title',
+        'position'   => null,
+        'items'      => array(
+            array(
+                'class' => 'bootstrap.widgets.TbNav',
+                'items' => array(
+                    array('label' => 'Home', 'url' => '#', 'active' => true),
+                    array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
+                    array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
+                )
+            )
+        )
+    )
+);
+	</pre>
+
+
+<hr class="bs-docs-separator">
+
+<h3>Forms</h3>
+
+<p><code>TbNavbar</code> allows you to include HTML text too, so to include forms in the navigation bar is quite an easy
+    task.</p>
+
+<div class="bs-docs-example">
+    <?php $this->widget(
+        'bootstrap.widgets.TbNavbar',
+        array(
+            'brandLabel' => 'Title',
+            'position'   => null,
+            'items'      => array(
+                '<form class="navbar-form pull-left">
+                        <input type="text" class="span2">
+                        <button type="submit" class="btn">Submit</button>
+                    </form>'
+            )
+        )
+    );
+    ?>
+</div>
+	<pre class="prettyprint linenums">
+$this->widget('bootstrap.widgets.TbNavbar', array(
+    'brandLabel' => 'Title',
+    'position' => null,
+    'items' => array(
+        '&lt;form class="navbar-form pull-left"&gt;
+        &lt;input type="text" class="span2"&gt;
+        &lt;button type="submit" class="btn">Submit&lt;/button&gt;
+        &lt;/form&gt;'
+    )
+));
+	</pre>
+
+<h3>Search form</h3>
+
+<p>Check this alternative search form.</p>
+
+<div class="bs-docs-example">
+    <?php $this->widget(
+        'bootstrap.widgets.TbNavbar',
+        array(
+            'brandLabel' => 'Title',
+            'position'   => null,
+            'items'      => array(
+                '<form class="navbar-search pull-left">
+                        <input type="text" class="search-query" placeholder="search">
+                    </form>'
+            )
+        )
+    );
+    ?>
+</div>
+	<pre class="prettyprint linenums">
+$this-&gt;widget('bootstrap.widgets.TbNavbar', array(
+    'brandLabel' =&gt; 'Title',
+    'position' =&gt; null,
+    'items' =&gt; array(
+       '&lt;form class=&quot;navbar-search pull-left&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;search-query&quot; placeholder=&quot;search&quot;&gt;
+&lt;/form&gt;'
+    )
+));
+    </pre>
+
+<h3>Component alignment</h3>
+
+<p>Align nav links, search form, or text, use the <code>.pull-left</code> or <code>.pull-right</code> utility classes.
+    Both classes will add a CSS float in the specified direction.</p>
+
+<h3>Using dropdowns</h3>
+
+<div class="bs-docs-example">
+    <?php $this->widget(
+        'bootstrap.widgets.TbNavbar',
+        array(
+            'brandLabel' => 'Title',
+            'position'   => null,
+            'items'      => array(
+                array(
+                    'class' => 'bootstrap.widgets.TbNav',
+                    'items' => array(
+                        array('label' => 'Home', 'url' => '#', 'active' => true),
+                        array('label' => TbHtml::STYLE_LINK, 'url' => '#'),
+                        array(
+                            'label' => 'Dropdown',
+                            'items' => array(
+                                array('label' => 'Item1', 'url' => '#')
+                            )
+                        ),
+                    )
+                )
+            )
+        )
+    );
+    ?>
+</div>
+	<pre class="prettyprint linenums">
+$this->widget('bootstrap.widgets.TbNavbar', array(
+	'brandLabel' => 'Title',
+    'position' => null,
+	'items' => array(
+		array(
+			'class' => 'bootstrap.widgets.TbMenu',
+			'items' => array(
+				array('label'=>'Home', 'url'=>'#', 'active'=>true),
+				array('label'=>TbHtml::STYLE_LINK, 'url'=>'#'),
+				array('label'=>'Dropdown', 'items'=> array(
+				     array('label'=>'Item1', 'url'=>'#')
+				)),
+			)
+		)
+	)
+));
+	</pre>
+
+
+<h3>Text</h3>
+
+<p>Wrap strings of text in an element with <code>.navbar-text</code>, usually on a <code>&lt;p&gt;</code> tag for proper
+    leading and color.</p>
+
+
+<hr class="bs-docs-separator">
+
+
+<h2>Optional display variations</h2>
+
+<p>Fix the navbar to the top or bottom of the viewport by setting property
+    <code>position</code> to <code>TbHtml::POSITION_TOP</code> or <code>TbHtml::POSITION_BOTTOM</code> respectively.</p>
+
+<!-- Breadcrumbs
+	================================================== -->
+<section id="breadcrumbs">
+    <div class="page-header">
+        <h1>Breadcrumbs
+            <small></small>
+        </h1>
+    </div>
+
+    <h2>Examples</h2>
+
+    <p>A single example shown as it might be displayed across multiple pages.</p>
+
+    <div class="bs-docs-example">
+        <?php $this->widget(
+            'bootstrap.widgets.TbBreadcrumb',
+            array(
+                'homeLabel' => 'Home',
+                'links'     => array('')
+            )
+        );
+        ?>
+        <?php $this->widget(
+            'bootstrap.widgets.TbBreadcrumb',
+            array(
+                'links' => array('Library'),
+            )
+        );
+        ?>
+        <?php $this->widget(
+            'bootstrap.widgets.TbBreadcrumb',
+            array(
+                'links' => array('Library' => '#', 'Data'),
+            )
+        );
+        ?>
+    </div>
+	<pre class="prettyprint linenums">
+$this->widget('bootstrap.widgets.TbBreadcrumb', array(
+    'links' => array('Library' => '#', 'Data'),
+));
+</pre>
+
+</section>
+
+<!-- Labels and badges
+	================================================== -->
+<section id="labels-badges">
+    <div class="page-header">
+        <h1>Labels and badges</h1>
+    </div>
+    <h3>Labels</h3>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>Labels</th>
+            <th>Markup</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <span class="label">Default</span>
+            </td>
+            <td>
+                <code>&lt;span class="label"&gt;Default&lt;/span&gt;</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="label label-success">Success</span>
+            </td>
+            <td>
+                <code>&lt;span class="label label-success"&gt;Success&lt;/span&gt;</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="label label-warning">Warning</span>
+            </td>
+            <td>
+                <code>&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="label label-important">Important</span>
+            </td>
+            <td>
+                <code>&lt;span class="label label-important"&gt;Important&lt;/span&gt;</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="label label-info">Info</span>
+            </td>
+            <td>
+                <code>&lt;span class="label label-info"&gt;Info&lt;/span&gt;</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="label label-inverse">Inverse</span>
+            </td>
+            <td>
+                <code>&lt;span class="label label-inverse"&gt;Inverse&lt;/span&gt;</code>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+<pre class="prettyprint linenums">
+echo TbHtml::labelTb('This is a label', array('style'=>TbHtml::STYLE_SUCCESS));
+ </pre>
+    <h3>Badges</h3>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Example</th>
+            <th>Markup</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                Default
+            </td>
+            <td>
+                <span class="badge">1</span>
+            </td>
+            <td>
+                <code>&lt;span class="badge"&gt;1&lt;/span&gt;</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Success
+            </td>
+            <td>
+                <span class="badge badge-success">2</span>
+            </td>
+            <td>
+                <code>&lt;span class="badge badge-success"&gt;2&lt;/span&gt;</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Warning
+            </td>
+            <td>
+                <span class="badge badge-warning">4</span>
+            </td>
+            <td>
+                <code>&lt;span class="badge badge-warning"&gt;4&lt;/span&gt;</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Important
+            </td>
+            <td>
+                <span class="badge badge-important">6</span>
+            </td>
+            <td>
+                <code>&lt;span class="badge badge-important"&gt;6&lt;/span&gt;</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Info
+            </td>
+            <td>
+                <span class="badge badge-info">8</span>
+            </td>
+            <td>
+                <code>&lt;span class="badge badge-info"&gt;8&lt;/span&gt;</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Inverse
+            </td>
+            <td>
+                <span class="badge badge-inverse">10</span>
+            </td>
+            <td>
+                <code>&lt;span class="badge badge-inverse"&gt;10&lt;/span&gt;</code>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+<pre class="prettyprint linenums">
+echo TbHtml::badge('This is a badge', array('style'=>TbHtml::STYLE_SUCCESS));
+ </pre>
+</section>
+
+
+<!-- Typographic components
+	================================================== -->
+<section id="typography">
+    <div class="page-header">
+        <h1>Typographic components</h1>
+    </div>
+
+    <h2>Hero unit</h2>
+
+    <p>A lightweight, flexible component to showcase key content on your site. It works well on marketing and
+        content-heavy sites.</p>
+
+    <div class="bs-docs-example">
+        <?php
+        $this->widget(
+            'bootstrap.widgets.TbHeroUnit',
+            array(
+                'heading' => 'Hello, world!',
+                'content' => '<p>This is a simple hero unit, a simple jumbotron-style component for calling extra ' .
+                    'attention to featured content or information.</p><p>' .
+                    TbHtml::button('Large button', array('size' => TbHtml::SIZE_LARGE)) . '</p>'
+            )
+        );
+        ?>
+    </div>
+	<pre class="prettyprint linenums">
+$this-&gt;widget(
+    'bootstrap.widgets.TbHeroUnit',
+    array(
+        'heading' =&gt; 'Hello, world!',
+        // we can also use a renderPartial content
+        'content' =&gt; '&lt;p&gt;This is a simple hero unit, a simple jumbotron-style component for calling extra ' .
+            'attention to featured content or information.&lt;/p&gt;&lt;p&gt;' .
+            TbHtml::button('Large button', array('size' =&gt; TbHtml::SIZE_LARGE)) . '&lt;/p&gt;'
+    )
+);
+</pre>
+
+    <h2>Page header</h2>
+
+    <p>Not part of any widget but worth to know: A simple shell for an <code>h1</code> to appropriately space out and
+        segment sections of content on a page. It
+        can utilize the <code>h1</code>'s default <code>small</code>, element as well most other components (with
+        additional styles).</p>
+
+    <div class="bs-docs-example">
+        <div class="page-header">
+            <h1>Example page header
+                <small>Subtext for header</small>
+            </h1>
+        </div>
+    </div>
+	<pre class="prettyprint linenums">
+&lt;div class="page-header"&gt;
+  &lt;h1&gt;Example page header &lt;small&gt;Subtext for header&lt;/small&gt;&lt;/h1&gt;
+&lt;/div&gt;
+	</pre>
+
+</section>
+
+
+<!-- Thumbnails
+	================================================== -->
+<section id="thumbnails">
+    <div class="page-header">
+        <h1>Thumbnails
+            <small>Grids of images, videos, text, and more</small>
+        </h1>
+    </div>
+
+    <h2>Default thumbnails</h2>
+
+    <p>By default, Bootstrap's thumbnails are designed to showcase linked images with minimal required markup.</p>
+
+    <div class="row-fluid">
+        <?php $thumbnail = array(
+            'content' => '<img src="holder.js/260x180" />',
+            'url'     => '#',
+        ); ?>
+        <?php echo TbHtml::thumbnails(array($thumbnail, $thumbnail, $thumbnail, $thumbnail)); ?>
+    </div>
+	<pre class="prettyprint linenums">
+&lt;?php $thumbnail = array(
+    'content' =&gt; '&lt;img src=&quot;holder.js/260x180&quot; /&gt;',
+    'url'     =&gt; '#',
+); ?&gt;
+&lt;?php echo TbHtml::thumbnails(array($thumbnail, $thumbnail, $thumbnail, $thumbnail)); ?&gt;
+	</pre>
+    <div class="row-fluid">
+        <?php $captionThumbnail = array(
+            'content' => '<img src="holder.js/300x200" /><div class="caption"><h3>Thumbnail label</h3>' .
+                '<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi ' .
+                'porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>' .
+                TbHtml::button(
+                    'Action',
+                    array('style' => 'primary')
+                ) . ' ' . TbHtml::button('Action') . '</div>',
+            'span'    => 4,
+        );
+        ?>
+
+        <h2>Thumbnails with caption</h2>
+
+        <?php echo TbHtml::thumbnails(array($captionThumbnail, $captionThumbnail, $captionThumbnail)); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php $captionThumbnail = array(
+    'content' =&gt; '&lt;img src=&quot;holder.js/300x200&quot; /&gt;&lt;div class=&quot;caption&quot;&gt;&lt;h3&gt;Thumbnail label&lt;/h3&gt;' .
+        '&lt;p&gt;Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi ' .
+        'porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;' .
+        TbHtml::button(
+            'Action',
+                array('style' =&gt; 'primary')
+            ) . ' ' . TbHtml::button('Action') . '&lt;/div&gt;',
+            'span'    =&gt; 4,
+        );
+?&gt;
+&lt;?php echo TbHtml::thumbnails(array($captionThumbnail, $captionThumbnail, $captionThumbnail)); ?&gt;
+    </pre>
+    <div>
+
+        <h2>Different sizes</h2>
+
+        <?php echo TbHtml::thumbnails(
+            array(
+                array('content' => '<img src="http://placehold.it/360x270" />', 'url' => '#', 'span' => 4),
+                array('content' => '<img src="http://placehold.it/260x120" />', 'url' => '#', 'span' => 3),
+                array('content' => '<img src="http://placehold.it/160x120" />', 'url' => '#', 'span' => 2),
+                array('content' => '<img src="http://placehold.it/260x120" />', 'url' => '#', 'span' => 3),
+                array('content' => '<img src="http://placehold.it/160x120" />', 'url' => '#', 'span' => 2),
+            )
+        ); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::thumbnails(
+    array(
+        array('content' =&gt; '&lt;img src=&quot;http://placehold.it/360x270&quot; /&gt;', 'url' =&gt; '#', 'span' =&gt; 4),
+        array('content' =&gt; '&lt;img src=&quot;http://placehold.it/260x120&quot; /&gt;', 'url' =&gt; '#', 'span' =&gt; 3),
+        array('content' =&gt; '&lt;img src=&quot;http://placehold.it/160x120&quot; /&gt;', 'url' =&gt; '#', 'span' =&gt; 2),
+        array('content' =&gt; '&lt;img src=&quot;http://placehold.it/260x120&quot; /&gt;', 'url' =&gt; '#', 'span' =&gt; 3),
+        array('content' =&gt; '&lt;img src=&quot;http://placehold.it/160x120&quot; /&gt;', 'url' =&gt; '#', 'span' =&gt; 2),
+    )
+); ?&gt;
+    </pre>
+</section>
+<!-- Alerts
+	================================================== -->
+<section id="alerts">
+    <div class="page-header">
+        <h1>Alerts
+            <small>Styles for success, warning, and error messages</small>
+        </h1>
+    </div>
+
+    <h2>Default alert</h2>
+
+    <div class="bs-docs-example">
+        <?php
+        Yii::app()->user->setFlash(
+            TbHtml::STYLE_SUCCESS,
+            '<strong>Well done!</strong> You successfully read this important alert message.'
+        );
+        $this->widget(
+            'bootstrap.widgets.TbAlert',
+            array(
+                'block'     => true, // display a larger alert block?
+                'fade'      => true, // use transitions?
+                'closeText' => '&times;', // close link text - if set to false, no close link is displayed
+                'alerts'    => array( // configurations per alert type
+                    TbHtml::STYLE_SUCCESS => array('block' => true, 'fade' => true, 'closeText' => '&times;'),
+                    // success, info, warning, error or danger
+                ),
+            )
+        );
+        Yii::app()->user->setFlash(
+            TbHtml::STYLE_INFO,
+            '<strong>Heads up!</strong> This alert needs your attention, but it\'s not super important.'
+        );
+        $this->widget(
+            'bootstrap.widgets.TbAlert',
+            array(
+                'block'     => true, // display a larger alert block?
+                'fade'      => true, // use transitions?
+                'closeText' => '&times;', // close link text - if set to false, no close link is displayed
+                'alerts'    => array( // configurations per alert type
+                    TbHtml::STYLE_INFO => array('block' => true, 'fade' => true, 'closeText' => '&times;'),
+                    // success, info, warning, error or danger
+                ),
+            )
+        );
+        Yii::app()->user->setFlash(
+            TbHtml::STYLE_WARNING,
+            '<strong>Warning!</strong> Best check yo self, you\'re not looking too good.'
+        );
+        $this->widget(
+            'bootstrap.widgets.TbAlert',
+            array(
+                'block'     => true, // display a larger alert block?
+                'fade'      => true, // use transitions?
+                'closeText' => '&times;', // close link text - if set to false, no close link is displayed
+                'alerts'    => array( // configurations per alert type
+                    TbHtml::STYLE_WARNING => array('block' => true, 'fade' => true, 'closeText' => '&times;'),
+                    // success, info, warning, error or danger
+                ),
+            )
+        );
+        Yii::app()->user->setFlash(
+            'error',
+            '<strong>Oh snap!</strong> Change a few things up and try submitting again.'
+        );
+        $this->widget(
+            'bootstrap.widgets.TbAlert',
+            array(
+                'block'     => true, // display a larger alert block?
+                'fade'      => true, // use transitions?
+                'closeText' => '&times;', // close link text - if set to false, no close link is displayed
+                'alerts'    => array( // configurations per alert type
+                    'error' => array('block' => true, 'fade' => true, 'closeText' => '&times;'),
+                    // success, info, warning, error or danger
+                ),
+            )
+        );
+        ?>
+    </div>
+	<pre class="prettyprint linenums">
+Yii::app()->user->setFlash(TbHtml::STYLE_SUCCESS,
+        '&lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.');
+
+$this->widget('bootstrap.widgets.TbAlert', array(
+    'block'=>true, // display a larger alert block?
+    'fade'=>true, // use transitions?
+    'closeText'=>'&times;', // close link text - if set to false, no close link is displayed
+    'alerts'=>array( // configurations per alert type
+	    TbHtml::STYLE_SUCCESS=>array('block'=>true, 'fade'=>true, 'closeText'=>'&times;'),
+    ),
+));
+	</pre>
+</section>
+
+
+<!-- Progress bars
+	================================================== -->
+<section id="progress">
+    <div class="page-header">
+        <h1>Progress bars
+            <small>For loading, redirecting, or action status</small>
+        </h1>
+    </div>
+
+    <h2>Examples</h2>
+
+    <h3>Basic</h3>
+
+    <p>Default progress bar with a vertical gradient.</p>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::progressBar(60); ?>
+    </div>
+	<pre class="prettyprint linenums">
+echo TbHtml::progressBar(60);
+	</pre>
+
+    <h3>Striped</h3>
+
+    <p>Uses a gradient to create a striped effect. Not available in IE7-8.</p>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::stripedProgressBar(20); ?>
+    </div>
+	<pre class="prettyprint linenums">
+echo TbHtml::stripedProgressBar(20);
+	</pre>
+
+    <h3>Animated</h3>
+
+    <p>Set <code>animated</code> to <code>true</code> to animate the stripes right to left. Not available in
+        all versions of IE.</p>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::animatedProgressBar(40); ?>
+    </div>
+	<pre class="prettyprint linenums">
+echo TbHtml::animatedProgressBar(40);
+	</pre>
+
+    <h3>Stacked</h3>
+
+    <p>Place multiple bars into the same <code>.progress</code> to stack them.</p>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::stackedProgressBar(
+            array(
+                array('style' => 'success', 'width' => 35, 'htmlOptions' => array('class' => 'foo')),
+                array('style' => 'warning', 'width' => 20),
+                array('style' => 'danger', 'width' => 10),
+            )
+        ); ?>
+    </div>
+	<pre class="prettyprint linenums">
+echo TbHtml::stackedProgressBar(
+    array(
+        array('style' => 'success', 'width' => 35, 'htmlOptions' => array('class' => 'foo')),
+        array('style' => 'warning', 'width' => 20),
+        array('style' => 'danger', 'width' => 10),
+    )
+);
+	</pre>
+
+
+    <hr class="bs-docs-separator">
+
+    <h2>Browser support</h2>
+
+    <p>Progress bars use CSS3 gradients, transitions, and animations to achieve all their effects. These features are
+        not supported in IE7-9 or older versions of Firefox.</p>
+
+    <p>Versions earlier than Internet Explorer 10 and Opera 12 do not support animations.</p>
+
+</section>
+
+<!-- Tables
+	================================================== -->
+<section id="tables">
+<div class="page-header">
+    <h1>Tables</h1>
+</div>
+
+<h2>Detail Views</h2>
+
+<h3>Basic Stuff</h3>
+
+<div class="bs-docs-example">
+    <?php $this->widget(
+        'bootstrap.widgets.TbDetailView',
+        array(
+            'data'       => array('id' => 1, 'firstName' => 'Mark', 'lastName' => 'Otto', 'language' => 'CSS'),
+            'attributes' => array(
+                array('name' => 'firstName', 'label' => 'First name'),
+                array('name' => 'lastName', 'label' => 'Last name'),
+                array('name' => 'language', 'label' => 'Language'),
+            ),
+        )
+    );
+    ?>
+</div>
+	<pre class="prettyprint linenums">
+$this->widget('bootstrap.widgets.TbDetailView', array(
+    'data'=>array('id'=>1, 'firstName'=>'Mark', 'lastName'=>'Otto', 'language'=>'CSS'),
+    'attributes'=>array(
+	    array('name'=>'firstName', 'label'=>'First name'),
+	    array('name'=>'lastName', 'label'=>'Last name'),
+	    array('name'=>'language', 'label'=>'Language'),
+    ),
+));
+	</pre>
+
+<h2>Grid Views</h2>
+
+<p>In order to test the Grid Views we make use of the following data:</p>
+<pre class="prettyprint linenums">
+// $gridDataProvider
+$mark = new Person();
+$mark->id = 1;
+$mark->firstName = 'Mark';
+$mark->lastName = 'Otto';
+$mark->language = 'CSS';
+$mark->hours = 10;
+
+$jacob = new Person();
+$jacob->id = 2;
+$jacob->firstName = 'Jacob';
+$jacob->lastName = 'Thornton';
+$jacob->language = 'JavaScript';
+$jacob->hours = 20;
+
+$stu = new Person();
+$stu->id = 3;
+$stu->firstName = 'Stu';
+$stu->lastName = 'Dent';
+$stu->language = 'HTML';
+$stu->hours = 10;
+
+$persons = array($mark, $jacob, $stu);
+
+$gridDataProvider = new CArrayDataProvider($persons);
+
+// $gridColumns
+$gridColumns = array(
+	array('name'=>'id', 'header'=>'#', 'htmlOptions'=>array('style'=>'width: 60px')),
+	array('name'=>'firstName', 'header'=>'First name'),
+	array('name'=>'lastName', 'header'=>'Last name'),
+	array('name'=>'language', 'header'=>'Language'),
+	array('name'=>'hours', 'header'=>'Hours worked'),
+	array(
+		'htmlOptions' => array('nowrap'=>'nowrap'),
+		'class'=>'bootstrap.widgets.TbButtonColumn',
+		'viewButtonUrl'=>null,
+		'updateButtonUrl'=>null,
+		'deleteButtonUrl'=>null,
+	)
+);
+</pre>
+<h3>Default</h3>
+
+<div class="bs-docs-example">
+    <?php
+    $mark = new Person();
+    $mark->id = 1;
+    $mark->firstName = 'Mark';
+    $mark->lastName = 'Otto';
+    $mark->language = 'CSS';
+    $mark->hours = 10;
+
+    $jacob = new Person();
+    $jacob->id = 2;
+    $jacob->firstName = 'Jacob';
+    $jacob->lastName = 'Thornton';
+    $jacob->language = 'JavaScript';
+    $jacob->hours = 20;
+
+    $stu = new Person();
+    $stu->id = 3;
+    $stu->firstName = 'Stu';
+    $stu->lastName = 'Dent';
+    $stu->language = 'HTML';
+    $stu->hours = 15;
+
+    $sunny = new Person();
+    $sunny->id = 4;
+    $sunny->firstName = 'Sunny';
+    $sunny->lastName = 'Man';
+    $sunny->language = 'HTML';
+    $sunny->hours = 15;
+
+    $persons = array($mark, $jacob, $stu, $sunny);
+
+    $gridDataProvider = new CArrayDataProvider($persons);
+
+    $gridColumns = array(
+        array('name' => 'id', 'header' => '#', 'htmlOptions' => array('style' => 'width: 60px')),
+        array('name' => 'firstName', 'header' => 'First name'),
+        array('name' => 'lastName', 'header' => 'Last name'),
+        array('name' => 'language', 'header' => 'Language'),
+        array('name' => 'hours', 'header' => 'Hours worked', 'htmlOptions' => array('class' => 'tobeselected')),
+        array(
+            'htmlOptions'     => array('nowrap' => 'nowrap'),
+            'class'           => 'bootstrap.widgets.TbButtonColumn',
+            'header'          => 'Edit',
+            'viewButtonUrl'   => null,
+            'updateButtonUrl' => null,
+            'deleteButtonUrl' => null,
+            'buttons'         => array(
+                'delete' => array(
+                    'click' => 'function(){return false;}'
+                )
+            )
+        )
+    );
+    ?>
+    <?php $this->widget(
+        'bootstrap.widgets.TbGridView',
+        array(
+            'dataProvider' => $gridDataProvider,
+            'template'     => "{items}",
+            'columns'      => $gridColumns,
+        )
+    );
+    ?>
+</div>
+<pre class="prettyprint linenums">
+$this->widget('bootstrap.widgets.TbGridView', array(
+	'dataProvider'=>$gridDataProvider,
+	'template'=>"{items}",
+	'columns'=>$gridColumns,
+));
+</pre>
+<h3>Striped</h3>
+
+<div class="bs-docs-example">
+    <?php $this->widget(
+        'bootstrap.widgets.TbGridView',
+        array(
+            'type'         => 'striped',
+            'dataProvider' => $gridDataProvider,
+            'template'     => "{items}",
+            'columns'      => $gridColumns,
+        )
+    );
+    ?>
+</div>
+<pre class="prettyprint linenums">
+this->widget('bootstrap.widgets.TbGridView', array(
+	'type'=>'striped',
+	'dataProvider'=>$gridDataProvider,
+	'template'=>"{items}",
+	'columns'=>$gridColumns,
+));
+</pre>
+<h3>Bordered</h3>
+
+<div class="bs-docs-example">
+    <?php $this->widget(
+        'bootstrap.widgets.TbGridView',
+        array(
+            'type'         => TbHtml::GRID_BORDERED,
+            'dataProvider' => $gridDataProvider,
+            'template'     => "{items}",
+            'columns'      => $gridColumns,
+        )
+    );
+    ?>
+</div>
+<pre class="prettyprint linenums">
+$this->widget('bootstrap.widgets.TbGridView', array(
+	'type'=> TbHtml::GRID_BORDERED,
+	'dataProvider'=>$gridDataProvider,
+	'template'=>"{items}",
+	'columns'=>$gridColumns,
+));
+</pre>
+<h3>Condensed</h3>
+
+<div class="bs-docs-example">
+    <?php $this->widget(
+        'bootstrap.widgets.TbGridView',
+        array(
+            'type'         => TbHtml::GRID_CONDENSED,
+            'dataProvider' => $gridDataProvider,
+            'template'     => "{items}",
+            'columns'      => $gridColumns,
+        )
+    );
+    ?>
+</div>
+<pre class="prettyprint linenums">
+$this->widget('bootstrap.widgets.TbGridView', array(
+	'type'=> TbHtml::GRID_CONDENSED,
+	'dataProvider'=>$gridDataProvider,
+	'template'=>"{items}",
+	'columns'=>$gridColumns,
+));
+</pre>
+<h3>Striped, bordered and condensed</h3>
+
+<div class="bs-docs-example">
+    <?php $this->widget(
+        'bootstrap.widgets.TbGridView',
+        array(
+            'type'         => 'striped bordered condensed',
+            'dataProvider' => $gridDataProvider,
+            'template'     => "{items}",
+            'columns'      => $gridColumns,
+        )
+    );
+    ?>
+</div>
+<pre class="prettyprint linenums">
+$this->widget('bootstrap.widgets.TbGridView', array(
+	'type'=>'striped bordered condensed',
+	'dataProvider'=>$gridDataProvider,
+	'template'=>"{items}",
+	'filter'=>$person->search(),
+	'columns'=>$gridColumns,
+));
+</pre>
+</section>
+
+<!-- Forms
+	================================================== -->
+<section id="forms">
+<div class="page-header">
+    <h1>Forms</h1>
+</div>
+
+<h2>Vertical</h2>
+
+<p>Use the well as a simple effect on an element to give it an inset effect.</p>
+
+<div class="bs-docs-example">
+    <?php /** @var BootActiveForm $form */
+    $model = new TestForm();
+
+    $form = $this->beginWidget(
+        'bootstrap.widgets.TbActiveForm',
+        array(
+            'id'          => 'verticalForm',
+            'htmlOptions' => array('class' => 'well'),
+        )
+    );
+    ?>
+    <?php echo $form->textFieldRow($model, 'textField', array('class' => 'span3')); ?>
+    <?php echo $form->passwordFieldRow($model, 'password', array('class' => 'span3')); ?>
+    <?php echo $form->checkboxRow($model, 'checkbox'); ?>
+    <?php echo TbHtml::button('Login', array('style' => TbHtml::STYLE_PRIMARY)); ?>
+
+    <?php $this->endWidget(); ?>
+</div>
+	<pre class="prettyprint linenums">
+&lt;?php /** @var BootActiveForm $form */
+    $model = new TestForm();
+
+    $form = $this-&gt;beginWidget('bootstrap.widgets.TbActiveForm', array(
+            'id' =&gt; 'verticalForm',
+            'htmlOptions' =&gt; array('class' =&gt; 'well'),
+        ));
+?&gt;
+    &lt;?php echo $form-&gt;textFieldRow($model, 'textField', array('class' =&gt; 'span3')); ?&gt;
+    &lt;?php echo $form-&gt;passwordFieldRow($model, 'password', array('class' =&gt; 'span3')); ?&gt;
+    &lt;?php echo $form-&gt;checkboxRow($model, 'checkbox'); ?&gt;
+    &lt;?php echo TbHtml::button('Login',  array('style' =&gt; TbHtml::STYLE_PRIMARY)); ?&gt;
+
+    &lt;?php $this-&gt;endWidget(); ?&gt;
+</pre>
 <!--<h3>Search Form</h3>-->
 <!---->
 <!--<div class="bs-docs-example">-->
@@ -1982,139 +1886,102 @@ echo TbHtml::buttonGroup(
 <!---->
 <!--&lt;?php $this->endWidget(); ?&gt;-->
 <!--	</pre>-->
-<!--<h3>Horizontal</h3>-->
-<!---->
-<!--<div class="bs-docs-example">-->
-<!--    --><?php ///** @var BootActiveForm $form */
-//    $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-//            'id' => 'horizontalForm',
-//            'type' => 'horizontal',
-//        ));
-?>
-<!---->
-<!--    <fieldset>-->
-<!---->
-<!--        <legend>Legend</legend>-->
-<!---->
-<!--        --><?php //echo $form->textFieldRow($model, 'textField', array('hint' => 'In addition to freeform text, any HTML5 text-based input appears like so.')); ?>
-<!--        --><?php //echo $form->datepickerRow($model, 'dateField', array('options' => array('language' => 'es'), 'hint' => 'Click inside! This is a super cool date field.', 'prepend' => '<i class="icon-calendar"></i>')); ?>
-<!--        --><?php //echo $form->dateRangeRow($model, 'dateRangeField', array('hint' => 'Click inside! An even a date range field!.',
-//                                                                       'prepend' => '<i class="icon-calendar"></i>',
-//                                                                       'options' => array('callback' => 'js:function(start, end){console.log(start.toString("MMMM d, yyyy") + " - " + end.toString("MMMM d, yyyy"));}')
-//            ));
-?>
-<!--        --><?php //echo $form->timepickerRow($model, 'timepicker', array('hint' => 'Nice bootstrap time picker', 'class' => 'input-small', 'append' => '<i class="icon-time" style="cursor:pointer"></i>'));?>
-<!--        --><?php //echo $form->colorpickerRow($model, 'colorpicker', array('hint' => 'Color fields, not bad'));?>
-<!--        --><?php //echo $form->dropDownListRow($model, 'dropdown', array('Something ...', '1', '2', '3', '4', '5')); ?>
-<!--        --><?php //echo $form->dropDownListRow($model, 'multiDropdown', array('1', '2', '3', '4', '5'), array('multiple' => true)); ?>
-<!--        --><?php //echo $form->select2Row($model, 'select2', array('asDropDownList' => false, 'options' => array(
-//                'tags' => array('clever', 'is', 'better', 'clevertech'),
-//                'placeholder' => 'type clever, or is, or just type!',
-//                'width' => '40%',
-//                'tokenSeparators' => array(',', ' ')
-//            )));
-?>
-<!--        --><?php //echo $form->fileFieldRow($model, 'fileField'); ?>
-<!--        --><?php //echo $form->textAreaRow($model, 'textarea', array('class' => 'span4', 'rows' => 5)); ?>
-<!--        --><?php //echo $form->redactorRow($model, 'redactor', array('class' => 'span4', 'rows' => 5,
-//                                                                'hint' => '<span class="label label-important">Important</span> Developers must obtain a license for <a href="http://impreavi.com/redactor/download">RedactorJS</a> to use it on their projects.')
-//        );
-?>
-<!--        --><?php //echo $form->html5EditorRow($model, 'wysihtml5', array('class' => 'span4', 'rows' => 5, 'height' => '200', 'options' => array('color' => true))); ?>
-<!--        --><?php //echo $form->ckEditorRow($model, 'ckeditor', array('options' => array('fullpage' => 'js:true', 'width' => '640', 'resize_maxWidth' => '640', 'resize_minWidth' => '320')));?>
-<!--        --><?php //echo $form->markdownEditorRow($model, 'markdown', array('height' => '200px'));?>
-<!--        --><?php //echo $form->toggleButtonRow($model, 'toggle'); ?>
-<!--        --><?php //echo $form->textFieldRow($model, 'disabled', array('disabled' => true)); ?>
-<!--        --><?php //echo $form->textFieldRow($model, 'prepend', array('prepend' => '@')); ?>
-<!--        --><?php //echo $form->textFieldRow($model, 'append', array('append' => '.00')); ?>
-<!--        --><?php //echo $form->checkBoxRow($model, 'disabledCheckbox', array('disabled' => true)); ?>
-<!--        --><?php //echo $form->checkBoxListInlineRow($model, 'inlineCheckboxes', array('1', '2', '3')); ?>
-<!--        --><?php //echo $form->checkBoxListRow($model, 'checkboxes', array(
-//                'Option one is this and that—be sure to include why it\'s great',
-//                'Option two can also be checked and included in form results',
-//                'Option three can—yes, you guessed it—also be checked and included in form results',
-//            ), array('hint' => '<strong>Note:</strong> Labels surround all the options for much larger click areas.'));
-?>
-<!--        --><?php //echo $form->radioButtonRow($model, 'radioButton'); ?>
-<!--        --><?php //echo $form->radioButtonListRow($model, 'radioButtons', array(
-//                'Option one is this and that—be sure to include why it\'s great',
-//                'Option two can is something else and selecting it will deselect option one',
-//            ));
-?>
-<!--    </fieldset>-->
-<!---->
-<!--    <div class="form-actions">-->
-<!--        --><?php //$this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submit', 'type' => TbHtml::STYLE_PRIMARY, 'label' => 'Submit')); ?>
-<!--        --><?php //$this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'reset', 'label' => 'Reset')); ?>
-<!--    </div>-->
-<!---->
-<!--    --><?php //$this->endWidget(); ?>
-<!--</div>-->
-<!--<pre class="prettyprint linenums">-->
-<!--&lt;?php /** @var BootActiveForm $form */-->
-<!--	$form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(-->
-<!--		'id'=>'horizontalForm',-->
-<!--		'type'=>'horizontal',-->
-<!--	)); ?&gt;-->
-<!---->
-<!--    &lt;fieldset&gt;-->
-<!---->
-<!--        &lt;legend>Legend&lt;/legend&gt;-->
-<!---->
-<!--        &lt;?php echo $form->textFieldRow($model, 'textField',-->
-<!--        array('hint'=>'In addition to freeform text, any HTML5 text-based input appears like so.')); ?&gt;-->
-<!--        &lt;?php echo $form->datepickerRow($model, 'dateField',-->
-<!--        array('hint'=>'Click inside! This is a super cool date field.',-->
-<!--        'prepend'=>'&gt;i class="icon-calendar"&gt;&gt;/i&gt;')); ?&gt;-->
-<!--        &lt;?php echo $form->dateRangeRow($model, 'dateRangeField',-->
-<!--        array('hint'=>'Click inside! An even a date range field!.',-->
-<!--        'prepend'=>'&lt;i class="icon-calendar">&gt;/i&gt;',-->
-<!--        'options' => array('callback'=>'js:function(start, end){console.log(start.toString("MMMM d, yyyy") + " - " + end.toString("MMMM d, yyyy"));}')-->
-<!--        )); ?&gt;-->
-<!--		&lt;?php echo $form->timepickerRow($model, 'timepicker', array('hint'=>'Nice bootstrap time picker', 'append'=>'&lt;i class="icon-time" style="cursor:pointer"&gt;&lt;/i&gt;'));?&gt;-->
-<!--        &lt;?php echo $form->dropDownListRow($model, 'dropdown',-->
-<!--        array('Something ...', '1', '2', '3', '4', '5')); ?&gt;-->
-<!--        &lt;?php echo $form->dropDownListRow($model, 'multiDropdown',-->
-<!--        array('1', '2', '3', '4', '5'), array('multiple'=>true)); ?&gt;-->
-<!--        &lt;?php echo $form->select2Row($model, 'select2', array('asDropDownList' => false, 'options' => array(-->
-<!--        'tags' => array('clever','is', 'better', 'clevertech'),-->
-<!--        'placeholder' => 'type clever, or is, or just type!',-->
-<!--        'width' => '40%',-->
-<!--        'tokenSeparators' => array(',', ' ')-->
-<!--        )));?&gt;-->
-<!--        &lt;?php echo $form->fileFieldRow($model, 'fileField'); ?&gt;-->
-<!--        &lt;?php echo $form->textAreaRow($model, 'textarea', array('class'=>'span8', 'rows'=>5)); ?&gt;-->
-<!--        &lt;?php echo $form->redactorRow($model, 'redactor', array('class'=>'span4', 'rows'=>5)); ?&gt;-->
-<!--        &lt;?php echo $form->html5EditorRow($model, 'wysihtml5', array('class'=>'span4', 'rows'=>5, 'height'=>'200', 'options'=>array('color'=>true))); ?&gt;-->
-<!--		&lt;?php echo $form->ckEditorRow($model, 'ckeditor', array('options'=>array('fullpage'=>'js:true', 'width'=>'640', 'resize_maxWidth'=>'640','resize_minWidth'=>'320')));?&gt;-->
-<!--		&lt;?php echo $form->markdownEditorRow($model, 'markdown', array('height'=>'200px'));?&gt;-->
-<!--        &lt;?php echo $form->toggleButtonRow($model, 'toggle'); ?&gt;-->
-<!--        &lt;?php echo $form->uneditableRow($model, 'uneditable'); ?&gt;-->
-<!--        &lt;?php echo $form->textFieldRow($model, 'disabled', array('disabled'=>true)); ?&gt;-->
-<!--        &lt;?php echo $form->textFieldRow($model, 'prepend', array('prepend'=>'@')); ?&gt;-->
-<!--        &lt;?php echo $form->textFieldRow($model, 'append', array('append'=>'.00')); ?&gt;-->
-<!--        &lt;?php echo $form->checkBoxRow($model, 'disabledCheckbox', array('disabled'=>true)); ?&gt;-->
-<!--        &lt;?php echo $form->checkBoxListInlineRow($model, 'inlineCheckboxes', array('1', '2', '3')); ?&gt;-->
-<!--        &lt;?php echo $form->checkBoxListRow($model, 'checkboxes', array(-->
-<!--		'Option one is this and that—be sure to include why it\'s great',-->
-<!--		'Option two can also be checked and included in form results',-->
-<!--		'Option three can—yes, you guessed it—also be checked and included in form results',-->
-<!--	), array('hint'=>'&lt;strong>Note:&lt;/strong> Labels surround all the options for much larger click areas.')); ?&gt;-->
-<!--        &lt;?php echo $form->radioButtonRow($model, 'radioButton'); ?&gt;-->
-<!--        &lt;?php echo $form->radioButtonListRow($model, 'radioButtons', array(-->
-<!--		'Option one is this and that—be sure to include why it\'s great',-->
-<!--		'Option two can is something else and selecting it will deselect option one',-->
-<!--	)); ?&gt;-->
-<!---->
-<!--    &lt;/fieldset&gt;-->
-<!---->
-<!--    &lt;div class="form-actions">-->
-<!--        &lt;?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>TbHtml::STYLE_PRIMARY, 'label'=>'Submit')); ?&gt;-->
-<!--        &lt;?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'reset', 'label'=>'Reset')); ?&gt;-->
-<!--    &lt;/div&gt;-->
-<!---->
-<!--&lt;?php $this->endWidget(); ?&gt;-->
-<!--</pre>-->
+<h2>Horizontal</h2>
+
+<div class="bs-docs-example">
+    <?php /** @var BootActiveForm $form */
+    $form = $this->beginWidget(
+        'bootstrap.widgets.TbActiveForm',
+        array(
+            'id'   => 'horizontalForm',
+            'type' => 'horizontal',
+        )
+    );
+    ?>
+    <fieldset>
+        <legend>Legend</legend>
+        <?php echo $form->textFieldRow(
+            $model,
+            'textField',
+            array('hint' => 'In addition to freeform text, any HTML5 text-based input appears like so.')
+        ); ?>
+        <?php echo $form->dropDownListRow($model, 'dropdown', array('Something ...', '1', '2', '3', '4', '5')); ?>
+        <?php echo $form->dropDownListRow(
+            $model,
+            'multiDropdown',
+            array('1', '2', '3', '4', '5'),
+            array('multiple' => true)
+        ); ?>
+        <?php echo $form->fileFieldRow($model, 'fileField'); ?>
+        <?php echo $form->textAreaRow($model, 'textarea', array('class' => 'span4', 'rows' => 5)); ?>
+        <?php echo $form->textFieldRow($model, 'disabled', array('disabled' => true)); ?>
+        <?php echo $form->textFieldRow($model, 'prepend', array('prepend' => '@')); ?>
+        <?php echo $form->textFieldRow($model, 'append', array('append' => '.00')); ?>
+        <?php echo $form->checkBoxRow($model, 'disabledCheckbox', array('disabled' => true)); ?>
+        <div class="control-group">
+            <?php echo $form->inlineCheckBoxList($model, 'inlineCheckboxes', array('1', '2', '3')); ?>
+        </div>
+        <?php echo $form->radioButtonRow($model, 'radioButton'); ?>
+        <div class="control-group">
+            <?php echo $form->inlineRadioButtonList($model, 'inlineRadioButtons', array('1', '2', '3')); ?>
+        </div>
+    </fieldset>
+
+    <div class="form-actions">
+        <?php echo TbHtml::button('Submit', array('style' => TbHtml::STYLE_PRIMARY)); ?>
+        <?php echo TbHtml::resetButton('Reset'); ?>
+    </div>
+
+    <?php $this->endWidget(); ?>
+</div>
+<pre class="prettyprint linenums">
+&lt;?php
+$form = $this-&gt;beginWidget(
+    'bootstrap.widgets.TbActiveForm',
+    array(
+        'id'   =&gt; 'horizontalForm',
+        'type' =&gt; 'horizontal',
+    )
+);
+?&gt;
+&lt;fieldset&gt;
+    &lt;legend&gt;Legend&lt;/legend&gt;
+    &lt;?php echo $form-&gt;textFieldRow(
+        $model,
+        'textField',
+        array('hint' =&gt; 'Some words here.')
+    ); ?&gt;
+    &lt;?php echo $form-&gt;dropDownListRow($model,
+        'dropdown',
+        array('Something ...', '1', '2', '3', '4', '5')); ?&gt;
+    &lt;?php echo $form-&gt;dropDownListRow(
+        $model,
+        'multiDropdown',
+        array('1', '2', '3', '4', '5'),
+        array('multiple' =&gt; true)
+    ); ?&gt;
+    &lt;?php echo $form-&gt;fileFieldRow($model, 'fileField'); ?&gt;
+    &lt;?php echo $form-&gt;textAreaRow($model, 'textarea', array('class' =&gt; 'span4', 'rows' =&gt; 5)); ?&gt;
+    &lt;?php echo $form-&gt;textFieldRow($model, 'disabled', array('disabled' =&gt; true)); ?&gt;
+    &lt;?php echo $form-&gt;textFieldRow($model, 'prepend', array('prepend' =&gt; '@')); ?&gt;
+    &lt;?php echo $form-&gt;textFieldRow($model, 'append', array('append' =&gt; '.00')); ?&gt;
+    &lt;?php echo $form-&gt;checkBoxRow($model, 'disabledCheckbox', array('disabled' =&gt; true)); ?&gt;
+    &lt;div class=&quot;control-group&quot;&gt;
+        &lt;?php echo $form-&gt;inlineCheckBoxList($model,'inlineCheckboxes',array('1', '2', '3')); ?&gt;
+    &lt;/div&gt;
+    &lt;?php echo $form-&gt;radioButtonRow($model, 'radioButton'); ?&gt;
+    &lt;div class=&quot;control-group&quot;&gt;
+        &lt;?php echo $form-&gt;inlineRadioButtonList($model,'inlineRadioButtons',array('1', '2', '3'));?&gt;
+    &lt;/div&gt;
+&lt;/fieldset&gt;
+
+&lt;div class=&quot;form-actions&quot;&gt;
+    &lt;?php echo TbHtml::button('Submit', array('style' =&gt; TbHtml::STYLE_PRIMARY)); ?&gt;
+    &lt;?php echo TbHtml::resetButton('Reset'); ?&gt;
+&lt;/div&gt;
+
+&lt;?php $this-&gt;endWidget(); ?&gt;
+</pre>
 <!--<h3>Support For Yii Formbuilder-->
 <!--    <small>Thanks to Joe Blocher</small>-->
 <!--</h3>-->
