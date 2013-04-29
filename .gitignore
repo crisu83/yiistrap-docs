@@ -1,24 +1,17 @@
+# composer
+/vendor
+
+# project files
+/.buildpath
+/.idea
+/.project
+/.settings
+/nbproject
+
 # cache directories
 Thumbs.db
 *.DS_Store
 *.empty
-
-# phpstorm project files
-.idea
-
-# vagrant
-.vagrant
-
-# netbeans project files
-nbproject
-
-# eclipse, zend studio, aptana or other eclipse like project files
-.buildpath
-.project
-.settings
-
-# sass cache files
-*.sass-cache
 
 # mac deployment helpers
 switch
@@ -27,3 +20,6 @@ index
 # runtime and cache directories
 /docs/app/runtime
 /docs/web/assets
+
+# vagrant
+.vagrant
