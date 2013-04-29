@@ -1,4 +1,4 @@
-Yiistrap
-========
+Yiistrap Docs
+=============
 
-Twitter Bootstrap for Yii Demo site.
+Documentation for Yiistrap, Twitter Bootstrap for Yii.
