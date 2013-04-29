@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('UTC');
 
 $debugger = __DIR__ . '/../vendor/crisu83/yii-debug/helpers/Debugger.php';
 
