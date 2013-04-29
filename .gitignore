@@ -19,8 +19,8 @@ switch
 index
 
 # runtime and cache directories
-/docs/app/runtime
-/docs/web/assets
+/app/runtime
+/web/assets
 
 # vagrant
 .vagrant
