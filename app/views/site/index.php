@@ -1,21 +1,21 @@
 <div class="jumbotron masthead">
     <div class="container">
-        <h1>YiiStrap</h1>
+        <h1>Yiistrap</h1>
 
         <p>Twitter Bootstrap for Yii</p>
 
         <p><a href="https://github.com/yii-twbs/yiistrap/archive/master.zip" class="btn btn-primary btn-large"
               onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 1.0.0']);">Download
-                YiiStrap</a></p>
+                Yiistrap</a></p>
         <ul class="masthead-links">
             <li><a href="http://github.com/yii-twbs/yiistrap"
                    onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'GitHub project']);">GitHub
                     project</a></li>
-            <li>Version 1.0.1</li>
+            <li>Version 1.0.0</li>
             <li class="tweet-btn">
                 <a href="https://twitter.com/share" class="twitter-share-button"
                    data-url="http://yiistrap.2amigos.us/" data-count="horizontal" data-via="twbooster"
-                   data-related="mdo:YiiStrap">Tweet</a>
+                   data-related="mdo:Yiistrap">Tweet</a>
             </li>
         </ul>
     </div>
@@ -48,9 +48,9 @@
 
     <div class="marketing">
 
-        <h1>Introducing YiiStrap</h1>
+        <h1>Introducing Yiistrap</h1>
 
-        <p class="marketing-byline">YiiStrap is the new generation of Yii-Bootstrap extension.</p>
+        <p class="marketing-byline">Yiistrap is the new generation of the Yii-Bootstrap extension.</p>
 
         <div class="row-fluid">
             <div class="span4">
@@ -78,13 +78,13 @@
 
                 <p style="text-align:justify">
                     In the past other libraries extended from the old <a href="http://www.cniska.net/yii-bootstrap/"
-                                                                         target="_blank">Yii-Bootstrap-</a> and confused
+                                                                         target="_blank">Yii-Bootstrap</a> and confused
                     the community as there
-                    was two versions of nearly the same extension. YiiStrap has combined forces with <a
+                    was two versions of nearly the same extension. Yiistrap has combined forces with <a
                         href="http://2amigos.us" target="_blank">2amigOS!</a>
                     to have its own enhanced library: <a href="http://yiiwheels.2amigos.us"
                                                          target="_blank">YiiWheels</a>.
-                    YiiStrap will always be the same, keeping up to date with the latest releases of <a
+                    Yiistrap will always be the same, keeping up to date with the latest releases of <a
                         href="twitter.github.com/bootstrap/" target="_blank">Twitter's Bootstrap</a>.
                 </p>
             </div>

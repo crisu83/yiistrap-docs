@@ -1,20 +1,19 @@
 <?php
-// require application params
-$params = require(__DIR__ . '/params.php');
-
 // application configuration
 return array(
 	// application base path
-	'basePath'   => realpath(__DIR__ . DIRECTORY_SEPARATOR . '..'),
+	'basePath' => realpath(__DIR__ . DIRECTORY_SEPARATOR . '..'),
 	// application name
-	'name'	   => $params['app.name'],
+	'name' => 'Yiistrap',
 	// application language
-	'language'   => 'en',
+	'language' => 'en',
 	// components to preload
-	'preload'	=> array('log'),
+	'preload' => array('log'),
 	// path aliases
-	'aliases'	=> array(
-		'bootstrap' => realpath(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '../vendor/yii-twbs/yiistrap'),
+	'aliases' => array(
+		'app' => 'application',
+		'vendor' => realpath(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '../vendor'),
+		'bootstrap' => 'vendor.yii-twbs.yiistrap',
 	),
 	// paths to import
 	'import' => array(
@@ -30,12 +29,6 @@ return array(
 		'errorHandler' => array(
 			'errorAction' => 'site/error',
 		),
-		'less' => array(
-			'class'  => 'ext.less.components.Less',
-			'mode'	=> $params['less.mode'],
-			'options' => $params['less.options'],
-			'files' => $params['less.files'],
-		),
 		'log' => array(
 			'class'  => 'CLogRouter',
 			'routes' => array(
@@ -43,24 +36,23 @@ return array(
 					'class'  => 'CFileLogRoute',
 					'levels' => 'error, warning',
 				),
-				// uncomment the following to show log messages on web pages
-				/*
-				array(
-					'class'=>'CWebLogRoute',
-				),
-				*/
 			),
 		),
 		'urlManager' => array(
-			'urlFormat'	  => 'path',
+			'urlFormat' => 'path',
 			'showScriptName' => false,
 			'caseSensitive' => false,
-			'rules' => $params['urlManager.rules'],
+			'rules' => array(
+				// default rules
+				'<controller:\w+>/<id:\d+>' => '<controller>/view',
+				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+			),
 		),
 		'user' => array(
 			'allowAutoLogin' => true,
 		),
 	),
 	// application parameters
-	'params' => $params,
+	'params' => array(),
 );
