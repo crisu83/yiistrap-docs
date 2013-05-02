@@ -25,7 +25,7 @@
 		<li><a href="#thumbnails"><i class="icon-chevron-right"></i> Thumbnails</a></li>
 		<li><a href="#alerts"><i class="icon-chevron-right"></i> Alerts</a></li>
 		<li><a href="#progress"><i class="icon-chevron-right"></i> Progress bars</a></li>
-		<li><a href="#media"><i class="icon-chevron-right"></i> Media Objects</a></li>
+		<li><a href="#media"><i class="icon-chevron-right"></i> Media object</a></li>
 		<li><a href="#carousel"><i class="icon-chevron-right"></i> Carousel</a></li>
 		<li><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
 		<li><a href="#code"><i class="icon-chevron-right"></i> Code</a></li>
@@ -930,12 +930,12 @@ echo TbHtml::buttonGroup(array(
 
 </section>
 
-<!-- Media Objects
+<!-- Media object
 	================================================== -->
 <section id="media">
 
 	<div class="page-header">
-		<h1>Media Objects</h1>
+		<h1>Media object</h1>
 	</div>
 
 	<div class="bs-docs-example">
