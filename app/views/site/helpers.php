@@ -26,6 +26,7 @@
 		<li><a href="#alerts"><i class="icon-chevron-right"></i> Alerts</a></li>
 		<li><a href="#progress"><i class="icon-chevron-right"></i> Progress bars</a></li>
 		<li><a href="#media"><i class="icon-chevron-right"></i> Media Objects</a></li>
+		<li><a href="#carousel"><i class="icon-chevron-right"></i> Carousel</a></li>
 		<li><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
 		<li><a href="#code"><i class="icon-chevron-right"></i> Code</a></li>
 		<li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li>
@@ -543,6 +544,10 @@ echo TbHtml::buttonGroup(array(
 &lt;/div>
 </pre>
 
+	<h2>Tabbable nav</h2>
+
+	<p class="muted">Coming soon!</p>
+
 </section>
 
 <!-- Pagination
@@ -766,10 +771,10 @@ echo TbHtml::buttonGroup(array(
 
 	<pre class="prettyprint linenums">
 &lt;?php echo TbHtml::thumbnails(array(
-    array('image' => '...', 'url' => '#'),
-    array('image' => '...', 'url' => '#'),
-    array('image' => '...', 'url' => '#'),
-    array('image' => '...', 'url' => '#'),
+    array('image' => 'holder.js/260x180', 'url' => '#'),
+    array('image' => 'holder.js/260x180', 'url' => '#'),
+    array('image' => 'holder.js/260x180', 'url' => '#'),
+    array('image' => 'holder.js/260x180', 'url' => '#'),
 )); ?></pre>
 
 	<hr class="bs-docs-separator">
@@ -782,9 +787,9 @@ echo TbHtml::buttonGroup(array(
 
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::thumbnails(array(
-    array('image' => '...', 'label' => 'Thumbnail label', 'caption' => '...'),
-    array('image' => '...', 'label' => 'Thumbnail label', 'caption' => '...'),
-    array('image' => '...', 'label' => 'Thumbnail label', 'caption' => '...'),
+    array('image' => 'holder.js/300x200', 'label' => 'Thumbnail label', 'caption' => '...'),
+    array('image' => 'holder.js/300x200', 'label' => 'Thumbnail label', 'caption' => '...'),
+    array('image' => 'holder.js/300x200', 'label' => 'Thumbnail label', 'caption' => '...'),
 ), array('span' => 4)); ?></pre>
 
 	<div>
@@ -804,11 +809,11 @@ echo TbHtml::buttonGroup(array(
 	</div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::thumbnails(array(
-    array('image' => '...', 'url' => '#', 'span' => 4),
-    array('image' => '...', 'url' => '#', 'span' => 3),
-    array('image' => '...', 'url' => '#', 'span' => 2),
-    array('image' => '...', 'url' => '#', 'span' => 3),
-    array('image' => '...', 'url' => '#', 'span' => 2),
+    array('image' => 'holder.js/360x270', 'url' => '#', 'span' => 4),
+    array('image' => 'holder.js/260x120', 'url' => '#', 'span' => 3),
+    array('image' => 'holder.js/160x120', 'url' => '#', 'span' => 2),
+    array('image' => 'holder.js/260x120', 'url' => '#', 'span' => 3),
+    array('image' => 'holder.js/160x120', 'url' => '#', 'span' => 2),
 )); ?>
     </pre>
 </section>
@@ -952,6 +957,31 @@ echo TbHtml::buttonGroup(array(
         )),
     )),
     array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => '...'),
+)); ?></pre>
+
+</section>
+
+<!-- Carousel
+	================================================== -->
+<section id="carousel">
+
+	<div class="page-header">
+		<h1>Carousel</h1>
+	</div>
+
+	<div class="bs-docs-example">
+		<?php echo TbHtml::carousel(array(
+			array('image' => 'holder.js/830x477', 'label' => 'First Thumbnail label', 'caption' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'),
+			array('image' => 'holder.js/830x477', 'label' => 'Second Thumbnail label', 'caption' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'),
+			array('image' => 'holder.js/830x477', 'label' => 'Third Thumbnail label', 'caption' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'),
+		)); ?>
+	</div>
+
+	<pre class="prettyprint linenums">
+&lt;?php echo TbHtml::carousel(array(
+    array('image' => 'holder.js/830x477', 'label' => 'First Thumbnail label', 'caption' => '...'),
+    array('image' => 'holder.js/830x477', 'label' => 'Second Thumbnail label', 'caption' => '...'),
+    array('image' => 'holder.js/830x477', 'label' => 'Third Thumbnail label', 'caption' => '...'),
 )); ?></pre>
 
 </section>
@@ -1216,15 +1246,22 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 
 	<h3>Sizes</h3>
 
+	<h4>Large</h4>
+
 	<div class="bs-docs-example">
 		<?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::SIZE_LARGE)); ?>
-		<?php echo TbHtml::well('Look, I\'m in a well!'); ?>
+	</div>
+
+	<pre class="prettyprint linenums">
+&lt;?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::SIZE_LARGE)); ?></pre>
+
+	<h4>Small</h4>
+
+	<div class="bs-docs-example">
 		<?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::SIZE_SMALL)); ?>
 	</div>
 
 	<pre class="prettyprint linenums">
-&lt;?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::SIZE_LARGE)); ?>
-&lt;?php echo TbHtml::well('Look, I\'m in a well!'); ?>
 &lt;?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::SIZE_SMALL)); ?></pre>
 
 	<h2>Close icon</h2>

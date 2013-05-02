@@ -18,7 +18,7 @@
 		<ul class="nav nav-list bs-docs-sidenav">
 			<li><a href="#navs"><i class="icon-chevron-right"></i> Navs</a></li>
 			<li><a href="#navbar"><i class="icon-chevron-right"></i> Navbar</a></li>
-			<li><a href="#breadcrumbs"><i class="icon-chevron-right"></i> Breadcrumbs</a></li>
+			<li><a href="#breadcrumb"><i class="icon-chevron-right"></i> Breadcrumb</a></li>
 			<li><a href="#herounit"><i class="icon-chevron-right"></i> Hero unit</a></li>
 			<li><a href="#gridview"><i class="icon-chevron-right"></i> Grid view</a></li>
 			<li><a href="#detailview"><i class="icon-chevron-right"></i> Detail view</a></li>
@@ -50,7 +50,7 @@
 	); ?>
 
 	<div class="page-header">
-		<h1>Navigation <small><a href="#">TbNav</a></small></h1>
+		<h1>Navigation</h1>
 	</div>
 
 	<h3>Basic tabs</h3>
@@ -313,7 +313,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 	); ?>
 
 	<div class="page-header">
-		<h1>Navbar <small><a href="#">TbNavbar</a></small></h1>
+		<h1>Navbar</h1>
 	</div>
 
 	<h2>Basic navbar</h2>
@@ -364,17 +364,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 		<hr class="bs-docs-separator">
 
-		<h2>Optional display variations</h2>
-
-		<h3>Fixed to top</h3>
-
-		<p class="muted">Coming soon!</p>
-
-		<h3>Fixed to bottom</h3>
-
-		<p class="muted">Coming soon!</p>
-
-		<h3>Static top navbar</h3>
+		<h2>Display variations</h2>
 
 		<p class="muted">Coming soon!</p>
 
@@ -420,12 +410,12 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 </section>
 
-<!-- Breadcrumbs
+<!-- Breadcrumb
 ================================================== -->
-<section id="breadcrumbs">
+<section id="breadcrumb">
 
 	<div class="page-header">
-		<h1>Breadcrumbs <small><a href="#">TbBreadcrumb</a></small></h1>
+		<h1>Breadcrumb</h1>
 	</div>
 
 	<div class="bs-docs-example">
@@ -456,7 +446,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 <section id="herounit">
 
 	<div class="page-header">
-		<h1>Hero unit <small><a href="#">TbHeroUnit</a></small></h1>
+		<h1>Hero unit</h1>
 	</div>
 
 	<div class="bs-docs-example">
@@ -480,10 +470,10 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 <!-- Alerts
 	================================================== -->
-<section id="alerts">
+<section id="alert">
 
 	<div class="page-header">
-		<h1>Alerts <small><a href="#">TbAlert</a></small></h1>
+		<h1>Alert</h1>
 	</div>
 
 	<h2>Default alert</h2>
@@ -576,7 +566,7 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
 	?>
 
 	<div class="page-header">
-		<h1>Grid view <small><a href="#">TbGridView</a></small></h1>
+		<h1>Grid view</h1>
 	</div>
 
 	<div class="bs-docs-example">
@@ -679,7 +669,7 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
 	================================================== -->
 <section id="detailview">
 
-	<h1>Detail view <small><a href="#">TbDetailView</a></small></h1>
+	<h1>Detail view</h1>
 
 	<p class="muted">Coming soon!</p>
 
@@ -690,7 +680,7 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
 <section id="forms">
 
 	<div class="page-header">
-		<h1>Forms <small><a href="#">TbActiveForm</a></small></h1>
+		<h1>Forms</h1>
 	</div>
 
 	<p class="muted">Coming soon!</p>
@@ -702,7 +692,7 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
 	<section id="modals">
 
 		<div class="page-header">
-			<h1>Modals <small><a href="#">TbModal</a></small></h1>
+			<h1>Modals</h1>
 		</div>
 
 		<div class="bs-docs-example" style="background-color: #f5f5f5;">
@@ -764,688 +754,258 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
 )); ?&gt;
 </pre>
 
-		<hr class="bs-docs-separator">
+	<hr class="bs-docs-separator">
 
-	</section>
+</section>
 
-	<!-- Scrollspy
-	================================================== -->
-	<section id="scrollspy">
+<!-- Scrollspy
+================================================== -->
+<section id="scrollspy">
 
-		<div class="page-header">
-			<h1>Scrollspy <small><a href="#">TbScrollspy</a></small></h1>
-		</div>
-
-		<p class="muted">Coming soon!</p>
-
-	</section>
-
-	<!-- Tabs
-	================================================== -->
-	<section id="tabs">
-		<div class="page-header">
-			<h1>Togglable tabs <small><a href="#">TbTabs</a></small></h1>
-		</div>
-
-		<h2>Example tabs</h2>
-
-		<p>We didn't play with the <a href="components.html#navs">placement property </a>. Let's do it now.</p>
-
-		<div class="bs-docs-example">
-	      <span class="span4">
-		  <h3>Top Placement</h3>
-			  <?php $this->widget(
-				  'bootstrap.widgets.TbTabs',
-				  array(
-					  'type' => 'tabs',
-					  'tabs' => array(
-						  array('label' => 'Home', 'content' => 'Home Content', 'active' => true),
-						  array('label' => 'Profile', 'content' => 'Profile Content'),
-						  array('label' => 'Messages', 'content' => 'Messages Content'),
-					  ),
-				  )
-			  ); ?>
-		  </span>
-	      <span class="span4">
-		      <h3>Bottom Placement</h3>
-			  <?php $this->widget(
-				  'bootstrap.widgets.TbTabs',
-				  array(
-					  'type' => 'tabs',
-					  'placement' => 'below',
-					  'tabs' => array(
-						  array('label' => 'Home', 'content' => 'Home Content', 'active' => true),
-						  array('label' => 'Profile', 'content' => 'Profile Content'),
-						  array('label' => 'Messages', 'content' => 'Messages Content'),
-					  ),
-				  )
-			  ); ?>
-	      </span>
-
-			<div style="clear:both"></div>
-	      <span class="span4">
-		      <h3>Left Placement</h3>
-			  <?php $this->widget(
-				  'bootstrap.widgets.TbTabs',
-				  array(
-					  'type' => 'tabs',
-					  'placement' => 'left',
-					  'tabs' => array(
-						  array('label' => 'Home', 'content' => 'Home Content', 'active' => true),
-						  array('label' => 'Profile', 'content' => 'Profile Content'),
-						  array('label' => 'Messages', 'content' => 'Messages Content'),
-					  ),
-				  )
-			  ); ?>
-		  </span>
-	      <span class="span4">
-		      <h3>Right Placement</h3>
-			  <?php $this->widget(
-				  'bootstrap.widgets.TbTabs',
-				  array(
-					  'type' => 'tabs',
-					  'placement' => 'right',
-					  'tabs' => array(
-						  array('label' => 'Home', 'content' => 'Home Content', 'active' => true),
-						  array('label' => 'Profile', 'content' => 'Profile Content'),
-						  array('label' => 'Messages', 'content' => 'Messages Content'),
-					  ),
-				  )
-			  ); ?>
-	      </span>
-
-			<div style="clear:both"></div>
-		</div>
-	</section>
-
-
-	<!-- Tooltips
-	================================================== -->
-	<section id="tooltips">
-
-		<div class="page-header">
-			<h1>Tooltips <small><a href="#">TbTooltip</a></small></h1>
-		</div>
-
-		<h2>Examples
-			<small>from Twitter Booster docs -no need to rewrite same info</small>
-		</h2>
-		<p>Inspired by the excellent jQuery.tipsy plugin written by Jason Frame; Tooltips are an updated version, which
-			don't rely on images, use CSS3 for animations, and data-attributes for local title storage.</p>
-
-		<p>Hover over the links below to see tooltips:</p>
-
-		<div class="bs-docs-example tooltip-demo">
-			<p class="muted" style="margin-bottom: 0;">
-				Tight pants next level keffiyeh <a href="#" rel="tooltip" title="Default tooltip">you probably</a>
-				haven't
-				heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table
-				seitan,
-				mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" rel="tooltip"
-																			   title="Another tooltip">have a</a> terry
-				richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel
-				williamsburg
-				marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" rel="tooltip"
-																								title="Another one here too">whatever
-					keytar</a>, scenester farm-to-table banksy Austin twitter handle freegan cred raw denim
-				single-origin
-				coffee
-				viral.
-			</p>
-		</div>
-
-		<h3>Four directions</h3>
-
-		<div class="bs-docs-example tooltip-demo">
-			<ul class="bs-docs-tooltip-examples">
-				<li><a href="#" rel="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</a></li>
-				<li><a href="#" rel="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</a></li>
-				<li><a href="#" rel="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</a>
-				</li>
-				<li><a href="#" rel="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</a></li>
-			</ul>
-		</div>
-		<hr class="bs-docs-separator">
-
-		<h2>Usage</h2>
-
-		<p>Trigger the tooltip via JavaScript:</p>
-		<pre class="prettyprint linenums">$('#example').tooltip(options)</pre>
-
-		<h3>Options</h3>
-
-		<p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to
-			<code>data-</code>,
-			as in <code>data-animation=""</code>.</p>
-		<table class="table table-bordered table-striped">
-			<thead>
-			<tr>
-				<th style="width: 100px;">Name</th>
-				<th style="width: 100px;">type</th>
-				<th style="width: 50px;">default</th>
-				<th>description</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td>animation</td>
-				<td>boolean</td>
-				<td>true</td>
-				<td>apply a css fade transition to the tooltip</td>
-			</tr>
-			<tr>
-				<td>html</td>
-				<td>boolean</td>
-				<td>true</td>
-				<td>Insert html into the tooltip. If false, jquery's <code>text</code> method will be used to insert
-					content
-					into the dom. Use text if you're worried about XSS attacks.
-				</td>
-			</tr>
-			<tr>
-				<td>placement</td>
-				<td>string|function</td>
-				<td>'top'</td>
-				<td>how to position the tooltip - top | bottom | left | right</td>
-			</tr>
-			<tr>
-				<td>selector</td>
-				<td>string</td>
-				<td>false</td>
-				<td>If a selector is provided, tooltip objects will be delegated to the specified targets.</td>
-			</tr>
-			<tr>
-				<td>title</td>
-				<td>string | function</td>
-				<td>''</td>
-				<td>default title value if `title` tag isn't present</td>
-			</tr>
-			<tr>
-				<td>trigger</td>
-				<td>string</td>
-				<td>'hover'</td>
-				<td>how tooltip is triggered - click | hover | focus | manual</td>
-			</tr>
-			<tr>
-				<td>delay</td>
-				<td>number | object</td>
-				<td>0</td>
-				<td>
-					<p>delay showing and hiding the tooltip (ms) - does not apply to manual trigger type</p>
-
-					<p>If a number is supplied, delay is applied to both hide/show</p>
-
-					<p>Object structure is: <code>delay: { show: 500, hide: 100 }</code></p>
-				</td>
-			</tr>
-			</tbody>
-		</table>
-		<div class="alert alert-info">
-			<strong>Heads up!</strong>
-			Options for individual tooltips can alternatively be specified through the use of data attributes.
-		</div>
-
-		<h3>Markup</h3>
-
-		<p>For performance reasons, the Tooltip and Popover data-apis are opt in. If you would like to use them just
-			specify
-			a selector option.</p>
-    <pre
-		class="prettyprint linenums">&lt;a href="#" rel="tooltip" title="first tooltip"&gt;hover over me&lt;/a&gt;</pre>
-
-		<h3>Methods</h3>
-		<h4>$().tooltip(options)</h4>
-
-		<p>Attaches a tooltip handler to an element collection.</p>
-		<h4>.tooltip('show')</h4>
-
-		<p>Reveals an element's tooltip.</p>
-		<pre class="prettyprint linenums">$('#element').tooltip('show')</pre>
-		<h4>.tooltip('hide')</h4>
-
-		<p>Hides an element's tooltip.</p>
-		<pre class="prettyprint linenums">$('#element').tooltip('hide')</pre>
-		<h4>.tooltip('toggle')</h4>
-
-		<p>Toggles an element's tooltip.</p>
-		<pre class="prettyprint linenums">$('#element').tooltip('toggle')</pre>
-		<h4>.tooltip('destroy')</h4>
-
-		<p>Hides and destroys an element's tooltip.</p>
-		<pre class="prettyprint linenums">$('#element').tooltip('destroy')</pre>
-	</section>
-
-	<!-- Popovers
-	================================================== -->
-	<section id="popovers">
-
-		<div class="page-header">
-			<h1>Popovers <small><a href="#">TbPopover</a></small></h1>
-		</div>
-
-		<h2>Examples</h2>
-
-		<h3>Static popover</h3>
-
-		<p>Four options are available: top, right, bottom, and left aligned.</p>
-
-		<div class="bs-docs-example bs-docs-example-popover">
-			<div class="popover bottom">
-				<div class="arrow"></div>
-				<h3 class="popover-title">Popover bottom</h3>
-
-				<div class="popover-content">
-					<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-						venenatis vestibulum.</p>
-				</div>
-			</div>
-
-			<div class="popover right">
-				<div class="arrow"></div>
-				<h3 class="popover-title">Popover right</h3>
-
-				<div class="popover-content">
-					<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-						venenatis vestibulum.</p>
-				</div>
-			</div>
-
-			<div class="popover top">
-				<div class="arrow"></div>
-				<h3 class="popover-title">Popover top</h3>
-
-				<div class="popover-content">
-					<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-						venenatis vestibulum.</p>
-				</div>
-			</div>
-
-			<div class="popover left">
-				<div class="arrow"></div>
-				<h3 class="popover-title">Popover left</h3>
-
-				<div class="popover-content">
-					<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-						venenatis vestibulum.</p>
-				</div>
-			</div>
-
-			<div class="clearfix"></div>
-		</div>
-		<p>Use the following statement for your custom [selectors default to <code>a[rel=popover]</code>.</p>
-<pre class="prettyprint linenums">
-Yii::app()->bootstrap->registerPopover('body', array('selector'=>'button[rel=popover]'));
-</pre>
-
-		<span class="label label-info">Note</span> Please, check
-		<a target="_blank" href="http://twitter.github.com/bootstrap/javascript.html#popovers">Twitter popover
-			documentation</a> for more information about all the options related to popovers.
-	</section>
-
-	<!-- Collapse
-	================================================== -->
-	<section id="collapse">
-
-		<div class="page-header">
-			<h1>Collapse <small><a href="#">TbCollapse</a></small></h1>
-		</div>
-
-		<h2>Example accordion</h2>
-
-		<p>Using the TbCollapse widget, we built a simple accordion style widget:</p>
-
-		<div class="bs-docs-example">
-			<?php $collapse = $this->beginWidget('bootstrap.widgets.TbCollapse'); ?>
-			<div class="accordion-group">
-				<div class="accordion-heading">
-					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-						Collapsible Group Item #1
-					</a>
-				</div>
-				<div id="collapseOne" class="accordion-body collapse in">
-					<div class="accordion-inner">
-						Anim pariatur cliche...
-					</div>
-				</div>
-			</div>
-			<div class="accordion-group">
-				<div class="accordion-heading">
-					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-						Collapsible Group Item #2
-					</a>
-				</div>
-				<div id="collapseTwo" class="accordion-body collapse">
-					<div class="accordion-inner">
-						Anim pariatur cliche...
-					</div>
-				</div>
-			</div>
-			<?php $this->endWidget(); ?>
-			<div style="clear:both"></div>
-		</div>
-<pre class="prettyprint linenums">
-&lt;div class="accordion" id="accordion2"&gt;
-&lt;?php $collapse = $this->beginWidget('bootstrap.widgets.TbCollapse');?&gt;
-&lt;div class="accordion-group"&gt;
-    &lt;div class="accordion-heading"&gt;
-        &lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"&gt;
-            Collapsible Group Item #1
-        &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div id="collapseOne" class="accordion-body collapse in"&gt;
-        &lt;div class="accordion-inner"&gt;
-            Anim pariatur cliche...
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="accordion-group"&gt;
-  &lt;div class="accordion-heading"&gt;
-      &lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"&gt;
-          Collapsible Group Item #2
-      &lt;/a&gt;
-  &lt;/div&gt;
-  &lt;div id="collapseTwo" class="accordion-body collapse"&gt;
-      &lt;div class="accordion-inner"&gt;
-          Anim pariatur cliche...
-      &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;?php $this->endWidget();?&gt;
-...
-</pre>
-	</section>
-
-
-	<!-- Carousel
-	================================================== -->
-	<section id="carousel">
-
-		<div class="page-header">
-			<h1>Carousel <small><a href="#">TbCarousel</a></small></h1>
-		</div>
-
-		<h2>Example carousel</h2>
-
-		<p>The slideshow below shows a generic plugin and component for cycling through elements like a carousel.</p>
-
-		<div class="bs-docs-example">
-			<?php echo TbHtml::carousel(
-				array(
-					array(
-						'content' => '<img src="holder.js/660x380" />',
-						'label' => 'First Thumbnail label',
-						'caption' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.',
-					),
-					array(
-						'content' => '<img src="holder.js/660x380" />',
-						'label' => 'Second Thumbnail label',
-						'caption' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.',
-					),
-					array(
-						'content' => '<img src="holder.js/660x380" />',
-						'label' => 'Third Thumbnail label',
-						'caption' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.',
-					),
-				),
-				array('style' => 'width: 660px;')
-			); ?>
-		</div>
-<pre class="prettyprint linenums">
-&lt;?php echo TbHtml::carousel(
-    array(
-        array(
-            'content' =&gt; '&lt;img src=&quot;holder.js/660x380&quot; /&gt;',
-            'label'   =&gt; 'First Thumbnail label',
-            'caption' =&gt; 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. ...',
-        ),
-        array(
-            'content' =&gt; '&lt;img src=&quot;holder.js/660x380&quot; /&gt;',
-            'label'   =&gt; 'Second Thumbnail label',
-            'caption' =&gt; 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. ...',
-        ),
-        array(
-            'content' =&gt; '&lt;img src=&quot;holder.js/660x380&quot; /&gt;',
-            'label'   =&gt; 'Third Thumbnail label',
-            'caption' =&gt; 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. ...',
-        ),
-    ),
-    array('style' =&gt; 'width: 660px;')
-); ?&gt;
-</pre>
-	</section>
-
-	<!-- Typeahead
-	================================================== -->
-	<section id="typeahead">
-
-		<div class="page-header">
-			<h1>Typeahead <small><a href="#">TbTypeAhead</a></small></h1>
-		</div>
-
-		<h2>Example</h2>
-
-		<p>A basic, easily extended plugin for quickly creating elegant typeaheads with any form text input.</p>
-
-		<div class="bs-docs-example" style="background-color: #f5f5f5;">
-			<?php
-			$this->widget(
-				'bootstrap.widgets.TbTypeAhead',
-				array(
-					'name' => 'typeahead-test',
-					'htmlOptions' => array(
-						'prepend' => TbHtml::icon(TbIcon::ICON_GLOBE),
-						'placeholder' => 'Write an USA state'
-					),
-					'source' => array(
-						"Alabama",
-						"Alaska",
-						"Arizona",
-						"Arkansas",
-						"California",
-						"Colorado",
-						"Connecticut",
-						"Delaware",
-						"Florida",
-						"Georgia",
-						"Hawaii",
-						"Idaho",
-						"Illinois",
-						"Indiana",
-						"Iowa",
-						"Kansas",
-						"Kentucky",
-						"Louisiana",
-						"Maine",
-						"Maryland",
-						"Massachusetts",
-						"Michigan",
-						"Minnesota",
-						"Mississippi",
-						"Missouri",
-						"Montana",
-						"Nebraska",
-						"Nevada",
-						"New Hampshire",
-						"New Jersey",
-						"New Mexico",
-						"New York",
-						"North Dakota",
-						"North Carolina",
-						"Ohio",
-						"Oklahoma",
-						"Oregon",
-						"Pennsylvania",
-						"Rhode Island",
-						"South Carolina",
-						"South Dakota",
-						"Tennessee",
-						"Texas",
-						"Utah",
-						"Vermont",
-						"Virginia",
-						"Washington",
-						"West Virginia",
-						"Wisconsin",
-						"Wyoming"
-					),
-
-				)
-			);
-			?>
-		</div>
-<pre class="prettyprint linenums">
- $this->widget(
-    'bootstrap.widgets.TbTypeAhead',
-    array(
-        'name'        => 'typeahead-test',
-        'htmlOptions' => array(
-            'prepend'     => TbHtml::icon(TbIcon::ICON_GLOBE),
-            'placeholder' => 'Write an USA state'
-        ),
-        'source'      => array(
-            "Alabama",
-            "Alaska",
-            "Arizona",
-            "Arkansas",
-            "California",
-            "Colorado",
-            "Connecticut",
-            "Delaware",
-            "Florida",
-            "Georgia",
-            "Hawaii",
-            "Idaho",
-            "Illinois",
-            "Indiana",
-            "Iowa",
-            "Kansas",
-            "Kentucky",
-            "Louisiana",
-            "Maine",
-            "Maryland",
-            "Massachusetts",
-            "Michigan",
-            "Minnesota",
-            "Mississippi",
-            "Missouri",
-            "Montana",
-            "Nebraska",
-            "Nevada",
-            "New Hampshire",
-            "New Jersey",
-            "New Mexico",
-            "New York",
-            "North Dakota",
-            "North Carolina",
-            "Ohio",
-            "Oklahoma",
-            "Oregon",
-            "Pennsylvania",
-            "Rhode Island",
-            "South Carolina",
-            "South Dakota",
-            "Tennessee",
-            "Texas",
-            "Utah",
-            "Vermont",
-            "Virginia",
-            "Washington",
-            "West Virginia",
-            "Wisconsin",
-            "Wyoming"
-        ),
-    )
-);
-</pre>
-	</section>
-
-
-	<!-- Affix
-	================================================== -->
-	<section id="affix">
-
-		<div class="page-header">
-			<h1>Affix <small><a href="#">TbAffix</a></small></h1>
-		</div>
-
-		<h2>Example
-			<small>extracted from Twitter Documentation</small>
-		</h2>
-		<p>The subnavigation on the left is a live demo of the affix plugin.</p>
-
-		<hr class="bs-docs-separator">
-
-		<h2>Usage</h2>
-
-		<h3>Via data attributes</h3>
-
-		<p>To easily add affix behavior to any element, just add <code>data-spy="affix"</code> to the element you want
-			to
-			spy on. Then use offsets to define when to toggle the pinning of an element on and off.</p>
-
-		<pre class="prettyprint linenums">&lt;div data-spy="affix" data-offset-top="200"&gt;...&lt;/div&gt;</pre>
-
-		<div class="alert alert-info">
-			<strong>Heads up!</strong>
-			You must manage the position of a pinned element and the behavior of its immediate parent. Position is
-			controlled by <code>affix</code>, <code>affix-top</code>, and <code>affix-bottom</code>. Remember to check
-			for a
-			potentially collapsed parent when the affix kicks in as it's removing content from the normal flow of the
-			page.
-		</div>
-
-		<h3>Via JavaScript</h3>
-
-		<p>Call the affix plugin via JavaScript:</p>
-		<pre class="prettyprint linenums">$('#navbar').affix()</pre>
-
-		<h3>Methods</h3>
-		<h4>.affix('refresh')</h4>
-
-		<p>When using affix in conjunction with adding or removing of elements from the DOM, you'll want to call the
-			refresh
-			method:</p>
-<pre class="prettyprint linenums">
-$('[data-spy="affix"]').each(function () {
-  $(this).affix('refresh')
-});
-</pre>
-		<h3>Options</h3>
-
-		<p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to
-			<code>data-</code>,
-			as in <code>data-offset-top="200"</code>.</p>
-		<table class="table table-bordered table-striped">
-			<thead>
-			<tr>
-				<th style="width: 100px;">Name</th>
-				<th style="width: 100px;">type</th>
-				<th style="width: 50px;">default</th>
-				<th>description</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td>offset</td>
-				<td>number | function | object</td>
-				<td>10</td>
-				<td>Pixels to offset from screen when calculating position of scroll. If a single number is provide, the
-					offset will be applied in both top and left directions. To listen for a single direction, or
-					multiple
-					unique offsets, just provided an object <code>offset: { x: 10 }</code>. Use a function when you need
-					to
-					dynamically provide an offset (useful for some responsive designs).
-				</td>
-			</tr>
-			</tbody>
-		</table>
-	</section>
+	<div class="page-header">
+		<h1>Scrollspy</h1>
 	</div>
+
+	<p class="muted">Coming soon!</p>
+
+</section>
+
+<!-- Tabs
+================================================== -->
+<section id="tabs">
+
+	<div class="page-header">
+		<h1>Togglable tabs</h1>
+	</div>
+
+	<div class="bs-docs-example">
+		<?php $this->widget('bootstrap.widgets.TbTabs', array(
+			'tabs' => array(
+				array('label' => 'Home', 'content' => 'Raw denim you probably haven\'t heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.', 'active' => true),
+				array('label' => 'Profile', 'content' => 'Food truck fixie locavore, accusamus mcsweeney\'s marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.'),
+				array('label' => 'Messages', 'items' => array(
+					array('label' => '@fat', 'content' => 'Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney\'s organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven\'t heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.'),
+					array('label' => '@mdo', 'content' => 'Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.'),
+				)),
+			),
+		)); ?>
+	</div>
+
+	<pre class="prettyprint linenums">
+%lt;?php $this->widget('bootstrap.widgets.TbTabs', array(
+    'tabs' => array(
+        array('label' => 'Home', 'content' => '...', 'active' => true),
+        array('label' => 'Profile', 'content' => '...'),
+        array('label' => 'Messages', 'items' => array(
+            array('label' => '@fat', 'content' => '...'),
+            array('label' => '@mdo', 'content' => '...'),
+        )),
+    ),
+)); ?></pre>
+
+</section>
+
+<!-- Tooltips
+================================================== -->
+<section id="tooltips">
+
+	<div class="page-header">
+		<h1>Tooltips</h1>
+	</div>
+
+	<div class="bs-docs-example tooltip-demo">
+		<p class="muted" style="margin-bottom: 0;">
+			Tight pants next level keffiyeh
+			<?php echo TbHtml::tooltip('you probably', '#', 'Default tooltip'); ?>
+			haven't	heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan,	mcsweeney's fixie sustainable quinoa 8-bit american apparel
+			<?php echo TbHtml::tooltip('have a', '#', 'Another tooltip'); ?>
+			richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan
+			<?php echo TbHtml::tooltip('whatever keytar', '#', 'Another one here too'); ?>
+			, scenester farm-to-table banksy Austin twitter handle freegan cred raw denim single-origin coffee viral.
+		</p>
+	</div>
+
+	<pre class="prettyprint linenums">
+    Tight pants next level keffiyeh &lt;?php echo TbHtml::tooltip('you probably', '#', 'Default tooltip'); ?> haven\'t heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney\'s fixie sustainable quinoa 8-bit american apparel &lt;?php echo TbHtml::tooltip('have a', '#', 'Another tooltip'); ?> richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney\'s cleanse vegan chambray. A really ironic artisan &lt;?php echo TbHtml::tooltip('whatever keytar', '#', 'Another one here too'); ?>, scenester farm-to-table banksy Austin twitter handle freegan cred raw denim single-origin coffee viral.</pre>
+
+	<h3>Four directions</h3>
+
+	<div class="bs-docs-example tooltip-demo">
+		<ul class="bs-docs-tooltip-examples">
+			<li><?php echo TbHtml::tooltip('Tooltip on top', '#', 'Tooltip on top'); ?></li>
+			<li><?php echo TbHtml::tooltip('Tooltip on right', '#', 'Tooltip on right', array('placement' => TbHtml::TOOLTIP_RIGHT)); ?></li>
+			<li><?php echo TbHtml::tooltip('Tooltip on bottom', '#', 'Tooltip on bottom', array('placement' => TbHtml::TOOLTIP_BOTTOM)); ?></li>
+			<li><?php echo TbHtml::tooltip('Tooltip on left', '#', 'Tooltip on left', array('placement' => TbHtml::TOOLTIP_LEFT)); ?></li>
+		</ul>
+	</div>
+
+	<pre class="prettyprint linenums">
+&lt;?php echo TbHtml::tooltip(...); ?>
+&lt;?php echo TbHtml::tooltip(..., array('placement' => TbHtml::TOOLTIP_RIGHT)); ?>
+&lt;?php echo TbHtml::tooltip(..., array('placement' => TbHtml::TOOLTIP_BOTTOM)); ?>
+&lt;?php echo TbHtml::tooltip(..., array('placement' => TbHtml::TOOLTIP_LEFT)); ?></pre>
+
+</section>
+
+<!-- Popovers
+================================================== -->
+<section id="popovers">
+
+	<div class="page-header">
+		<h1>Popovers</h1>
+	</div>
+
+	<div class="bs-docs-example">
+		<?php echo TbHtml::popover('Click to toggle popover', 'A Title', 'And here\'s some amazing content. It\'s very engaging. right?', array(
+			'class' => 'btn btn-large btn-danger',
+		)); ?>
+	</div>
+
+	<pre class="prettyprint linenums">
+&lt?php echo TbHtml::popover('Click to toggle popover', 'A Title', '...', array(
+    'class' => 'btn btn-large btn-danger',
+)); ?></pre>
+
+	<h3>Four directions</h3>
+
+	<div class="bs-docs-example tooltip-demo">
+		<ul class="bs-docs-tooltip-examples">
+			<li><?php echo TbHtml::popover('Popover on top', 'Popover on top', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::TOOLTIP_TOP)); ?></li>
+			<li><?php echo TbHtml::popover('Popover on right', 'Popover on right', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::TOOLTIP_RIGHT)); ?></li>
+			<li><?php echo TbHtml::popover('Popover on bottom', 'Popover on bottom', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::TOOLTIP_BOTTOM)); ?></li>
+			<li><?php echo TbHtml::popover('Popover on left', 'Popover on left', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::TOOLTIP_LEFT)); ?></li>
+		</ul>
+	</div>
+
+</section>
+
+<!-- Collapse
+================================================== -->
+<section id="collapse">
+
+	<div class="page-header">
+		<h1>Collapse</h1>
+	</div>
+
+	<p class="muted">Coming soon!</p>
+
+</section>
+
+
+<!-- Carousel
+================================================== -->
+<section id="carousel">
+
+	<div class="page-header">
+		<h1>Carousel</h1>
+	</div>
+
+	<p class="muted">Coming soon!</p>
+
+</section>
+
+<!-- Typeahead
+================================================== -->
+<section id="typeahead">
+
+	<div class="page-header">
+		<h1>Typeahead</h1>
+	</div>
+
+	<div class="bs-docs-example" style="background-color: #f5f5f5;">
+		<?php
+		$this->widget('bootstrap.widgets.TbTypeAhead', array(
+			'name' => 'typeahead-test',
+			'source' => array(
+				"Alabama",
+				"Alaska",
+				"Arizona",
+				"Arkansas",
+				"California",
+				"Colorado",
+				"Connecticut",
+				"Delaware",
+				"Florida",
+				"Georgia",
+				"Hawaii",
+				"Idaho",
+				"Illinois",
+				"Indiana",
+				"Iowa",
+				"Kansas",
+				"Kentucky",
+				"Louisiana",
+				"Maine",
+				"Maryland",
+				"Massachusetts",
+				"Michigan",
+				"Minnesota",
+				"Mississippi",
+				"Missouri",
+				"Montana",
+				"Nebraska",
+				"Nevada",
+				"New Hampshire",
+				"New Jersey",
+				"New Mexico",
+				"New York",
+				"North Dakota",
+				"North Carolina",
+				"Ohio",
+				"Oklahoma",
+				"Oregon",
+				"Pennsylvania",
+				"Rhode Island",
+				"South Carolina",
+				"South Dakota",
+				"Tennessee",
+				"Texas",
+				"Utah",
+				"Vermont",
+				"Virginia",
+				"Washington",
+				"West Virginia",
+				"Wisconsin",
+				"Wyoming"
+			),
+			'htmlOptions' => array(
+				'prepend' => TbHtml::icon(TbIcon::ICON_GLOBE),
+				'placeholder' => 'Write an USA state'
+			),
+		)); ?>
+	</div>
+
+<pre class="prettyprint linenums">
+&lt;?php $this->widget('bootstrap.widgets.TbTypeAhead', array(
+    'name' => 'typeahead-test',
+    'source' => array(...),
+    'htmlOptions' => array(
+        'prepend' => TbHtml::icon(TbIcon::ICON_GLOBE),
+        'placeholder' => 'Write an USA state'
+    ),
+)); ?></pre>
+
+</section>
+
+<!-- Affix
+================================================== -->
+<section id="affix">
+
+	<div class="page-header">
+		<h1>Affix</h1>
+	</div>
+
+	<p class="muted">Coming soon!</p>
+
+</section>
+
+		</div>
 	</div>
 </div>
+
 <?php
 // fix twitter bootstrap docs bug: https://github.com/twitter/bootstrap/issues/6832
 Yii::app()->clientScript->registerScript('javascript#ReadyJS', <<<EOD
-$('.tooltip-demo a').each(function(){\$(this).tooltip();});
+$('.tooltip-demo a[rel=tooltip]').tooltip();
 EOD
 );
