@@ -13,7 +13,7 @@ return array(
 	'aliases' => array(
 		'app' => 'application',
 		'vendor' => realpath(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '../vendor'),
-		'bootstrap' => 'vendor.yii-twbs.yiistrap',
+		'bootstrap' => 'vendor.crisu83.yiistrap',
 	),
 	// paths to import
 	'import' => array(

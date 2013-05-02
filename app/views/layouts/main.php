@@ -41,8 +41,8 @@
 			'items' => array(
 				array('label' => 'Home', 'url' => array('site/index')),
 				array('label' => 'Get started', 'url' => array('site/started')),
-				array('label' => 'Components', 'url' => array('site/components')),
-				array('label' => 'Javascript', 'url' => array('site/javascript')),
+				array('label' => 'Helpers', 'url' => array('site/helpers')),
+				array('label' => 'Widgets', 'url' => array('site/widgets')),
 				array('label' => 'API', 'url' => $this->createUrl('/api'))
 			),
 		),
