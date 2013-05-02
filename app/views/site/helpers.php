@@ -1048,7 +1048,7 @@ echo TbHtml::buttonGroup(array(
 &lt;?php echo TbHtml::muted('...'); ?>
 &lt;?php echo TbHtml::em(TbHtml::STYLE_WARNING, '...'); ?>
 &lt;?php echo TbHtml::em(TbHtml::STYLE_ERROR, '...'); ?>
-&lt;?php echo TbHtml::em(TbHtml::STYLE_INFO, ...'); ?>
+&lt;?php echo TbHtml::em(TbHtml::STYLE_INFO, '...'); ?>
 &lt;?php echo TbHtml::em(TbHtml::STYLE_SUCCESS, '...'); ?></pre>
 
 	<hr class="bs-docs-separator">
