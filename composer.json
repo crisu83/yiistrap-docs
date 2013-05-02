@@ -1,8 +1,8 @@
 {
-	"name": "yii-twbs/yiistrap-docs",
+	"name": "crisu83/yiistrap-docs",
 	"description": "The documentation for Yiistrap, Twitter Bootstrap for the Yii PHP framework.",
 	"type": "yii-extension-docs",
-	"keywords": ["bootstrap", "yiistrap", "docs"],
+	"keywords": ["yiistrap", "bootstrap", "docs", "yii"],
 	"license": "BSD-3-Clause",
 	"authors": [
 		{
@@ -25,7 +25,7 @@
 	"require": {
 		"crisu83/yii-configbuilder": "dev-master",
 		"crisu83/yii-debug": "dev-master",
-		"yii-twbs/yiistrap": "dev-master",
+		"crisu83/yiistrap": "dev-master",
 		"yiisoft/yii": "1.1.13"
 	},
 	"minimum-stability": "dev"
