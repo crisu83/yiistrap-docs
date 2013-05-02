@@ -12,11 +12,6 @@
                    onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'GitHub project']);">GitHub
                     project</a></li>
             <li>Version 1.0.0</li>
-            <li class="tweet-btn">
-                <a href="https://twitter.com/share" class="twitter-share-button"
-                   data-url="http://yiistrap.2amigos.us/" data-count="horizontal" data-via="twbooster"
-                   data-related="mdo:Yiistrap">Tweet</a>
-            </li>
         </ul>
     </div>
 </div>
@@ -24,14 +19,21 @@
 <div class="bs-docs-social">
     <div class="container">
         <ul class="bs-docs-social-buttons">
-            <li class="follow-btn">
-                <a href="https://twitter.com/Crisu83" class="twitter-follow-button" data-align="right"
-                   data-width="260px" data-show-count="true" data-size="large">Follow @Crisu83</a>
+			<li>
+				<iframe width="85" height="20" src="http://ghbtns.com/github-btn.html?user=Crisu83&repo=yiistrap&type=watch&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
+			</li>
+			<li>
+				<iframe width="95" height="20" src="http://ghbtns.com/github-btn.html?user=Crisu83&repo=yiistrap&type=fork&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
+			</li>
+            <li>
+                <a href="https://twitter.com/Crisu83" class="twitter-follow-button" data-align="right" data-width="242px" data-show-count="true">Follow @Crisu83</a>
             </li>
             <li>
-                <a href="https://twitter.com/tonydspaniard" class="twitter-follow-button" data-align="right"
-                   data-width="280px" data-show-count="true" data-size="large">Follow @tonydspaniard</a>
+                <a href="https://twitter.com/tonydspaniard" class="twitter-follow-button" data-align="right" data-width="242px" data-show-count="true">Follow @tonydspaniard</a>
             </li>
+			<li>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.getyiistrap.com" data-count="horizontal" data-via="Crisu83" data-related="Crisu83:Yiistrap">Tweet</a>
+			</li>
         </ul>
     </div>
 </div>
@@ -57,35 +59,19 @@
                 <h2>Faster</h2>
 
                 <p style="text-align:justify">
-                    <a href="http://www.cniska.net/yii-bootstrap/" target="_blank">Yii-Bootstrap</a> was an awesome
-                    extension library, but it was too widget hierarchical, thus slow compared
-                    to this new approach. We though that we could get rid of that and concentrate on a better and more
-                    robust TbHtml helper, and to tell you truth, we are very happy with the results.
+                    <a href="http://www.cniska.net/yii-bootstrap/" target="_blank">Yii-Bootstrap</a> was an awesome extension library, but it was too widget hierarchical, thus slow compared to this new approach. We though that we could replace all that with a robust html helper, and to tell you truth, we are very happy with the results.
                 </p>
             </div>
             <div class="span4">
                 <h2>Easier</h2>
-
                 <p style="text-align:justify">
-                    The decision of removing the hierarchy of widgets made the codebase of the extension cleaner, easier
-                    to understand, to improve, to extend from. We expect that this new version is for you the ultimate
-                    tool to include <a href="twitter.github.com/bootstrap/" target="_blank">Twitter's Bootstrap</a> in
-                    your Yii projects.
+                    The decision of removing the hierarchy of widgets made the codebase of the extension cleaner, easier to understand, to improve and to extend from. We expect that this new version is for you the ultimate tool to include <a href="twitter.github.com/bootstrap/" target="_blank">Twitter's Bootstrap</a> in your Yii projects.
                 </p>
             </div>
             <div class="span4">
-                <h2>Enhanced</h2>
-
+                <h2>Better</h2>
                 <p style="text-align:justify">
-                    In the past other libraries extended from the old <a href="http://www.cniska.net/yii-bootstrap/"
-                                                                         target="_blank">Yii-Bootstrap</a> and confused
-                    the community as there
-                    was two versions of nearly the same extension. Yiistrap has combined forces with <a
-                        href="http://2amigos.us" target="_blank">2amigOS!</a>
-                    to have its own enhanced library: <a href="http://yiiwheels.2amigos.us"
-                                                         target="_blank">YiiWheels</a>.
-                    Yiistrap will always be the same, keeping up to date with the latest releases of <a
-                        href="twitter.github.com/bootstrap/" target="_blank">Twitter's Bootstrap</a>.
+                    In the past other libraries extended from the old <a href="http://www.cniska.net/yii-bootstrap/" target="_blank">Yii-Bootstrap</a> and confused the community as there was two versions of nearly the same extension. Yiistrap has combined forces with <a href="http://2amigos.us" target="_blank">2amigOS!</a> to have its own enhanced library: <a href="http://yiiwheels.2amigos.us" target="_blank">YiiWheels</a>.
                 </p>
             </div>
         </div>
