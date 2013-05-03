@@ -3,27 +3,7 @@
 class SiteController extends Controller
 {
     /**
-     * Declares class-based actions.
-     */
-    public function actions()
-    {
-        return array(
-            // captcha action renders the CAPTCHA image displayed on the contact page
-            'captcha' => array(
-                'class'     => 'CCaptchaAction',
-                'backColor' => 0xFFFFFF,
-            ),
-            // page action renders "static" pages stored under 'protected/views/site/pages'
-            // They can be accessed via: index.php?r=site/page&view=FileName
-            'page'    => array(
-                'class' => 'CViewAction',
-            ),
-        );
-    }
-
-    /**
-     * This is the default 'index' action that is invoked
-     * when an action is not explicitly requested by users.
+     * Renders the index page
      */
     public function actionIndex()
     {
@@ -38,12 +18,20 @@ class SiteController extends Controller
         $this->render('started');
     }
 
+	/**
+	 * Renders the basic docs
+	 */
+	public function actionBasics()
+	{
+		$this->render('basics');
+	}
+
     /**
-     * Renders the helper docs
+     * Renders the component docs
      */
-    public function actionHelpers()
+    public function actionComponents()
     {
-        $this->render('helpers');
+        $this->render('components');
     }
 
 	/**
@@ -66,10 +54,5 @@ class SiteController extends Controller
                 $this->render('error', $error);
             }
         }
-    }
-
-    public function actionTestRemote()
-    {
-        echo '<p>AJAX content!</p>';
     }
 }

@@ -5,7 +5,8 @@
 ================================================== -->
 <header class="jumbotron subhead">
 	<div class="container">
-		<h1>Widgets <small>bootstrap.widgets</small></h1>
+		<h1>Widgets</h1>
+		<p class="lead">Getting advanced with widgets</p>
 	</div>
 </header>
 
@@ -16,7 +17,7 @@
 	<div class="row">
 	<div class="span3 bs-docs-sidebar">
 		<ul class="nav nav-list bs-docs-sidenav">
-			<li><a href="#navs"><i class="icon-chevron-right"></i> Navs</a></li>
+			<li><a href="#navs"><i class="icon-chevron-right"></i> Nav</a></li>
 			<li><a href="#navbar"><i class="icon-chevron-right"></i> Navbar</a></li>
 			<li><a href="#breadcrumb"><i class="icon-chevron-right"></i> Breadcrumb</a></li>
 			<li><a href="#herounit"><i class="icon-chevron-right"></i> Hero unit</a></li>
