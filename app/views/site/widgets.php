@@ -969,7 +969,7 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
 				"Wyoming"
 			),
 			'htmlOptions' => array(
-				'prepend' => TbHtml::icon(TbIcon::ICON_GLOBE),
+				'prepend' => TbHtml::icon(TbHtml::ICON_GLOBE),
 				'placeholder' => 'Write an USA state'
 			),
 		)); ?>
@@ -980,7 +980,7 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
     'name' => 'typeahead-test',
     'source' => array(...),
     'htmlOptions' => array(
-        'prepend' => TbHtml::icon(TbIcon::ICON_GLOBE),
+        'prepend' => TbHtml::icon(TbHtml::ICON_GLOBE),
         'placeholder' => 'Write an USA state'
     ),
 )); ?></pre>
