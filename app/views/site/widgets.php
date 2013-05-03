@@ -467,84 +467,6 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 </section>
 
-<!-- Alerts
-	================================================== -->
-<section id="alert">
-
-	<div class="page-header">
-		<h1>Alert <small>TbAlert.php</small></h1>
-	</div>
-
-	<h2>Default alert</h2>
-
-	<div class="bs-docs-example">
-		<?php Yii::app()->user->setFlash(TbHtml::STYLE_WARNING, '<strong>Warning!</strong> Best check yo self, you\'re not looking too good.'); ?>
-		<?php $this->widget('bootstrap.widgets.TbAlert'); ?>
-	</div>
-
-	<pre class="prettyprint linenums">
-Yii::app()->user->setFlash(TbHtml::STYLE_WARNING,
-    '&lt;strong>Warning!&lt;/strong> Best check yo self, you\'re not looking too good.');
-
-&lt;?php $this->widget('bootstrap.widgets.TbAlert'); ?></pre>
-
-	<hr class="bs-docs-separator">
-
-	<h2>Block</h2>
-
-	<div class="bs-docs-example">
-		<?php Yii::app()->user->setFlash(TbHtml::STYLE_WARNING, '<h4>Warning!</h4> Best check yo self, you\'re not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.'); ?>
-		<?php $this->widget('bootstrap.widgets.TbAlert', array(
-			'block' => true,
-		)); ?>
-	</div>
-
-	<pre class="prettyprint linenums">
-Yii::app()->user->setFlash(TbHtml::STYLE_WARNING,
-    '&lt;h4>Warning!&lt;/h4> Best check yo self, you\'re not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.');
-
-&lt;?php $this->widget('bootstrap.widgets.TbAlert', array(
-    'block'=>true,
-)); ?></pre>
-
-	<hr class="bs-docs-separator">
-
-	<h2>Contextual alternatives</h2>
-
-	<h3>Error or danger</h3>
-
-	<div class="bs-docs-example">
-		<?php Yii::app()->user->setFlash(TbHtml::STYLE_ERROR, '<strong>Oh snap!</strong> Change a few things up and try submitting again.'); ?>
-		<?php $this->widget('bootstrap.widgets.TbAlert'); ?>
-	</div>
-
-	<pre class="prettyprint linenums">
-Yii::app()->user->setFlash(TbHtml::STYLE_ERROR,
-    '&lt;strong>Oh snap!&lt;/strong> Change a few things up and try submitting again.');</pre>
-
-		<h3>Success</h3>
-
-		<div class="bs-docs-example">
-			<?php Yii::app()->user->setFlash(TbHtml::STYLE_SUCCESS, '<strong>Well done!</strong> You successfully read this important alert message.'); ?>
-			<?php $this->widget('bootstrap.widgets.TbAlert'); ?>
-		</div>
-	<pre class="prettyprint linenums">
-Yii::app()->user->setFlash(TbHtml::STYLE_SUCCESS,
-    '&lt;strong>Well done!&lt;/strong> You successfully read this important alert message.');</pre>
-
-	<h3>Information</h3>
-
-	<div class="bs-docs-example">
-		<?php Yii::app()->user->setFlash(TbHtml::STYLE_INFO, '<strong>Heads up!</strong> This alert needs your attention, but it\'s not super important.'); ?>
-		<?php $this->widget('bootstrap.widgets.TbAlert'); ?>
-	</div>
-
-	<pre class="prettyprint linenums">
-Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
-    '&lt;strong>Heads up!&lt;/strong> This alert needs your attention, but it\'s not super important.');</pre>
-
-</section>
-
 <!-- Grid view
 ================================================== -->
 <section id="gridview">
@@ -768,6 +690,85 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
         )),
     ),
 )); ?></pre>
+
+</section>
+
+<!-- Alerts
+================================================== -->
+<section id="alert">
+
+	<div class="page-header">
+		<h1>Alert <small>TbAlert.php</small></h1>
+	</div>
+
+	<h2>Default alert</h2>
+
+	<div class="bs-docs-example">
+		<?php Yii::app()->user->setFlash(TbHtml::STYLE_WARNING, '<strong>Warning!</strong> Best check yo self, you\'re not looking too good.'); ?>
+		<?php $this->widget('bootstrap.widgets.TbAlert'); ?>
+	</div>
+
+	<pre class="prettyprint linenums">
+Yii::app()->user->setFlash(TbHtml::STYLE_WARNING,
+    '&lt;strong>Warning!&lt;/strong> Best check yo self, you\'re not looking too good.');
+
+&lt;?php $this->widget('bootstrap.widgets.TbAlert'); ?></pre>
+
+	<hr class="bs-docs-separator">
+
+	<h2>Block</h2>
+
+	<div class="bs-docs-example">
+		<?php Yii::app()->user->setFlash(TbHtml::STYLE_WARNING, '<h4>Warning!</h4> Best check yo self, you\'re not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.'); ?>
+		<?php $this->widget('bootstrap.widgets.TbAlert', array(
+			'block' => true,
+		)); ?>
+	</div>
+
+	<pre class="prettyprint linenums">
+Yii::app()->user->setFlash(TbHtml::STYLE_WARNING,
+    '&lt;h4>Warning!&lt;/h4> Best check yo self, you\'re not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.');
+
+&lt;?php $this->widget('bootstrap.widgets.TbAlert', array(
+    'block'=>true,
+)); ?></pre>
+
+	<hr class="bs-docs-separator">
+
+	<h2>Contextual alternatives</h2>
+
+	<h3>Error or danger</h3>
+
+	<div class="bs-docs-example">
+		<?php Yii::app()->user->setFlash(TbHtml::STYLE_ERROR, '<strong>Oh snap!</strong> Change a few things up and try submitting again.'); ?>
+		<?php $this->widget('bootstrap.widgets.TbAlert'); ?>
+	</div>
+
+	<pre class="prettyprint linenums">
+Yii::app()->user->setFlash(TbHtml::STYLE_ERROR,
+    '&lt;strong>Oh snap!&lt;/strong> Change a few things up and try submitting again.');</pre>
+
+	<h3>Success</h3>
+
+	<div class="bs-docs-example">
+		<?php Yii::app()->user->setFlash(TbHtml::STYLE_SUCCESS, '<strong>Well done!</strong> You successfully read this important alert message.'); ?>
+		<?php $this->widget('bootstrap.widgets.TbAlert'); ?>
+	</div>
+
+	<pre class="prettyprint linenums">
+Yii::app()->user->setFlash(TbHtml::STYLE_SUCCESS,
+    '&lt;strong>Well done!&lt;/strong> You successfully read this important alert message.');</pre>
+
+	<h3>Information</h3>
+
+	<div class="bs-docs-example">
+		<?php Yii::app()->user->setFlash(TbHtml::STYLE_INFO, '<strong>Heads up!</strong> This alert needs your attention, but it\'s not super important.'); ?>
+		<?php $this->widget('bootstrap.widgets.TbAlert'); ?>
+	</div>
+
+	<pre class="prettyprint linenums">
+Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
+    '&lt;strong>Heads up!&lt;/strong> This alert needs your attention, but it\'s not super important.');</pre>
 
 </section>
 
