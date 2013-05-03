@@ -26,8 +26,6 @@
 			<li><a href="#modals"><i class="icon-chevron-right"></i> Modal</a></li>
 			<li><a href="#scrollspy"><i class="icon-chevron-right"></i> Scrollspy</a></li>
 			<li><a href="#tabs"><i class="icon-chevron-right"></i> Tab</a></li>
-			<li><a href="#tooltips"><i class="icon-chevron-right"></i> Tooltip</a></li>
-			<li><a href="#popovers"><i class="icon-chevron-right"></i> Popover</a></li>
 			<li><a href="#alert"><i class="icon-chevron-right"></i> Alert</a></li>
 			<li><a href="#collapse"><i class="icon-chevron-right"></i> Collapse</a></li>
 			<li><a href="#carousel"><i class="icon-chevron-right"></i> Carousel</a></li>
@@ -50,7 +48,7 @@
 	); ?>
 
 	<div class="page-header">
-		<h1>Navigation</h1>
+		<h1>Navigation <small>TbNav.php</small></h1>
 	</div>
 
 	<h3>Basic tabs</h3>
@@ -313,7 +311,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 	); ?>
 
 	<div class="page-header">
-		<h1>Navbar</h1>
+		<h1>Navbar <small>TbNavbar.php</small></h1>
 	</div>
 
 	<h2>Basic navbar</h2>
@@ -362,23 +360,23 @@ $this->widget('bootstrap.widgets.TbNav', array(
     ),
 ));</pre>
 
-		<hr class="bs-docs-separator">
+	<hr class="bs-docs-separator">
 
-		<h2>Display variations</h2>
+	<h2>Display variations</h2>
 
-		<p class="muted">Coming soon!</p>
+	<p class="muted">Coming soon!</p>
 
-		<hr class="bs-docs-separator">
+	<hr class="bs-docs-separator">
 
-		<h2>Responsive navbar</h2>
+	<h2>Responsive navbar</h2>
 
-		<div class="bs-docs-example">
-			<?php $this->widget('bootstrap.widgets.TbNavbar', array(
-				'brandLabel' => 'Title',
-				'collapse' => true,
-				'items' => $navbarItems
-			));	?>
-		</div>
+	<div class="bs-docs-example">
+		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
+			'brandLabel' => 'Title',
+			'collapse' => true,
+			'items' => $navbarItems
+		));	?>
+	</div>
 
 	<pre class="prettyprint linenums">
 &lt;?php $this->widget('bootstrap.widgets.TbNavbar', array(
@@ -387,18 +385,18 @@ $this->widget('bootstrap.widgets.TbNav', array(
     'items' => array(...),
 )); ?></pre>
 
-		<hr class="bs-docs-separator">
+	<hr class="bs-docs-separator">
 
-		<h2>Inverted variation</h2>
+	<h2>Inverted variation</h2>
 
-		<div class="bs-docs-example">
-			<?php $this->widget('bootstrap.widgets.TbNavbar', array(
-				'style' => TbHtml::STYLE_INVERSE,
-				'brandLabel' => 'Title',
-				'collapse' => true,
-				'items' => $navbarItems,
-			));	?>
-		</div>
+	<div class="bs-docs-example">
+		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
+			'style' => TbHtml::STYLE_INVERSE,
+			'brandLabel' => 'Title',
+			'collapse' => true,
+			'items' => $navbarItems,
+		));	?>
+	</div>
 
 	<pre class="prettyprint linenums">
 &lt;?php $this->widget('bootstrap.widgets.TbNavbar', array(
@@ -415,7 +413,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 <section id="breadcrumb">
 
 	<div class="page-header">
-		<h1>Breadcrumb</h1>
+		<h1>Breadcrumb <small>TbBreadcrumb.php</small></h1>
 	</div>
 
 	<div class="bs-docs-example">
@@ -446,7 +444,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 <section id="herounit">
 
 	<div class="page-header">
-		<h1>Hero unit</h1>
+		<h1>Hero unit <small>TbHeroUnit.php</small></h1>
 	</div>
 
 	<div class="bs-docs-example">
@@ -473,7 +471,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 <section id="alert">
 
 	<div class="page-header">
-		<h1>Alert</h1>
+		<h1>Alert <small>TbAlert.php</small></h1>
 	</div>
 
 	<h2>Default alert</h2>
@@ -566,7 +564,7 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
 	?>
 
 	<div class="page-header">
-		<h1>Grid view</h1>
+		<h1>Grid view <small>TbGridView.php</small></h1>
 	</div>
 
 	<div class="bs-docs-example">
@@ -669,7 +667,9 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
 	================================================== -->
 <section id="detailview">
 
-	<h1>Detail view</h1>
+	<div class="page-header">
+		<h1>Detail view</h1>
+	</div>
 
 	<p class="muted">Coming soon!</p>
 
@@ -680,81 +680,46 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
 <section id="forms">
 
 	<div class="page-header">
-		<h1>Forms</h1>
+		<h1>Forms <small>TbActiveForm.php</small></h1>
 	</div>
 
 	<p class="muted">Coming soon!</p>
 
 </section>
 
-	<!-- Modal
-	================================================== -->
-	<section id="modals">
+<!-- Modal
+================================================== -->
+<section id="modals">
 
-		<div class="page-header">
-			<h1>Modals</h1>
-		</div>
+	<div class="page-header">
+		<h1>Modal <small>TbModal.php</small></h1>
+	</div>
 
-		<div class="bs-docs-example" style="background-color: #f5f5f5;">
-			<?php
-			// we just want the scripts
-			$this->widget(
-				'bootstrap.widgets.TbModal',
-				array(
-					'id' => 'myModal',
-					'header' => '<h4>Modal header</h4>',
-					'content' => '<p>One fine body...</p>',
-					'footer' =>
-					TbHtml::button(
-						'Save Changes',
-						array('data-dismiss' => 'modal', 'style' => TbHtml::STYLE_PRIMARY)
-					) . '&nbsp;' .
-						TbHtml::button('Close', array('data-dismiss' => 'modal'))
+	<div class="bs-docs-example">
+		<?php $this->widget('bootstrap.widgets.TbModal', array(
+			'id' => 'myModal',
+			'header' => 'Modal Heading',
+			'content' => '<p>One fine body...</p>',
+			'footer' => TbHtml::button('Save Changes',array('data-dismiss' => 'modal', 'style' => TbHtml::STYLE_PRIMARY)) . '&nbsp;' . TbHtml::button('Close', array('data-dismiss' => 'modal')),
+		)); ?>
+		<?php echo TbHtml::button('Click me to open modal', array('style' => TbHtml::STYLE_PRIMARY, 'size' => TbHtml::SIZE_LARGE, 'data-toggle' => 'modal', 'data-target' => '#myModal')); ?>
+	</div>
 
-				)
-			);
-			?>
-			<?php
-			echo TbHtml::button('Click me to open modal', array('data-toggle' => 'modal', 'data-target' => '#myModal'));
-			?>
-		</div>
 <pre class="prettyprint linenums">
-&lt;?php $this->beginWidget('bootstrap.widgets.TbModal', array('id'=>'myModal')); ?>
+&lt;?php $this->widget('bootstrap.widgets.TbModal', array(
+    'id' => 'myModal',
+    'header' => 'Modal Heading',
+    'content' => '&lt;p>One fine body...&lt;/p>',
+    'footer' => TbHtml::button('Save Changes',array('data-dismiss' => 'modal', 'style' => TbHtml::STYLE_PRIMARY))
+        . '&nbsp;' . TbHtml::button('Close', array('data-dismiss' => 'modal')),
+)); ?>
 
-    &lt;div class="modal-header"&gt;
-        &lt;a class="close" data-dismiss="modal">&times;&lt;/a&gt;
-    &lt;h4>Modal header&lt;/h4&gt;
-    &lt;/div&gt;
-
-&lt;div class="modal-body"&gt;
-    &lt;p>One fine body...&lt;/p&gt;
-&lt;/div>
-
-&lt;div class="modal-footer"&gt;
-	&lt;?php $this->widget('bootstrap.widgets.TbButton', array(
-	'type'=>'primary',
-	'label'=>'Save changes',
-	'url'=>'#',
-	'htmlOptions'=>array('data-dismiss'=>'modal'),
-)); ?&gt;
-	&lt;?php $this->widget('bootstrap.widgets.TbButton', array(
-	'label'=>'Close',
-	'url'=>'#',
-	'htmlOptions'=>array('data-dismiss'=>'modal'),
-)); ?&gt;
-&lt;/div&gt;
-&lt;?php $this->endWidget(); ?&gt;
-	&lt;?php $this->widget('bootstrap.widgets.TbButton', array(
-	'label'=>'Click me',
-	'type'=>'primary',
-	'htmlOptions'=>array(
-		'data-toggle'=>'modal',
-		'data-target'=>'#myModal',
-	),
-)); ?&gt;
-</pre>
-
-	<hr class="bs-docs-separator">
+&lt;?php echo TbHtml::button('Click me to open modal', array(
+    'style' => TbHtml::STYLE_PRIMARY,
+    'size' => TbHtml::SIZE_LARGE,
+    'data-toggle' => 'modal',
+    'data-target' => '#myModal',
+)); ?></pre>
 
 </section>
 
@@ -763,7 +728,7 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
 <section id="scrollspy">
 
 	<div class="page-header">
-		<h1>Scrollspy</h1>
+		<h1>Scrollspy <small>TbScrollspy.php</small></h1>
 	</div>
 
 	<p class="muted">Coming soon!</p>
@@ -775,7 +740,7 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
 <section id="tabs">
 
 	<div class="page-header">
-		<h1>Togglable tabs</h1>
+		<h1>Togglable tabs <small>TbTabs.php</small></h1>
 	</div>
 
 	<div class="bs-docs-example">
@@ -805,86 +770,12 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
 
 </section>
 
-<!-- Tooltips
-================================================== -->
-<section id="tooltips">
-
-	<div class="page-header">
-		<h1>Tooltips</h1>
-	</div>
-
-	<div class="bs-docs-example tooltip-demo">
-		<p class="muted" style="margin-bottom: 0;">
-			Tight pants next level keffiyeh
-			<?php echo TbHtml::tooltip('you probably', '#', 'Default tooltip'); ?>
-			haven't	heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan,	mcsweeney's fixie sustainable quinoa 8-bit american apparel
-			<?php echo TbHtml::tooltip('have a', '#', 'Another tooltip'); ?>
-			richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan
-			<?php echo TbHtml::tooltip('whatever keytar', '#', 'Another one here too'); ?>
-			, scenester farm-to-table banksy Austin twitter handle freegan cred raw denim single-origin coffee viral.
-		</p>
-	</div>
-
-	<pre class="prettyprint linenums">
-    Tight pants next level keffiyeh &lt;?php echo TbHtml::tooltip('you probably', '#', 'Default tooltip'); ?> haven\'t heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney\'s fixie sustainable quinoa 8-bit american apparel &lt;?php echo TbHtml::tooltip('have a', '#', 'Another tooltip'); ?> richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney\'s cleanse vegan chambray. A really ironic artisan &lt;?php echo TbHtml::tooltip('whatever keytar', '#', 'Another one here too'); ?>, scenester farm-to-table banksy Austin twitter handle freegan cred raw denim single-origin coffee viral.</pre>
-
-	<h3>Four directions</h3>
-
-	<div class="bs-docs-example tooltip-demo">
-		<ul class="bs-docs-tooltip-examples">
-			<li><?php echo TbHtml::tooltip('Tooltip on top', '#', 'Tooltip on top'); ?></li>
-			<li><?php echo TbHtml::tooltip('Tooltip on right', '#', 'Tooltip on right', array('placement' => TbHtml::TOOLTIP_RIGHT)); ?></li>
-			<li><?php echo TbHtml::tooltip('Tooltip on bottom', '#', 'Tooltip on bottom', array('placement' => TbHtml::TOOLTIP_BOTTOM)); ?></li>
-			<li><?php echo TbHtml::tooltip('Tooltip on left', '#', 'Tooltip on left', array('placement' => TbHtml::TOOLTIP_LEFT)); ?></li>
-		</ul>
-	</div>
-
-	<pre class="prettyprint linenums">
-&lt;?php echo TbHtml::tooltip(...); ?>
-&lt;?php echo TbHtml::tooltip(..., array('placement' => TbHtml::TOOLTIP_RIGHT)); ?>
-&lt;?php echo TbHtml::tooltip(..., array('placement' => TbHtml::TOOLTIP_BOTTOM)); ?>
-&lt;?php echo TbHtml::tooltip(..., array('placement' => TbHtml::TOOLTIP_LEFT)); ?></pre>
-
-</section>
-
-<!-- Popovers
-================================================== -->
-<section id="popovers">
-
-	<div class="page-header">
-		<h1>Popovers</h1>
-	</div>
-
-	<div class="bs-docs-example">
-		<?php echo TbHtml::popover('Click to toggle popover', 'A Title', 'And here\'s some amazing content. It\'s very engaging. right?', array(
-			'class' => 'btn btn-large btn-danger',
-		)); ?>
-	</div>
-
-	<pre class="prettyprint linenums">
-&lt?php echo TbHtml::popover('Click to toggle popover', 'A Title', '...', array(
-    'class' => 'btn btn-large btn-danger',
-)); ?></pre>
-
-	<h3>Four directions</h3>
-
-	<div class="bs-docs-example tooltip-demo">
-		<ul class="bs-docs-tooltip-examples">
-			<li><?php echo TbHtml::popover('Popover on top', 'Popover on top', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::TOOLTIP_TOP)); ?></li>
-			<li><?php echo TbHtml::popover('Popover on right', 'Popover on right', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::TOOLTIP_RIGHT)); ?></li>
-			<li><?php echo TbHtml::popover('Popover on bottom', 'Popover on bottom', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::TOOLTIP_BOTTOM)); ?></li>
-			<li><?php echo TbHtml::popover('Popover on left', 'Popover on left', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::TOOLTIP_LEFT)); ?></li>
-		</ul>
-	</div>
-
-</section>
-
 <!-- Collapse
 ================================================== -->
 <section id="collapse">
 
 	<div class="page-header">
-		<h1>Collapse</h1>
+		<h1>Collapse <small>TbCollapse.php</small></h1>
 	</div>
 
 	<p class="muted">Coming soon!</p>
@@ -909,12 +800,11 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
 <section id="typeahead">
 
 	<div class="page-header">
-		<h1>Typeahead</h1>
+		<h1>Typeahead <small>TbTypeaAhead.php</small></h1>
 	</div>
 
 	<div class="bs-docs-example" style="background-color: #f5f5f5;">
-		<?php
-		$this->widget('bootstrap.widgets.TbTypeAhead', array(
+		<?php $this->widget('bootstrap.widgets.TbTypeAhead', array(
 			'name' => 'typeahead-test',
 			'source' => array(
 				"Alabama",
@@ -992,7 +882,7 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
 <section id="affix">
 
 	<div class="page-header">
-		<h1>Affix</h1>
+		<h1>Affix <small>TbAffix.php</small></h1>
 	</div>
 
 	<p class="muted">Coming soon!</p>

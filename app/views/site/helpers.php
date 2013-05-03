@@ -23,6 +23,8 @@
 		<li><a href="#breadcrumbs"><i class="icon-chevron-right"></i> Breadcrumbs</a></li>
 		<li><a href="#labels-badges"><i class="icon-chevron-right"></i> Labels and badges</a></li>
 		<li><a href="#thumbnails"><i class="icon-chevron-right"></i> Thumbnails</a></li>
+		<li><a href="#tooltips"><i class="icon-chevron-right"></i> Tooltip</a></li>
+		<li><a href="#popovers"><i class="icon-chevron-right"></i> Popover</a></li>
 		<li><a href="#alerts"><i class="icon-chevron-right"></i> Alerts</a></li>
 		<li><a href="#progress"><i class="icon-chevron-right"></i> Progress bars</a></li>
 		<li><a href="#media"><i class="icon-chevron-right"></i> Media object</a></li>
@@ -817,6 +819,80 @@ echo TbHtml::buttonGroup(array(
     array('image' => 'holder.js/160x120', 'url' => '#', 'span' => 2),
 )); ?>
     </pre>
+</section>
+
+<!-- Tooltips
+================================================== -->
+<section id="tooltips">
+
+	<div class="page-header">
+		<h1>Tooltips</h1>
+	</div>
+
+	<div class="bs-docs-example tooltip-demo">
+		<p class="muted" style="margin-bottom: 0;">
+			Tight pants next level keffiyeh
+			<?php echo TbHtml::tooltip('you probably', '#', 'Default tooltip'); ?>
+			haven't	heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan,	mcsweeney's fixie sustainable quinoa 8-bit american apparel
+			<?php echo TbHtml::tooltip('have a', '#', 'Another tooltip'); ?>
+			richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan
+			<?php echo TbHtml::tooltip('whatever keytar', '#', 'Another one here too'); ?>
+			, scenester farm-to-table banksy Austin twitter handle freegan cred raw denim single-origin coffee viral.
+		</p>
+	</div>
+
+	<pre class="prettyprint linenums">
+    Tight pants next level keffiyeh &lt;?php echo TbHtml::tooltip('you probably', '#', 'Default tooltip'); ?> haven\'t heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney\'s fixie sustainable quinoa 8-bit american apparel &lt;?php echo TbHtml::tooltip('have a', '#', 'Another tooltip'); ?> richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney\'s cleanse vegan chambray. A really ironic artisan &lt;?php echo TbHtml::tooltip('whatever keytar', '#', 'Another one here too'); ?>, scenester farm-to-table banksy Austin twitter handle freegan cred raw denim single-origin coffee viral.</pre>
+
+	<h3>Four directions</h3>
+
+	<div class="bs-docs-example tooltip-demo">
+		<ul class="bs-docs-tooltip-examples">
+			<li><?php echo TbHtml::tooltip('Tooltip on top', '#', 'Tooltip on top'); ?></li>
+			<li><?php echo TbHtml::tooltip('Tooltip on right', '#', 'Tooltip on right', array('placement' => TbHtml::TOOLTIP_RIGHT)); ?></li>
+			<li><?php echo TbHtml::tooltip('Tooltip on bottom', '#', 'Tooltip on bottom', array('placement' => TbHtml::TOOLTIP_BOTTOM)); ?></li>
+			<li><?php echo TbHtml::tooltip('Tooltip on left', '#', 'Tooltip on left', array('placement' => TbHtml::TOOLTIP_LEFT)); ?></li>
+		</ul>
+	</div>
+
+	<pre class="prettyprint linenums">
+&lt;?php echo TbHtml::tooltip(...); ?>
+&lt;?php echo TbHtml::tooltip(..., array('placement' => TbHtml::TOOLTIP_RIGHT)); ?>
+&lt;?php echo TbHtml::tooltip(..., array('placement' => TbHtml::TOOLTIP_BOTTOM)); ?>
+&lt;?php echo TbHtml::tooltip(..., array('placement' => TbHtml::TOOLTIP_LEFT)); ?></pre>
+
+</section>
+
+<!-- Popovers
+================================================== -->
+<section id="popovers">
+
+	<div class="page-header">
+		<h1>Popovers</h1>
+	</div>
+
+	<div class="bs-docs-example">
+		<?php echo TbHtml::popover('Click to toggle popover', 'A Title', 'And here\'s some amazing content. It\'s very engaging. right?', array(
+			'class' => 'btn btn-large btn-danger',
+		)); ?>
+	</div>
+
+	<pre class="prettyprint linenums">
+&lt?php echo TbHtml::popover('Click to toggle popover', 'A Title', '...', array(
+    'class' => 'btn btn-large btn-danger',
+)); ?></pre>
+
+	<h3>Four directions</h3>
+
+	<div class="bs-docs-example tooltip-demo">
+		<ul class="bs-docs-tooltip-examples">
+			<li><?php echo TbHtml::popover('Popover on top', 'Popover on top', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::TOOLTIP_TOP)); ?></li>
+			<li><?php echo TbHtml::popover('Popover on right', 'Popover on right', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::TOOLTIP_RIGHT)); ?></li>
+			<li><?php echo TbHtml::popover('Popover on bottom', 'Popover on bottom', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::TOOLTIP_BOTTOM)); ?></li>
+			<li><?php echo TbHtml::popover('Popover on left', 'Popover on left', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::TOOLTIP_LEFT)); ?></li>
+		</ul>
+	</div>
+
 </section>
 
 <!-- Alerts
