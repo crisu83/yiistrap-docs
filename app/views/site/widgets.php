@@ -591,7 +591,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 <section id="detailview">
 
 	<div class="page-header">
-		<h1>Detail view</h1>
+		<h1>Detail view <small>TbDetailView.php</small></h1>
 	</div>
 
 	<p class="muted">Coming soon!</p>
@@ -790,7 +790,7 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
 <section id="carousel">
 
 	<div class="page-header">
-		<h1>Carousel</h1>
+		<h1>Carousel <small>TbCarousel.php</small></h1>
 	</div>
 
 	<p class="muted">Coming soon!</p>
