@@ -395,7 +395,7 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
         <?php echo TbHtml::beginFormTb(); ?>
             <fieldset>
                 <legend>Legend</legend>
-                <?php echo TbHtml::verticalRow(TbHtml::INPUT_TEXT, 'text', '', array('label' => 'Label name', 'placeholder' => 'Type something...')); ?>
+                <?php echo TbHtml::row(TbHtml::INPUT_TEXT, 'text', '', array('label' => 'Label name', 'placeholder' => 'Type something...')); ?>
                 <?php echo TbHtml::checkBox('checkMeOut', false, array('label' => 'Check me out')); ?>
                 <?php echo TbHtml::submitButton('Submit'); ?>
             </fieldset>
@@ -405,7 +405,7 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 &lt;?php echo TbHtml::beginFormTb(); ?>
     &lt;fieldset>
         &lt;legend>Legend&lt;/legend>
-        &lt;?php echo TbHtml::verticalRow(TbHtml::INPUT_TEXT, 'text', '',
+        &lt;?php echo TbHtml::row(TbHtml::INPUT_TEXT, 'text', '',
             array('label' => 'Label name', 'placeholder' => 'Type something...')); ?>
         &lt;?php echo TbHtml::checkBox('checkMeOut', false, array('label' => 'Check me out')); ?>
         &lt;?php echo TbHtml::submitButton('Submit'); ?>
@@ -454,22 +454,22 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 
     <div class="bs-docs-example">
         <?php echo TbHtml::beginFormTb(TbHtml::FORM_HORIZONTAL); ?>
-            <?php echo TbHtml::horizontalRow(TbHtml::INPUT_TEXT, 'email', '', array('label' => 'Email', 'placeholder' => 'Email')); ?>
-            <?php echo TbHtml::horizontalRow(TbHtml::INPUT_PASSWORD, 'password', '', array('label' => 'Password', 'placeholder' => 'Password')); ?>
-            <?php echo TbHtml::horizontalRow(TbHtml::INPUT_CHECKBOX, 'rememberMe', '', array('label' => 'Remember me', 'controlOptions' => array('after' => TbHtml::submitButton('Sign in')))); ?>
+            <?php echo TbHtml::wrappedRow(TbHtml::INPUT_TEXT, 'email', '', array('label' => 'Email', 'placeholder' => 'Email')); ?>
+            <?php echo TbHtml::wrappedRow(TbHtml::INPUT_PASSWORD, 'password', '', array('label' => 'Password', 'placeholder' => 'Password')); ?>
+            <?php echo TbHtml::wrappedRow(TbHtml::INPUT_CHECKBOX, 'rememberMe', '', array('label' => 'Remember me', 'controlOptions' => array('after' => TbHtml::submitButton('Sign in')))); ?>
         <?php echo TbHtml::endForm(); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::beginFormTb(TbHtml::FORM_HORIZONTAL); ?>
-    &lt;?php echo TbHtml::horizontalRow(TbHtml::INPUT_TEXT, 'email', '', array(
+    &lt;?php echo TbHtml::wrappedRow(TbHtml::INPUT_TEXT, 'email', '', array(
         'label' => 'Email',
         'placeholder' => 'Email',
     )); ?>
-    &lt;?php echo TbHtml::horizontalRow(TbHtml::INPUT_PASSWORD, 'password', '', array(
+    &lt;?php echo TbHtml::wrappedRow(TbHtml::INPUT_PASSWORD, 'password', '', array(
         'label' => 'Password',
         'placeholder' => 'Password',
     )); ?>
-    &lt;?php echo TbHtml::horizontalRow(TbHtml::INPUT_CHECKBOX, 'rememberMe', '', array(
+    &lt;?php echo TbHtml::wrappedRow(TbHtml::INPUT_CHECKBOX, 'rememberMe', '', array(
         'label' => 'Remember me',
         'controlOptions' => array('after' => TbHtml::submitButton('Sign in')),
     )); ?>
@@ -692,20 +692,20 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 &lt;?php echo TbHtml::dropDownList('dropDown', '', array('1'), array('span' => 3)); ?></pre>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::controls(TbHtml::textField('text', '', array('placeholder' => '.span5', 'span' => 5))); ?>
-        <?php echo TbHtml::controlsRow(array(
+        <?php echo TbHtml::formControls(TbHtml::textField('text', '', array('placeholder' => '.span5', 'span' => 5))); ?>
+        <?php echo TbHtml::formControlsRow(array(
             TbHtml::textField('text', '', array('placeholder' => '.span4', 'span' => 4)),
             TbHtml::textField('text', '', array('placeholder' => '.span1', 'span' => 1)),
         )); ?>
-        <?php echo TbHtml::controlsRow(array(
+        <?php echo TbHtml::formControlsRow(array(
             TbHtml::textField('text', '', array('placeholder' => '.span3', 'span' => 3)),
             TbHtml::textField('text', '', array('placeholder' => '.span2', 'span' => 2)),
         )); ?>
-        <?php echo TbHtml::controlsRow(array(
+        <?php echo TbHtml::formControlsRow(array(
             TbHtml::textField('text', '', array('placeholder' => '.span2', 'span' => 2)),
             TbHtml::textField('text', '', array('placeholder' => '.span3', 'span' => 3)),
         )); ?>
-        <?php echo TbHtml::controlsRow(array(
+        <?php echo TbHtml::formControlsRow(array(
             TbHtml::textField('text', '', array('placeholder' => '.span1', 'span' => 1)),
             TbHtml::textField('text', '', array('placeholder' => '.span4', 'span' => 4)),
         )); ?>
@@ -745,19 +745,19 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <h4>Inline help</h4>
 
     <div class="bs-docs-example form-inline">
-        <?php echo TbHtml::textField('text', '', array('help' => array('text' => 'Inline help text'))); ?>
+        <?php echo TbHtml::textField('text', '', array('help' => 'Inline help text')); ?>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::textField('text', '', array('help' => array('text' => 'Inline help text'))); ?></pre>
+&lt;?php echo TbHtml::textField('text', '', array('help' => 'Inline help text')); ?></pre>
 
     <h4>Block help</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('text', '', array('help' => array('text' => 'A longer block of help text that breaks onto a new line and may extend beyond one line.', 'type' => TbHtml::HELP_BLOCK))); ?>
+        <?php echo TbHtml::textField('text', '', array('help' => 'A longer block of help text that breaks onto a new line and may extend beyond one line.', 'helpOptions' => array('type' => TbHtml::HELP_BLOCK))); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('text', '',
-    array('help' => array('text' => '...', 'type' => TbHtml::HELP_BLOCK))); ?></pre>
+    array('help' => '...', 'helpOptions' => array('type' => TbHtml::HELP_BLOCK))); ?></pre>
 
     <hr class="bs-docs-separator">
 
@@ -783,50 +783,50 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 
     <div class="bs-docs-example">
         <?php echo TbHtml::beginFormTb(TbHtml::FORM_HORIZONTAL); ?>
-        <?php echo TbHtml::horizontalRow(TbHtml::INPUT_TEXT, 'text', '', array(
+        <?php echo TbHtml::wrappedRow(TbHtml::INPUT_TEXT, 'text', '', array(
             'label' => 'Input with warning',
-            'help' => array('text' => 'Something may have gone wrong'),
+            'help' => 'Something may have gone wrong',
             'state' => TbHtml::STYLE_WARNING,
         )); ?>
-        <?php echo TbHtml::horizontalRow(TbHtml::INPUT_TEXT, 'text', '', array(
+        <?php echo TbHtml::wrappedRow(TbHtml::INPUT_TEXT, 'text', '', array(
             'label' => 'Input with error',
-            'help' => array('text' => 'Please correct the error'),
+            'help' => 'Please correct the error',
             'state' => TbHtml::STYLE_ERROR,
         )); ?>
-        <?php echo TbHtml::horizontalRow(TbHtml::INPUT_TEXT, 'text', '', array(
+        <?php echo TbHtml::wrappedRow(TbHtml::INPUT_TEXT, 'text', '', array(
             'label' => 'Input with info',
-            'help' => array('text' => 'Username is taken'),
+            'help' => 'Username is taken',
             'state' => TbHtml::STYLE_INFO,
         )); ?>
-        <?php echo TbHtml::horizontalRow(TbHtml::INPUT_TEXT, 'text', '', array(
+        <?php echo TbHtml::wrappedRow(TbHtml::INPUT_TEXT, 'text', '', array(
             'label' => 'Input with success',
-            'help' => array('text' => 'Woohoo!'),
+            'help' => 'Woohoo!',
             'state' => TbHtml::STYLE_SUCCESS,
         )); ?>
         <?php TbHtml::endForm(); ?>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::horizontalRow(TbHtml::INPUT_TEXT, 'text', '', array(
+&lt;?php echo TbHtml::wrappedRow(TbHtml::INPUT_TEXT, 'text', '', array(
     'label' => 'Input with warning',
-    'help' => array('text' => 'Something may have gone wrong'),
+    'help' => 'Something may have gone wrong',
     'state' => TbHtml::STYLE_WARNING,
 )); ?>
 
-&lt;?php echo TbHtml::horizontalRow(TbHtml::INPUT_TEXT, 'text', '', array(
+&lt;?php echo TbHtml::wrappedRow(TbHtml::INPUT_TEXT, 'text', '', array(
     'label' => 'Input with error',
-    'help' => array('text' => 'Please correct the error'),
+    'help' => 'Please correct the error',
     'state' => TbHtml::STYLE_ERROR,
 )); ?>
 
-&lt;?php echo TbHtml::horizontalRow(TbHtml::INPUT_TEXT, 'text', '', array(
+&lt;?php echo TbHtml::wrappedRow(TbHtml::INPUT_TEXT, 'text', '', array(
     'label' => 'Input with info',
-    'help' => array('text' => 'Username is taken'),
+    'help' => 'Username is taken',
     'state' => TbHtml::STYLE_INFO,
 )); ?>
 
-&lt;?php echo TbHtml::horizontalRow(TbHtml::INPUT_TEXT, 'text', '', array(
+&lt;?php echo TbHtml::wrappedRow(TbHtml::INPUT_TEXT, 'text', '', array(
     'label' => 'Input with success',
-    'help' => array('text' => 'Woohoo!'),
+    'help' => 'Woohoo!',
     'state' => TbHtml::STYLE_SUCCESS,
 )); ?></pre>
 
