@@ -4,11 +4,11 @@
 
         <p>Twitter Bootstrap for Yii</p>
 
-        <p><a href="https://github.com/yii-twbs/yiistrap/archive/master.zip" class="btn btn-inverse btn-large"
+        <p><a href="https://github.com/Crisu83/yiistrap/archive/master.zip" class="btn btn-inverse btn-large"
               onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 1.0.0']);">Download
                 Yiistrap</a></p>
         <ul class="masthead-links">
-            <li><a href="http://github.com/yii-twbs/yiistrap"
+            <li><a href="http://github.com/Crisu83/yiistrap"
                    onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'GitHub project']);">GitHub
                     project</a></li>
             <li>Version 1.0.0</li>
