@@ -395,7 +395,7 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
         <?php echo TbHtml::beginFormTb(); ?>
             <fieldset>
                 <legend>Legend</legend>
-                <?php echo TbHtml::row(TbHtml::INPUT_TEXT, 'text', '', array('label' => 'Label name', 'placeholder' => 'Type something...')); ?>
+                <?php echo TbHtml::textFieldRow('text', '', array('label' => 'Label name', 'placeholder' => 'Type something...')); ?>
                 <?php echo TbHtml::checkBox('checkMeOut', false, array('label' => 'Check me out')); ?>
                 <?php echo TbHtml::submitButton('Submit'); ?>
             </fieldset>
@@ -405,7 +405,7 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 &lt;?php echo TbHtml::beginFormTb(); ?>
     &lt;fieldset>
         &lt;legend>Legend&lt;/legend>
-        &lt;?php echo TbHtml::row(TbHtml::INPUT_TEXT, 'text', '',
+        &lt;?php echo TbHtml::textFieldRow('text', '',
             array('label' => 'Label name', 'placeholder' => 'Type something...')); ?>
         &lt;?php echo TbHtml::checkBox('checkMeOut', false, array('label' => 'Check me out')); ?>
         &lt;?php echo TbHtml::submitButton('Submit'); ?>

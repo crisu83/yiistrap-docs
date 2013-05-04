@@ -11,7 +11,7 @@
     <?php js('js/google-code-prettify/prettify.js'); ?>
     <?php js('js/google-code-prettify/prettify.js'); ?>
     <?php js('js/holder.js'); ?>
-	<?php js('/js/app.js', CClientScript::POS_END); ?>
+	<?php js('js/app.js', CClientScript::POS_END); ?>
     <title><?php echo e($this->pageTitle); ?></title>
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
 <body class="layout-main" data-spy="scroll" data-target=".bs-docs-sidebar">
 <!-- Navbar -->
 <?php $this->widget('bootstrap.widgets.TbNavbar', array(
-	'brandLabel' => e(Yii::app()->name),
+	'brandLabel' => img('images/logo-navbar.png') . ' ' . e(Yii::app()->name),
 	'brandUrl' => baseUrl('site/index'),
 	'collapse' => true,
 	'position' => TbHtml::NAVBAR_TOP,
@@ -55,14 +55,14 @@
 <!-- Footer -->
 <footer class="footer">
     <div class="container">
-        <p class="powered">
-            Powered by <a target="_blank" href="http://www.yiiframework.com">Yii PHP framework</a> /
-			<a target="_blank" href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> /
-			<a target="_blank" href="http://www.jquery.com">jQuery</a>
-		</p>
-        <p class="copy">
-			Copyright &copy; <?php echo date('Y'); ?> by Christoffer Niska
-		</p>
+        <div class="text-center">
+            <p class="credits">
+                Developed by <a href="http://www.cniska.net" target="_blank">Christoffer Niska</a> and <a href="http://www.ramirezcobos.com/" target="_blank">Antonio Ramirez</a>, Graphics by <a href="http://www.kevinvanderven.com" target="_blank">Kevin van der Ven</a>.
+            </p>
+            <p class="license">
+                Code licensed under <a href="http://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause License</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+            </p>
+        </div>
     </div>
 </footer>
 </body>
