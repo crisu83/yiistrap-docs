@@ -784,7 +784,6 @@ Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
 
 </section>
 
-
 <!-- Carousel
 ================================================== -->
 <section id="carousel">
