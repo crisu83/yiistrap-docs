@@ -456,17 +456,23 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
         <?php echo TbHtml::beginFormTb(TbHtml::FORM_HORIZONTAL); ?>
             <?php echo TbHtml::horizontalRow(TbHtml::INPUT_TEXT, 'email', '', array('label' => 'Email', 'placeholder' => 'Email')); ?>
             <?php echo TbHtml::horizontalRow(TbHtml::INPUT_PASSWORD, 'password', '', array('label' => 'Password', 'placeholder' => 'Password')); ?>
-            <?php echo TbHtml::horizontalRow(TbHtml::INPUT_CHECKBOX, 'rememberMe', '', array('label' => 'Remember me', 'afterControl' => TbHtml::submitButton('Sign in'))); ?>
+            <?php echo TbHtml::horizontalRow(TbHtml::INPUT_CHECKBOX, 'rememberMe', '', array('label' => 'Remember me', 'controlOptions' => array('after' => TbHtml::submitButton('Sign in')))); ?>
         <?php echo TbHtml::endForm(); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::beginFormTb(TbHtml::FORM_HORIZONTAL); ?>
-    &lt;?php echo TbHtml::horizontalRow(TbHtml::INPUT_TEXT, 'email', '',
-        array('label' => 'Email', 'placeholder' => 'Email')); ?>
-    &lt;?php echo TbHtml::horizontalRow(TbHtml::INPUT_PASSWORD, 'password', '',
-        array('label' => 'Password', 'placeholder' => 'Password')); ?>
-    &lt;?php echo TbHtml::horizontalRow(TbHtml::INPUT_CHECKBOX, 'rememberMe', '',
-        array('label' => 'Remember me', 'afterControl' => TbHtml::submitButton('Sign in'))); ?>
+    &lt;?php echo TbHtml::horizontalRow(TbHtml::INPUT_TEXT, 'email', '', array(
+        'label' => 'Email',
+        'placeholder' => 'Email',
+    )); ?>
+    &lt;?php echo TbHtml::horizontalRow(TbHtml::INPUT_PASSWORD, 'password', '', array(
+        'label' => 'Password',
+        'placeholder' => 'Password',
+    )); ?>
+    &lt;?php echo TbHtml::horizontalRow(TbHtml::INPUT_CHECKBOX, 'rememberMe', '', array(
+        'label' => 'Remember me',
+        'controlOptions' => array('after' => TbHtml::submitButton('Sign in')),
+    )); ?>
 &lt;?php echo TbHtml::endForm(); ?></pre>
 
     <hr class="bs-docs-separator">
@@ -709,7 +715,8 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 &lt;?php echo TbHtml::controlsRow(array(
     TbHtml::textField('text', '', array('placeholder' => '.span4', 'span' => 4)),
     TbHtml::textField('text', '', array('placeholder' => '.span1', 'span' => 1)),
-)); ?></pre>
+)); ?>
+...</pre>
 
     <h3>Uneditable inputs</h3>
 
