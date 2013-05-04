@@ -18,12 +18,11 @@
 	<div class="span3 bs-docs-sidebar">
 		<ul class="nav nav-list bs-docs-sidenav">
 			<li><a href="#navs"><i class="icon-chevron-right"></i> Nav</a></li>
-			<li><a href="#navbar"><i class="icon-chevron-right"></i> Navbar</a></li>
-			<li><a href="#breadcrumb"><i class="icon-chevron-right"></i> Breadcrumb</a></li>
-			<li><a href="#herounit"><i class="icon-chevron-right"></i> Hero unit</a></li>
-			<li><a href="#gridview"><i class="icon-chevron-right"></i> Grid view</a></li>
-			<li><a href="#detailview"><i class="icon-chevron-right"></i> Detail view</a></li>
-			<li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
+            <li><a href="#navbar"><i class="icon-chevron-right"></i> Navbar</a></li>
+            <li><a href="#breadcrumb"><i class="icon-chevron-right"></i> Breadcrumb</a></li>
+            <li><a href="#herounit"><i class="icon-chevron-right"></i> Hero unit</a></li>
+            <li><a href="#gridview"><i class="icon-chevron-right"></i> Grid view</a></li>
+            <li><a href="#forms"><i class="icon-chevron-right"></i> Form</a></li>
 			<li><a href="#modals"><i class="icon-chevron-right"></i> Modal</a></li>
 			<li><a href="#scrollspy"><i class="icon-chevron-right"></i> Scrollspy</a></li>
 			<li><a href="#tabs"><i class="icon-chevron-right"></i> Tab</a></li>
@@ -583,18 +582,6 @@ $this->widget('bootstrap.widgets.TbNav', array(
 )); ?></pre>
 
 	<p><?php echo TbHtml::labelTb('Heads up!', array('style' => TbHtml::STYLE_INFO)); ?> You can also combine table styles by providing multiple values.</p>
-
-</section>
-
-<!-- Detail view
-	================================================== -->
-<section id="detailview">
-
-	<div class="page-header">
-		<h1>Detail view <small>TbDetailView.php</small></h1>
-	</div>
-
-	<p class="muted">Coming soon!</p>
 
 </section>
 
