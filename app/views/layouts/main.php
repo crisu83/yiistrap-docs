@@ -33,7 +33,7 @@
 <?php $this->widget('bootstrap.widgets.TbNavbar', array(
 	'brandLabel' => e(Yii::app()->name),
 	'brandUrl' => baseUrl('site/index'),
-	'collapse' => true,
+	'collapse' => false,
 	'display' => TbHtml::NAVBAR_FIXED_TOP,
 	'items' => array(
 		array(

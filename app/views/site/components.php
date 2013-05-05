@@ -763,7 +763,7 @@ echo TbHtml::buttonGroup(array(
 <section id="thumbnails">
 
    <?php $thumbnail = array(
-      'image' => 'holder.js/260x180',
+      'image' => '/holder.js/260x180',
       'url' => '#',
    ); ?>
 
