@@ -1,3 +1,7 @@
+<?php
+/* @var SiteController $this */
+$this->pageTitle = 'Getting started - ' . param('pageTitle');
+?>
 <!-- Subhead
 ================================================== -->
 <header class="jumbotron subhead" id="overview">

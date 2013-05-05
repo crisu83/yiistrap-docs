@@ -1,3 +1,7 @@
+<?php
+/* @var SiteController $this */
+$this->pageTitle = param('pageTitle');
+?>
 <div class="jumbotron masthead">
     <div class="container">
         <h1>Yiistrap</h1>
@@ -42,6 +46,7 @@
         if (!d.getElementById(id)) {
             js = d.createElement(s);
             js.id = id;
+
             js.src = "//platform.twitter.com/widgets.js";
             fjs.parentNode.insertBefore(js, fjs);
         }

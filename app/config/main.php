@@ -54,5 +54,7 @@ return array(
 		),
 	),
 	// application parameters
-	'params' => array(),
+	'params' => array(
+        'pageTitle' => 'Yiistrap, Twitter Bootstrap for Yii',
+    ),
 );

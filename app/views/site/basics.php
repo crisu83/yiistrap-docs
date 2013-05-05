@@ -1,5 +1,6 @@
 <?php
 /* @var SiteController $this */
+$this->pageTitle = 'Basics - ' . param('pageTitle');
 ?>
 <!-- Subhead
 ================================================== -->
