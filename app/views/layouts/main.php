@@ -34,7 +34,7 @@
 	'brandLabel' => e(Yii::app()->name),
 	'brandUrl' => baseUrl('site/index'),
 	'collapse' => true,
-	'position' => TbHtml::NAVBAR_TOP,
+	'display' => TbHtml::NAVBAR_FIXED_TOP,
 	'items' => array(
 		array(
 			'class' => 'bootstrap.widgets.TbNav',
