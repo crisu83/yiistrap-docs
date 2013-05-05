@@ -31,10 +31,9 @@
 <body class="layout-main" data-spy="scroll" data-target=".bs-docs-sidebar">
 <!-- Navbar -->
 <?php $this->widget('bootstrap.widgets.TbNavbar', array(
-	'brandLabel' => img('images/logo-navbar.png') . ' ' . e(Yii::app()->name),
+	'brandLabel' => img('images/logo-navbar.png') . ' ' . e(Yii::app()->name) . ' <small>BETA</small>',
 	'brandUrl' => baseUrl('site/index'),
-	'collapse' => true,
-	'position' => TbHtml::NAVBAR_TOP,
+	//'collapse' => true,
 	'items' => array(
 		array(
 			'class' => 'bootstrap.widgets.TbNav',

@@ -7,7 +7,7 @@ $this->pageTitle = 'Getting started - ' . param('pageTitle');
 <header class="jumbotron subhead" id="overview">
     <div class="container">
         <h1>Getting started</h1>
-        <p class="lead">How to configure the extension for your project</p>
+        <p class="lead">How to configure Yiistrap for your project</p>
     </div>
 </header>
 
