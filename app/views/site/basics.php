@@ -76,17 +76,17 @@ $this->pageTitle = 'Basics - ' . param('pageTitle');
 
     <div class="bs-docs-example">
         <?php echo TbHtml::muted('Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.'); ?>
-        <?php echo TbHtml::em(TbHtml::STYLE_WARNING, 'Etiam porta sem malesuada magna mollis euismod.'); ?>
-        <?php echo TbHtml::em(TbHtml::STYLE_ERROR, 'Donec ullamcorper nulla non metus auctor fringilla.'); ?>
-        <?php echo TbHtml::em(TbHtml::STYLE_INFO, 'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.'); ?>
-        <?php echo TbHtml::em(TbHtml::STYLE_SUCCESS, 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula.'); ?>
+        <?php echo TbHtml::em(TbHtml::COLOR_WARNING, 'Etiam porta sem malesuada magna mollis euismod.'); ?>
+        <?php echo TbHtml::em(TbHtml::COLOR_ERROR, 'Donec ullamcorper nulla non metus auctor fringilla.'); ?>
+        <?php echo TbHtml::em(TbHtml::COLOR_INFO, 'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.'); ?>
+        <?php echo TbHtml::em(TbHtml::COLOR_SUCCESS, 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula.'); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::muted('...'); ?>
-&lt;?php echo TbHtml::em(TbHtml::STYLE_WARNING, '...'); ?>
-&lt;?php echo TbHtml::em(TbHtml::STYLE_ERROR, '...'); ?>
-&lt;?php echo TbHtml::em(TbHtml::STYLE_INFO, '...'); ?>
-&lt;?php echo TbHtml::em(TbHtml::STYLE_SUCCESS, '...'); ?></pre>
+&lt;?php echo TbHtml::em(TbHtml::COLOR_WARNING, '...'); ?>
+&lt;?php echo TbHtml::em(TbHtml::COLOR_ERROR, '...'); ?>
+&lt;?php echo TbHtml::em(TbHtml::COLOR_INFO, '...'); ?>
+&lt;?php echo TbHtml::em(TbHtml::COLOR_SUCCESS, '...'); ?></pre>
 
     <hr class="bs-docs-separator">
 
@@ -728,13 +728,13 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 
     <div class="bs-docs-example form-inline">
         <?php echo TbHtml::formActions(array(
-            TbHtml::submitButton('Save changes', array('style' => TbHtml::STYLE_PRIMARY)),
+            TbHtml::submitButton('Save changes', array('color' => TbHtml::COLOR_PRIMARY)),
             TbHtml::button('Cancel'),
         )); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::formActions(array(
-    TbHtml::submitButton('Save changes', array('style' => TbHtml::STYLE_PRIMARY)),
+    TbHtml::submitButton('Save changes', array('color' => TbHtml::COLOR_PRIMARY)),
     TbHtml::button('Cancel'),
 )); ?></pre>
 
@@ -743,18 +743,18 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <h4>Inline help</h4>
 
     <div class="bs-docs-example form-inline">
-        <?php echo TbHtml::textField('text', '', array('help' => 'Inline help text')); ?>
+        <?php echo TbHtml::textFieldRow('text', '', array('help' => 'Inline help text')); ?>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::textField('text', '', array('help' => 'Inline help text')); ?></pre>
+&lt;?php echo TbHtml::textFieldRow('text', '', array('help' => 'Inline help text')); ?></pre>
 
     <h4>Block help</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('text', '', array('help' => 'A longer block of help text that breaks onto a new line and may extend beyond one line.', 'helpOptions' => array('type' => TbHtml::HELP_BLOCK))); ?>
+        <?php echo TbHtml::textFieldRow('text', '', array('help' => 'A longer block of help text that breaks onto a new line and may extend beyond one line.', 'helpOptions' => array('type' => TbHtml::HELP_BLOCK))); ?>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::textField('text', '',
+&lt;?php echo TbHtml::textFieldRow('text', '',
     array('help' => '...', 'helpOptions' => array('type' => TbHtml::HELP_BLOCK))); ?></pre>
 
     <hr class="bs-docs-separator">
@@ -784,25 +784,25 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
             <?php echo TbHtml::textFieldRow('text', '', array(
                 'label' => 'Input with warning',
                 'help' => 'Something may have gone wrong',
-                'state' => TbHtml::STYLE_WARNING,
+                'color' => TbHtml::COLOR_WARNING,
                 'wrap' => true,
             )); ?>
             <?php echo TbHtml::textFieldRow('text', '', array(
                 'label' => 'Input with error',
                 'help' => 'Please correct the error',
-                'state' => TbHtml::STYLE_ERROR,
+                'color' => TbHtml::COLOR_ERROR,
                 'wrap' => true,
             )); ?>
             <?php echo TbHtml::textFieldRow('text', '', array(
                 'label' => 'Input with info',
                 'help' => 'Username is taken',
-                'state' => TbHtml::STYLE_INFO,
+                'color' => TbHtml::COLOR_INFO,
                 'wrap' => true,
             )); ?>
             <?php echo TbHtml::textFieldRow('text', '', array(
                 'label' => 'Input with success',
                 'help' => 'Woohoo!',
-                'state' => TbHtml::STYLE_SUCCESS,
+                'color' => TbHtml::COLOR_SUCCESS,
                 'wrap' => true,
             )); ?>
         <?php TbHtml::endForm(); ?>
@@ -811,25 +811,25 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 &lt;?php echo TbHtml::textFieldRow('text', '', array(
     'label' => 'Input with warning',
     'help' => 'Something may have gone wrong',
-    'state' => TbHtml::STYLE_WARNING,
+    'color' => TbHtml::COLOR_WARNING,
     'wrap' => true,
 )); ?>
 &lt;?php echo TbHtml::textFieldRow('text', '', array(
     'label' => 'Input with error',
     'help' => 'Please correct the error',
-    'state' => TbHtml::STYLE_ERROR,
+    'color' => TbHtml::COLOR_ERROR,
     'wrap' => true,
 )); ?>
 &lt;?php echo TbHtml::textFieldRow('text', '', array(
     'label' => 'Input with info',
     'help' => 'Username is taken',
-    'state' => TbHtml::STYLE_INFO,
+    'color' => TbHtml::COLOR_INFO,
     'wrap' => true,
 )); ?>
 &lt;?php echo TbHtml::textFieldRow('text', '', array(
     'label' => 'Input with success',
     'help' => 'Woohoo!',
-    'state' => TbHtml::STYLE_SUCCESS,
+    'color' => TbHtml::COLOR_SUCCESS,
     'wrap' => true,
 )); ?></pre>
 
