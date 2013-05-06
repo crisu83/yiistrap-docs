@@ -617,7 +617,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
             <?php echo $form->dropDownListRow($model, 'dropDown', array('1', '2', '3', '4', '5'), array('empty' => 'Something ...')); ?>
             <?php echo $form->dropDownListRow($model, 'multiDropDown', array('1', '2', '3', '4', '5'), array('multiple' => true)); ?>
             <?php echo $form->fileFieldRow($model, 'fileField'); ?>
-            <?php echo $form->textAreaRow($model, 'textArea', array('class' => 'span8', 'rows' => 5)); ?>
+            <?php echo $form->textAreaRow($model, 'textArea', array('span' => 8, 'rows' => 5)); ?>
             <?php echo $form->uneditableFieldRow($model, 'uneditableField'); ?>
             <?php echo $form->textFieldRow($model, 'disabled', array('disabled' => true)); ?>
             <?php echo $form->textFieldRow($model, 'prepend', array('prepend' => '@')); ?>
@@ -645,6 +645,49 @@ $this->widget('bootstrap.widgets.TbNav', array(
         <?php $this->endWidget(); ?>
         </div>
 	</div>
+    <pre class="prettyprint linenums">
+&lt;?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+    'layout' => TbHtml::FORM_HORIZONTAL,
+)); ?>
+
+&lt;fieldset>
+
+    &lt;legend>Legend&lt;/legend>
+
+    &lt;?php echo $form->textFieldRow($model, 'textField',
+        array('help' => 'In addition to freeform text, any HTML5 text-based input appears like so.')); ?>
+    &lt;?php echo $form->dropDownListRow($model, 'dropDown',
+        array('1', '2', '3', '4', '5'), array('empty' => 'Something ...')); ?>
+    &lt;?php echo $form->dropDownListRow($model, 'multiDropDown',
+        array('1', '2', '3', '4', '5'), array('multiple' => true)); ?>
+    &lt;?php echo $form->fileFieldRow($model, 'fileField'); ?>
+    &lt;?php echo $form->textAreaRow($model, 'textArea',
+        array('span' => 8, 'rows' => 5)); ?>
+    &lt;?php echo $form->uneditableFieldRow($model, 'uneditableField'); ?>
+    &lt;?php echo $form->textFieldRow($model, 'disabled', array('disabled' => true)); ?>
+    &lt;?php echo $form->textFieldRow($model, 'prepend', array('prepend' => '@')); ?>
+    &lt;?php echo $form->textFieldRow($model, 'append', array('append' => '.00')); ?>
+    &lt;?php echo $form->checkBoxRow($model, 'disabledCheckbox', array('disabled' => true)); ?>
+    &lt;?php echo $form->inlineCheckBoxListRow($model, 'inlineCheckboxes', array('1', '2', '3')); ?>
+    &lt;?php echo $form->checkBoxListRow($model, 'checkboxes', array(
+        'Option one is this and that—be sure to include why it\'s great',
+        'Option two can also be checked and included in form results',
+        'Option three can—yes, you guessed it—also be checked and included in form results',
+    ), array('help' => '&lt;strong>Note:&lt;/strong> Labels surround all the options for much larger click areas.')); ?>
+    &lt;?php echo $form->radioButtonRow($model, 'radioButton'); ?>
+    &lt;?php echo $form->radioButtonListRow($model, 'radioButtons', array(
+        'Option one is this and that—be sure to include why it\'s great',
+        'Option two can is something else and selecting it will deselect option one',
+    )); ?>
+
+&lt;/fieldset>
+
+&lt;?php echo TbHtml::formActions(array(
+    TbHtml::submitButton('Submit', array('color' => TbHtml::COLOR_PRIMARY)),
+    TbHtml::resetButton('Reset'),
+)); ?>
+
+&lt;?php $this->endWidget(); ?></pre>
 
 </section>
 
