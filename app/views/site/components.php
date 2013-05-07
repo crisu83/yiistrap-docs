@@ -943,25 +943,48 @@ echo TbHtml::buttonGroup(array(
       <h1>Media object</h1>
    </div>
 
-   <div class="bs-docs-example">
-      <?php echo TbHtml::mediaObjects(array(
-         array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.', 'items' => array(
-            array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.', 'items' => array(
-                  array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.'),
-            )),
-         )),
-         array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.'),
-      ));   ?>
-   </div>
+   <h2>Default example</h2>
 
-   <pre class="prettyprint linenums">
+    <div class="bs-docs-example">
+        <?php echo TbHtml::mediaObjects(array(
+            array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.'),
+            array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.', 'items' => array(
+                array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.'),
+            )),
+        )); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::mediaObjects(array(
+    array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => '...'),
+    array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => '...', 'items' => array(
+        array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => '...'),
+    )),
+)); ?></pre>
+
+    <hr class="bs-docs-separator">
+
+    <h2>Media list</h2>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::mediaObjects(array(
+            array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.', 'items' => array(
+                array('image' => 'holder.js/64x64', 'heading' => 'Nested media heading', 'content' => 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.', 'items' => array(
+                    array('image' => 'holder.js/64x64', 'heading' => 'Nested media heading', 'content' => 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.'),
+                )),
+                array('image' => 'holder.js/64x64', 'heading' => 'Nested media heading', 'content' => 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.'),
+            )),
+            array('heading' => 'Media heading', 'content' => 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.'),
+        )); ?>
+    </div>
+    <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::mediaObjects(array(
     array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => '...', 'items' => array(
         array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => '...', 'items' => array(
             array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => '...'),
         )),
+        array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => '...'),
     )),
-    array('image' => 'holder.js/64x64', 'heading' => 'Media heading', 'content' => '...'),
+    array('heading' => 'Media heading', 'content' => '...'),
 )); ?></pre>
 
 </section>
