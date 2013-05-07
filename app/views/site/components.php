@@ -455,11 +455,133 @@ echo TbHtml::buttonGroup(array(
    ================================================== -->
 <section id="pagination">
 
-   <div class="page-header">
-      <h1>Pagination</h1>
-   </div>
+    <?php $paginationConfig = array(
+        array('label' => '&laquo;', 'url' => '#'),
+        array('label' => '1', 'url' => '#'),
+        array('label' => '2', 'url' => '#'),
+        array('label' => '3', 'url' => '#'),
+        array('label' => '4', 'url' => '#'),
+        array('label' => '5', 'url' => '#'),
+        array('label' => '&raquo;', 'url' => '#'),
+    ); ?>
 
-   <p class="muted">Coming soon!</p>
+    <div class="page-header">
+      <h1>Pagination</h1>
+    </div>
+
+    <h2>Standard pagination</h2>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::pagination($paginationConfig); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::pagination(array(
+      array('label' => '&amp;laquo;', 'url' => '#'),
+      array('label' => '1', 'url' => '#'),
+      array('label' => '2', 'url' => '#'),
+      array('label' => '3', 'url' => '#'),
+      array('label' => '4', 'url' => '#'),
+      array('label' => '5', 'url' => '#'),
+      array('label' => '&amp;raquo;', 'url' => '#'),
+)); ?></pre>
+
+    <hr class="bs-docs-separator">
+
+    <h2>Options</h2>
+
+    <h3>Disable and active states</h3>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::pagination(array(
+            array('label' => '&laquo;', 'url' => '#', 'disabled' => true),
+            array('label' => '1', 'url' => '#', 'active' => true),
+            array('label' => '2', 'url' => '#'),
+            array('label' => '3', 'url' => '#'),
+            array('label' => '4', 'url' => '#'),
+            array('label' => '5', 'url' => '#'),
+            array('label' => '&raquo;', 'url' => '#'),
+        )); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::pagination(array(
+    array('label' => '&amp;laquo;', 'url' => '#', 'disabled' => true),
+    array('label' => '1', 'url' => '#', 'active' => true),
+    ...
+)); ?></pre>
+
+    <h3>Sizes</h3>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::pagination($paginationConfig, array('size' => TbHtml::PAGINATION_SIZE_LARGE)); ?>
+        <?php echo TbHtml::pagination($paginationConfig); ?>
+        <?php echo TbHtml::pagination($paginationConfig, array('size' => TbHtml::PAGINATION_SIZE_SMALL)); ?>
+        <?php echo TbHtml::pagination($paginationConfig, array('size' => TbHtml::PAGINATION_SIZE_MINI)); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::pagination(array(...), array('size' => TbHtml::PAGINATION_SIZE_LARGE)); ?>
+&lt;?php echo TbHtml::pagination(array(...)); ?>
+&lt;?php echo TbHtml::pagination(array(...), array('size' => TbHtml::PAGINATION_SIZE_SMALL)); ?>
+&lt;?php echo TbHtml::pagination(array(...), array('size' => TbHtml::PAGINATION_SIZE_MINI)); ?></pre>
+
+    <h3>Alignments</h3>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::pagination($paginationConfig, array('align' => TbHtml::PAGINATION_ALIGN_CENTER)); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::pagination(array(...), array('align' => TbHtml::PAGINATION_ALIGN_CENTER)); ?></pre>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::pagination($paginationConfig, array('align' => TbHtml::PAGINATION_ALIGN_RIGHT)); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::pagination(array(...), array('align' => TbHtml::PAGINATION_ALIGN_RIGHT)); ?></pre>
+
+    <hr class="bs-docs-separator">
+
+    <h2>Pager</h2>
+
+    <h3>Default example</h3>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::pager(array(
+            array('label' => 'Previous', 'url' => '#'),
+            array('label' => 'Next', 'url' => '#'),
+        )); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::pager(array(
+    array('label' => 'Previous', 'url' => '#'),
+    array('label' => 'Next', 'url' => '#'),
+)); ?></pre>
+
+    <h3>Aligned links</h3>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::pager(array(
+            array('label' => '&larr; Older', 'url' => '#', 'previous' => true),
+            array('label' => 'Newer &rarr;', 'url' => '#', 'next' => true),
+        )); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::pager(array(
+    array('label' => '&amp;larr; Older', 'url' => '#', 'previous' => true),
+    array('label' => 'Newer &amp;rarr;', 'url' => '#', 'next' => true),
+)); ?></pre>
+
+    <h3>Optional disabled state</h3>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::pager(array(
+            array('label' => '&larr; Older', 'url' => '#', 'previous' => true, 'disabled' => true),
+            array('label' => 'Newer &rarr;', 'url' => '#', 'next' => true),
+        )); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::pager(array(
+    array('label' => '&amp;larr; Older', 'url' => '#', 'previous' => true, 'disabled' => true),
+    ...
+)); ?></pre>
 
 </section>
 
