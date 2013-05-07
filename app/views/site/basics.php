@@ -378,18 +378,18 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <h4>Buttons instead of text</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('appendedInputButton', '', array('append' => TbHtml::htmlButton('Go!'), 'class' => 'span2')); ?>
+        <?php echo TbHtml::textField('appendedInputButton', '', array('append' => TbHtml::button('Go!'), 'class' => 'span2')); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('appendedInputButton', '',
-    array('append' => TbHtml::htmlButton('Go!'), 'class' => 'span2')); ?></pre>
+    array('append' => TbHtml::button('Go!'), 'class' => 'span2')); ?></pre>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('appendedInputButtons', '', array('append' => TbHtml::htmlButton('Search') . ' ' . TbHtml::htmlButton('Options'), 'class' => 'span2')); ?>
+        <?php echo TbHtml::textField('appendedInputButtons', '', array('append' => TbHtml::button('Search') . ' ' . TbHtml::button('Options'), 'class' => 'span2')); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('appendedInputButtons', '',
-    array('append' => TbHtml::htmlButton('Search') . ' ' . TbHtml::htmlButton('Options'), 'class' => 'span2')); ?></pre>
+    array('append' => TbHtml::button('Search') . ' ' . TbHtml::button('Options'), 'class' => 'span2')); ?></pre>
 
     <h4>Button dropdowns</h4>
 
@@ -535,13 +535,13 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <div class="bs-docs-example form-inline">
         <?php echo TbHtml::formActions(array(
             TbHtml::submitButton('Save changes', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)),
-            TbHtml::htmlButton('Cancel'),
+            TbHtml::button('Cancel'),
         )); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::formActions(array(
     TbHtml::submitButton('Save changes', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)),
-    TbHtml::htmlButton('Cancel'),
+    TbHtml::button('Cancel'),
 )); ?></pre>
 
     <h3>Help text</h3>
@@ -650,90 +650,90 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 	</div>
 
 	<div class="bs-docs-example">
-		<?php echo TbHtml::htmlButton('Default'); ?>
-		<?php echo TbHtml::htmlButton('Primary', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
-		<?php echo TbHtml::htmlButton('Danger', array('color' => TbHtml::BUTTON_COLOR_DANGER)); ?>
-		<?php echo TbHtml::htmlButton('Warning', array('color' => TbHtml::BUTTON_COLOR_WARNING)); ?>
-		<?php echo TbHtml::htmlButton('Success', array('color' => TbHtml::BUTTON_COLOR_SUCCESS)); ?>
-		<?php echo TbHtml::htmlButton('Info', array('color' => TbHtml::BUTTON_COLOR_INFO)); ?>
-		<?php echo TbHtml::htmlButton('Inverse', array('color' => TbHtml::BUTTON_COLOR_INVERSE)); ?>
-		<?php echo TbHtml::htmlButton('Link', array('color' => TbHtml::BUTTON_COLOR_LINK)); ?>
+		<?php echo TbHtml::button('Default'); ?>
+		<?php echo TbHtml::button('Primary', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
+		<?php echo TbHtml::button('Danger', array('color' => TbHtml::BUTTON_COLOR_DANGER)); ?>
+		<?php echo TbHtml::button('Warning', array('color' => TbHtml::BUTTON_COLOR_WARNING)); ?>
+		<?php echo TbHtml::button('Success', array('color' => TbHtml::BUTTON_COLOR_SUCCESS)); ?>
+		<?php echo TbHtml::button('Info', array('color' => TbHtml::BUTTON_COLOR_INFO)); ?>
+		<?php echo TbHtml::button('Inverse', array('color' => TbHtml::BUTTON_COLOR_INVERSE)); ?>
+		<?php echo TbHtml::button('Link', array('color' => TbHtml::BUTTON_COLOR_LINK)); ?>
 	</div>
 
    <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::htmlButton('Default'); ?>
-&lt;?php echo TbHtml::htmlButton('Primary', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
-&lt;?php echo TbHtml::htmlButton('Danger', array('color' => TbHtml::BUTTON_COLOR_DANGER)); ?>
-&lt;?php echo TbHtml::htmlButton('Warning', array('color' => TbHtml::BUTTON_COLOR_WARNING)); ?>
-&lt;?php echo TbHtml::htmlButton('Success', array('color' => TbHtml::BUTTON_COLOR_SUCCESS)); ?>
-&lt;?php echo TbHtml::htmlButton('Info', array('color' => TbHtml::BUTTON_COLOR_INFO)); ?>
-&lt;?php echo TbHtml::htmlButton('Inverse', array('color' => TbHtml::BUTTON_COLOR_INVERSE)); ?>
-&lt;?php echo TbHtml::htmlButton('Link', array('color' => TbHtml::BUTTON_COLOR_LINK)); ?></pre>
+&lt;?php echo TbHtml::button('Default'); ?>
+&lt;?php echo TbHtml::button('Primary', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
+&lt;?php echo TbHtml::button('Danger', array('color' => TbHtml::BUTTON_COLOR_DANGER)); ?>
+&lt;?php echo TbHtml::button('Warning', array('color' => TbHtml::BUTTON_COLOR_WARNING)); ?>
+&lt;?php echo TbHtml::button('Success', array('color' => TbHtml::BUTTON_COLOR_SUCCESS)); ?>
+&lt;?php echo TbHtml::button('Info', array('color' => TbHtml::BUTTON_COLOR_INFO)); ?>
+&lt;?php echo TbHtml::button('Inverse', array('color' => TbHtml::BUTTON_COLOR_INVERSE)); ?>
+&lt;?php echo TbHtml::button('Link', array('color' => TbHtml::BUTTON_COLOR_LINK)); ?></pre>
 
 	<h2>Sizes</h2>
 
 	<div class="bs-docs-example">
 		<p>
-			<?php echo TbHtml::htmlButton('Large button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
-			<?php echo TbHtml::htmlButton('Large button', array('size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
+			<?php echo TbHtml::button('Large button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
+			<?php echo TbHtml::button('Large button', array('size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
 		</p>
 		<p>
-			<?php echo TbHtml::htmlButton('Default button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
-			<?php echo TbHtml::htmlButton('Default button'); ?>
+			<?php echo TbHtml::button('Default button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
+			<?php echo TbHtml::button('Default button'); ?>
 		</p>
 		<p>
-			<?php echo TbHtml::htmlButton('Small button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_SMALL)); ?>
-			<?php echo TbHtml::htmlButton('Small button', array('size' => TbHtml::BUTTON_SIZE_SMALL)); ?>
+			<?php echo TbHtml::button('Small button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_SMALL)); ?>
+			<?php echo TbHtml::button('Small button', array('size' => TbHtml::BUTTON_SIZE_SMALL)); ?>
 		</p>
 		<p>
-			<?php echo TbHtml::htmlButton('Mini button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_MINI)); ?>
-			<?php echo TbHtml::htmlButton('Mini button', array('size' => TbHtml::BUTTON_SIZE_MINI)); ?>
+			<?php echo TbHtml::button('Mini button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_MINI)); ?>
+			<?php echo TbHtml::button('Mini button', array('size' => TbHtml::BUTTON_SIZE_MINI)); ?>
 		</p>
 	</div>
 
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::htmlButton('Large button',
+&lt;?php echo TbHtml::button('Large button',
     array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
-&lt;?php echo TbHtml::htmlButton('Large button',
+&lt;?php echo TbHtml::button('Large button',
     array('size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
-&lt;?php echo TbHtml::htmlButton('Default button',
+&lt;?php echo TbHtml::button('Default button',
     array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
-&lt;?php echo TbHtml::htmlButton('Default button'); ?>
-&lt;?php echo TbHtml::htmlButton('Small button',
+&lt;?php echo TbHtml::button('Default button'); ?>
+&lt;?php echo TbHtml::button('Small button',
     array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_SMALL)); ?>
-&lt;?php echo TbHtml::htmlButton('Small button',
+&lt;?php echo TbHtml::button('Small button',
     array('size' => TbHtml::BUTTON_SIZE_SMALL)); ?>
-&lt;?php echo TbHtml::htmlButton('Mini button',
+&lt;?php echo TbHtml::button('Mini button',
     array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_MINI)); ?>
-&lt;?php echo TbHtml::htmlButton('Mini button',
+&lt;?php echo TbHtml::button('Mini button',
     array('size' => TbHtml::BUTTON_SIZE_MINI)); ?></pre>
 
 	<h2>Block</h2>
 
 	<div class="bs-docs-example">
 		<div class="well" style="max-width: 400px; margin: 0 auto 10px;">
-			<?php echo TbHtml::htmlButton('Block button', array('block' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
-			<?php echo TbHtml::htmlButton('Block button', array('block' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
+			<?php echo TbHtml::button('Block button', array('block' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
+			<?php echo TbHtml::button('Block button', array('block' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
 		</div>
 	</div>
 
    <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::htmlButton('Block button',
+&lt;?php echo TbHtml::button('Block button',
    array('block' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size'=>TbHtml::BUTTON_SIZE_LARGE)); ?>
-&lt;?php echo TbHtml::htmlButton('Block button',
+&lt;?php echo TbHtml::button('Block button',
    array('block' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?></pre>
 
 	<h2>Disabled state</h2>
 
 	<div class="bs-docs-example">
-		<?php echo TbHtml::htmlButton('Primary button', array('disabled' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
-		<?php echo TbHtml::htmlButton('Button', array('disabled' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
+		<?php echo TbHtml::button('Primary button', array('disabled' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
+		<?php echo TbHtml::button('Button', array('disabled' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
 	</div>
 
    <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::htmlButton('Primary button',
+&lt;?php echo TbHtml::button('Primary button',
    array('disabled' => true, 'size'=>TbHtml::BUTTON_SIZE_LARGE, 'color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
-&lt;?php echo TbHtml::htmlButton('Button',
+&lt;?php echo TbHtml::button('Button',
    array('disabled' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?></pre>
 
 </section>

@@ -654,7 +654,7 @@ echo TbHtml::buttonGroup(array(
    <h2>Hero unit</h2>
 
    <div class="bs-docs-example">
-      <?php echo TbHtml::heroUnit('Hello, world!', '<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>' . TbHtml::htmlButton('Learn more', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE))); ?>
+      <?php echo TbHtml::heroUnit('Hello, world!', '<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>' . TbHtml::button('Learn more', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE))); ?>
    </div>
 
    <pre class="prettyprint linenums">
@@ -685,7 +685,7 @@ echo TbHtml::buttonGroup(array(
    <?php $captionThumbnail = array(
       'image' => 'holder.js/300x200',
       'label' => 'Thumbnail label',
-      'caption' => '<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>' . TbHtml::htmlButton('Action',   array('color' => 'primary')) . ' ' . TbHtml::htmlButton('Action'),
+      'caption' => '<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>' . TbHtml::button('Action',   array('color' => 'primary')) . ' ' . TbHtml::button('Action'),
    ); ?>
 
    <div class="page-header">

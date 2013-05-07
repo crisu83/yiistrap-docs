@@ -467,14 +467,14 @@ $this->widget('bootstrap.widgets.TbNav', array(
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbHeroUnit', array(
 			'heading' => 'Hello, world!',
-			'content' => '<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>' . TbHtml::htmlButton('Learn more', array('color' =>TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)),
+			'content' => '<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>' . TbHtml::button('Learn more', array('color' =>TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)),
 		)); ?>
 	</div>
 
 	<pre class="prettyprint linenums">
 &lt?php $this->widget('bootstrap.widgets.TbHeroUnit', array(
     'heading' => 'Hello, world!',
-    'content' => '&lt;p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.&lt;/p>' . TbHtml::htmlButton('Learn more', array('color' =>TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)),
+    'content' => '&lt;p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.&lt;/p>' . TbHtml::button('Learn more', array('color' =>TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)),
 )); ?></pre>
 
 	<h4>Using a view</h4>
@@ -716,9 +716,9 @@ $this->widget('bootstrap.widgets.TbNav', array(
 			'id' => 'myModal',
 			'header' => 'Modal Heading',
 			'content' => '<p>One fine body...</p>',
-			'footer' => TbHtml::htmlButton('Save Changes',array('data-dismiss' => 'modal', 'style' => TbHtml::BUTTON_COLOR_PRIMARY)) . '&nbsp;' . TbHtml::htmlButton('Close', array('data-dismiss' => 'modal')),
+			'footer' => TbHtml::button('Save Changes',array('data-dismiss' => 'modal', 'style' => TbHtml::BUTTON_COLOR_PRIMARY)) . '&nbsp;' . TbHtml::button('Close', array('data-dismiss' => 'modal')),
 		)); ?>
-		<?php echo TbHtml::htmlButton('Click me to open modal', array('color' =>TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE, 'data-toggle' => 'modal', 'data-target' => '#myModal')); ?>
+		<?php echo TbHtml::button('Click me to open modal', array('color' =>TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE, 'data-toggle' => 'modal', 'data-target' => '#myModal')); ?>
 	</div>
 
 <pre class="prettyprint linenums">
@@ -726,11 +726,11 @@ $this->widget('bootstrap.widgets.TbNav', array(
     'id' => 'myModal',
     'header' => 'Modal Heading',
     'content' => '&lt;p>One fine body...&lt;/p>',
-    'footer' => TbHtml::htmlButton('Save Changes',array('data-dismiss' => 'modal', 'style' => TbHtml::BUTTON_COLOR_PRIMARY))
-        . '&nbsp;' . TbHtml::htmlButton('Close', array('data-dismiss' => 'modal')),
+    'footer' => TbHtml::button('Save Changes',array('data-dismiss' => 'modal', 'style' => TbHtml::BUTTON_COLOR_PRIMARY))
+        . '&nbsp;' . TbHtml::button('Close', array('data-dismiss' => 'modal')),
 )); ?>
 
-&lt;?php echo TbHtml::htmlButton('Click me to open modal', array(
+&lt;?php echo TbHtml::button('Click me to open modal', array(
     'style' => TbHtml::BUTTON_COLOR_PRIMARY,
     'size' => TbHtml::BUTTON_SIZE_LARGE,
     'data-toggle' => 'modal',
