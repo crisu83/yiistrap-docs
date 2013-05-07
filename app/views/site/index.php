@@ -1,17 +1,21 @@
+<?php
+/* @var SiteController $this */
+$this->pageTitle = param('pageTitle');
+?>
 <div class="jumbotron masthead">
     <div class="container">
         <h1>Yiistrap</h1>
 
         <p>Twitter Bootstrap for Yii</p>
 
-        <p><a href="https://github.com/yii-twbs/yiistrap/archive/master.zip" class="btn btn-primary btn-large"
+        <p><a href="https://github.com/Crisu83/yiistrap/archive/master.zip" class="btn btn-inverse btn-large"
               onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 1.0.0']);">Download
                 Yiistrap</a></p>
         <ul class="masthead-links">
-            <li><a href="http://github.com/yii-twbs/yiistrap"
+            <li><a href="http://github.com/Crisu83/yiistrap"
                    onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'GitHub project']);">GitHub
                     project</a></li>
-            <li>Version 1.0.0</li>
+            <li>Version 1.0.0 BETA</li>
         </ul>
     </div>
 </div>
@@ -42,6 +46,7 @@
         if (!d.getElementById(id)) {
             js = d.createElement(s);
             js.id = id;
+
             js.src = "//platform.twitter.com/widgets.js";
             fjs.parentNode.insertBefore(js, fjs);
         }
@@ -57,7 +62,6 @@
         <div class="row-fluid">
             <div class="span4">
                 <h2>Faster</h2>
-
                 <p style="text-align:justify">
                     <a href="http://www.cniska.net/yii-bootstrap/" target="_blank">Yii-Bootstrap</a> was an awesome extension library, but it was too widget hierarchical, thus slow compared to this new approach. We though that we could replace all that with a robust html helper, and to tell you truth, we are very happy with the results.
                 </p>
@@ -65,7 +69,7 @@
             <div class="span4">
                 <h2>Easier</h2>
                 <p style="text-align:justify">
-                    The decision of removing the hierarchy of widgets made the codebase of the extension cleaner, easier to understand, to improve and to extend from. We expect that this new version is for you the ultimate tool to include <a href="twitter.github.com/bootstrap/" target="_blank">Twitter's Bootstrap</a> in your Yii projects.
+                    The decision of removing the hierarchy of widgets made the codebase of the extension cleaner, easier to understand, to improve and to extend from. We expect that this new version is for you the ultimate tool to include <a href="twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a> in your Yii projects.
                 </p>
             </div>
             <div class="span4">

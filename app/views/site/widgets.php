@@ -1,5 +1,6 @@
 <?php
 /* @var SiteController $this */
+$this->pageTitle = 'Widgets - ' . param('pageTitle');
 ?>
 <!-- Subhead
 ================================================== -->
@@ -18,12 +19,11 @@
 	<div class="span3 bs-docs-sidebar">
 		<ul class="nav nav-list bs-docs-sidenav">
 			<li><a href="#navs"><i class="icon-chevron-right"></i> Nav</a></li>
-			<li><a href="#navbar"><i class="icon-chevron-right"></i> Navbar</a></li>
-			<li><a href="#breadcrumb"><i class="icon-chevron-right"></i> Breadcrumb</a></li>
-			<li><a href="#herounit"><i class="icon-chevron-right"></i> Hero unit</a></li>
-			<li><a href="#gridview"><i class="icon-chevron-right"></i> Grid view</a></li>
-			<li><a href="#detailview"><i class="icon-chevron-right"></i> Detail view</a></li>
-			<li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
+            <li><a href="#navbar"><i class="icon-chevron-right"></i> Navbar</a></li>
+            <li><a href="#breadcrumb"><i class="icon-chevron-right"></i> Breadcrumb</a></li>
+            <li><a href="#herounit"><i class="icon-chevron-right"></i> Hero unit</a></li>
+            <li><a href="#gridview"><i class="icon-chevron-right"></i> Grid view</a></li>
+            <li><a href="#forms"><i class="icon-chevron-right"></i> Form</a></li>
 			<li><a href="#modals"><i class="icon-chevron-right"></i> Modal</a></li>
 			<li><a href="#scrollspy"><i class="icon-chevron-right"></i> Scrollspy</a></li>
 			<li><a href="#tabs"><i class="icon-chevron-right"></i> Tab</a></li>
@@ -56,7 +56,7 @@
 
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbNav', array(
-			'style' => TbHtml::NAV_TABS,
+			'type' => TbHtml::NAV_TABS,
 			'items' => array(
 				array('label' => 'Home', 'url' => '#', 'active' => true),
 				array('label' => 'Profile', 'url' => '#',),
@@ -67,7 +67,7 @@
 
 	<pre class="prettyprint linenums">
 &lt;?php $this->widget('bootstrap.widgets.TbNav', array(
-    'style' => TbHtml::NAV_TABS,
+    'type' => TbHtml::NAV_TABS,
     'items' => array(
         array('label' => 'Home', 'url' => '#', 'active' => true),
         array('label' => 'Profile', 'url' => '#',),
@@ -79,7 +79,7 @@
 
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbNav', array(
-			'style' => TbHtml::NAV_PILLS,
+			'type' => TbHtml::NAV_PILLS,
 			'items' => array(
 				array('label' => 'Home', 'url' => '#', 'active' => true),
 				array('label' => 'Profile', 'url' => '#',),
@@ -90,7 +90,7 @@
 
 	<pre class="prettyprint linenums">
 &lt;?php $this->widget('bootstrap.widgets.TbNav', array(
-    'style' => TbHtml::NAV_PILLS,
+    'type' => TbHtml::NAV_PILLS,
     'items' => array(
         array('label' => 'Home', 'url' => '#', 'active' => true),
         array('label' => 'Profile', 'url' => '#',),
@@ -102,7 +102,7 @@
 
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbNav', array(
-			'style' => TbHtml::NAV_PILLS,
+			'type' => TbHtml::NAV_PILLS,
 			'items' => array(
 				array('label' => 'Clickable link', 'url' => '#'),
 				array('label' => 'Clickable link', 'url' => '#'),
@@ -113,7 +113,7 @@
 
 	<pre class="prettyprint linenums">
 &lt;?php $this->widget('bootstrap.widgets.TbNav', array(
-    'style' => TbHtml::NAV_PILLS,
+    'type' => TbHtml::NAV_PILLS,
     'items' => array(
         array('label' => 'Clickable link', 'url' => '#'),
         array('label' => 'Clickable link', 'url' => '#'),
@@ -129,7 +129,7 @@
 
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbNav', array(
-			'style' => TbHtml::NAV_TABS,
+			'type' => TbHtml::NAV_TABS,
 			'stacked' => true,
 			'items' => array(
 				array('label' => 'Home', 'url' => '#', 'active' => true),
@@ -141,7 +141,7 @@
 
 	<pre class="prettyprint linenums">
 &lt;?php $this->widget('bootstrap.widgets.TbNav', array(
-    'style' => TbHtml::NAV_TABS,
+    'type' => TbHtml::NAV_TABS,
     'stacked' => true,
     ...
 )); ?></pre>
@@ -150,7 +150,7 @@
 
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbNav', array(
-			'style' => TbHtml::NAV_PILLS,
+			'type' => TbHtml::NAV_PILLS,
 			'stacked' => true,
 			'items' => array(
 				array('label' => 'Home', 'url' => '#', 'active' => true),
@@ -162,7 +162,7 @@
 
 	<pre class="prettyprint linenums">
 &lt;?php $this->widget('bootstrap.widgets.TbNav', array(
-    'style' => TbHtml::NAV_PILLS,
+    'type' => TbHtml::NAV_PILLS,
     'stacked' => true,
     ...
 )); ?></pre>
@@ -175,7 +175,7 @@
 
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbNav', array(
-			'style' => TbHtml::NAV_TABS,
+			'type' => TbHtml::NAV_TABS,
 			'items' => array(
 				array('label' => 'Home', 'url' => '#', 'active' => true),
 				array('label' => 'Help', 'url' => '#'),
@@ -186,7 +186,7 @@
 
 	<pre class="prettyprint linenums">
 &lt;?php $this->widget('bootstrap.widgets.TbNav', array(
-    'style' => TbHtml::NAV_TABS,
+    'type' => TbHtml::NAV_TABS,
     'items' => array(
         ...
         array('label' => 'Dropdown', 'items' => array(
@@ -203,7 +203,7 @@
 
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbNav', array(
-			'style' => TbHtml::NAV_PILLS,
+			'type' => TbHtml::NAV_PILLS,
 			'items' => array(
 				array('label' => 'Home', 'url' => '#', 'active' => true),
 				array('label' => 'Help', 'url' => '#'),
@@ -214,7 +214,7 @@
 
 	<pre class="prettyprint linenums">
 &lt;?php $this->widget('bootstrap.widgets.TbNav', array(
-    'style' => TbHtml::NAV_PILLS,
+    'type' => TbHtml::NAV_PILLS,
     'items' => array(
         ...
         array('label' => 'Dropdown', 'items' => array(
@@ -234,7 +234,7 @@
 	<div class="bs-docs-example">
 		<div class="well" style="max-width: 340px; padding: 8px 0;">
 			<?php $this->widget('bootstrap.widgets.TbNav', array(
-				'style' => TbHtml::NAV_LIST,
+				'type' => TbHtml::NAV_LIST,
 				'items' => array(
 					array('label' => 'List header'),
 					array('label' => 'Home', 'url' => '#', 'active' => true),
@@ -252,7 +252,7 @@
 
 	<pre class="prettyprint linenums">
 $this->widget('bootstrap.widgets.TbNav', array(
-    'style' => TbHtml::NAV_LIST,
+    'type' => TbHtml::NAV_LIST,
     'items' => array(
         array('label' => 'List header'),
         array('label' => 'Home', 'url' => '#', 'active' => true),
@@ -319,6 +319,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
+            'display' => TbHtml::NAVBAR_INLINE,
 			'brandLabel' => 'Title',
             'display' => null,
 			'items' => array($navbarNav),
@@ -347,6 +348,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
+            'display' => TbHtml::NAVBAR_INLINE,
 			'brandLabel' => 'Title',
             'display' => null,
 			'items' => array(
@@ -384,6 +386,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
+            'display' => TbHtml::NAVBAR_INLINE,
 			'brandLabel' => 'Title',
 			'collapse' => true,
             'display' => null,
@@ -404,17 +407,17 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
-			'style' => TbHtml::STYLE_INVERSE,
-            'display' => null,
-			'brandLabel' => 'Title',
-			'collapse' => true,
-			'items' => $navbarItems,
+            'display' => TbHtml::NAVBAR_INLINE,
+            'color' => TbHtml::COLOR_INVERSE,
+            'brandLabel' => 'Title',
+            'collapse' => true,
+            'items' => $navbarItems,
 		));	?>
 	</div>
 
 	<pre class="prettyprint linenums">
 &lt;?php $this->widget('bootstrap.widgets.TbNavbar', array(
-    'style' => TbHtml::STYLE_INVERSE,
+    'color' => TbHtml::COLOR_INVERSE,
     'brandLabel' => 'Title',
     'collapse' => true,
     'items' => array(...),
@@ -464,19 +467,19 @@ $this->widget('bootstrap.widgets.TbNav', array(
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbHeroUnit', array(
 			'heading' => 'Hello, world!',
-			'content' => '<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>' . TbHtml::button('Learn more', array('style' => TbHtml::STYLE_PRIMARY, 'size' => TbHtml::SIZE_LARGE)),
+			'content' => '<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>' . TbHtml::htmlButton('Learn more', array('color' =>TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_LARGE)),
 		)); ?>
 	</div>
 
 	<pre class="prettyprint linenums">
 &lt?php $this->widget('bootstrap.widgets.TbHeroUnit', array(
     'heading' => 'Hello, world!',
-    'content' => '&lt;p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.&lt;/p>' . TbHtml::button('Learn more', array('style' => TbHtml::STYLE_PRIMARY, 'size' => TbHtml::SIZE_LARGE)),
+    'content' => '&lt;p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.&lt;/p>' . TbHtml::htmlButton('Learn more', array('color' =>TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_LARGE)),
 )); ?></pre>
 
 	<h4>Using a view</h4>
 
-	<p><?php echo TbHtml::labelTb('Head up!', array('style' => TbHtml::STYLE_INFO)); ?> You can also use a view instead of a string as content by passing the path or alias to that view as the content attribute.</p>
+	<p><?php echo TbHtml::labelTb('Head up!', array('color' =>TbHtml::COLOR_INFO)); ?> You can also use a view instead of a string as content by passing the path or alias to that view as the content attribute.</p>
 
 </section>
 
@@ -492,7 +495,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 	));
 
 	$gridColumns = array(
-		array('name' => 'id', 'header' => '#', 'htmlOptions' => array('style' => 'width: 60px')),
+		array('name' => 'id', 'header' => '#', 'htmlOptions' => array('color' =>'width: 60px')),
 		array('name' => 'firstName', 'header' => 'First name'),
 		array('name' => 'lastName', 'header' => 'Last name'),
 		array('name' => 'username', 'header' => 'Username'),
@@ -516,7 +519,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
    'dataProvider' => $gridDataProvider,
    'template' => "{items}",
    'columns' => array(
-        array('name' => 'id', 'header' => '#', 'htmlOptions' => array('style' => 'width: 60px')),
+        array('name' => 'id', 'header' => '#', 'htmlOptions' => array('color' =>'width: 60px')),
         array('name' => 'firstName', 'header' => 'First name'),
         array('name' => 'lastName', 'header' => 'Last name'),
         array('name' => 'username', 'header' => 'Username'),
@@ -531,7 +534,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbGridView', array(
-			'style' => TbHtml::GRID_STRIPED,
+			'type' => TbHtml::GRID_STRIPED,
 			'dataProvider' => $gridDataProvider,
 			'template' => "{items}",
 			'columns' => $gridColumns,
@@ -540,7 +543,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 	<pre class="prettyprint linenums">
 &lt?php $this->widget('bootstrap.widgets.TbGridView', array(
-    'style' => TbHtml::GRID_STRIPED,
+    'type' => TbHtml::GRID_STRIPED,
     ...
 )); ?></pre>
 
@@ -548,7 +551,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbGridView', array(
-			'style' => TbHtml::GRID_BORDERED,
+			'type' => TbHtml::GRID_BORDERED,
 			'dataProvider' => $gridDataProvider,
 			'template' => "{items}",
 			'columns' => $gridColumns,
@@ -557,7 +560,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 	<pre class="prettyprint linenums">
 &lt?php $this->widget('bootstrap.widgets.TbGridView', array(
-    'style' => TbHtml::GRID_BORDERED,
+    'type' => TbHtml::GRID_BORDERED,
     ...
 )); ?></pre>
 
@@ -565,7 +568,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbGridView', array(
-			'style' => TbHtml::GRID_HOVER,
+			'type' => TbHtml::GRID_HOVER,
 			'dataProvider' => $gridDataProvider,
 			'template' => "{items}",
 			'columns' => $gridColumns,
@@ -574,7 +577,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 	<pre class="prettyprint linenums">
 &lt?php $this->widget('bootstrap.widgets.TbGridView', array(
-    'style' => TbHtml::GRID_HOVER,
+    'type' => TbHtml::GRID_HOVER,
     ...
 )); ?></pre>
 
@@ -582,7 +585,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbGridView', array(
-			'style' => TbHtml::GRID_CONDENSED,
+			'type' => TbHtml::GRID_CONDENSED,
 			'dataProvider' => $gridDataProvider,
 			'template' => "{items}",
 			'columns' => $gridColumns,
@@ -591,23 +594,11 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 	<pre class="prettyprint linenums">
 &lt?php $this->widget('bootstrap.widgets.TbGridView', array(
-    'style' => TbHtml::GRID_CONDENSED,
+    'type' => TbHtml::GRID_CONDENSED,
     ...
 )); ?></pre>
 
-	<p><?php echo TbHtml::labelTb('Heads up!', array('style' => TbHtml::STYLE_INFO)); ?> You can also combine table styles by providing multiple values.</p>
-
-</section>
-
-<!-- Detail view
-	================================================== -->
-<section id="detailview">
-
-	<div class="page-header">
-		<h1>Detail view <small>TbDetailView.php</small></h1>
-	</div>
-
-	<p class="muted">Coming soon!</p>
+	<p><?php echo TbHtml::labelTb('Heads up!', array('color' =>TbHtml::COLOR_INFO)); ?> You can also combine table styles by providing multiple values.</p>
 
 </section>
 
@@ -619,7 +610,96 @@ $this->widget('bootstrap.widgets.TbNav', array(
 		<h1>Forms <small>TbActiveForm.php</small></h1>
 	</div>
 
-	<p class="muted">Coming soon!</p>
+	<div class="bs-docs-example">
+        <div class="row-fluid">
+        <?php
+        Yii::import('application.models.Test');
+        $model = new Test();
+
+        /* @var TbActiveForm $form */
+        $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+            'layout' => TbHtml::FORM_HORIZONTAL,
+        )); ?>
+
+        <fieldset>
+
+            <legend>Legend</legend>
+
+            <?php echo $form->textFieldRow($model, 'textField', array('help' => 'In addition to freeform text, any HTML5 text-based input appears like so.')); ?>
+            <?php echo $form->dropDownListRow($model, 'dropDown', array('1', '2', '3', '4', '5'), array('empty' => 'Something ...')); ?>
+            <?php echo $form->dropDownListRow($model, 'multiDropDown', array('1', '2', '3', '4', '5'), array('multiple' => true)); ?>
+            <?php echo $form->fileFieldRow($model, 'fileField'); ?>
+            <?php echo $form->textAreaRow($model, 'textArea', array('span' => 8, 'rows' => 5)); ?>
+            <?php echo $form->uneditableFieldRow($model, 'uneditableField'); ?>
+            <?php echo $form->textFieldRow($model, 'disabled', array('disabled' => true)); ?>
+            <?php echo $form->textFieldRow($model, 'prepend', array('prepend' => '@')); ?>
+            <?php echo $form->textFieldRow($model, 'append', array('append' => '.00')); ?>
+            <?php echo $form->checkBoxRow($model, 'disabledCheckbox', array('disabled' => true)); ?>
+            <?php echo $form->inlineCheckBoxListRow($model, 'inlineCheckboxes', array('1', '2', '3')); ?>
+            <?php echo $form->checkBoxListRow($model, 'checkboxes', array(
+                'Option one is this and that—be sure to include why it\'s great',
+                'Option two can also be checked and included in form results',
+                'Option three can—yes, you guessed it—also be checked and included in form results',
+            ), array('help' => '<strong>Note:</strong> Labels surround all the options for much larger click areas.')); ?>
+            <?php echo $form->radioButtonRow($model, 'radioButton'); ?>
+            <?php echo $form->radioButtonListRow($model, 'radioButtons', array(
+                'Option one is this and that—be sure to include why it\'s great',
+                'Option two can is something else and selecting it will deselect option one',
+            )); ?>
+
+        </fieldset>
+
+        <?php echo TbHtml::formActions(array(
+            TbHtml::submitButton('Submit', array('color' => TbHtml::COLOR_PRIMARY)),
+            TbHtml::resetButton('Reset'),
+        )); ?>
+
+        <?php $this->endWidget(); ?>
+        </div>
+	</div>
+    <pre class="prettyprint linenums">
+&lt;?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+    'layout' => TbHtml::FORM_HORIZONTAL,
+)); ?>
+
+&lt;fieldset>
+
+    &lt;legend>Legend&lt;/legend>
+
+    &lt;?php echo $form->textFieldRow($model, 'textField',
+        array('help' => 'In addition to freeform text, any HTML5 text-based input appears like so.')); ?>
+    &lt;?php echo $form->dropDownListRow($model, 'dropDown',
+        array('1', '2', '3', '4', '5'), array('empty' => 'Something ...')); ?>
+    &lt;?php echo $form->dropDownListRow($model, 'multiDropDown',
+        array('1', '2', '3', '4', '5'), array('multiple' => true)); ?>
+    &lt;?php echo $form->fileFieldRow($model, 'fileField'); ?>
+    &lt;?php echo $form->textAreaRow($model, 'textArea',
+        array('span' => 8, 'rows' => 5)); ?>
+    &lt;?php echo $form->uneditableFieldRow($model, 'uneditableField'); ?>
+    &lt;?php echo $form->textFieldRow($model, 'disabled', array('disabled' => true)); ?>
+    &lt;?php echo $form->textFieldRow($model, 'prepend', array('prepend' => '@')); ?>
+    &lt;?php echo $form->textFieldRow($model, 'append', array('append' => '.00')); ?>
+    &lt;?php echo $form->checkBoxRow($model, 'disabledCheckbox', array('disabled' => true)); ?>
+    &lt;?php echo $form->inlineCheckBoxListRow($model, 'inlineCheckboxes', array('1', '2', '3')); ?>
+    &lt;?php echo $form->checkBoxListRow($model, 'checkboxes', array(
+        'Option one is this and that—be sure to include why it\'s great',
+        'Option two can also be checked and included in form results',
+        'Option three can—yes, you guessed it—also be checked and included in form results',
+    ), array('help' => '&lt;strong>Note:&lt;/strong> Labels surround all the options for much larger click areas.')); ?>
+    &lt;?php echo $form->radioButtonRow($model, 'radioButton'); ?>
+    &lt;?php echo $form->radioButtonListRow($model, 'radioButtons', array(
+        'Option one is this and that—be sure to include why it\'s great',
+        'Option two can is something else and selecting it will deselect option one',
+    )); ?>
+
+&lt;/fieldset>
+
+&lt;?php echo TbHtml::formActions(array(
+    TbHtml::submitButton('Submit', array('color' => TbHtml::COLOR_PRIMARY)),
+    TbHtml::resetButton('Reset'),
+)); ?>
+
+&lt;?php $this->endWidget(); ?></pre>
 
 </section>
 
@@ -636,9 +716,9 @@ $this->widget('bootstrap.widgets.TbNav', array(
 			'id' => 'myModal',
 			'header' => 'Modal Heading',
 			'content' => '<p>One fine body...</p>',
-			'footer' => TbHtml::button('Save Changes',array('data-dismiss' => 'modal', 'style' => TbHtml::STYLE_PRIMARY)) . '&nbsp;' . TbHtml::button('Close', array('data-dismiss' => 'modal')),
+			'footer' => TbHtml::htmlButton('Save Changes',array('data-dismiss' => 'modal', 'style' => TbHtml::COLOR_PRIMARY)) . '&nbsp;' . TbHtml::htmlButton('Close', array('data-dismiss' => 'modal')),
 		)); ?>
-		<?php echo TbHtml::button('Click me to open modal', array('style' => TbHtml::STYLE_PRIMARY, 'size' => TbHtml::SIZE_LARGE, 'data-toggle' => 'modal', 'data-target' => '#myModal')); ?>
+		<?php echo TbHtml::htmlButton('Click me to open modal', array('color' =>TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_LARGE, 'data-toggle' => 'modal', 'data-target' => '#myModal')); ?>
 	</div>
 
 <pre class="prettyprint linenums">
@@ -646,12 +726,12 @@ $this->widget('bootstrap.widgets.TbNav', array(
     'id' => 'myModal',
     'header' => 'Modal Heading',
     'content' => '&lt;p>One fine body...&lt;/p>',
-    'footer' => TbHtml::button('Save Changes',array('data-dismiss' => 'modal', 'style' => TbHtml::STYLE_PRIMARY))
-        . '&nbsp;' . TbHtml::button('Close', array('data-dismiss' => 'modal')),
+    'footer' => TbHtml::htmlButton('Save Changes',array('data-dismiss' => 'modal', 'style' => TbHtml::COLOR_PRIMARY))
+        . '&nbsp;' . TbHtml::htmlButton('Close', array('data-dismiss' => 'modal')),
 )); ?>
 
-&lt;?php echo TbHtml::button('Click me to open modal', array(
-    'style' => TbHtml::STYLE_PRIMARY,
+&lt;?php echo TbHtml::htmlButton('Click me to open modal', array(
+    'style' => TbHtml::COLOR_PRIMARY,
     'size' => TbHtml::SIZE_LARGE,
     'data-toggle' => 'modal',
     'data-target' => '#myModal',
@@ -717,12 +797,12 @@ $this->widget('bootstrap.widgets.TbNav', array(
 	<h2>Default alert</h2>
 
 	<div class="bs-docs-example">
-		<?php Yii::app()->user->setFlash(TbHtml::STYLE_WARNING, '<strong>Warning!</strong> Best check yo self, you\'re not looking too good.'); ?>
+		<?php Yii::app()->user->setFlash(TbHtml::COLOR_WARNING, '<strong>Warning!</strong> Best check yo self, you\'re not looking too good.'); ?>
 		<?php $this->widget('bootstrap.widgets.TbAlert'); ?>
 	</div>
 
 	<pre class="prettyprint linenums">
-Yii::app()->user->setFlash(TbHtml::STYLE_WARNING,
+Yii::app()->user->setFlash(TbHtml::COLOR_WARNING,
     '&lt;strong>Warning!&lt;/strong> Best check yo self, you\'re not looking too good.');
 
 &lt;?php $this->widget('bootstrap.widgets.TbAlert'); ?></pre>
@@ -732,14 +812,14 @@ Yii::app()->user->setFlash(TbHtml::STYLE_WARNING,
 	<h2>Block</h2>
 
 	<div class="bs-docs-example">
-		<?php Yii::app()->user->setFlash(TbHtml::STYLE_WARNING, '<h4>Warning!</h4> Best check yo self, you\'re not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.'); ?>
+		<?php Yii::app()->user->setFlash(TbHtml::COLOR_WARNING, '<h4>Warning!</h4> Best check yo self, you\'re not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.'); ?>
 		<?php $this->widget('bootstrap.widgets.TbAlert', array(
 			'block' => true,
 		)); ?>
 	</div>
 
 	<pre class="prettyprint linenums">
-Yii::app()->user->setFlash(TbHtml::STYLE_WARNING,
+Yii::app()->user->setFlash(TbHtml::COLOR_WARNING,
     '&lt;h4>Warning!&lt;/h4> Best check yo self, you\'re not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.');
 
 &lt;?php $this->widget('bootstrap.widgets.TbAlert', array(
@@ -753,34 +833,34 @@ Yii::app()->user->setFlash(TbHtml::STYLE_WARNING,
 	<h3>Error or danger</h3>
 
 	<div class="bs-docs-example">
-		<?php Yii::app()->user->setFlash(TbHtml::STYLE_ERROR, '<strong>Oh snap!</strong> Change a few things up and try submitting again.'); ?>
+		<?php Yii::app()->user->setFlash(TbHtml::COLOR_ERROR, '<strong>Oh snap!</strong> Change a few things up and try submitting again.'); ?>
 		<?php $this->widget('bootstrap.widgets.TbAlert'); ?>
 	</div>
 
 	<pre class="prettyprint linenums">
-Yii::app()->user->setFlash(TbHtml::STYLE_ERROR,
+Yii::app()->user->setFlash(TbHtml::COLOR_ERROR,
     '&lt;strong>Oh snap!&lt;/strong> Change a few things up and try submitting again.');</pre>
 
 	<h3>Success</h3>
 
 	<div class="bs-docs-example">
-		<?php Yii::app()->user->setFlash(TbHtml::STYLE_SUCCESS, '<strong>Well done!</strong> You successfully read this important alert message.'); ?>
+		<?php Yii::app()->user->setFlash(TbHtml::COLOR_SUCCESS, '<strong>Well done!</strong> You successfully read this important alert message.'); ?>
 		<?php $this->widget('bootstrap.widgets.TbAlert'); ?>
 	</div>
 
 	<pre class="prettyprint linenums">
-Yii::app()->user->setFlash(TbHtml::STYLE_SUCCESS,
+Yii::app()->user->setFlash(TbHtml::COLOR_SUCCESS,
     '&lt;strong>Well done!&lt;/strong> You successfully read this important alert message.');</pre>
 
 	<h3>Information</h3>
 
 	<div class="bs-docs-example">
-		<?php Yii::app()->user->setFlash(TbHtml::STYLE_INFO, '<strong>Heads up!</strong> This alert needs your attention, but it\'s not super important.'); ?>
+		<?php Yii::app()->user->setFlash(TbHtml::COLOR_INFO, '<strong>Heads up!</strong> This alert needs your attention, but it\'s not super important.'); ?>
 		<?php $this->widget('bootstrap.widgets.TbAlert'); ?>
 	</div>
 
 	<pre class="prettyprint linenums">
-Yii::app()->user->setFlash(TbHtml::STYLE_INFO,
+Yii::app()->user->setFlash(TbHtml::COLOR_INFO,
     '&lt;strong>Heads up!&lt;/strong> This alert needs your attention, but it\'s not super important.');</pre>
 
 </section>

@@ -1,8 +1,13 @@
+<?php
+/* @var SiteController $this */
+$this->pageTitle = 'Getting started - ' . param('pageTitle');
+?>
 <!-- Subhead
 ================================================== -->
 <header class="jumbotron subhead" id="overview">
     <div class="container">
         <h1>Getting started</h1>
+        <p class="lead">How to configure Yiistrap for your project</p>
     </div>
 </header>
 
@@ -16,7 +21,7 @@
         <div class="span3 bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav">
                 <li><a href="#download-bootstrap"><i class="icon-chevron-right"></i> Download</a></li>
-                <li><a href="#configuration"><i class="icon-chevron-right"></i> Configure</a></li>
+                <li><a href="#configuration"><i class="icon-chevron-right"></i> Configuration</a></li>
                 <li><a href="#contents"><i class="icon-chevron-right"></i> What's included</a></li>
                 <li><a href="#basic-layout"><i class="icon-chevron-right"></i> Basic layout</a></li>
                 <li><a href="#what-next"><i class="icon-chevron-right"></i> What next?</a></li>
