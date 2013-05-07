@@ -404,7 +404,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 	<div class="bs-docs-example">
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
-			'style' => TbHtml::STYLE_INVERSE,
+			'style' => TbHtml::COLOR_INVERSE,
             'display' => null,
 			'brandLabel' => 'Title',
 			'collapse' => true,
