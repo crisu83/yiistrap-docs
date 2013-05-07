@@ -17,7 +17,6 @@ $this->pageTitle = 'Components - ' . param('pageTitle');
 <div class="row">
 <div class="span3 bs-docs-sidebar">
    <ul class="nav nav-list bs-docs-sidenav">
-      <li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
       <li><a href="#buttonGroups"><i class="icon-chevron-right"></i> Button groups</a></li>
       <li><a href="#buttonDropdowns"><i class="icon-chevron-right"></i> Button dropdowns</a></li>
       <li><a href="#navs"><i class="icon-chevron-right"></i> Navs</a></li>
@@ -32,107 +31,11 @@ $this->pageTitle = 'Components - ' . param('pageTitle');
       <li><a href="#progress"><i class="icon-chevron-right"></i> Progress bars</a></li>
       <li><a href="#media"><i class="icon-chevron-right"></i> Media object</a></li>
       <li><a href="#carousel"><i class="icon-chevron-right"></i> Carousel</a></li>
+      <li><a href="#misc"><i class="icon-chevron-right"></i> Misc</a></li>
    </ul>
 </div>
 
 <div class="span9">
-
-<!-- Buttons
-   ================================================== -->
-<section id="buttons">
-
-   <div class="page-header">
-      <h1>Buttons</h1>
-   </div>
-
-   <div class="bs-docs-example">
-      <?php echo TbHtml::button('Default'); ?>
-      <?php echo TbHtml::button('Primary', array('color' => TbHtml::COLOR_PRIMARY)); ?>
-      <?php echo TbHtml::button('Danger', array('color' => TbHtml::COLOR_DANGER)); ?>
-      <?php echo TbHtml::button('Warning', array('color' => TbHtml::COLOR_WARNING)); ?>
-      <?php echo TbHtml::button('Success', array('color' => TbHtml::COLOR_SUCCESS)); ?>
-      <?php echo TbHtml::button('Info', array('color' => TbHtml::COLOR_INFO)); ?>
-      <?php echo TbHtml::button('Inverse', array('color' => TbHtml::COLOR_INVERSE)); ?>
-      <?php echo TbHtml::button('Link', array('color' => TbHtml::COLOR_LINK)); ?>
-   </div>
-
-   <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::button('Default'); ?>
-&lt;?php echo TbHtml::button('Primary', array('color' => TbHtml::COLOR_PRIMARY)); ?>
-&lt;?php echo TbHtml::button('Danger', array('color' => TbHtml::COLOR_DANGER)); ?>
-&lt;?php echo TbHtml::button('Warning', array('color' => TbHtml::COLOR_WARNING)); ?>
-&lt;?php echo TbHtml::button('Success', array('color' => TbHtml::COLOR_SUCCESS)); ?>
-&lt;?php echo TbHtml::button('Info', array('color' => TbHtml::COLOR_INFO)); ?>
-&lt;?php echo TbHtml::button('Inverse', array('color' => TbHtml::COLOR_INVERSE)); ?>
-&lt;?php echo TbHtml::button('Link', array('color' => TbHtml::COLOR_LINK)); ?></pre>
-
-   <h2>Sizes</h2>
-
-   <div class="bs-docs-example">
-      <p>
-         <?php echo TbHtml::button('Large button', array('color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_LARGE)); ?>
-         <?php echo TbHtml::button('Large button', array('size' => TbHtml::SIZE_LARGE)); ?>
-      </p>
-      <p>
-         <?php echo TbHtml::button('Default button', array('color' => TbHtml::COLOR_PRIMARY)); ?>
-         <?php echo TbHtml::button('Default button'); ?>
-      </p>
-      <p>
-         <?php echo TbHtml::button('Small button', array('color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_SMALL)); ?>
-         <?php echo TbHtml::button('Small button', array('size' => TbHtml::SIZE_SMALL)); ?>
-      </p>
-      <p>
-         <?php echo TbHtml::button('Mini button', array('color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_MINI)); ?>
-         <?php echo TbHtml::button('Mini button', array('size' => TbHtml::SIZE_MINI)); ?>
-      </p>
-   </div>
-
-    <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::button('Large button',
-    array('color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_LARGE)); ?>
-&lt;?php echo TbHtml::button('Large button',
-    array('size' => TbHtml::SIZE_LARGE)); ?>
-&lt;?php echo TbHtml::button('Default button',
-    array('color' => TbHtml::COLOR_PRIMARY)); ?>
-&lt;?php echo TbHtml::button('Default button'); ?>
-&lt;?php echo TbHtml::button('Small button',
-    array('color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_SMALL)); ?>
-&lt;?php echo TbHtml::button('Small button',
-    array('size' => TbHtml::SIZE_SMALL)); ?>
-&lt;?php echo TbHtml::button('Mini button',
-    array('color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_MINI)); ?>
-&lt;?php echo TbHtml::button('Mini button',
-    array('size' => TbHtml::SIZE_MINI)); ?></pre>
-
-   <h2>Block</h2>
-
-   <div class="bs-docs-example">
-      <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
-         <?php echo TbHtml::button('Block button', array('block' => true, 'color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_LARGE)); ?>
-         <?php echo TbHtml::button('Block button', array('block' => true, 'size' => TbHtml::SIZE_LARGE)); ?>
-      </div>
-   </div>
-
-   <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::button('Block button',
-   array('block' => true, 'color' => TbHtml::COLOR_PRIMARY, 'size'=>TbHtml::SIZE_LARGE)); ?>
-&lt;?php echo TbHtml::button('Block button',
-   array('block' => true, 'size' => TbHtml::SIZE_LARGE)); ?></pre>
-
-   <h2>Disabled state</h2>
-
-   <div class="bs-docs-example">
-      <?php echo TbHtml::button('Primary button', array('disabled' => true, 'color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_LARGE)); ?>
-      <?php echo TbHtml::button('Button', array('disabled' => true, 'size' => TbHtml::SIZE_LARGE)); ?>
-   </div>
-
-   <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::button('Primary button',
-   array('disabled' => true, 'size'=>TbHtml::SIZE_LARGE, 'color' => TbHtml::COLOR_PRIMARY)); ?>
-&lt;?php echo TbHtml::button('Button',
-   array('disabled' => true, 'size' => TbHtml::SIZE_LARGE)); ?></pre>
-
-</section>
 
 <!-- Button Groups
    ================================================== -->
@@ -751,7 +654,7 @@ echo TbHtml::buttonGroup(array(
    <h2>Hero unit</h2>
 
    <div class="bs-docs-example">
-      <?php echo TbHtml::heroUnit('Hello, world!', '<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>' . TbHtml::button('Learn more', array('color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_LARGE))); ?>
+      <?php echo TbHtml::heroUnit('Hello, world!', '<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>' . TbHtml::htmlButton('Learn more', array('color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_LARGE))); ?>
    </div>
 
    <pre class="prettyprint linenums">
@@ -782,7 +685,7 @@ echo TbHtml::buttonGroup(array(
    <?php $captionThumbnail = array(
       'image' => 'holder.js/300x200',
       'label' => 'Thumbnail label',
-      'caption' => '<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>' . TbHtml::button('Action',   array('color' => 'primary')) . ' ' . TbHtml::button('Action'),
+      'caption' => '<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>' . TbHtml::htmlButton('Action',   array('color' => 'primary')) . ' ' . TbHtml::htmlButton('Action'),
    ); ?>
 
    <div class="page-header">
@@ -1085,6 +988,54 @@ echo TbHtml::buttonGroup(array(
     array('image' => 'holder.js/830x477', 'label' => 'Second Thumbnail label', 'caption' => '...'),
     array('image' => 'holder.js/830x477', 'label' => 'Third Thumbnail label', 'caption' => '...'),
 )); ?></pre>
+
+</section>
+
+
+<!-- Miscellaneous
+    ================================================== -->
+<section id="misc">
+
+	<div class="page-header">
+		<h1>Miscellaneous</h1>
+	</div>
+
+	<h2>Wells</h2>
+
+	<div class="bs-docs-example">
+		<?php echo TbHtml::well('Look, I\'m in a well!'); ?>
+	</div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::well('Look, I\'m in a well!'); ?></pre>
+
+	<h3>Sizes</h3>
+
+	<h4>Large</h4>
+
+	<div class="bs-docs-example">
+		<?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::SIZE_LARGE)); ?>
+	</div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::SIZE_LARGE)); ?></pre>
+
+	<h4>Small</h4>
+
+	<div class="bs-docs-example">
+		<?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::SIZE_SMALL)); ?>
+	</div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::SIZE_SMALL)); ?></pre>
+
+	<h2>Close icon</h2>
+
+	<div class="bs-docs-example">
+		<?php echo TbHtml::closeButton(TbHtml::CLOSE_TEXT, array('style' => 'float: none')); ?>
+	</div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::closeButton(); ?></pre>
+
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::closeLink(); ?></pre>
 
 </section>
 
