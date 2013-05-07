@@ -659,8 +659,7 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 		<?php echo TbHtml::button('Inverse', array('color' => TbHtml::BUTTON_COLOR_INVERSE)); ?>
 		<?php echo TbHtml::button('Link', array('color' => TbHtml::BUTTON_COLOR_LINK)); ?>
 	</div>
-
-   <pre class="prettyprint linenums">
+    <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::button('Default'); ?>
 &lt;?php echo TbHtml::button('Primary', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
 &lt;?php echo TbHtml::button('Danger', array('color' => TbHtml::BUTTON_COLOR_DANGER)); ?>
@@ -690,7 +689,6 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 			<?php echo TbHtml::button('Mini button', array('size' => TbHtml::BUTTON_SIZE_MINI)); ?>
 		</p>
 	</div>
-
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::button('Large button',
     array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
@@ -716,7 +714,6 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 			<?php echo TbHtml::button('Block button', array('block' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
 		</div>
 	</div>
-
    <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::button('Block button',
    array('block' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size'=>TbHtml::BUTTON_SIZE_LARGE)); ?>
@@ -729,12 +726,29 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 		<?php echo TbHtml::button('Primary button', array('disabled' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
 		<?php echo TbHtml::button('Button', array('disabled' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
 	</div>
-
-   <pre class="prettyprint linenums">
+    <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::button('Primary button',
    array('disabled' => true, 'size'=>TbHtml::BUTTON_SIZE_LARGE, 'color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
 &lt;?php echo TbHtml::button('Button',
    array('disabled' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?></pre>
+
+    <h2>Stateful</h2>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::button('Loading state', array('loading' => 'Loading...', 'data-complete-text' => 'Loading state', 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'onclick' => new CJavaScriptExpression("$(this).button('loading'); setTimeout(function() { $(this).button('complete'); }.bind(this), 3000);"))); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::button('Loading state',
+    array('loading' => 'Loading...', 'color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?></pre>
+
+    <h2>Single toggle</h2>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::button('Single toggle', array('toggle' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::button('Single toggle',
+    array('toggle' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?></pre>
 
 </section>
 

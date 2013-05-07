@@ -41,6 +41,12 @@ $this->pageTitle = 'Components - ' . param('pageTitle');
    ================================================== -->
 <section id="buttonGroups">
 
+    <?php $buttonGroupConfig = array(
+        array('label' => 'Left'),
+        array('label' => 'Middle'),
+        array('label' => 'Right'),
+    ); ?>
+
    <div class="page-header">
       <h1>Button groups</h1>
    </div>
@@ -48,11 +54,7 @@ $this->pageTitle = 'Components - ' . param('pageTitle');
    <h3>Single button group</h3>
 
    <div class="bs-docs-example">
-      <?php echo TbHtml::buttonGroup(array(
-         array('label' => 'Left'),
-         array('label' => 'Middle'),
-         array('label' => 'Right'),
-      )); ?>
+      <?php echo TbHtml::buttonGroup($buttonGroupConfig); ?>
    </div>
    <pre class="prettyprint linenums">
 &lt;?php
@@ -120,21 +122,31 @@ echo TbHtml::buttonGroup(array(
     array('icon' => 'align-justify'),
 ), array('vertical' => true)); ?></pre>
 
-   <h3>Stateful</h3>
-
-   <p class="muted">Coming soon!</p>
-
-   <h3>Single toggle</h3>
-
-   <p class="muted">Coming soon!</p>
-
    <h3>Checkbox</h3>
 
-   <p class="muted">Coming soon!</p>
+    <div class="bs-docs-example">
+        <?php echo TbHtml::buttonGroup($buttonGroupConfig, array('toggle' => TbHtml::BUTTON_TOGGLE_CHECKBOX, 'color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php
+echo TbHtml::buttonGroup(array(
+    array('label' => 'Left'),
+    array('label' => 'Middle'),
+    array('label' => 'Right'),
+), array('toggle' => TbHtml::BUTTON_TOGGLE_CHECKBOX, 'color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?></pre>
 
    <h3>Radio</h3>
 
-   <p class="muted">Coming soon!</p>
+    <div class="bs-docs-example">
+        <?php echo TbHtml::buttonGroup($buttonGroupConfig, array('toggle' => TbHtml::BUTTON_TOGGLE_RADIO, 'color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php
+echo TbHtml::buttonGroup(array(
+    array('label' => 'Left'),
+    array('label' => 'Middle'),
+    array('label' => 'Right'),
+), array('toggle' => TbHtml::BUTTON_TOGGLE_RADIO, 'color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?></pre>
 
 </section>
 
