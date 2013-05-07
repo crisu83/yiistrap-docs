@@ -76,17 +76,17 @@ $this->pageTitle = 'Basics - ' . param('pageTitle');
 
     <div class="bs-docs-example">
         <?php echo TbHtml::muted('Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.'); ?>
-        <?php echo TbHtml::em(TbHtml::COLOR_WARNING, 'Etiam porta sem malesuada magna mollis euismod.'); ?>
-        <?php echo TbHtml::em(TbHtml::COLOR_ERROR, 'Donec ullamcorper nulla non metus auctor fringilla.'); ?>
-        <?php echo TbHtml::em(TbHtml::COLOR_INFO, 'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.'); ?>
-        <?php echo TbHtml::em(TbHtml::COLOR_SUCCESS, 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula.'); ?>
+        <?php echo TbHtml::em(TbHtml::TEXT_COLOR_WARNING, 'Etiam porta sem malesuada magna mollis euismod.'); ?>
+        <?php echo TbHtml::em(TbHtml::TEXT_COLOR_ERROR, 'Donec ullamcorper nulla non metus auctor fringilla.'); ?>
+        <?php echo TbHtml::em(TbHtml::TEXT_COLOR_INFO, 'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.'); ?>
+        <?php echo TbHtml::em(TbHtml::TEXT_COLOR_SUCCESS, 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula.'); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::muted('...'); ?>
-&lt;?php echo TbHtml::em(TbHtml::COLOR_WARNING, '...'); ?>
-&lt;?php echo TbHtml::em(TbHtml::COLOR_ERROR, '...'); ?>
-&lt;?php echo TbHtml::em(TbHtml::COLOR_INFO, '...'); ?>
-&lt;?php echo TbHtml::em(TbHtml::COLOR_SUCCESS, '...'); ?></pre>
+&lt;?php echo TbHtml::em(TbHtml::TEXT_COLOR_WARNING, '...'); ?>
+&lt;?php echo TbHtml::em(TbHtml::TEXT_COLOR_ERROR, '...'); ?>
+&lt;?php echo TbHtml::em(TbHtml::TEXT_COLOR_INFO, '...'); ?>
+&lt;?php echo TbHtml::em(TbHtml::TEXT_COLOR_SUCCESS, '...'); ?></pre>
 
     <hr class="bs-docs-separator">
 
@@ -226,13 +226,13 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <h3>Search form</h3>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::beginFormTb(TbHtml::FORM_SEARCH); ?>
+        <?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_SEARCH); ?>
             <?php echo TbHtml::searchQuery('search'); ?>
             <?php echo TbHtml::submitButton('Submit'); ?>
         <?php echo TbHtml::endForm(); ?>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::beginFormTb(TbHtml::FORM_SEARCH); ?>
+&lt;?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_SEARCH); ?>
     &lt;?php echo TbHtml::searchQuery('search'); ?>
     &lt;?php echo TbHtml::submitButton('Submit'); ?>
 &lt;?php echo TbHtml::endForm(); ?></pre>
@@ -240,7 +240,7 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <h3>Inline form</h3>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::beginFormTb(TbHtml::FORM_INLINE); ?>
+        <?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_INLINE); ?>
             <?php echo TbHtml::textField('email', '', array('placeholder' => 'Email', 'class' => 'input-small')); ?>
             <?php echo TbHtml::passwordField('password', '', array('placeholder' => 'Password', 'class' => 'input-small')); ?>
             <?php echo TbHtml::checkBox('rememberMe', '', array('label' => 'Remember me')); ?>
@@ -248,7 +248,7 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
         <?php echo TbHtml::endForm(); ?>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::beginFormTb(TbHtml::FORM_INLINE); ?>
+&lt;?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_INLINE); ?>
     &lt;?php echo TbHtml::textField('email', '',
         array('placeholder' => 'Email', 'class' => 'input-small')); ?>
     &lt;?php echo TbHtml::passwordField('password', '',
@@ -260,14 +260,14 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <h3>Horizontal form</h3>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::beginFormTb(TbHtml::FORM_HORIZONTAL); ?>
+        <?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_HORIZONTAL); ?>
             <?php echo TbHtml::emailFieldRow('email', '', array('label' => 'Email', 'placeholder' => 'Email', 'wrap' => true)); ?>
             <?php echo TbHtml::passwordFieldRow('password', '', array('label' => 'Password', 'placeholder' => 'Password', 'wrap' => true)); ?>
             <?php echo TbHtml::checkBoxRow('rememberMe', '', array('label' => 'Remember me', 'controlOptions' => array('after' => TbHtml::submitButton('Sign in')), 'wrap' => true)); ?>
         <?php echo TbHtml::endForm(); ?>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::beginFormTb(TbHtml::FORM_HORIZONTAL); ?>
+&lt;?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_HORIZONTAL); ?>
     &lt;?php echo TbHtml::emailFieldRow('email', '',
         array('label' => 'Email', 'placeholder' => 'Email', 'wrap' => true)); ?>
     &lt;?php echo TbHtml::passwordFieldRow('password', '',
@@ -430,13 +430,13 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <h4>Search form</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::beginFormTb(TbHtml::FORM_SEARCH); ?>
+        <?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_SEARCH); ?>
         <?php echo TbHtml::searchQuery('appendedSearch', '', array('append' => TbHtml::submitButton('Search'), 'class' => 'span2')); ?>
         <?php echo TbHtml::searchQuery('prependedSearch', '', array('prepend' => TbHtml::submitButton('Search'), 'class' => 'span2')); ?>
         <?php echo TbHtml::endForm(); ?>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::beginFormTb(TbHtml::FORM_SEARCH); ?>
+&lt;?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_SEARCH); ?>
 &lt;?php echo TbHtml::searchQuery('appendedSearch', '',
     array('append' => TbHtml::submitButton('Search'), 'class' => 'span2')); ?>
 &lt;?php echo TbHtml::searchQuery('prependedSearch', '',
@@ -456,26 +456,26 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <h4>Relative sizing</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('text', '', array('placeholder' => '.input-mini', 'size' => TbHtml::SIZE_MINI)); ?><br>
-        <?php echo TbHtml::textField('text', '', array('placeholder' => '.input-small', 'size' => TbHtml::SIZE_SMALL)); ?><br>
-        <?php echo TbHtml::textField('text', '', array('placeholder' => '.input-medium', 'size' => TbHtml::SIZE_MEDIUM)); ?><br>
-        <?php echo TbHtml::textField('text', '', array('placeholder' => '.input-large', 'size' => TbHtml::SIZE_LARGE)); ?><br>
-        <?php echo TbHtml::textField('text', '', array('placeholder' => '.input-xlarge', 'size' => TbHtml::SIZE_XLARGE)); ?><br>
-        <?php echo TbHtml::textField('text', '', array('placeholder' => '.input-xxlarge', 'size' => TbHtml::SIZE_XXLARGE)); ?>
+        <?php echo TbHtml::textField('text', '', array('placeholder' => '.input-mini', 'size' => TbHtml::INPUT_SIZE_MINI)); ?><br>
+        <?php echo TbHtml::textField('text', '', array('placeholder' => '.input-small', 'size' => TbHtml::INPUT_SIZE_SMALL)); ?><br>
+        <?php echo TbHtml::textField('text', '', array('placeholder' => '.input-medium', 'size' => TbHtml::INPUT_SIZE_MEDIUM)); ?><br>
+        <?php echo TbHtml::textField('text', '', array('placeholder' => '.input-large', 'size' => TbHtml::INPUT_SIZE_LARGE)); ?><br>
+        <?php echo TbHtml::textField('text', '', array('placeholder' => '.input-xlarge', 'size' => TbHtml::INPUT_SIZE_XLARGE)); ?><br>
+        <?php echo TbHtml::textField('text', '', array('placeholder' => '.input-xxlarge', 'size' => TbHtml::INPUT_SIZE_XXLARGE)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('text', '', array(
-    'placeholder' => '.input-mini', 'size' => TbHtml::SIZE_MINI)); ?>
+    'placeholder' => '.input-mini', 'size' => TbHtml::INPUT_SIZE_MINI)); ?>
 &lt;?php echo TbHtml::textField('text', '', array(
-    'placeholder' => '.input-small', 'size' => TbHtml::SIZE_SMALL)); ?>
+    'placeholder' => '.input-small', 'size' => TbHtml::INPUT_SIZE_SMALL)); ?>
 &lt;?php echo TbHtml::textField('text', '', array(
-    'placeholder' => '.input-medium', 'size' => TbHtml::SIZE_MEDIUM)); ?>
+    'placeholder' => '.input-medium', 'size' => TbHtml::INPUT_SIZE_MEDIUM)); ?>
 &lt;?php echo TbHtml::textField('text', '', array(
-    'placeholder' => '.input-large', 'size' => TbHtml::SIZE_LARGE)); ?>
+    'placeholder' => '.input-large', 'size' => TbHtml::INPUT_SIZE_LARGE)); ?>
 &lt;?php echo TbHtml::textField('text', '', array(
-    'placeholder' => '.input-xlarge', 'size' => TbHtml::SIZE_XLARGE)); ?>
+    'placeholder' => '.input-xlarge', 'size' => TbHtml::INPUT_SIZE_XLARGE)); ?>
 &lt;?php echo TbHtml::textField('text', '', array(
-    'placeholder' => '.input-xxlarge', 'size' => TbHtml::SIZE_XXLARGE)); ?></pre>
+    'placeholder' => '.input-xxlarge', 'size' => TbHtml::INPUT_SIZE_XXLARGE)); ?></pre>
 
     <h4>Grid sizing</h4>
 
@@ -534,13 +534,13 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 
     <div class="bs-docs-example form-inline">
         <?php echo TbHtml::formActions(array(
-            TbHtml::submitButton('Save changes', array('color' => TbHtml::COLOR_PRIMARY)),
+            TbHtml::submitButton('Save changes', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)),
             TbHtml::htmlButton('Cancel'),
         )); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::formActions(array(
-    TbHtml::submitButton('Save changes', array('color' => TbHtml::COLOR_PRIMARY)),
+    TbHtml::submitButton('Save changes', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)),
     TbHtml::htmlButton('Cancel'),
 )); ?></pre>
 
@@ -557,11 +557,11 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <h4>Block help</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textFieldRow('text', '', array('help' => 'A longer block of help text that breaks onto a new line and may extend beyond one line.', 'helpOptions' => array('type' => TbHtml::HELP_BLOCK))); ?>
+        <?php echo TbHtml::textFieldRow('text', '', array('help' => 'A longer block of help text that breaks onto a new line and may extend beyond one line.', 'helpOptions' => array('type' => TbHtml::HELP_TYPE_BLOCK))); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textFieldRow('text', '',
-    array('help' => '...', 'helpOptions' => array('type' => TbHtml::HELP_BLOCK))); ?></pre>
+    array('help' => '...', 'helpOptions' => array('type' => TbHtml::HELP_TYPE_BLOCK))); ?></pre>
 
     <hr class="bs-docs-separator">
 
@@ -586,29 +586,29 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <h3>Validation states</h3>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::beginFormTb(TbHtml::FORM_HORIZONTAL); ?>
+        <?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_HORIZONTAL); ?>
             <?php echo TbHtml::textFieldRow('text', '', array(
                 'label' => 'Input with warning',
                 'help' => 'Something may have gone wrong',
-                'color' => TbHtml::COLOR_WARNING,
+                'color' => TbHtml::INPUT_COLOR_WARNING,
                 'wrap' => true,
             )); ?>
             <?php echo TbHtml::textFieldRow('text', '', array(
                 'label' => 'Input with error',
                 'help' => 'Please correct the error',
-                'color' => TbHtml::COLOR_ERROR,
+                'color' => TbHtml::INPUT_COLOR_ERROR,
                 'wrap' => true,
             )); ?>
             <?php echo TbHtml::textFieldRow('text', '', array(
                 'label' => 'Input with info',
                 'help' => 'Username is taken',
-                'color' => TbHtml::COLOR_INFO,
+                'color' => TbHtml::INPUT_COLOR_INFO,
                 'wrap' => true,
             )); ?>
             <?php echo TbHtml::textFieldRow('text', '', array(
                 'label' => 'Input with success',
                 'help' => 'Woohoo!',
-                'color' => TbHtml::COLOR_SUCCESS,
+                'color' => TbHtml::INPUT_COLOR_SUCCESS,
                 'wrap' => true,
             )); ?>
         <?php TbHtml::endForm(); ?>
@@ -617,25 +617,25 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 &lt;?php echo TbHtml::textFieldRow('text', '', array(
     'label' => 'Input with warning',
     'help' => 'Something may have gone wrong',
-    'color' => TbHtml::COLOR_WARNING,
+    'color' => TbHtml::INPUT_COLOR_WARNING,
     'wrap' => true,
 )); ?>
 &lt;?php echo TbHtml::textFieldRow('text', '', array(
     'label' => 'Input with error',
     'help' => 'Please correct the error',
-    'color' => TbHtml::COLOR_ERROR,
+    'color' => TbHtml::INPUT_COLOR_ERROR,
     'wrap' => true,
 )); ?>
 &lt;?php echo TbHtml::textFieldRow('text', '', array(
     'label' => 'Input with info',
     'help' => 'Username is taken',
-    'color' => TbHtml::COLOR_INFO,
+    'color' => TbHtml::INPUT_COLOR_INFO,
     'wrap' => true,
 )); ?>
 &lt;?php echo TbHtml::textFieldRow('text', '', array(
     'label' => 'Input with success',
     'help' => 'Woohoo!',
-    'color' => TbHtml::COLOR_SUCCESS,
+    'color' => TbHtml::INPUT_COLOR_SUCCESS,
     'wrap' => true,
 )); ?></pre>
 
@@ -651,90 +651,90 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 
 	<div class="bs-docs-example">
 		<?php echo TbHtml::htmlButton('Default'); ?>
-		<?php echo TbHtml::htmlButton('Primary', array('color' => TbHtml::COLOR_PRIMARY)); ?>
-		<?php echo TbHtml::htmlButton('Danger', array('color' => TbHtml::COLOR_DANGER)); ?>
-		<?php echo TbHtml::htmlButton('Warning', array('color' => TbHtml::COLOR_WARNING)); ?>
-		<?php echo TbHtml::htmlButton('Success', array('color' => TbHtml::COLOR_SUCCESS)); ?>
-		<?php echo TbHtml::htmlButton('Info', array('color' => TbHtml::COLOR_INFO)); ?>
-		<?php echo TbHtml::htmlButton('Inverse', array('color' => TbHtml::COLOR_INVERSE)); ?>
-		<?php echo TbHtml::htmlButton('Link', array('color' => TbHtml::COLOR_LINK)); ?>
+		<?php echo TbHtml::htmlButton('Primary', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
+		<?php echo TbHtml::htmlButton('Danger', array('color' => TbHtml::BUTTON_COLOR_DANGER)); ?>
+		<?php echo TbHtml::htmlButton('Warning', array('color' => TbHtml::BUTTON_COLOR_WARNING)); ?>
+		<?php echo TbHtml::htmlButton('Success', array('color' => TbHtml::BUTTON_COLOR_SUCCESS)); ?>
+		<?php echo TbHtml::htmlButton('Info', array('color' => TbHtml::BUTTON_COLOR_INFO)); ?>
+		<?php echo TbHtml::htmlButton('Inverse', array('color' => TbHtml::BUTTON_COLOR_INVERSE)); ?>
+		<?php echo TbHtml::htmlButton('Link', array('color' => TbHtml::BUTTON_COLOR_LINK)); ?>
 	</div>
 
    <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::htmlButton('Default'); ?>
-&lt;?php echo TbHtml::htmlButton('Primary', array('color' => TbHtml::COLOR_PRIMARY)); ?>
-&lt;?php echo TbHtml::htmlButton('Danger', array('color' => TbHtml::COLOR_DANGER)); ?>
-&lt;?php echo TbHtml::htmlButton('Warning', array('color' => TbHtml::COLOR_WARNING)); ?>
-&lt;?php echo TbHtml::htmlButton('Success', array('color' => TbHtml::COLOR_SUCCESS)); ?>
-&lt;?php echo TbHtml::htmlButton('Info', array('color' => TbHtml::COLOR_INFO)); ?>
-&lt;?php echo TbHtml::htmlButton('Inverse', array('color' => TbHtml::COLOR_INVERSE)); ?>
-&lt;?php echo TbHtml::htmlButton('Link', array('color' => TbHtml::COLOR_LINK)); ?></pre>
+&lt;?php echo TbHtml::htmlButton('Primary', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
+&lt;?php echo TbHtml::htmlButton('Danger', array('color' => TbHtml::BUTTON_COLOR_DANGER)); ?>
+&lt;?php echo TbHtml::htmlButton('Warning', array('color' => TbHtml::BUTTON_COLOR_WARNING)); ?>
+&lt;?php echo TbHtml::htmlButton('Success', array('color' => TbHtml::BUTTON_COLOR_SUCCESS)); ?>
+&lt;?php echo TbHtml::htmlButton('Info', array('color' => TbHtml::BUTTON_COLOR_INFO)); ?>
+&lt;?php echo TbHtml::htmlButton('Inverse', array('color' => TbHtml::BUTTON_COLOR_INVERSE)); ?>
+&lt;?php echo TbHtml::htmlButton('Link', array('color' => TbHtml::BUTTON_COLOR_LINK)); ?></pre>
 
 	<h2>Sizes</h2>
 
 	<div class="bs-docs-example">
 		<p>
-			<?php echo TbHtml::htmlButton('Large button', array('color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_LARGE)); ?>
-			<?php echo TbHtml::htmlButton('Large button', array('size' => TbHtml::SIZE_LARGE)); ?>
+			<?php echo TbHtml::htmlButton('Large button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
+			<?php echo TbHtml::htmlButton('Large button', array('size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
 		</p>
 		<p>
-			<?php echo TbHtml::htmlButton('Default button', array('color' => TbHtml::COLOR_PRIMARY)); ?>
+			<?php echo TbHtml::htmlButton('Default button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
 			<?php echo TbHtml::htmlButton('Default button'); ?>
 		</p>
 		<p>
-			<?php echo TbHtml::htmlButton('Small button', array('color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_SMALL)); ?>
-			<?php echo TbHtml::htmlButton('Small button', array('size' => TbHtml::SIZE_SMALL)); ?>
+			<?php echo TbHtml::htmlButton('Small button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_SMALL)); ?>
+			<?php echo TbHtml::htmlButton('Small button', array('size' => TbHtml::BUTTON_SIZE_SMALL)); ?>
 		</p>
 		<p>
-			<?php echo TbHtml::htmlButton('Mini button', array('color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_MINI)); ?>
-			<?php echo TbHtml::htmlButton('Mini button', array('size' => TbHtml::SIZE_MINI)); ?>
+			<?php echo TbHtml::htmlButton('Mini button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_MINI)); ?>
+			<?php echo TbHtml::htmlButton('Mini button', array('size' => TbHtml::BUTTON_SIZE_MINI)); ?>
 		</p>
 	</div>
 
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::htmlButton('Large button',
-    array('color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_LARGE)); ?>
+    array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
 &lt;?php echo TbHtml::htmlButton('Large button',
-    array('size' => TbHtml::SIZE_LARGE)); ?>
+    array('size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
 &lt;?php echo TbHtml::htmlButton('Default button',
-    array('color' => TbHtml::COLOR_PRIMARY)); ?>
+    array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
 &lt;?php echo TbHtml::htmlButton('Default button'); ?>
 &lt;?php echo TbHtml::htmlButton('Small button',
-    array('color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_SMALL)); ?>
+    array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_SMALL)); ?>
 &lt;?php echo TbHtml::htmlButton('Small button',
-    array('size' => TbHtml::SIZE_SMALL)); ?>
+    array('size' => TbHtml::BUTTON_SIZE_SMALL)); ?>
 &lt;?php echo TbHtml::htmlButton('Mini button',
-    array('color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_MINI)); ?>
+    array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_MINI)); ?>
 &lt;?php echo TbHtml::htmlButton('Mini button',
-    array('size' => TbHtml::SIZE_MINI)); ?></pre>
+    array('size' => TbHtml::BUTTON_SIZE_MINI)); ?></pre>
 
 	<h2>Block</h2>
 
 	<div class="bs-docs-example">
 		<div class="well" style="max-width: 400px; margin: 0 auto 10px;">
-			<?php echo TbHtml::htmlButton('Block button', array('block' => true, 'color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_LARGE)); ?>
-			<?php echo TbHtml::htmlButton('Block button', array('block' => true, 'size' => TbHtml::SIZE_LARGE)); ?>
+			<?php echo TbHtml::htmlButton('Block button', array('block' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
+			<?php echo TbHtml::htmlButton('Block button', array('block' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
 		</div>
 	</div>
 
    <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::htmlButton('Block button',
-   array('block' => true, 'color' => TbHtml::COLOR_PRIMARY, 'size'=>TbHtml::SIZE_LARGE)); ?>
+   array('block' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size'=>TbHtml::BUTTON_SIZE_LARGE)); ?>
 &lt;?php echo TbHtml::htmlButton('Block button',
-   array('block' => true, 'size' => TbHtml::SIZE_LARGE)); ?></pre>
+   array('block' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?></pre>
 
 	<h2>Disabled state</h2>
 
 	<div class="bs-docs-example">
-		<?php echo TbHtml::htmlButton('Primary button', array('disabled' => true, 'color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_LARGE)); ?>
-		<?php echo TbHtml::htmlButton('Button', array('disabled' => true, 'size' => TbHtml::SIZE_LARGE)); ?>
+		<?php echo TbHtml::htmlButton('Primary button', array('disabled' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
+		<?php echo TbHtml::htmlButton('Button', array('disabled' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
 	</div>
 
    <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::htmlButton('Primary button',
-   array('disabled' => true, 'size'=>TbHtml::SIZE_LARGE, 'color' => TbHtml::COLOR_PRIMARY)); ?>
+   array('disabled' => true, 'size'=>TbHtml::BUTTON_SIZE_LARGE, 'color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
 &lt;?php echo TbHtml::htmlButton('Button',
-   array('disabled' => true, 'size' => TbHtml::SIZE_LARGE)); ?></pre>
+   array('disabled' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?></pre>
 
 </section>
 

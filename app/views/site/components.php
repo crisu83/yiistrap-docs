@@ -158,12 +158,12 @@ echo TbHtml::buttonGroup(array(
 
       <div class="btn-toolbar">
          <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig); ?>
-         <?php echo TbHtml::buttonDropdown('Primary', $dropdownConfig, array('color' => TbHtml::COLOR_PRIMARY)); ?>
-         <?php echo TbHtml::buttonDropdown('Danger', $dropdownConfig, array('color' => TbHtml::COLOR_DANGER)); ?>
-         <?php echo TbHtml::buttonDropdown('Warning', $dropdownConfig, array('color' => TbHtml::COLOR_WARNING)); ?>
-         <?php echo TbHtml::buttonDropdown('Success', $dropdownConfig, array('color' => TbHtml::COLOR_SUCCESS)); ?>
-         <?php echo TbHtml::buttonDropdown('Info', $dropdownConfig, array('color' => TbHtml::COLOR_INFO)); ?>
-         <?php echo TbHtml::buttonDropdown('Inverse', $dropdownConfig, array('color' => TbHtml::COLOR_INVERSE)); ?>
+         <?php echo TbHtml::buttonDropdown('Primary', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
+         <?php echo TbHtml::buttonDropdown('Danger', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_DANGER)); ?>
+         <?php echo TbHtml::buttonDropdown('Warning', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_WARNING)); ?>
+         <?php echo TbHtml::buttonDropdown('Success', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_SUCCESS)); ?>
+         <?php echo TbHtml::buttonDropdown('Info', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_INFO)); ?>
+         <?php echo TbHtml::buttonDropdown('Inverse', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_INVERSE)); ?>
       </div>
 
    </div>
@@ -182,13 +182,13 @@ echo TbHtml::buttonGroup(array(
    <div class="bs-docs-example">
 
       <div class="btn-toolbar">
-         <?php echo TbHtml::buttonDropdown('Large action', $dropdownConfig, array('size' => TbHtml::SIZE_LARGE)); ?>
+         <?php echo TbHtml::buttonDropdown('Large action', $dropdownConfig, array('size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
       </div>
       <div class="btn-toolbar">
-         <?php echo TbHtml::buttonDropdown('Small action', $dropdownConfig, array('size' => TbHtml::SIZE_SMALL)); ?>
+         <?php echo TbHtml::buttonDropdown('Small action', $dropdownConfig, array('size' => TbHtml::BUTTON_SIZE_SMALL)); ?>
       </div>
       <div class="btn-toolbar">
-         <?php echo TbHtml::buttonDropdown('Mini action', $dropdownConfig, array('size' => TbHtml::SIZE_MINI)); ?>
+         <?php echo TbHtml::buttonDropdown('Mini action', $dropdownConfig, array('size' => TbHtml::BUTTON_SIZE_MINI)); ?>
       </div>
 
    </div>
@@ -200,7 +200,7 @@ echo TbHtml::buttonGroup(array(
     array('label' => 'Something else here', 'url' => '#'),
     TbHtml::menuDivider(),
     array('label' => 'Separate link', 'url' => '#'),
-), array('size'=>TbHtml::SIZE_MINI)); ?></pre>
+), array('size'=>TbHtml::BUTTON_SIZE_MINI)); ?></pre>
 
    <hr class="bs-docs-separator">
 
@@ -209,12 +209,12 @@ echo TbHtml::buttonGroup(array(
    <div class="bs-docs-example">
       <div class="btn-toolbar" style="margin: 0;">
          <?php echo TbHtml::buttonDropdown('Action', $dropdownConfig, array('split' => true)); ?>
-         <?php echo TbHtml::buttonDropdown('Primary', $dropdownConfig, array('color' => TbHtml::COLOR_PRIMARY, 'split' => true)); ?>
-         <?php echo TbHtml::buttonDropdown('Danger', $dropdownConfig, array('color' => TbHtml::COLOR_DANGER, 'split' => true)); ?>
-         <?php echo TbHtml::buttonDropdown('Warning',   $dropdownConfig, array('color' => TbHtml::COLOR_WARNING, 'split' => true)); ?>
-         <?php echo TbHtml::buttonDropdown('Success', $dropdownConfig, array('color' => TbHtml::COLOR_SUCCESS, 'split' => true)); ?>
-         <?php echo TbHtml::buttonDropdown('Info', $dropdownConfig, array('color' => TbHtml::COLOR_INFO, 'split' => true)); ?>
-         <?php echo TbHtml::buttonDropdown('Inverse', $dropdownConfig, array('color' => TbHtml::COLOR_INVERSE, 'split' => true)         ); ?>
+         <?php echo TbHtml::buttonDropdown('Primary', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'split' => true)); ?>
+         <?php echo TbHtml::buttonDropdown('Danger', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_DANGER, 'split' => true)); ?>
+         <?php echo TbHtml::buttonDropdown('Warning',   $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_WARNING, 'split' => true)); ?>
+         <?php echo TbHtml::buttonDropdown('Success', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_SUCCESS, 'split' => true)); ?>
+         <?php echo TbHtml::buttonDropdown('Info', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_INFO, 'split' => true)); ?>
+         <?php echo TbHtml::buttonDropdown('Inverse', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_INVERSE, 'split' => true)); ?>
       </div>
    </div>
 
@@ -232,7 +232,7 @@ echo TbHtml::buttonGroup(array(
    <div class="bs-docs-example">
       <div class="btn-toolbar" style="margin: 0;">
          <?php echo TbHtml::buttonDropdown('Dropup', $dropdownConfig, array('split' => true, 'dropup' => true)); ?>
-         <?php echo TbHtml::buttonDropdown('Right dropup', $dropdownConfig, array('split' => true, 'dropup' => true, 'menuOptions' => array('align' => TbHtml::ALIGN_RIGHT))); ?>
+         <?php echo TbHtml::buttonDropdown('Right dropup', $dropdownConfig, array('split' => true, 'dropup' => true, 'menuOptions' => array('pull' => TbHtml::PULL_RIGHT))); ?>
       </div>
    </div>
 
@@ -243,7 +243,7 @@ echo TbHtml::buttonGroup(array(
     array('label' => 'Something else here', 'url' => '#'),
     TbHtml::menuDivider(),
     array('label' => 'Separate link', 'url' => '#'),
-), array('split' => true, 'dropup' => true, 'menuOptions' => array('align' => TbHtml::ALIGN_RIGHT))); ?></pre>
+), array('split' => true, 'dropup' => true, 'menuOptions' => array('pull' => TbHtml::PULL_RIGHT))); ?></pre>
 
 </section>
 
@@ -520,42 +520,42 @@ echo TbHtml::buttonGroup(array(
       </tr>
       <tr>
          <td>
-            <?php echo TbHtml::labelTb('Success', array('color' =>  TbHtml::COLOR_SUCCESS)); ?>
+            <?php echo TbHtml::labelTb('Success', array('color' =>  TbHtml::LABEL_COLOR_SUCCESS)); ?>
          </td>
          <td>
-            <code>&lt;?php echo TbHtml::labelTb('Success', array('color' =>  TbHtml::COLOR_SUCCESS)); ?></code>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <?php echo TbHtml::labelTb('Warning', array('color' =>  TbHtml::COLOR_WARNING)); ?>
-         </td>
-         <td>
-            <code>&lt;?php echo TbHtml::labelTb('Warning', array('color' =>  TbHtml::COLOR_WARNING)); ?></code>
+            <code>&lt;?php echo TbHtml::labelTb('Success', array('color' =>  TbHtml::LABEL_COLOR_SUCCESS)); ?></code>
          </td>
       </tr>
       <tr>
          <td>
-            <?php echo TbHtml::labelTb('Important', array('color' =>  TbHtml::COLOR_IMPORTANT)); ?>
+            <?php echo TbHtml::labelTb('Warning', array('color' =>  TbHtml::LABEL_COLOR_WARNING)); ?>
          </td>
          <td>
-            <code>&lt;?php echo TbHtml::labelTb('Important', array('color' =>  TbHtml::COLOR_IMPORTANT)); ?></code>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <?php echo TbHtml::labelTb('Info', array('color' =>  TbHtml::COLOR_INFO)); ?>
-         </td>
-         <td>
-            <code>&lt;?php echo TbHtml::labelTb('Info', array('color' =>  TbHtml::COLOR_INFO)); ?></code>
+            <code>&lt;?php echo TbHtml::labelTb('Warning', array('color' =>  TbHtml::LABEL_COLOR_WARNING)); ?></code>
          </td>
       </tr>
       <tr>
          <td>
-            <?php echo TbHtml::labelTb('Inverse', array('color' =>  TbHtml::COLOR_INVERSE)); ?>
+            <?php echo TbHtml::labelTb('Important', array('color' =>  TbHtml::LABEL_COLOR_IMPORTANT)); ?>
          </td>
          <td>
-            <code>&lt;?php echo TbHtml::labelTb('Inverse', array('color' =>  TbHtml::COLOR_INVERSE)); ?></code>
+            <code>&lt;?php echo TbHtml::labelTb('Important', array('color' =>  TbHtml::LABEL_COLOR_IMPORTANT)); ?></code>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <?php echo TbHtml::labelTb('Info', array('color' =>  TbHtml::LABEL_COLOR_INFO)); ?>
+         </td>
+         <td>
+            <code>&lt;?php echo TbHtml::labelTb('Info', array('color' =>  TbHtml::LABEL_COLOR_INFO)); ?></code>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <?php echo TbHtml::labelTb('Inverse', array('color' =>  TbHtml::LABEL_COLOR_INVERSE)); ?>
+         </td>
+         <td>
+            <code>&lt;?php echo TbHtml::labelTb('Inverse', array('color' =>  TbHtml::LABEL_COLOR_INVERSE)); ?></code>
          </td>
       </tr>
       </tbody>
@@ -588,10 +588,10 @@ echo TbHtml::buttonGroup(array(
             Success
          </td>
          <td>
-            <?php echo TbHtml::badge('2', array('color' =>  TbHtml::COLOR_SUCCESS)); ?>
+            <?php echo TbHtml::badge('2', array('color' =>  TbHtml::BADGE_COLOR_SUCCESS)); ?>
          </td>
          <td>
-            <code>&lt;?php echo TbHtml::badge('2', array('color' =>  TbHtml::COLOR_SUCCESS)); ?></code>
+            <code>&lt;?php echo TbHtml::badge('2', array('color' =>  TbHtml::BADGE_COLOR_SUCCESS)); ?></code>
          </td>
       </tr>
       <tr>
@@ -599,10 +599,10 @@ echo TbHtml::buttonGroup(array(
             Warning
          </td>
          <td>
-            <?php echo TbHtml::badge('4', array('color' =>  TbHtml::COLOR_WARNING)); ?>
+            <?php echo TbHtml::badge('4', array('color' =>  TbHtml::BADGE_COLOR_WARNING)); ?>
          </td>
          <td>
-            <code>&lt;?php echo TbHtml::badge('4', array('color' =>  TbHtml::COLOR_WARNING)); ?></code>
+            <code>&lt;?php echo TbHtml::badge('4', array('color' =>  TbHtml::BADGE_COLOR_WARNING)); ?></code>
          </td>
       </tr>
       <tr>
@@ -610,10 +610,10 @@ echo TbHtml::buttonGroup(array(
             Important
          </td>
          <td>
-            <?php echo TbHtml::badge('6', array('color' =>  TbHtml::COLOR_IMPORTANT)); ?>
+            <?php echo TbHtml::badge('6', array('color' =>  TbHtml::BADGE_COLOR_IMPORTANT)); ?>
          </td>
          <td>
-            <code>&lt;?php echo TbHtml::badge('6', array('color' =>  TbHtml::COLOR_IMPORTANT)); ?></code>
+            <code>&lt;?php echo TbHtml::badge('6', array('color' =>  TbHtml::BADGE_COLOR_IMPORTANT)); ?></code>
          </td>
       </tr>
       <tr>
@@ -621,10 +621,10 @@ echo TbHtml::buttonGroup(array(
             Info
          </td>
          <td>
-            <?php echo TbHtml::badge('8', array('color' =>  TbHtml::COLOR_INFO)); ?>
+            <?php echo TbHtml::badge('8', array('color' =>  TbHtml::BADGE_COLOR_INFO)); ?>
          </td>
          <td>
-            <code>&lt;?php echo TbHtml::badge('8', array('color' =>  TbHtml::COLOR_INFO)); ?></code>
+            <code>&lt;?php echo TbHtml::badge('8', array('color' =>  TbHtml::BADGE_COLOR_INFO)); ?></code>
          </td>
       </tr>
       <tr>
@@ -632,10 +632,10 @@ echo TbHtml::buttonGroup(array(
             Inverse
          </td>
          <td>
-            <?php echo TbHtml::badge('10', array('color' =>  TbHtml::COLOR_INVERSE)); ?>
+            <?php echo TbHtml::badge('10', array('color' =>  TbHtml::BADGE_COLOR_INVERSE)); ?>
          </td>
          <td>
-            <code>&lt;?php echo TbHtml::badge('10', array('color' =>  TbHtml::COLOR_INVERSE)); ?></code>
+            <code>&lt;?php echo TbHtml::badge('10', array('color' =>  TbHtml::BADGE_COLOR_INVERSE)); ?></code>
          </td>
       </tr>
       </tbody>
@@ -654,7 +654,7 @@ echo TbHtml::buttonGroup(array(
    <h2>Hero unit</h2>
 
    <div class="bs-docs-example">
-      <?php echo TbHtml::heroUnit('Hello, world!', '<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>' . TbHtml::htmlButton('Learn more', array('color' => TbHtml::COLOR_PRIMARY, 'size' => TbHtml::SIZE_LARGE))); ?>
+      <?php echo TbHtml::heroUnit('Hello, world!', '<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>' . TbHtml::htmlButton('Learn more', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE))); ?>
    </div>
 
    <pre class="prettyprint linenums">
@@ -777,17 +777,17 @@ echo TbHtml::buttonGroup(array(
    <div class="bs-docs-example tooltip-demo">
       <ul class="bs-docs-tooltip-examples">
          <li><?php echo TbHtml::tooltip('Tooltip on top', '#', 'Tooltip on top'); ?></li>
-         <li><?php echo TbHtml::tooltip('Tooltip on right', '#', 'Tooltip on right', array('placement' => TbHtml::TOOLTIP_RIGHT)); ?></li>
-         <li><?php echo TbHtml::tooltip('Tooltip on bottom', '#', 'Tooltip on bottom', array('placement' => TbHtml::TOOLTIP_BOTTOM)); ?></li>
-         <li><?php echo TbHtml::tooltip('Tooltip on left', '#', 'Tooltip on left', array('placement' => TbHtml::TOOLTIP_LEFT)); ?></li>
+         <li><?php echo TbHtml::tooltip('Tooltip on right', '#', 'Tooltip on right', array('placement' => TbHtml::TOOLTIP_PLACEMENT_RIGHT)); ?></li>
+         <li><?php echo TbHtml::tooltip('Tooltip on bottom', '#', 'Tooltip on bottom', array('placement' => TbHtml::TOOLTIP_PLACEMENT_BOTTOM)); ?></li>
+         <li><?php echo TbHtml::tooltip('Tooltip on left', '#', 'Tooltip on left', array('placement' => TbHtml::TOOLTIP_PLACEMENT_LEFT)); ?></li>
       </ul>
    </div>
 
    <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::tooltip(...); ?>
-&lt;?php echo TbHtml::tooltip(..., array('placement' => TbHtml::TOOLTIP_RIGHT)); ?>
-&lt;?php echo TbHtml::tooltip(..., array('placement' => TbHtml::TOOLTIP_BOTTOM)); ?>
-&lt;?php echo TbHtml::tooltip(..., array('placement' => TbHtml::TOOLTIP_LEFT)); ?></pre>
+&lt;?php echo TbHtml::tooltip(..., array('placement' => TbHtml::TOOLTIP_PLACEMENT_RIGHT)); ?>
+&lt;?php echo TbHtml::tooltip(..., array('placement' => TbHtml::TOOLTIP_PLACEMENT_BOTTOM)); ?>
+&lt;?php echo TbHtml::tooltip(..., array('placement' => TbHtml::TOOLTIP_PLACEMENT_LEFT)); ?></pre>
 
 </section>
 
@@ -814,10 +814,10 @@ echo TbHtml::buttonGroup(array(
 
    <div class="bs-docs-example tooltip-demo">
       <ul class="bs-docs-tooltip-examples">
-         <li><?php echo TbHtml::popover('Popover on top', 'Popover on top', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::TOOLTIP_TOP)); ?></li>
-         <li><?php echo TbHtml::popover('Popover on right', 'Popover on right', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::TOOLTIP_RIGHT)); ?></li>
-         <li><?php echo TbHtml::popover('Popover on bottom', 'Popover on bottom', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::TOOLTIP_BOTTOM)); ?></li>
-         <li><?php echo TbHtml::popover('Popover on left', 'Popover on left', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::TOOLTIP_LEFT)); ?></li>
+         <li><?php echo TbHtml::popover('Popover on top', 'Popover on top', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::POPOVER_PLACEMENT_TOP)); ?></li>
+         <li><?php echo TbHtml::popover('Popover on right', 'Popover on right', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::POPOVER_PLACEMENT_RIGHT)); ?></li>
+         <li><?php echo TbHtml::popover('Popover on bottom', 'Popover on bottom', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::POPOVER_PLACEMENT_BOTTOM)); ?></li>
+         <li><?php echo TbHtml::popover('Popover on left', 'Popover on left', 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', array('class' => 'btn', 'placement' => TbHtml::POPOVER_PLACEMENT_LEFT)); ?></li>
       </ul>
    </div>
 
@@ -834,22 +834,22 @@ echo TbHtml::buttonGroup(array(
    <h2>Default alert</h2>
 
    <div class="bs-docs-example">
-      <?php echo TbHtml::alert(TbHtml::COLOR_WARNING, '<h4>Warning!</h4> Best check yo self, you\'re not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.'); ?>
+      <?php echo TbHtml::alert(TbHtml::ALERT_COLOR_WARNING, '<h4>Warning!</h4> Best check yo self, you\'re not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.'); ?>
    </div>
 
    <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::alert(TbHtml::COLOR_WARNING, '...'); ?></pre>
+&lt;?php echo TbHtml::alert(TbHtml::ALERT_COLOR_WARNING, '...'); ?></pre>
 
    <hr class="bs-docs-separator">
 
    <h2>Block</h2>
 
    <div class="bs-docs-example">
-      <?php echo TbHtml::blockAlert(TbHtml::COLOR_WARNING, '<h4>Warning!</h4> Best check yo self, you\'re not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.'); ?>
+      <?php echo TbHtml::blockAlert(TbHtml::ALERT_COLOR_WARNING, '<h4>Warning!</h4> Best check yo self, you\'re not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.'); ?>
    </div>
 
    <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::blockAlert(TbHtml::COLOR_WARNING, '...'); ?></pre>
+&lt;?php echo TbHtml::blockAlert(TbHtml::ALERT_COLOR_WARNING, '...'); ?></pre>
 
    <hr class="bs-docs-separator">
 
@@ -858,27 +858,27 @@ echo TbHtml::buttonGroup(array(
    <h3>Error or danger</h3>
 
    <div class="bs-docs-example">
-      <?php echo TbHtml::alert(TbHtml::COLOR_ERROR, '<strong>Oh snap!</strong> Change a few things up and try submitting again.'); ?>
+      <?php echo TbHtml::alert(TbHtml::ALERT_COLOR_ERROR, '<strong>Oh snap!</strong> Change a few things up and try submitting again.'); ?>
    </div>
    <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::alert(TbHtml::COLOR_ERROR, '...'); ?></pre>
+&lt;?php echo TbHtml::alert(TbHtml::ALERT_COLOR_ERROR, '...'); ?></pre>
 
    <h3>Success</h3>
 
    <div class="bs-docs-example">
-      <?php echo TbHtml::alert(TbHtml::COLOR_SUCCESS, '<strong>Well done!</strong> You successfully read this important alert message.'); ?>
+      <?php echo TbHtml::alert(TbHtml::ALERT_COLOR_SUCCESS, '<strong>Well done!</strong> You successfully read this important alert message.'); ?>
    </div>
    <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::alert(TbHtml::COLOR_SUCCESS, '...'); ?></pre>
+&lt;?php echo TbHtml::alert(TbHtml::ALERT_COLOR_SUCCESS, '...'); ?></pre>
 
    <h3>Information</h3>
 
    <div class="bs-docs-example">
-      <?php echo TbHtml::alert(TbHtml::COLOR_INFO, '<strong>Heads up!</strong> This alert needs your attention, but it\'s not super important.'); ?>
+      <?php echo TbHtml::alert(TbHtml::ALERT_COLOR_INFO, '<strong>Heads up!</strong> This alert needs your attention, but it\'s not super important.'); ?>
    </div>
 
    <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::alert(TbHtml::COLOR_INFO, '...'); ?></pre>
+&lt;?php echo TbHtml::alert(TbHtml::ALERT_COLOR_INFO, '...'); ?></pre>
 
 </section>
 
@@ -921,16 +921,16 @@ echo TbHtml::buttonGroup(array(
 
    <div class="bs-docs-example">
       <?php echo TbHtml::stackedProgressBar(array(
-         array('color' => TbHtml::COLOR_SUCCESS, 'width' => 35),
-         array('color' => TbHtml::COLOR_WARNING, 'width' => 20),
-         array('color' => TbHtml::COLOR_DANGER, 'width' => 10),
+         array('color' => TbHtml::PROGRESS_COLOR_SUCCESS, 'width' => 35),
+         array('color' => TbHtml::PROGRESS_COLOR_WARNING, 'width' => 20),
+         array('color' => TbHtml::PROGRESS_COLOR_DANGER, 'width' => 10),
       )); ?>
    </div>
    <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::stackedProgressBar(array(
-    array('color' => TbHtml::COLOR_SUCCESS, 'width' => 35),
-    array('color' => TbHtml::COLOR_WARNING, 'width' => 20),
-    array('color' => TbHtml::COLOR_DANGER, 'width' => 10),
+    array('color' => TbHtml::PROGRESS_COLOR_SUCCESS, 'width' => 35),
+    array('color' => TbHtml::PROGRESS_COLOR_WARNING, 'width' => 20),
+    array('color' => TbHtml::PROGRESS_COLOR_DANGER, 'width' => 10),
 )); ?></pre>
 
 </section>
@@ -1013,18 +1013,18 @@ echo TbHtml::buttonGroup(array(
 	<h4>Large</h4>
 
 	<div class="bs-docs-example">
-		<?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::SIZE_LARGE)); ?>
+		<?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::WELL_SIZE_LARGE)); ?>
 	</div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::SIZE_LARGE)); ?></pre>
+&lt;?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::WELL_SIZE_LARGE)); ?></pre>
 
 	<h4>Small</h4>
 
 	<div class="bs-docs-example">
-		<?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::SIZE_SMALL)); ?>
+		<?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::WELL_SIZE_SMALL)); ?>
 	</div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::SIZE_SMALL)); ?></pre>
+&lt;?php echo TbHtml::well('Look, I\'m in a well!', array('size' => TbHtml::WELL_SIZE_SMALL)); ?></pre>
 
 	<h2>Close icon</h2>
 
