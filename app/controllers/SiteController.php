@@ -19,11 +19,11 @@ class SiteController extends Controller
     }
 
 	/**
-	 * Renders the basics docs
+	 * Renders the basic docs
 	 */
-	public function actionBase()
+	public function actionBasics()
 	{
-		$this->render('base');
+		$this->render('basics');
 	}
 
     /**
