@@ -321,6 +321,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
             'display' => TbHtml::NAVBAR_DISPLAY_NONE,
 			'brandLabel' => 'Title',
+            'display' => null,
 			'items' => array($navbarNav),
 		));	?>
 	</div>
@@ -328,6 +329,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 	<pre class="prettyprint linenums">
 &lt;?php $this->widget('bootstrap.widgets.TbNavbar', array(
     'brandLabel' => 'Title',
+    'display' => null, // default is static to top
     'items' => array(
         array(
             'class' => 'bootstrap.widgets.TbNav',
@@ -348,6 +350,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
             'display' => TbHtml::NAVBAR_DISPLAY_NONE,
 			'brandLabel' => 'Title',
+            'display' => null,
 			'items' => array(
 				TbHtml::navbarSearchForm('#'),
 			),
@@ -368,6 +371,14 @@ $this->widget('bootstrap.widgets.TbNav', array(
 	<h2>Display variations</h2>
 
 	<p class="muted">Coming soon!</p>
+    <div class="bs-docs-example bs-navbar-top-example">
+        <?php $this->widget('bootstrap.widgets.TbNavbar', array(
+            'brandLabel' => 'Title',
+            'collapse' => true,
+            'items' => $navbarItems,
+            'htmlOptions' => array('style'=>'position:absolute')
+        ));?>
+    </div>
 
 	<hr class="bs-docs-separator">
 
@@ -378,6 +389,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
             'display' => TbHtml::NAVBAR_DISPLAY_NONE,
 			'brandLabel' => 'Title',
 			'collapse' => true,
+            'display' => null,
 			'items' => $navbarItems
 		));	?>
 	</div>

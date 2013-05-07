@@ -139,7 +139,7 @@ return array(
 
 	<p class="lead">
 		<a class="btn btn-large btn-primary" href="<?php echo $this->createUrl('basics'); ?>" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Visit docs']);">Visit the Yiistrap docs</a>
-		<a class="btn btn-large" href="<?php echo $this->createUrl('api'); ?>"  onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Visit API']);">Open the Yiistrap API</a>
+		<a class="btn btn-large" href="<?php echo $this->createUrl('/api'); ?>"  onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Visit API']);">Open the Yiistrap API</a>
 	</p>
 </section>
 
