@@ -387,15 +387,15 @@ echo TbHtml::buttonGroup(array(
 
    <h3>Pills with dropdowns</h3>
 
-   <div class="bs-docs-example">
-      <?php echo TbHtml::pills(array(
-         array('label' => 'Home', 'url' => '#', 'active' => true),
-         array('label' => 'Help', 'url' => '#'),
-         array('label' => 'Dropdown', 'items' => $dropdownConfig),
-      )); ?>
-   </div>
+    <div class="bs-docs-example">
+        <?php echo TbHtml::pills(array(
+            array('label' => 'Home', 'url' => '#', 'active' => true),
+            array('label' => 'Help', 'url' => '#'),
+            array('label' => 'Dropdown', 'items' => $dropdownConfig),
+        )); ?>
+    </div>
 
-   <pre class="prettyprint linenums">
+    <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::tabs(array(
     array('label' => 'Home', 'url' => '#', 'active' => true),
     array('label' => 'Help', 'url' => '#'),
@@ -409,27 +409,27 @@ echo TbHtml::buttonGroup(array(
 )); ?>
 </pre>
 
-   <hr class="bs-docs-separator">
+    <hr class="bs-docs-separator">
 
-   <h2>Nav lists</h2>
+    <h2>Nav lists</h2>
 
-   <div class="bs-docs-example">
-      <div class="well" style="max-width: 340px; padding: 8px 0;">
-         <?php echo TbHtml::navList(array(
-            array('label' => 'List header'),
-            array('label' => 'Home', 'url' => '#', 'active' => true),
-            array('label' => 'Library', 'url' => '#'),
-            array('label' => 'Applications', 'url' => '#'),
-            array('label' => 'Another list header'),
-            array('label' => 'Profile', 'url' => '#'),
-            array('label' => 'Settings', 'url' => '#'),
-            TbHtml::menuDivider(),
-            array('label' => 'Help', 'url' => '#'),
-         )); ?>
-      </div>
-   </div>
+    <div class="bs-docs-example">
+        <div class="well" style="max-width: 340px; padding: 8px 0;">
+            <?php echo TbHtml::navList(array(
+                array('label' => 'List header'),
+                array('label' => 'Home', 'url' => '#', 'active' => true),
+                array('label' => 'Library', 'url' => '#'),
+                array('label' => 'Applications', 'url' => '#'),
+                array('label' => 'Another list header'),
+                array('label' => 'Profile', 'url' => '#'),
+                array('label' => 'Settings', 'url' => '#'),
+                TbHtml::menuDivider(),
+                array('label' => 'Help', 'url' => '#'),
+            )); ?>
+        </div>
+    </div>
 
-   <pre class="prettyprint linenums">
+    <pre class="prettyprint linenums">
 &lt;div class="well" style="max-width: 340px; padding: 8px 0;">
     &lt;?php echo TbHtml::navList(array(
         array('label' => 'List header'),
@@ -445,9 +445,73 @@ echo TbHtml::buttonGroup(array(
 &lt;/div>
 </pre>
 
-   <h2>Tabbable nav</h2>
+    <h2>Tabbable nav</h2>
 
-   <p class="muted">Coming soon!</p>
+    <h3>Tabbable example</h3>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::tabbable(array(
+            array('label' => 'Section 1', 'active' => true, 'content' => '<p>I\'m in Section 1.</p>'),
+            array('label' => 'Section 2', 'content' => '<p>Howdy, I\'m in Section 2.</p>'),
+            array('label' => 'Section 3', 'content' => '<p>What up girl, this is Section 3.</p>'),
+        ), array('style' => 'margin-bottom: 18px;', 'contentOptions' => array('style' => 'padding-bottom: 9px; border-bottom: 1px solid #ddd'))); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::tabbable(array(
+    array('label' => 'Section 1', 'active' => true, 'content' => '&lt;p>I\'m in Section 1.&lt;/p>'),
+    array('label' => 'Section 2', 'content' => '&lt;p>Howdy, I\'m in Section 2.&lt;/p>'),
+    array('label' => 'Section 3', 'content' => '&lt;p>What up girl, this is Section 3.&lt;/p>'),
+)); ?></pre>
+
+    <h3>Tabbable in any direction</h3>
+
+    <h4>Tabs on the bottom</h4>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::tabbable(array(
+            array('label' => 'Section 1', 'active' => true, 'content' => '<p>I\'m in Section A.</p>', 'id' => 'tabsBelow_1'),
+            array('label' => 'Section 2', 'content' => '<p>Howdy, I\'m in Section B.</p>', 'id' => 'tabsBelow_2'),
+            array('label' => 'Section 3', 'content' => '<p>What up girl, this is Section C.</p>', 'id' => 'tabsBelow_3'),
+        ), array('placement' => TbHtml::TABS_PLACEMENT_BELOW, 'style' => 'margin-bottom: 18px;', 'contentOptions' => array('style' => 'padding-bottom: 9px; border-bottom: 1px solid #ddd'))); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::tabbable(array(
+    array('label' => 'Section 1', 'active' => true, 'content' => '...'),
+    array('label' => 'Section 2', 'content' => '...'),
+    array('label' => 'Section 3', 'content' => '...'),
+), array('placement' => TbHtml::TABS_PLACEMENT_BELOW); ?></pre>
+
+    <h4>Tabs on the left</h4>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::tabbable(array(
+            array('label' => 'Section 1', 'active' => true, 'content' => '<p>I\'m in Section A.</p>', 'id' => 'tabsLeft_1'),
+            array('label' => 'Section 2', 'content' => '<p>Howdy, I\'m in Section B.</p>', 'id' => 'tabsLeft_2'),
+            array('label' => 'Section 3', 'content' => '<p>What up girl, this is Section C.</p>', 'id' => 'tabsLeft_3'),
+        ), array('placement' => TbHtml::TABS_PLACEMENT_LEFT, 'style' => 'margin-bottom: 18px;', 'contentOptions' => array('style' => 'padding-bottom: 9px'))); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::tabbable(array(
+    array('label' => 'Section 1', 'active' => true, 'content' => '...'),
+    array('label' => 'Section 2', 'content' => '...'),
+    array('label' => 'Section 3', 'content' => '...'),
+), array('placement' => TbHtml::TABS_PLACEMENT_LEFT); ?></pre>
+
+    <h4>Tabs on the right</h4>
+
+    <div class="bs-docs-example">
+        <?php echo TbHtml::tabbable(array(
+            array('label' => 'Section 1', 'active' => true, 'content' => '<p>I\'m in Section A.</p>', 'id' => 'tabsRight_1'),
+            array('label' => 'Section 2', 'content' => '<p>Howdy, I\'m in Section B.</p>', 'id' => 'tabsRight_2'),
+            array('label' => 'Section 3', 'content' => '<p>What up girl, this is Section C.</p>', 'id' => 'tabsRight_3'),
+        ), array('placement' => TbHtml::TABS_PLACEMENT_RIGHT, 'style' => 'margin-bottom: 18px;', 'contentOptions' => array('style' => 'padding-bottom: 9px'))); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::tabbable(array(
+    array('label' => 'Section 1', 'active' => true, 'content' => '..'),
+    array('label' => 'Section 2', 'content' => '..'),
+    array('label' => 'Section 3', 'content' => '...'),
+), array('placement' => TbHtml::TABS_PLACEMENT_RIGHT); ?></pre>
 
 </section>
 
