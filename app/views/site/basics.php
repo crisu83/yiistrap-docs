@@ -20,10 +20,10 @@ $this->pageTitle = 'Basics - ' . param('pageTitle');
         <li><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
         <li><a href="#code"><i class="icon-chevron-right"></i> Code</a></li>
         <li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
-		<li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
-		<li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li>
-		<li><a href="#icons"><i class="icon-chevron-right"></i> Icons</a></li>
-	</ul>
+        <li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
+        <li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li>
+        <li><a href="#icons"><i class="icon-chevron-right"></i> Icons</a></li>
+    </ul>
 </div>
 
 <div class="span9">
@@ -202,7 +202,8 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
         <?php echo TbHtml::beginFormTb(); ?>
             <fieldset>
                 <legend>Legend</legend>
-                <?php echo TbHtml::textFieldRow('text', '', array('label' => 'Label name', 'placeholder' => 'Type something...')); ?>
+                <?php echo TbHtml::label('Label name', 'text'); ?>
+                <?php echo TbHtml::textField('text', '', array('placeholder' => 'Type something...')); ?>
                 <?php echo TbHtml::checkBox('checkMeOut', false, array('label' => 'Check me out')); ?>
                 <?php echo TbHtml::submitButton('Submit'); ?>
             </fieldset>
@@ -212,8 +213,8 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 &lt;?php echo TbHtml::beginFormTb(); ?>
     &lt;fieldset>
         &lt;legend>Legend&lt;/legend>
-        &lt;?php echo TbHtml::textFieldRow('text', '',
-            array('label' => 'Label name', 'placeholder' => 'Type something...')); ?>
+        &lt;?php echo TbHtml::label('Label name', 'text'); ?>
+        &lt;?php echo TbHtml::textField('text', '', array('placeholder' => 'Type something...')); ?>
         &lt;?php echo TbHtml::checkBox('checkMeOut', false, array('label' => 'Check me out')); ?>
         &lt;?php echo TbHtml::submitButton('Submit'); ?>
     &lt;/fieldset>
@@ -227,7 +228,7 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 
     <div class="bs-docs-example">
         <?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_SEARCH); ?>
-            <?php echo TbHtml::searchQuery('search'); ?>
+            <?php echo TbHtml::searchField('search'); ?>
             <?php echo TbHtml::submitButton('Submit'); ?>
         <?php echo TbHtml::endForm(); ?>
     </div>
@@ -241,19 +242,19 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 
     <div class="bs-docs-example">
         <?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_INLINE); ?>
-            <?php echo TbHtml::textField('email', '', array('placeholder' => 'Email', 'class' => 'input-small')); ?>
-            <?php echo TbHtml::passwordField('password', '', array('placeholder' => 'Password', 'class' => 'input-small')); ?>
-            <?php echo TbHtml::checkBox('rememberMe', '', array('label' => 'Remember me')); ?>
+            <?php echo TbHtml::textField('email', '', array('placeholder' => 'Email', 'size' => TbHtml::INPUT_SIZE_SMALL)); ?>
+            <?php echo TbHtml::passwordField('password', '', array('placeholder' => 'Password', 'size' => TbHtml::INPUT_SIZE_SMALL)); ?>
+            <?php echo TbHtml::checkBox('rememberMe', false, array('label' => 'Remember me')); ?>
             <?php echo TbHtml::submitButton('Sign in'); ?>
         <?php echo TbHtml::endForm(); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_INLINE); ?>
     &lt;?php echo TbHtml::textField('email', '',
-        array('placeholder' => 'Email', 'class' => 'input-small')); ?>
+        array('placeholder' => 'Email', 'size' => TbHtml::INPUT_SIZE_SMALL)); ?>
     &lt;?php echo TbHtml::passwordField('password', '',
-        array('placeholder' => 'Password', 'class' => 'input-small')); ?>
-    &lt;?php echo TbHtml::checkBox('rememberMe', '', array('label' => 'Remember me')); ?>
+        array('placeholder' => 'Password', 'size' => TbHtml::INPUT_SIZE_SMALL)); ?>
+    &lt;?php echo TbHtml::checkBox('rememberMe', false, array('label' => 'Remember me')); ?>
     &lt;?php echo TbHtml::submitButton('Sign in'); ?>
 &lt;?php echo TbHtml::endForm(); ?></pre>
 
@@ -261,21 +262,20 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 
     <div class="bs-docs-example">
         <?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_HORIZONTAL); ?>
-            <?php echo TbHtml::emailFieldRow('email', '', array('label' => 'Email', 'placeholder' => 'Email', 'wrap' => true)); ?>
-            <?php echo TbHtml::passwordFieldRow('password', '', array('label' => 'Password', 'placeholder' => 'Password', 'wrap' => true)); ?>
-            <?php echo TbHtml::checkBoxRow('rememberMe', '', array('label' => 'Remember me', 'controlOptions' => array('after' => TbHtml::submitButton('Sign in')), 'wrap' => true)); ?>
+            <?php echo TbHtml::emailFieldControlGroup('email', '', array('label' => 'Email', 'placeholder' => 'Email')); ?>
+            <?php echo TbHtml::passwordFieldControlGroup('password', '', array('label' => 'Password', 'placeholder' => 'Password')); ?>
+            <?php echo TbHtml::checkBoxControlGroup('rememberMe', '', array('label' => 'Remember me', 'controlOptions' => array('after' => TbHtml::submitButton('Sign in')))); ?>
         <?php echo TbHtml::endForm(); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_HORIZONTAL); ?>
-    &lt;?php echo TbHtml::emailFieldRow('email', '',
-        array('label' => 'Email', 'placeholder' => 'Email', 'wrap' => true)); ?>
-    &lt;?php echo TbHtml::passwordFieldRow('password', '',
-        array('label' => 'Password', 'placeholder' => 'Password', 'wrap' => true)); ?>
-    &lt;?php echo TbHtml::checkBoxRow('rememberMe', '', array(
+    &lt;?php echo TbHtml::emailFieldControlGroup('email', '',
+        array('label' => 'Email', 'placeholder' => 'Email')); ?>
+    &lt;?php echo TbHtml::passwordFieldControlGroup('password', '',
+        array('label' => 'Password', 'placeholder' => 'Password')); ?>
+    &lt;?php echo TbHtml::checkBoxControlGroup('rememberMe', false, array(
         'label' => 'Remember me',
         'controlOptions' => array('after' => TbHtml::submitButton('Sign in')),
-        'wrap' => true,
     )); ?>
 &lt;?php echo TbHtml::endForm(); ?></pre>
 
@@ -356,65 +356,65 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <h4>Default options</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('prependedInput', '', array('placeholder' => 'Username', 'prepend' => '@', 'class' => 'span2')); ?>
+        <?php echo TbHtml::textField('prependedInput', '', array('placeholder' => 'Username', 'prepend' => '@', 'span' => 2)); ?>
         <br>
-        <?php echo TbHtml::textField('appendedInput', '', array('append' => '.00', 'class' => 'span2')); ?>
+        <?php echo TbHtml::textField('appendedInput', '', array('append' => '.00', 'span' => 2)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('prependedInput', '',
-    array('placeholder' => 'Username', 'prepend' => '@', 'class' => 'span2')); ?>
+    array('placeholder' => 'Username', 'prepend' => '@', 'span' => 2)); ?>
 &lt;?php echo TbHtml::textField('appendedInput', '',
-    array('append' => '.00', 'class' => 'span2')); ?></pre>
+    array('append' => '.00', 'span' => 2)); ?></pre>
 
     <h4>Combined</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('appendedPrependedInput', '', array('prepend' => '$', 'append' => '.00', 'class' => 'span2')); ?>
+        <?php echo TbHtml::textField('appendedPrependedInput', '', array('prepend' => '$', 'append' => '.00', 'span' => 2)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('appendedPrependedInput', '',
-    array('prepend' => '$', 'append' => '.00', 'class' => 'span2')); ?></pre>
+    array('prepend' => '$', 'append' => '.00', 'span' => 2)); ?></pre>
 
     <h4>Buttons instead of text</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('appendedInputButton', '', array('append' => TbHtml::button('Go!'), 'class' => 'span2')); ?>
+        <?php echo TbHtml::textField('appendedInputButton', '', array('append' => TbHtml::button('Go!'), 'span' => 2)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('appendedInputButton', '',
-    array('append' => TbHtml::button('Go!'), 'class' => 'span2')); ?></pre>
+    array('append' => TbHtml::button('Go!'), 'span' => 2)); ?></pre>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('appendedInputButtons', '', array('append' => TbHtml::button('Search') . ' ' . TbHtml::button('Options'), 'class' => 'span2')); ?>
+        <?php echo TbHtml::textField('appendedInputButtons', '', array('append' => TbHtml::button('Search') . ' ' . TbHtml::button('Options'), 'span' => 2)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('appendedInputButtons', '',
-    array('append' => TbHtml::button('Search') . ' ' . TbHtml::button('Options'), 'class' => 'span2')); ?></pre>
+    array('append' => TbHtml::button('Search') . ' ' . TbHtml::button('Options'), 'span' => 2)); ?></pre>
 
     <h4>Button dropdowns</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('appendedDropdownButton', '', array('append' => TbHtml::buttonDropdown('Action', $dropdownConfig), 'class' => 'span2')); ?>
+        <?php echo TbHtml::textField('appendedDropdownButton', '', array('append' => TbHtml::buttonDropdown('Action', $dropdownConfig), 'span' => 2)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('appendedDropdownButton', '',
-    array('append' => TbHtml::buttonDropdown('Action', array(...)), 'class' => 'span2')); ?></pre>
+    array('append' => TbHtml::buttonDropdown('Action', array(...)), 'span' => 2)); ?></pre>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('prependedDropdownButton', '', array('prepend' => TbHtml::buttonDropdown('Action', $dropdownConfig), 'class' => 'span2')); ?>
+        <?php echo TbHtml::textField('prependedDropdownButton', '', array('prepend' => TbHtml::buttonDropdown('Action', $dropdownConfig), 'span' => 2)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('prependedDropdownButton', '',
-    array('prepend' => TbHtml::buttonDropdown('Action', array(...)), 'class' => 'span2')); ?></pre>
+    array('prepend' => TbHtml::buttonDropdown('Action', array(...)), 'span' => 2)); ?></pre>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('appendedPrependedDropdownButton', '', array('prepend' => TbHtml::buttonDropdown('Action', $dropdownConfig), 'append' => TbHtml::buttonDropdown('Action', $dropdownConfig), 'class' => 'span2')); ?>
+        <?php echo TbHtml::textField('appendedPrependedDropdownButton', '', array('prepend' => TbHtml::buttonDropdown('Action', $dropdownConfig), 'append' => TbHtml::buttonDropdown('Action', $dropdownConfig), 'span' => 2)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('appendedPrependedDropdownButton', '', array(
     'prepend' => TbHtml::buttonDropdown('Action', array(...)),
     'append' => TbHtml::buttonDropdown('Action', array(..)),
-    'class' => 'span2',
+    'span' => 2,
 )); ?></pre>
 
     <div class="bs-docs-example">
@@ -431,16 +431,16 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 
     <div class="bs-docs-example">
         <?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_SEARCH); ?>
-        <?php echo TbHtml::searchQuery('appendedSearch', '', array('append' => TbHtml::submitButton('Search'), 'class' => 'span2')); ?>
-        <?php echo TbHtml::searchQuery('prependedSearch', '', array('prepend' => TbHtml::submitButton('Search'), 'class' => 'span2')); ?>
+        <?php echo TbHtml::searchField('appendedSearch', '', array('append' => TbHtml::submitButton('Search'), 'span' => 2)); ?>
+        <?php echo TbHtml::searchField('prependedSearch', '', array('prepend' => TbHtml::submitButton('Search'), 'span' => 2)); ?>
         <?php echo TbHtml::endForm(); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_SEARCH); ?>
 &lt;?php echo TbHtml::searchQuery('appendedSearch', '',
-    array('append' => TbHtml::submitButton('Search'), 'class' => 'span2')); ?>
+    array('append' => TbHtml::submitButton('Search'), 'span' => 2)); ?>
 &lt;?php echo TbHtml::searchQuery('prependedSearch', '',
-    array('prepend' => TbHtml::submitButton('Search'), 'class' => 'span2')); ?>
+    array('prepend' => TbHtml::submitButton('Search'), 'span' => 2)); ?>
 &lt;?php echo TbHtml::endForm(); ?></pre>
 
     <h3>Control sizing</h3>
@@ -549,18 +549,18 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <h4>Inline help</h4>
 
     <div class="bs-docs-example form-inline">
-        <?php echo TbHtml::textFieldRow('text', '', array('help' => 'Inline help text')); ?>
+        <?php echo TbHtml::textFieldControlGroup('text', '', array('help' => 'Inline help text')); ?>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::textFieldRow('text', '', array('help' => 'Inline help text')); ?></pre>
+&lt;?php echo TbHtml::textFieldControlGroup('text', '', array('help' => 'Inline help text')); ?></pre>
 
     <h4>Block help</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textFieldRow('text', '', array('help' => 'A longer block of help text that breaks onto a new line and may extend beyond one line.', 'helpOptions' => array('type' => TbHtml::HELP_TYPE_BLOCK))); ?>
+        <?php echo TbHtml::textFieldControlGroup('text', '', array('help' => 'A longer block of help text that breaks onto a new line and may extend beyond one line.', 'helpOptions' => array('type' => TbHtml::HELP_TYPE_BLOCK))); ?>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::textFieldRow('text', '',
+&lt;?php echo TbHtml::textFieldControlGroup('text', '',
     array('help' => '...', 'helpOptions' => array('type' => TbHtml::HELP_TYPE_BLOCK))); ?></pre>
 
     <hr class="bs-docs-separator">
@@ -587,56 +587,48 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 
     <div class="bs-docs-example">
         <?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_HORIZONTAL); ?>
-            <?php echo TbHtml::textFieldRow('text', '', array(
+            <?php echo TbHtml::textFieldControlGroup('text', '', array(
                 'label' => 'Input with warning',
                 'help' => 'Something may have gone wrong',
                 'color' => TbHtml::INPUT_COLOR_WARNING,
-                'wrap' => true,
             )); ?>
-            <?php echo TbHtml::textFieldRow('text', '', array(
+            <?php echo TbHtml::textFieldControlGroup('text', '', array(
                 'label' => 'Input with error',
                 'help' => 'Please correct the error',
                 'color' => TbHtml::INPUT_COLOR_ERROR,
-                'wrap' => true,
             )); ?>
-            <?php echo TbHtml::textFieldRow('text', '', array(
+            <?php echo TbHtml::textFieldControlGroup('text', '', array(
                 'label' => 'Input with info',
                 'help' => 'Username is taken',
                 'color' => TbHtml::INPUT_COLOR_INFO,
-                'wrap' => true,
             )); ?>
-            <?php echo TbHtml::textFieldRow('text', '', array(
+            <?php echo TbHtml::textFieldControlGroup('text', '', array(
                 'label' => 'Input with success',
                 'help' => 'Woohoo!',
                 'color' => TbHtml::INPUT_COLOR_SUCCESS,
-                'wrap' => true,
             )); ?>
         <?php TbHtml::endForm(); ?>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::textFieldRow('text', '', array(
+&lt;?php echo TbHtml::textFieldControlGroup('text', '', array(
     'label' => 'Input with warning',
     'help' => 'Something may have gone wrong',
     'color' => TbHtml::INPUT_COLOR_WARNING,
-    'wrap' => true,
 )); ?>
-&lt;?php echo TbHtml::textFieldRow('text', '', array(
+&lt;?php echo TbHtml::textFieldControlGroup('text', '', array(
     'label' => 'Input with error',
     'help' => 'Please correct the error',
     'color' => TbHtml::INPUT_COLOR_ERROR,
-    'wrap' => true,
 )); ?>
-&lt;?php echo TbHtml::textFieldRow('text', '', array(
+&lt;?php echo TbHtml::textFieldControlGroup('text', '', array(
     'label' => 'Input with info',
     'help' => 'Username is taken',
     'color' => TbHtml::INPUT_COLOR_INFO,
-    'wrap' => true,
 )); ?>
-&lt;?php echo TbHtml::textFieldRow('text', '', array(
+&lt;?php echo TbHtml::textFieldControlGroup('text', '', array(
     'label' => 'Input with success',
     'help' => 'Woohoo!',
     'color' => TbHtml::INPUT_COLOR_SUCCESS,
-    'wrap' => true,
 )); ?></pre>
 
 </section>
@@ -645,20 +637,20 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
    ================================================== -->
 <section id="buttons">
 
-	<div class="page-header">
-		<h1>Buttons</h1>
-	</div>
+    <div class="page-header">
+        <h1>Buttons</h1>
+    </div>
 
-	<div class="bs-docs-example">
-		<?php echo TbHtml::button('Default'); ?>
-		<?php echo TbHtml::button('Primary', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
-		<?php echo TbHtml::button('Danger', array('color' => TbHtml::BUTTON_COLOR_DANGER)); ?>
-		<?php echo TbHtml::button('Warning', array('color' => TbHtml::BUTTON_COLOR_WARNING)); ?>
-		<?php echo TbHtml::button('Success', array('color' => TbHtml::BUTTON_COLOR_SUCCESS)); ?>
-		<?php echo TbHtml::button('Info', array('color' => TbHtml::BUTTON_COLOR_INFO)); ?>
-		<?php echo TbHtml::button('Inverse', array('color' => TbHtml::BUTTON_COLOR_INVERSE)); ?>
-		<?php echo TbHtml::button('Link', array('color' => TbHtml::BUTTON_COLOR_LINK)); ?>
-	</div>
+    <div class="bs-docs-example">
+        <?php echo TbHtml::button('Default'); ?>
+        <?php echo TbHtml::button('Primary', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
+        <?php echo TbHtml::button('Danger', array('color' => TbHtml::BUTTON_COLOR_DANGER)); ?>
+        <?php echo TbHtml::button('Warning', array('color' => TbHtml::BUTTON_COLOR_WARNING)); ?>
+        <?php echo TbHtml::button('Success', array('color' => TbHtml::BUTTON_COLOR_SUCCESS)); ?>
+        <?php echo TbHtml::button('Info', array('color' => TbHtml::BUTTON_COLOR_INFO)); ?>
+        <?php echo TbHtml::button('Inverse', array('color' => TbHtml::BUTTON_COLOR_INVERSE)); ?>
+        <?php echo TbHtml::button('Link', array('color' => TbHtml::BUTTON_COLOR_LINK)); ?>
+    </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::button('Default'); ?>
 &lt;?php echo TbHtml::button('Primary', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
@@ -669,26 +661,26 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 &lt;?php echo TbHtml::button('Inverse', array('color' => TbHtml::BUTTON_COLOR_INVERSE)); ?>
 &lt;?php echo TbHtml::button('Link', array('color' => TbHtml::BUTTON_COLOR_LINK)); ?></pre>
 
-	<h2>Sizes</h2>
+    <h2>Sizes</h2>
 
-	<div class="bs-docs-example">
-		<p>
-			<?php echo TbHtml::button('Large button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
-			<?php echo TbHtml::button('Large button', array('size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
-		</p>
-		<p>
-			<?php echo TbHtml::button('Default button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
-			<?php echo TbHtml::button('Default button'); ?>
-		</p>
-		<p>
-			<?php echo TbHtml::button('Small button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_SMALL)); ?>
-			<?php echo TbHtml::button('Small button', array('size' => TbHtml::BUTTON_SIZE_SMALL)); ?>
-		</p>
-		<p>
-			<?php echo TbHtml::button('Mini button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_MINI)); ?>
-			<?php echo TbHtml::button('Mini button', array('size' => TbHtml::BUTTON_SIZE_MINI)); ?>
-		</p>
-	</div>
+    <div class="bs-docs-example">
+        <p>
+            <?php echo TbHtml::button('Large button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
+            <?php echo TbHtml::button('Large button', array('size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
+        </p>
+        <p>
+            <?php echo TbHtml::button('Default button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
+            <?php echo TbHtml::button('Default button'); ?>
+        </p>
+        <p>
+            <?php echo TbHtml::button('Small button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_SMALL)); ?>
+            <?php echo TbHtml::button('Small button', array('size' => TbHtml::BUTTON_SIZE_SMALL)); ?>
+        </p>
+        <p>
+            <?php echo TbHtml::button('Mini button', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_MINI)); ?>
+            <?php echo TbHtml::button('Mini button', array('size' => TbHtml::BUTTON_SIZE_MINI)); ?>
+        </p>
+    </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::button('Large button',
     array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
@@ -706,26 +698,26 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 &lt;?php echo TbHtml::button('Mini button',
     array('size' => TbHtml::BUTTON_SIZE_MINI)); ?></pre>
 
-	<h2>Block</h2>
+    <h2>Block</h2>
 
-	<div class="bs-docs-example">
-		<div class="well" style="max-width: 400px; margin: 0 auto 10px;">
-			<?php echo TbHtml::button('Block button', array('block' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
-			<?php echo TbHtml::button('Block button', array('block' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
-		</div>
-	</div>
+    <div class="bs-docs-example">
+        <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
+            <?php echo TbHtml::button('Block button', array('block' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
+            <?php echo TbHtml::button('Block button', array('block' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
+        </div>
+    </div>
    <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::button('Block button',
    array('block' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size'=>TbHtml::BUTTON_SIZE_LARGE)); ?>
 &lt;?php echo TbHtml::button('Block button',
    array('block' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?></pre>
 
-	<h2>Disabled state</h2>
+    <h2>Disabled state</h2>
 
-	<div class="bs-docs-example">
-		<?php echo TbHtml::button('Primary button', array('disabled' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
-		<?php echo TbHtml::button('Button', array('disabled' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
-	</div>
+    <div class="bs-docs-example">
+        <?php echo TbHtml::button('Primary button', array('disabled' => true, 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
+        <?php echo TbHtml::button('Button', array('disabled' => true, 'size' => TbHtml::BUTTON_SIZE_LARGE)); ?>
+    </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::button('Primary button',
    array('disabled' => true, 'size'=>TbHtml::BUTTON_SIZE_LARGE, 'color' => TbHtml::BUTTON_COLOR_PRIMARY)); ?>
@@ -756,23 +748,23 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     ================================================== -->
 <section id="images">
 
-	<div class="page-header">
-		<h1>Images</h1>
-	</div>
+    <div class="page-header">
+        <h1>Images</h1>
+    </div>
 
-	<div class="bs-docs-example">
-		<div class="row-fluid" style="text-align: center; width: 450px;">
-			<div class="span4">
-				<?php echo TbHtml::imageRounded('holder.js/140x140'); ?>
-			</div>
-			<div class="span4">
-				<?php echo TbHtml::imageCircle('holder.js/140x140'); ?>
-			</div>
-			<div class="span4">
-				<?php echo TbHtml::imagePolaroid('holder.js/140x140'); ?>
-			</div>
-		</div>
-	</div>
+    <div class="bs-docs-example">
+        <div class="row-fluid" style="text-align: center; width: 450px;">
+            <div class="span4">
+                <?php echo TbHtml::imageRounded('holder.js/140x140'); ?>
+            </div>
+            <div class="span4">
+                <?php echo TbHtml::imageCircle('holder.js/140x140'); ?>
+            </div>
+            <div class="span4">
+                <?php echo TbHtml::imagePolaroid('holder.js/140x140'); ?>
+            </div>
+        </div>
+    </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::imageRounded('holder.js/140x140'); ?>
 &lt;?php echo TbHtml::imageCircle('holder.js/140x140'); ?>
@@ -784,165 +776,165 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     ================================================== -->
 <section id="icons">
 
-	<div class="page-header">
-		<h1>Icons</h1>
-	</div>
+    <div class="page-header">
+        <h1>Icons</h1>
+    </div>
 
-	<ul class="the-icons clearfix">
-		<li><?php echo TbHtml::icon(TbHtml::ICON_GLASS); ?> <small>ICON_GLASS</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_MUSIC); ?> <small>ICON_MUSIC</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_SEARCH); ?> <small>ICON_SEARCH</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_ENVELOPE); ?> <small>ICON_ENVELOPE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_HEART); ?> <small>ICON_HEART</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_STAR); ?> <small>ICON_STAR</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_STAR_EMPTY); ?> <small>ICON_STAR_EMPTY</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_USER); ?> <small>ICON_HEART</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_FILM); ?> <small>ICON_FILM</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_TH_LARGE); ?> <small>ICON_TH_LARGE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_TH); ?> <small>ICON_TH</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_TH_LIST); ?> <small>ICON_TH_LIST</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_OK); ?> <small>ICON_OK</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_REMOVE); ?> <small>ICON_REMOVE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_ZOOM_IN); ?> <small>ICON_ZOOM_IN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_ZOOM_OUT); ?> <small>ICON_ZOOM_OUT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_OFF); ?> <small>ICON_OFF</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_SIGNAL); ?> <small>ICON_SIGNAL</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_COG); ?> <small>ICON_COG</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_TRASH); ?> <small>ICON_TRASH</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_HOME); ?> <small>ICON_HOME</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_FILE); ?> <small>ICON_FILE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_TIME); ?> <small>ICON_TIME</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_ROAD); ?> <small>ICON_ROAD</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_DOWNLOAD_ALT); ?> <small>ICON_DOWNLOAD_ALT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_DOWNLOAD); ?> <small>ICON_DOWNLOAD</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_UPLOAD); ?> <small>ICON_UPLOAD</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_INBOX); ?> <small>ICON_INBOX</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_PLAY_CIRCLE); ?> <small>ICON_PLAY_CIRCLE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_REPEAT); ?> <small>ICON_REPEAT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_REFRESH); ?> <small>ICON_REFRESH</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_LIST_ALT); ?> <small>ICON_LIST_ALT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_LOCK); ?> <small>ICON_LOCK</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_FLAG); ?> <small>ICON_FLAG</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_HEADPHONES); ?> <small>ICON_HEADPHONES</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_VOLUME_OFF); ?> <small>ICON_VOLUME_OFF</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_VOLUME_DOWN); ?> <small>ICON_VOLUME_DOWN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_VOLUME_UP); ?> <small>ICON_VOLUME_UP</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_QRCODE); ?> <small>ICON_QRCODE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_BARCODE); ?> <small>ICON_BARCODE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_TAG); ?> <small>ICON_TAG</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_TAGS); ?> <small>ICON_TAGS</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_BOOK); ?> <small>ICON_BOOK</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_BOOKMARK); ?> <small>ICON_BOOKMARK</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_PRINT); ?> <small>ICON_PRINT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_CAMERA); ?> <small>ICON_CAMERA</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_FONT); ?> <small>ICON_FONT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_BOLD); ?> <small>ICON_BOLD</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_ITALIC); ?> <small>ICON_ITALIC</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_TEXT_HEIGHT); ?> <small>ICON_TEXT_HEIGHT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_TEXT_WIDTH); ?> <small>ICON_TEXT_WIDTH</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_ALIGN_LEFT); ?> <small>ICON_ALIGN_LEFT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_ALIGN_CENTER); ?> <small>ICON_ALIGN_CENTER</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_ALIGN_RIGHT); ?> <small>ICON_ALIGN_RIGHT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_ALIGN_JUSTIFY); ?> <small>ICON_ALIGN_JUSTIFY</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_LIST); ?> <small>ICON_LIST</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_INDENT_LEFT); ?> <small>ICON_INDENT_LEFT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_INDENT_RIGHT); ?> <small>ICON_INDENT_RIGHT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_FACETIME_VIDEO); ?> <small>ICON_FACETIME_VIDEO</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_PICTURE); ?> <small>ICON_PICTURE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_PENCIL); ?> <small>ICON_PENCIL</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_MAP_MARKER); ?> <small>ICON_MAP_MARKER</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_ADJUST); ?> <small>ICON_ADJUST</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_TINT); ?> <small>ICON_TINT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_EDIT); ?> <small>ICON_EDIT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_SHARE); ?> <small>ICON_SHARE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_CHECK); ?> <small>ICON_CHECK</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_MOVE); ?> <small>ICON_MOVE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_STEP_BACKWARD); ?> <small>ICON_STEP_BACKWARD</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_FAST_FORWARD); ?> <small>ICON_FAST_FORWARD</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_BACKWARD); ?> <small>ICON_BACKWARD</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_PLAY); ?> <small>ICON_PLAY</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_PAUSE); ?> <small>ICON_PAUSE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_STOP); ?> <small>ICON_STOP</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_FORWARD); ?> <small>ICON_FORWARD</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_FAST_FORWARD); ?> <small>ICON_FAST_FORWARD</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_STEP_BACKWARD); ?> <small>ICON_STEP_BACKWARD</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_EJECT); ?> <small>ICON_EJECT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_CHEVRON_LEFT); ?> <small>ICON_CHEVRON_LEFT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_CHEVRON_RIGHT); ?> <small>ICON_CHEVRON_RIGHT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_PLUS_SIGN); ?> <small>ICON_PLUS_SIGN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_MINUS_SIGN); ?> <small>ICON_MINUS_SIGN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_REMOVE_SIGN); ?> <small>ICON_REMOVE_SIGN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_OK_SIGN); ?> <small>ICON_OK_SIGN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_QUESTION_SIGN); ?> <small>ICON_QUESTION_SIGN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_INFO_SIGN); ?> <small>ICON_INFO_SIGN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_SCREENSHOT); ?> <small>ICON_SCREENSHOT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_REMOVE_CIRCLE); ?> <small>ICON_REMOVE_CIRCLE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_OK_CIRCLE); ?> <small>ICON_OK_CIRCLE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_BAN_CIRCLE); ?> <small>ICON_BAN_CIRCLE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_ARROW_LEFT); ?> <small>ICON_ARROW_LEFT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_ARROW_RIGHT); ?> <small>ICON_ARROW_RIGHT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_ARROW_UP); ?> <small>ICON_ARROW_UP</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_ARROW_DOWN); ?> <small>ICON_ARROW_DOWN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_SHARE_ALT); ?> <small>ICON_SHARE_ALT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_RESIZE_FULL); ?> <small>ICON_RESIZE_FULL</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_RESIZE_SMALL); ?> <small>ICON_RESIZE_SMALL</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_PLUS); ?> <small>ICON_PLUS</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_MINUS); ?> <small>ICON_MINUS</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_ASTERISK); ?> <small>ICON_ASTERISK</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_EXCLAMATION_SIGN); ?> <small>ICON_EXCLAMATION_SIGN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_GIFT); ?> <small>ICON_GIFT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_LEAF); ?> <small>ICON_LEAF</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_FIRE); ?> <small>ICON_FIRE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_EYE_OPEN); ?> <small>ICON_EYE_OPEN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_EYE_CLOSE); ?> <small>ICON_EYE_CLOSE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_WARNING_SIGN); ?> <small>ICON_WARNING_SIGN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_PLANE); ?> <small>ICON_PLANE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_CALENDAR); ?> <small>ICON_CALENDAR</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_RANDOM); ?> <small>ICON_RANDOM</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_COMMENT); ?> <small>ICON_COMMENT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_MAGNET); ?> <small>ICON_MAGNET</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_CHEVRON_UP); ?> <small>ICON_CHEVRON_UP</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_CHEVRON_DOWN); ?> <small>ICON_CHEVRON_DOWN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_RETWEET); ?> <small>ICON_RETWEET</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_SHOPPING_CART); ?> <small>ICON_SHOPPING_CART</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_FOLDER_CLOSE); ?> <small>ICON_FOLDER_CLOSE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_FOLDER_OPEN); ?> <small>ICON_FOLDER_OPEN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_RESIZE_VERTICAL); ?> <small>ICON_RESIZE_VERTICAL</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_RESIZE_HORIZONTAL); ?> <small>ICON_RESIZE_HORIZONTAL</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_HDD); ?> <small>ICON_HDD</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_BULLHORN); ?> <small>ICON_BULLHORN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_BELL); ?> <small>ICON_BELL</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_CERTFICATE); ?> <small>ICON_CERTFICATE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_THUMBS_UP); ?> <small>ICON_THUMBS_UP</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_THUMBS_DOWN); ?> <small>ICON_THUMBS_DOWN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_HAND_RIGHT); ?> <small>ICON_HAND_RIGHT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_HAND_LEFT); ?> <small>ICON_HAND_LEFT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_HAND_UP); ?> <small>ICON_HAND_UP</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_HAND_DOWN); ?> <small>ICON_HAND_DOWN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_CIRCLE_ARROW_RIGHT); ?> <small>ICON_CIRCLE_ARROW_RIGHT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_CIRCLE_ARROW_LEFT); ?> <small>ICON_CIRCLE_ARROW_LEFT</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_CIRCLE_ARROW_UP); ?> <small>ICON_CIRCLE_ARROW_UP</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_CIRCLE_ARROW_DOWN); ?> <small>ICON_CIRCLE_ARROW_DOWN</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_GLOBE); ?> <small>ICON_GLOBE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_WRENCH); ?> <small>ICON_WRENCH</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_TASKS); ?> <small>ICON_TASKS</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_FILTER); ?> <small>ICON_FILTER</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_BRIEFCASE); ?> <small>ICON_BRIEFCASE</small></li>
-		<li><?php echo TbHtml::icon(TbHtml::ICON_FULLSCREEN); ?> <small>ICON_FULLSCREEN</small></li>
-	</ul>
+    <ul class="the-icons clearfix">
+        <li><?php echo TbHtml::icon(TbHtml::ICON_GLASS); ?> <small>ICON_GLASS</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_MUSIC); ?> <small>ICON_MUSIC</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_SEARCH); ?> <small>ICON_SEARCH</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_ENVELOPE); ?> <small>ICON_ENVELOPE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_HEART); ?> <small>ICON_HEART</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_STAR); ?> <small>ICON_STAR</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_STAR_EMPTY); ?> <small>ICON_STAR_EMPTY</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_USER); ?> <small>ICON_HEART</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_FILM); ?> <small>ICON_FILM</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_TH_LARGE); ?> <small>ICON_TH_LARGE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_TH); ?> <small>ICON_TH</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_TH_LIST); ?> <small>ICON_TH_LIST</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_OK); ?> <small>ICON_OK</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_REMOVE); ?> <small>ICON_REMOVE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_ZOOM_IN); ?> <small>ICON_ZOOM_IN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_ZOOM_OUT); ?> <small>ICON_ZOOM_OUT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_OFF); ?> <small>ICON_OFF</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_SIGNAL); ?> <small>ICON_SIGNAL</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_COG); ?> <small>ICON_COG</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_TRASH); ?> <small>ICON_TRASH</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_HOME); ?> <small>ICON_HOME</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_FILE); ?> <small>ICON_FILE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_TIME); ?> <small>ICON_TIME</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_ROAD); ?> <small>ICON_ROAD</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_DOWNLOAD_ALT); ?> <small>ICON_DOWNLOAD_ALT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_DOWNLOAD); ?> <small>ICON_DOWNLOAD</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_UPLOAD); ?> <small>ICON_UPLOAD</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_INBOX); ?> <small>ICON_INBOX</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_PLAY_CIRCLE); ?> <small>ICON_PLAY_CIRCLE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_REPEAT); ?> <small>ICON_REPEAT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_REFRESH); ?> <small>ICON_REFRESH</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_LIST_ALT); ?> <small>ICON_LIST_ALT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_LOCK); ?> <small>ICON_LOCK</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_FLAG); ?> <small>ICON_FLAG</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_HEADPHONES); ?> <small>ICON_HEADPHONES</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_VOLUME_OFF); ?> <small>ICON_VOLUME_OFF</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_VOLUME_DOWN); ?> <small>ICON_VOLUME_DOWN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_VOLUME_UP); ?> <small>ICON_VOLUME_UP</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_QRCODE); ?> <small>ICON_QRCODE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_BARCODE); ?> <small>ICON_BARCODE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_TAG); ?> <small>ICON_TAG</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_TAGS); ?> <small>ICON_TAGS</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_BOOK); ?> <small>ICON_BOOK</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_BOOKMARK); ?> <small>ICON_BOOKMARK</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_PRINT); ?> <small>ICON_PRINT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_CAMERA); ?> <small>ICON_CAMERA</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_FONT); ?> <small>ICON_FONT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_BOLD); ?> <small>ICON_BOLD</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_ITALIC); ?> <small>ICON_ITALIC</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_TEXT_HEIGHT); ?> <small>ICON_TEXT_HEIGHT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_TEXT_WIDTH); ?> <small>ICON_TEXT_WIDTH</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_ALIGN_LEFT); ?> <small>ICON_ALIGN_LEFT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_ALIGN_CENTER); ?> <small>ICON_ALIGN_CENTER</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_ALIGN_RIGHT); ?> <small>ICON_ALIGN_RIGHT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_ALIGN_JUSTIFY); ?> <small>ICON_ALIGN_JUSTIFY</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_LIST); ?> <small>ICON_LIST</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_INDENT_LEFT); ?> <small>ICON_INDENT_LEFT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_INDENT_RIGHT); ?> <small>ICON_INDENT_RIGHT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_FACETIME_VIDEO); ?> <small>ICON_FACETIME_VIDEO</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_PICTURE); ?> <small>ICON_PICTURE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_PENCIL); ?> <small>ICON_PENCIL</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_MAP_MARKER); ?> <small>ICON_MAP_MARKER</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_ADJUST); ?> <small>ICON_ADJUST</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_TINT); ?> <small>ICON_TINT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_EDIT); ?> <small>ICON_EDIT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_SHARE); ?> <small>ICON_SHARE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_CHECK); ?> <small>ICON_CHECK</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_MOVE); ?> <small>ICON_MOVE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_STEP_BACKWARD); ?> <small>ICON_STEP_BACKWARD</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_FAST_FORWARD); ?> <small>ICON_FAST_FORWARD</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_BACKWARD); ?> <small>ICON_BACKWARD</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_PLAY); ?> <small>ICON_PLAY</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_PAUSE); ?> <small>ICON_PAUSE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_STOP); ?> <small>ICON_STOP</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_FORWARD); ?> <small>ICON_FORWARD</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_FAST_FORWARD); ?> <small>ICON_FAST_FORWARD</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_STEP_BACKWARD); ?> <small>ICON_STEP_BACKWARD</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_EJECT); ?> <small>ICON_EJECT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_CHEVRON_LEFT); ?> <small>ICON_CHEVRON_LEFT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_CHEVRON_RIGHT); ?> <small>ICON_CHEVRON_RIGHT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_PLUS_SIGN); ?> <small>ICON_PLUS_SIGN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_MINUS_SIGN); ?> <small>ICON_MINUS_SIGN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_REMOVE_SIGN); ?> <small>ICON_REMOVE_SIGN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_OK_SIGN); ?> <small>ICON_OK_SIGN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_QUESTION_SIGN); ?> <small>ICON_QUESTION_SIGN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_INFO_SIGN); ?> <small>ICON_INFO_SIGN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_SCREENSHOT); ?> <small>ICON_SCREENSHOT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_REMOVE_CIRCLE); ?> <small>ICON_REMOVE_CIRCLE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_OK_CIRCLE); ?> <small>ICON_OK_CIRCLE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_BAN_CIRCLE); ?> <small>ICON_BAN_CIRCLE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_ARROW_LEFT); ?> <small>ICON_ARROW_LEFT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_ARROW_RIGHT); ?> <small>ICON_ARROW_RIGHT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_ARROW_UP); ?> <small>ICON_ARROW_UP</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_ARROW_DOWN); ?> <small>ICON_ARROW_DOWN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_SHARE_ALT); ?> <small>ICON_SHARE_ALT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_RESIZE_FULL); ?> <small>ICON_RESIZE_FULL</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_RESIZE_SMALL); ?> <small>ICON_RESIZE_SMALL</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_PLUS); ?> <small>ICON_PLUS</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_MINUS); ?> <small>ICON_MINUS</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_ASTERISK); ?> <small>ICON_ASTERISK</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_EXCLAMATION_SIGN); ?> <small>ICON_EXCLAMATION_SIGN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_GIFT); ?> <small>ICON_GIFT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_LEAF); ?> <small>ICON_LEAF</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_FIRE); ?> <small>ICON_FIRE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_EYE_OPEN); ?> <small>ICON_EYE_OPEN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_EYE_CLOSE); ?> <small>ICON_EYE_CLOSE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_WARNING_SIGN); ?> <small>ICON_WARNING_SIGN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_PLANE); ?> <small>ICON_PLANE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_CALENDAR); ?> <small>ICON_CALENDAR</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_RANDOM); ?> <small>ICON_RANDOM</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_COMMENT); ?> <small>ICON_COMMENT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_MAGNET); ?> <small>ICON_MAGNET</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_CHEVRON_UP); ?> <small>ICON_CHEVRON_UP</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_CHEVRON_DOWN); ?> <small>ICON_CHEVRON_DOWN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_RETWEET); ?> <small>ICON_RETWEET</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_SHOPPING_CART); ?> <small>ICON_SHOPPING_CART</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_FOLDER_CLOSE); ?> <small>ICON_FOLDER_CLOSE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_FOLDER_OPEN); ?> <small>ICON_FOLDER_OPEN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_RESIZE_VERTICAL); ?> <small>ICON_RESIZE_VERTICAL</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_RESIZE_HORIZONTAL); ?> <small>ICON_RESIZE_HORIZONTAL</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_HDD); ?> <small>ICON_HDD</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_BULLHORN); ?> <small>ICON_BULLHORN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_BELL); ?> <small>ICON_BELL</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_CERTFICATE); ?> <small>ICON_CERTFICATE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_THUMBS_UP); ?> <small>ICON_THUMBS_UP</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_THUMBS_DOWN); ?> <small>ICON_THUMBS_DOWN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_HAND_RIGHT); ?> <small>ICON_HAND_RIGHT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_HAND_LEFT); ?> <small>ICON_HAND_LEFT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_HAND_UP); ?> <small>ICON_HAND_UP</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_HAND_DOWN); ?> <small>ICON_HAND_DOWN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_CIRCLE_ARROW_RIGHT); ?> <small>ICON_CIRCLE_ARROW_RIGHT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_CIRCLE_ARROW_LEFT); ?> <small>ICON_CIRCLE_ARROW_LEFT</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_CIRCLE_ARROW_UP); ?> <small>ICON_CIRCLE_ARROW_UP</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_CIRCLE_ARROW_DOWN); ?> <small>ICON_CIRCLE_ARROW_DOWN</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_GLOBE); ?> <small>ICON_GLOBE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_WRENCH); ?> <small>ICON_WRENCH</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_TASKS); ?> <small>ICON_TASKS</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_FILTER); ?> <small>ICON_FILTER</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_BRIEFCASE); ?> <small>ICON_BRIEFCASE</small></li>
+        <li><?php echo TbHtml::icon(TbHtml::ICON_FULLSCREEN); ?> <small>ICON_FULLSCREEN</small></li>
+    </ul>
 
-	<hr class="bs-docs-separator">
+    <hr class="bs-docs-separator">
 
-	<h2>How to use</h2>
+    <h2>How to use</h2>
 
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::icon(TbHtml::ICON_GLASS); ?></pre>
 
-	<hr class="bs-docs-separator">
+    <hr class="bs-docs-separator">
 
-	<h2>Icon examples</h2>
+    <h2>Icon examples</h2>
 
-	<p class="muted">Coming soon!</p>
+    <p class="muted">Coming soon!</p>
 
 </section>
 
