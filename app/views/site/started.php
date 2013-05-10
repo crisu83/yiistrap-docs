@@ -76,6 +76,7 @@ $this->pageTitle = 'Getting started - ' . param('pageTitle');
           │   ├── img
           │   ├── js
           │   └── less
+          ├── behaviors
           ├── components
           ├── helpers
           └── widgets</pre>
