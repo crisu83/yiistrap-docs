@@ -76,17 +76,17 @@ $this->pageTitle = 'Basics - ' . param('pageTitle');
 
     <div class="bs-docs-example">
         <?php echo TbHtml::muted('Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.'); ?>
-        <?php echo TbHtml::em(TbHtml::TEXT_COLOR_WARNING, 'Etiam porta sem malesuada magna mollis euismod.'); ?>
-        <?php echo TbHtml::em(TbHtml::TEXT_COLOR_ERROR, 'Donec ullamcorper nulla non metus auctor fringilla.'); ?>
-        <?php echo TbHtml::em(TbHtml::TEXT_COLOR_INFO, 'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.'); ?>
-        <?php echo TbHtml::em(TbHtml::TEXT_COLOR_SUCCESS, 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula.'); ?>
+        <?php echo TbHtml::em('Etiam porta sem malesuada magna mollis euismod.', array('color' => TbHtml::TEXT_COLOR_WARNING)); ?>
+        <?php echo TbHtml::em('Donec ullamcorper nulla non metus auctor fringilla.', array('color' => TbHtml::TEXT_COLOR_ERROR)); ?>
+        <?php echo TbHtml::em('Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.', array('color' => TbHtml::TEXT_COLOR_INFO)); ?>
+        <?php echo TbHtml::em('Duis mollis, est non commodo luctus, nisi erat porttitor ligula.', array('color' => TbHtml::TEXT_COLOR_SUCCESS)); ?>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::muted('...'); ?>
-&lt;?php echo TbHtml::em(TbHtml::TEXT_COLOR_WARNING, '...'); ?>
-&lt;?php echo TbHtml::em(TbHtml::TEXT_COLOR_ERROR, '...'); ?>
-&lt;?php echo TbHtml::em(TbHtml::TEXT_COLOR_INFO, '...'); ?>
-&lt;?php echo TbHtml::em(TbHtml::TEXT_COLOR_SUCCESS, '...'); ?></pre>
+&lt;?php echo TbHtml::muted('Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.'); ?>
+&lt;?php echo TbHtml::em('Etiam porta sem malesuada magna mollis euismod.', array('color' => TbHtml::TEXT_COLOR_WARNING)); ?>
+&lt;?php echo TbHtml::em('Donec ullamcorper nulla non metus auctor fringilla.', array('color' => TbHtml::TEXT_COLOR_ERROR)); ?>
+&lt;?php echo TbHtml::em('Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.', array('color' => TbHtml::TEXT_COLOR_INFO)); ?>
+&lt;?php echo TbHtml::em('Duis mollis, est non commodo luctus, nisi erat porttitor ligula.', array('color' => TbHtml::TEXT_COLOR_SUCCESS)); ?></pre>
 
     <hr class="bs-docs-separator">
 
@@ -496,20 +496,20 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 &lt;?php echo TbHtml::dropDownList('dropDown', '', array('1'), array('span' => 3)); ?></pre>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::formControls(TbHtml::textField('text', '', array('placeholder' => '.span5', 'span' => 5))); ?>
-        <?php echo TbHtml::formControlsRow(array(
+        <?php echo TbHtml::controls(TbHtml::textField('text', '', array('placeholder' => '.span5', 'span' => 5))); ?>
+        <?php echo TbHtml::controlsRow(array(
             TbHtml::textField('text', '', array('placeholder' => '.span4', 'span' => 4)),
             TbHtml::textField('text', '', array('placeholder' => '.span1', 'span' => 1)),
         )); ?>
-        <?php echo TbHtml::formControlsRow(array(
+        <?php echo TbHtml::controlsRow(array(
             TbHtml::textField('text', '', array('placeholder' => '.span3', 'span' => 3)),
             TbHtml::textField('text', '', array('placeholder' => '.span2', 'span' => 2)),
         )); ?>
-        <?php echo TbHtml::formControlsRow(array(
+        <?php echo TbHtml::controlsRow(array(
             TbHtml::textField('text', '', array('placeholder' => '.span2', 'span' => 2)),
             TbHtml::textField('text', '', array('placeholder' => '.span3', 'span' => 3)),
         )); ?>
-        <?php echo TbHtml::formControlsRow(array(
+        <?php echo TbHtml::controlsRow(array(
             TbHtml::textField('text', '', array('placeholder' => '.span1', 'span' => 1)),
             TbHtml::textField('text', '', array('placeholder' => '.span4', 'span' => 4)),
         )); ?>
