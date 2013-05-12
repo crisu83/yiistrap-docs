@@ -25,18 +25,24 @@ $this->pageTitle = param('pageTitle');
         <ul class="bs-docs-social-buttons">
 			<li>
 				<iframe width="85" height="20" src="http://ghbtns.com/github-btn.html?user=Crisu83&repo=yiistrap&type=watch&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
-			</li>
-			<li>
 				<iframe width="95" height="20" src="http://ghbtns.com/github-btn.html?user=Crisu83&repo=yiistrap&type=fork&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
 			</li>
             <li>
-                <a href="https://twitter.com/Crisu83" class="twitter-follow-button" data-align="right" data-width="242px" data-show-count="true">Follow @Crisu83</a>
-            </li>
-            <li>
-                <a href="https://twitter.com/tonydspaniard" class="twitter-follow-button" data-align="right" data-width="242px" data-show-count="true">Follow @tonydspaniard</a>
-            </li>
+                <a href="https://twitter.com/Crisu83" class="twitter-follow-button" data-align="right" data-width="196px" data-show-count="true">Follow @Crisu83</a>
+			</li>
 			<li>
-				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.getyiistrap.com" data-count="horizontal" data-via="Crisu83" data-related="Crisu83:Yiistrap">Tweet</a>
+                <a href="https://twitter.com/tonydspaniard" class="twitter-follow-button" data-align="right" data-width="233px" data-show-count="true">Follow @tonydspaniard</a>
+            </li>
+			<li class="add-this">
+				<!-- AddThis Button BEGIN -->
+				<div class="addthis_toolbox addthis_default_style">
+					<a class="addthis_button_twitter"></a>
+					<a class="addthis_button_facebook"></a>
+					<a class="addthis_button_google"></a>
+					<a class="addthis_button_compact"></a>
+					<a class="addthis_counter addthis_bubble_style"></a>
+				</div>
+				<!-- AddThis Button END -->
 			</li>
         </ul>
     </div>
@@ -51,6 +57,8 @@ $this->pageTitle = param('pageTitle');
             fjs.parentNode.insertBefore(js, fjs);
         }
     }(document, "script", "twitter-wjs");</script>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f362fc83fc39768"></script>
 <div class="container">
 
     <div class="marketing">
