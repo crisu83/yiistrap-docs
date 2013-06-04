@@ -63,6 +63,11 @@
                 Code licensed under <a href="http://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause License</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
             </p>
 			<p class="sponsors" style="margin-top: 60px;">
+
+                <div style="text-align:center">
+                    <span>Yiistrap is proudly hosted by</span><br>
+                    <a href="http://2amigos.us"><img src="<?php baseUrl('images/2amigos-logo.png'); ?>"/></a><br>
+                </div>
 				<a href="http://www.jetbrains.com/phpstorm/" style="position:relative;display:inline-block;width:127px;height:37px;border:0;margin:0;padding:0;text-decoration:none;text-indent:0;"><span style="margin: 0;padding: 0;position: absolute;top: 0;left: 36px;font-size: 10px;cursor:pointer;  background-image:none;border:0;color: #fff; font-family: trebuchet ms,arial,sans-serif;font-weight: normal;text-align:left;">Developed with</span><img src="http://www.jetbrains.com/phpstorm/documentation/phpstorm_banners/phpstorm1/phpstorm125x37_violet.gif" alt="Developed with PhpStorm" border="0"/></a>
             </p>
         </div>
