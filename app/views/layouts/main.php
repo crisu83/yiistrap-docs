@@ -49,7 +49,7 @@
 	),
 ));
 ?>
-<a href="https://github.com/Crisu83/yiistrap"><img style="position:fixed;top:0;right:0;border:0;z-index:1031;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+<a href="https://github.com/Crisu83/yiistrap"><img style="position:fixed;top:43px;right:0;border:0;z-index:1031;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 <!-- Content -->
 <?php echo $content; ?>
 <!-- Footer -->
@@ -64,10 +64,10 @@
             </p>
 			<p class="sponsors" style="margin-top: 60px;">
                 <div style="text-align:center;margin-bottom:5px">
-                    <span style="font-size:9px">Yiistrap is proudly hosted by</span><br>
+                    <small class="muted">Proudly hosted by</small><br>
                     <a href="http://2amigos.us"><img src="<?php echo baseUrl('images/2amigos-logo.png'); ?>"/></a>
                 </div>
-				<a href="http://www.jetbrains.com/phpstorm/" style="position:relative;display:inline-block;width:127px;height:37px;border:0;margin:0;padding:0;text-decoration:none;text-indent:0;"><span style="margin: 0;padding: 0;position: absolute;top: 0;left: 36px;font-size: 10px;cursor:pointer;  background-image:none;border:0;color: #fff; font-family: trebuchet ms,arial,sans-serif;font-weight: normal;text-align:left;">Developed with</span><img src="http://www.jetbrains.com/phpstorm/documentation/phpstorm_banners/phpstorm1/phpstorm125x37_violet.gif" alt="Developed with PhpStorm" border="0"/></a>
+				<!--<a href="http://www.jetbrains.com/phpstorm/" style="position:relative;display:inline-block;width:127px;height:37px;border:0;margin:0;padding:0;text-decoration:none;text-indent:0;"><span style="margin: 0;padding: 0;position: absolute;top: 0;left: 36px;font-size: 10px;cursor:pointer;  background-image:none;border:0;color: #fff; font-family: trebuchet ms,arial,sans-serif;font-weight: normal;text-align:left;">Developed with</span><img src="http://www.jetbrains.com/phpstorm/documentation/phpstorm_banners/phpstorm1/phpstorm125x37_violet.gif" alt="Developed with PhpStorm" border="0"/></a>-->
             </p>
         </div>
     </div>

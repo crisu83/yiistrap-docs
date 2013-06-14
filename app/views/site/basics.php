@@ -228,7 +228,7 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 
     <div class="bs-docs-example">
         <?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_SEARCH); ?>
-            <?php echo TbHtml::searchField('search'); ?>
+            <?php echo TbHtml::searchQueryField('search'); ?>
             <?php echo TbHtml::submitButton('Submit'); ?>
         <?php echo TbHtml::endForm(); ?>
     </div>
@@ -431,8 +431,8 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 
     <div class="bs-docs-example">
         <?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_SEARCH); ?>
-        <?php echo TbHtml::searchField('appendedSearch', '', array('append' => TbHtml::submitButton('Search'), 'span' => 2)); ?>
-        <?php echo TbHtml::searchField('prependedSearch', '', array('prepend' => TbHtml::submitButton('Search'), 'span' => 2)); ?>
+        <?php echo TbHtml::searchQueryField('appendedSearch', '', array('append' => TbHtml::submitButton('Search'), 'span' => 2)); ?>
+        <?php echo TbHtml::searchQueryField('prependedSearch', '', array('prepend' => TbHtml::submitButton('Search'), 'span' => 2)); ?>
         <?php echo TbHtml::endForm(); ?>
     </div>
     <pre class="prettyprint linenums">
