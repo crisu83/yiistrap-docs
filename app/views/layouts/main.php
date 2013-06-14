@@ -49,7 +49,6 @@
 	),
 ));
 ?>
-<a href="https://github.com/Crisu83/yiistrap"><img style="position:fixed;top:43px;right:0;border:0;z-index:1031;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 <!-- Content -->
 <?php echo $content; ?>
 <!-- Footer -->
