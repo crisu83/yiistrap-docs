@@ -1,5 +1,7 @@
 <?php
 /* @var SiteController $this */
+/* @var TestForm $model */
+
 $this->pageTitle = 'Widgets - ' . param('pageTitle');
 ?>
 <!-- Subhead
@@ -609,13 +611,16 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
     <div class="bs-docs-example">
         <div class="row-fluid">
-        <?php
-        Yii::import('application.models.Test');
-        $model = new Test();
-
-        /* @var TbActiveForm $form */
+        <?php /* @var TbActiveForm $form */
         $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+			'id' => 'test-form',
             'layout' => TbHtml::FORM_LAYOUT_HORIZONTAL,
+			'enableAjaxValidation'=>true,
+			'enableClientValidation'=>true,
+			'clientOptions' => array(
+				'validateOnType' => true,
+				'validateOnChange' => true,
+			),
         )); ?>
 
         <fieldset>

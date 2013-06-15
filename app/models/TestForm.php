@@ -1,52 +1,45 @@
 <?php
-/**
- * TbHtml class file.
- * @author Antonio Ramirez <ramirez.cobos@gmail.com>
- * @author Christoffer Niska <christoffer.niska@gmail.com>
- * @copyright Copyright &copy; Christoffer Niska 2013-
- * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
- * @package bootstrap.helpers
- */
 
-/**
- * TestForm Model
- */
 class TestForm extends CFormModel
 {
-	public $textField;
-	public $password;
-	public $textarea;
-	public $dropdown;
-	public $multiDropdown;
-	public $checkbox;
-	public $checkboxes;
-	public $inlineCheckboxes;
-	public $radioButton;
-	public $radioButtons;
-	public $inlineRadioButtons;
-	public $fileField;
-	public $uneditable;
-	public $disabled;
-	public $prepend;
-	public $append;
-	public $disabledCheckbox;
-	public $captcha;
+    public $textField;
+    public $dropDown;
+    public $multiDropDown;
+    public $fileField;
+    public $textArea;
+    public $uneditableField;
+    public $disabled;
+    public $prepend;
+    public $append;
+    public $disabledCheckbox;
+    public $inlineCheckboxes;
+    public $checkboxes;
+    public $radioButton;
+    public $radioButtons;
 
-	public function attributeLabels()
-	{
+	public function rules() {
 		return array(
-			'textField'=>'Text input',
-			'dropdown'=>'Select list',
-			'multiDropdown'=>'Multiple select',
-			'checkbox'=>'Check me out',
-			'inlineCheckboxes'=>'Inline checkboxes',
-			'radioButtons'=>'Radio buttons',
-			'fileField'=>'File input',
-			'uneditable'=>'Uneditable input',
-			'disabled'=>'Disabled input',
-			'prepend'=>'Prepend text',
-			'append'=>'Append text',
-			'disabledCheckbox'=>'Disabled checkbox',
+			array('textField, dropDown, multiDropDown, textArea, prepend, append, inlineCheckboxes, checkboxes, radioButton, radioButtons', 'required'),
 		);
 	}
+
+    public function attributeLabels()
+    {
+        return array(
+            'textField' => 'Text input',
+            'dropDown' => 'Select list',
+            'multiDropDown' => 'Multiple select',
+            'fileField' => 'File input',
+            'textArea' => 'Text area',
+            'uneditableField' => 'Uneditable input',
+            'disabled' => 'Disabled input',
+            'prepend' => 'Prepend text',
+            'append' => 'Append text',
+            'disabledCheckbox' => 'Disabled checkbox',
+            'inlineCheckboxes', 'Inline checkboxes',
+            'checkboxes' => 'Checkboxes',
+            'radioButton' => 'Radio button',
+            'radioButtons' => 'Radio buttons',
+        );
+    }
 }
