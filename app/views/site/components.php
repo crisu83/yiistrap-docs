@@ -462,14 +462,14 @@ echo TbHtml::buttonGroup(array(
     <h3>Tabbable example</h3>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::tabbable(array(
+        <?php echo TbHtml::tabbableTabs(array(
             array('label' => 'Section 1', 'active' => true, 'content' => '<p>I\'m in Section 1.</p>'),
             array('label' => 'Section 2', 'content' => '<p>Howdy, I\'m in Section 2.</p>'),
             array('label' => 'Section 3', 'content' => '<p>What up girl, this is Section 3.</p>'),
         )); ?>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::tabbable(array(
+&lt;?php echo TbHtml::tabbableTabs(array(
     array('label' => 'Section 1', 'active' => true, 'content' => '&lt;p>I\'m in Section 1.&lt;/p>'),
     array('label' => 'Section 2', 'content' => '&lt;p>Howdy, I\'m in Section 2.&lt;/p>'),
     array('label' => 'Section 3', 'content' => '&lt;p>What up girl, this is Section 3.&lt;/p>'),
@@ -480,14 +480,14 @@ echo TbHtml::buttonGroup(array(
     <h4>Tabs on the bottom</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::tabbable(array(
+        <?php echo TbHtml::tabbableTabs(array(
             array('label' => 'Section 1', 'active' => true, 'content' => '<p>I\'m in Section A.</p>', 'id' => 'tabsBelow_1'),
             array('label' => 'Section 2', 'content' => '<p>Howdy, I\'m in Section B.</p>', 'id' => 'tabsBelow_2'),
             array('label' => 'Section 3', 'content' => '<p>What up girl, this is Section C.</p>', 'id' => 'tabsBelow_3'),
         ), array('placement' => TbHtml::TABS_PLACEMENT_BELOW)); ?>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::tabbable(array(
+&lt;?php echo TbHtml::tabbableTabs(array(
     array('label' => 'Section 1', 'active' => true, 'content' => '...'),
     array('label' => 'Section 2', 'content' => '...'),
     array('label' => 'Section 3', 'content' => '...'),
@@ -496,14 +496,14 @@ echo TbHtml::buttonGroup(array(
     <h4>Tabs on the left</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::tabbable(array(
+        <?php echo TbHtml::tabbableTabs(array(
             array('label' => 'Section 1', 'active' => true, 'content' => '<p>I\'m in Section A.</p>', 'id' => 'tabsLeft_1'),
             array('label' => 'Section 2', 'content' => '<p>Howdy, I\'m in Section B.</p>', 'id' => 'tabsLeft_2'),
             array('label' => 'Section 3', 'content' => '<p>What up girl, this is Section C.</p>', 'id' => 'tabsLeft_3'),
         ), array('placement' => TbHtml::TABS_PLACEMENT_LEFT)); ?>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::tabbable(array(
+&lt;?php echo TbHtml::tabbableTabs(array(
     array('label' => 'Section 1', 'active' => true, 'content' => '...'),
     array('label' => 'Section 2', 'content' => '...'),
     array('label' => 'Section 3', 'content' => '...'),
@@ -512,14 +512,14 @@ echo TbHtml::buttonGroup(array(
     <h4>Tabs on the right</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::tabbable(array(
+        <?php echo TbHtml::tabbableTabs(array(
             array('label' => 'Section 1', 'active' => true, 'content' => '<p>I\'m in Section A.</p>', 'id' => 'tabsRight_1'),
             array('label' => 'Section 2', 'content' => '<p>Howdy, I\'m in Section B.</p>', 'id' => 'tabsRight_2'),
             array('label' => 'Section 3', 'content' => '<p>What up girl, this is Section C.</p>', 'id' => 'tabsRight_3'),
         ), array('placement' => TbHtml::TABS_PLACEMENT_RIGHT)); ?>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::tabbable(array(
+&lt;?php echo TbHtml::tabbableTabs(array(
     array('label' => 'Section 1', 'active' => true, 'content' => '..'),
     array('label' => 'Section 2', 'content' => '..'),
     array('label' => 'Section 3', 'content' => '...'),
