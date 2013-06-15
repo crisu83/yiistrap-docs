@@ -775,7 +775,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
     </div>
 
     <pre class="prettyprint linenums">
-%lt;?php $this->widget('bootstrap.widgets.TbTabs', array(
+&lt;?php $this->widget('bootstrap.widgets.TbTabs', array(
     'tabs' => array(
         array('label' => 'Home', 'content' => '...', 'active' => true),
         array('label' => 'Profile', 'content' => '...'),
