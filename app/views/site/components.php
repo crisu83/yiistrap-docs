@@ -466,7 +466,7 @@ echo TbHtml::buttonGroup(array(
             array('label' => 'Section 1', 'active' => true, 'content' => '<p>I\'m in Section 1.</p>'),
             array('label' => 'Section 2', 'content' => '<p>Howdy, I\'m in Section 2.</p>'),
             array('label' => 'Section 3', 'content' => '<p>What up girl, this is Section 3.</p>'),
-        ), array('style' => 'margin-bottom: 18px;', 'contentOptions' => array('style' => 'padding-bottom: 9px; border-bottom: 1px solid #ddd'))); ?>
+        )); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::tabbable(array(
@@ -484,7 +484,7 @@ echo TbHtml::buttonGroup(array(
             array('label' => 'Section 1', 'active' => true, 'content' => '<p>I\'m in Section A.</p>', 'id' => 'tabsBelow_1'),
             array('label' => 'Section 2', 'content' => '<p>Howdy, I\'m in Section B.</p>', 'id' => 'tabsBelow_2'),
             array('label' => 'Section 3', 'content' => '<p>What up girl, this is Section C.</p>', 'id' => 'tabsBelow_3'),
-        ), array('placement' => TbHtml::TABS_PLACEMENT_BELOW, 'style' => 'margin-bottom: 18px;', 'contentOptions' => array('style' => 'padding-bottom: 9px; border-bottom: 1px solid #ddd'))); ?>
+        ), array('placement' => TbHtml::TABS_PLACEMENT_BELOW)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::tabbable(array(
@@ -500,7 +500,7 @@ echo TbHtml::buttonGroup(array(
             array('label' => 'Section 1', 'active' => true, 'content' => '<p>I\'m in Section A.</p>', 'id' => 'tabsLeft_1'),
             array('label' => 'Section 2', 'content' => '<p>Howdy, I\'m in Section B.</p>', 'id' => 'tabsLeft_2'),
             array('label' => 'Section 3', 'content' => '<p>What up girl, this is Section C.</p>', 'id' => 'tabsLeft_3'),
-        ), array('placement' => TbHtml::TABS_PLACEMENT_LEFT, 'style' => 'margin-bottom: 18px;', 'contentOptions' => array('style' => 'padding-bottom: 9px'))); ?>
+        ), array('placement' => TbHtml::TABS_PLACEMENT_LEFT)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::tabbable(array(
@@ -516,7 +516,7 @@ echo TbHtml::buttonGroup(array(
             array('label' => 'Section 1', 'active' => true, 'content' => '<p>I\'m in Section A.</p>', 'id' => 'tabsRight_1'),
             array('label' => 'Section 2', 'content' => '<p>Howdy, I\'m in Section B.</p>', 'id' => 'tabsRight_2'),
             array('label' => 'Section 3', 'content' => '<p>What up girl, this is Section C.</p>', 'id' => 'tabsRight_3'),
-        ), array('placement' => TbHtml::TABS_PLACEMENT_RIGHT, 'style' => 'margin-bottom: 18px;', 'contentOptions' => array('style' => 'padding-bottom: 9px'))); ?>
+        ), array('placement' => TbHtml::TABS_PLACEMENT_RIGHT)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::tabbable(array(
