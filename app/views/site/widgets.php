@@ -620,10 +620,13 @@ $this->widget('bootstrap.widgets.TbNav', array(
 			'clientOptions' => array(
 				'validateOnType' => true,
 				'validateOnChange' => true,
+				'validateOnSubmit' => true,
 			),
         )); ?>
 
         <fieldset>
+
+			<?php echo $form->errorSummary($model); ?>
 
             <legend>Legend</legend>
 
