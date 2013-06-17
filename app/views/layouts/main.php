@@ -33,7 +33,7 @@
 <?php $this->widget('bootstrap.widgets.TbNavbar', array(
 	'brandLabel' => img('images/logo-navbar.png') . ' ' . e(Yii::app()->name) . ' <small>BETA</small>',
 	'brandUrl' => baseUrl('site/index'),
-	//'collapse' => true,
+	'collapse' => true,
 	'items' => array(
 		array(
 			'class' => 'bootstrap.widgets.TbNav',
