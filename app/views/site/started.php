@@ -93,6 +93,10 @@ return array(
         ...
         'bootstrap' => realpath(__DIR__ . '/../extensions/bootstrap'), // change this if necessary
     ),
+    // import paths
+    'import' => array(
+        'bootstrap.helpers.TbHtml',
+    ),
     // application components
     'components' => array(
         ...

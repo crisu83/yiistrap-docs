@@ -370,7 +370,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
     <h2>Display variations</h2>
 
-    <p class="muted">Coming soon!</p>
+    <p class="muted">Example coming soon!</p>
     <div class="bs-docs-example bs-navbar-top-example">
         <?php $this->widget('bootstrap.widgets.TbNavbar', array(
             'brandLabel' => 'Title',
@@ -752,7 +752,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
         <h1>Scrollspy <small>TbScrollspy.php</small></h1>
     </div>
 
-    <p class="muted">Coming soon!</p>
+    <p class="muted">Example coming soon!</p>
 
 </section>
 
@@ -878,7 +878,7 @@ Yii::app()->user->setFlash(TbHtml::ALERT_COLOR_INFO,
         <h1>Collapse <small>TbCollapse.php</small></h1>
     </div>
 
-    <p class="muted">Coming soon!</p>
+    <p class="muted">Example coming soon!</p>
 
 </section>
 
@@ -890,7 +890,7 @@ Yii::app()->user->setFlash(TbHtml::ALERT_COLOR_INFO,
         <h1>Carousel <small>TbCarousel.php</small></h1>
     </div>
 
-    <p class="muted">Coming soon!</p>
+    <p class="muted">Example coming soon!</p>
 
 </section>
 
@@ -984,7 +984,7 @@ Yii::app()->user->setFlash(TbHtml::ALERT_COLOR_INFO,
         <h1>Affix <small>TbAffix.php</small></h1>
     </div>
 
-    <p class="muted">Coming soon!</p>
+    <p class="muted">Example coming soon!</p>
 
 </section>
 
