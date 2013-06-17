@@ -63,7 +63,7 @@ $this->pageTitle = 'Getting started - ' . param('pageTitle');
 		<h1>2. Configuration</h1>
 	</div>
 
-	<p class="lead">Within the download you'll find the following file structure and contents, logically grouping assets, components, helpers and widgets in respective directories.</p>
+	<p class="lead">Within the download you'll find the following file structure and contents, logically grouping assets, behaviors, components, helpers and widgets in respective directories.</p>
 
 	<p>Unzip the contents of the page under <strong>protected/extensions/bootstrap</strong>. The folder structure should now be the following:</p>
 
