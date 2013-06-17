@@ -106,6 +106,11 @@ return array(
     ),
 );</pre>
 
+    <p>Add the following line to your main layout in <strong>protected/views/layouts/main.php</strong> to register the necessary CSS and JavaScript files:</p>
+
+<pre class="prettyprint">
+&lt;?php Yii::app()->bootstrap->register(); ?&gt;</pre>
+
 </section>
 
 <!-- What's included
