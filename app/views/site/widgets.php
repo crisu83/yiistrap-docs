@@ -276,16 +276,18 @@ $this->widget('bootstrap.widgets.TbNav', array(
     ================================================== -->
 <section id="navbar">
 
-    <?php $navbarNav = array(
-        'class' => 'bootstrap.widgets.TbNav',
-        'items' => array(
-            array('label' => 'Home', 'url' => '#', 'active' => true),
-            array('label' => 'Link', 'url' => '#'),
-            array('label' => 'Link', 'url' => '#'),
+    <?php $navbarItems = array(
+        array(
+            'class' => 'bootstrap.widgets.TbNav',
+            'items' => array(
+                array('label' => 'Home', 'url' => '#', 'active' => true),
+                array('label' => 'Link', 'url' => '#'),
+                array('label' => 'Link', 'url' => '#'),
+            ),
         ),
     ); ?>
 
-    <?php $navbarItems = array(
+    <?php $navbarAdvancedItems = array(
         array(
             'class' => 'bootstrap.widgets.TbNav',
             'items' => array(
@@ -324,7 +326,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
         <?php $this->widget('bootstrap.widgets.TbNavbar', array(
             'display' => TbHtml::NAVBAR_DISPLAY_NONE,
             'brandLabel' => 'Title',
-            'items' => array($navbarNav),
+            'items' => $navbarItems,
         )); ?>
     </div>
 
@@ -371,13 +373,15 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
     <h2>Display variations</h2>
 
-    <p class="muted">Example coming soon!</p>
     <div class="bs-docs-example bs-navbar-top-example">
         <?php $this->widget('bootstrap.widgets.TbNavbar', array(
             'brandLabel' => 'Title',
             'collapse' => true,
             'items' => $navbarItems,
-            'htmlOptions' => array('style'=>'position:absolute')
+            'htmlOptions' => array(
+                'style'=>'position:absolute',
+                'containerOptions'=>array('style'=>'width: auto; padding: 0 20px;'),
+            ),
         ));?>
     </div>
 
@@ -390,7 +394,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
             'display' => TbHtml::NAVBAR_DISPLAY_NONE,
             'brandLabel' => 'Title',
             'collapse' => true,
-            'items' => $navbarItems
+            'items' => $navbarAdvancedItems
         )); ?>
     </div>
 
@@ -411,8 +415,8 @@ $this->widget('bootstrap.widgets.TbNav', array(
             'color' => TbHtml::NAVBAR_COLOR_INVERSE,
             'brandLabel' => 'Title',
             'collapse' => true,
-            'items' => $navbarItems,
-        ));    ?>
+            'items' => $navbarAdvancedItems,
+        )); ?>
     </div>
 
     <pre class="prettyprint linenums">

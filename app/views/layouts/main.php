@@ -10,8 +10,8 @@
     <?php css('css/main.css'); ?>
     <?php css('css/responsive.css'); ?>
     <?php css('css/styles.css'); ?>
-    <?php css('js/google-code-prettify/prettify.css'); ?>
-    <?php js('js/google-code-prettify/prettify.js'); ?>
+    <?php css('css/prettify.css'); ?>
+    <?php js('js/prettify.js'); ?>
     <?php js('js/holder.js'); ?>
 	<?php js('js/app.js', CClientScript::POS_END); ?>
     <title><?php echo e($this->pageTitle); ?></title>
