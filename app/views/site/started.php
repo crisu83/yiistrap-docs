@@ -78,6 +78,7 @@ $this->pageTitle = 'Getting started - ' . param('pageTitle');
           │   └── less
           ├── behaviors
           ├── components
+          ├── gii
           ├── helpers
           └── widgets</pre>
 
@@ -95,7 +96,15 @@ return array(
     ),
     // import paths
     'import' => array(
+        ...
         'bootstrap.helpers.TbHtml',
+    ),
+    // application modules
+    'modules' => array(
+        ...
+        'gii' => array(
+            'generatorPaths' => array('bootstrap.gii'),
+        ),
     ),
     // application components
     'components' => array(
