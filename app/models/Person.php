@@ -4,9 +4,7 @@ class Person extends CModel
 	public $id;
 	public $firstName;
 	public $lastName;
-	public $language;
-	public $hours;
-	public $firstLetter;
+	public $username;
 
 	public function attributeNames()
 	{
@@ -14,55 +12,49 @@ class Person extends CModel
 			'id',
 			'firstName',
 			'lastName',
-			'language',
-			'hours'
+			'username',
 		);
 	}
 
-	/**
-	 * Helper function to return a datagrid for the grid examples
-	 * @return CArrayDataProvider
-	 */
-	public static function getGridDataProvider()
-	{
-		$mark = new Person();
-		$mark->id = 1;
-		$mark->firstName = 'Mark';
-		$mark->lastName = 'Otto';
-		$mark->language = 'CSS';
-		$mark->hours = 10;
+    public function rules()
+    {
+        return array(
+            array('id, firstName, lastName, username', 'safe'),
+        );
+    }
 
-		$jacob = new Person();
-		$jacob->id = 2;
-		$jacob->firstName = 'Jacob';
-		$jacob->lastName = 'Thornton';
-		$jacob->language = 'JavaScript';
-		$jacob->hours = 20;
+    public function search()
+    {
+        $mark = new Person();
+        $mark->id = 1;
+        $mark->firstName = 'Mark';
+        $mark->lastName = 'Otto';
+        $mark->username = '@mdo';
 
-		$stu = new Person();
-		$stu->id = 3;
-		$stu->firstName = 'Stu';
-		$stu->lastName = 'Dent';
-		$stu->language = 'HTML';
-		$stu->hours = 15;
+        $jacob = new Person();
+        $jacob->id = 2;
+        $jacob->firstName = 'Jacob';
+        $jacob->lastName = 'Thornton';
+        $jacob->username = '@fat';
 
-		$sunny = new Person();
-		$sunny->id = 4;
-		$sunny->firstName = 'Sunny';
-		$sunny->lastName = 'Man';
-		$sunny->language = 'HTML';
-		$sunny->hours = 15;
+        $larry = new Person();
+        $larry->id = 3;
+        $larry->firstName = 'Larry';
+        $larry->lastName = 'the Bird';
+        $larry->username = '@twitter';
 
-		$persons = array($mark, $jacob, $stu, $sunny);
+        $rawData = array($mark, $jacob, $larry);
 
-		return new CArrayDataProvider($persons, array(
-			'pagination' => array('pageSize' => 2)
-		));
-	}
+        // Cowboy filtering
+        foreach ($rawData as $i => $row)
+            foreach ($this->attributes as $key => $value)
+                if (isset($row[$key]) && !empty($value) && stripos($row[$key], $value) === false)
+                    unset($rawData[$i]);
 
-
-	public function search()
-	{
-		return new Person();
-	}
+        return new CArrayDataProvider($rawData, array(
+            'sort' => array(
+                'attributes' => array('id', 'firstName', 'lastName', 'username'),
+            ),
+        ));
+    }
 }

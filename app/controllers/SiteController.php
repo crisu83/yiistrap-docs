@@ -39,16 +39,21 @@ class SiteController extends Controller
 	 */
 	public function actionWidgets()
 	{
-		Yii::import('application.models.TestForm');
+		Yii::import('application.models.*');
 		$model = new TestForm();
 
-		if (isset($_POST['ajax']) && $_POST['ajax'] === 'test-form')
+        $person = new Person('search');
+        $person->unsetAttributes();
+        if (isset($_GET['Person']))
+            $person->attributes = $_GET['Person'];
+
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'test-form')
 		{
 			echo CActiveForm::validate($model);
 			app()->end();
 		}
 
-		$this->render('widgets', array('model' => $model));
+		$this->render('widgets', array('person' => $person, 'model' => $model));
 	}
 
     /**

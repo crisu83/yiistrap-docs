@@ -1,5 +1,6 @@
 <?php
 /* @var SiteController $this */
+/* @var Person $person */
 /* @var TestForm $model */
 
 $this->pageTitle = 'Widgets - ' . param('pageTitle');
@@ -486,20 +487,12 @@ $this->widget('bootstrap.widgets.TbNav', array(
 ================================================== -->
 <section id="gridview">
 
-    <?php
-    $gridDataProvider = new CArrayDataProvider(array(
-        array('id' => 1, 'firstName' => 'Mark', 'lastName' => 'Otto', 'username' => '@mdo'),
-        array('id' => 2, 'firstName' => 'Jacob', 'lastName' => 'Thornton', 'username' => '@fat'),
-        array('id' => 3, 'firstName' => 'Larry', 'lastName' => 'the Bird', 'username' => '@twitter'),
-    ));
-
-    $gridColumns = array(
-        array('name' => 'id', 'header' => '#', 'htmlOptions' => array('color' =>'width: 60px')),
+    <?php $gridColumns = array(
+        array('name' => 'id', 'header' => '#', 'headerHtmlOptions' => array('style' =>'width: 60px')),
         array('name' => 'firstName', 'header' => 'First name'),
         array('name' => 'lastName', 'header' => 'Last name'),
         array('name' => 'username', 'header' => 'Username'),
-    );
-    ?>
+    ); ?>
 
     <div class="page-header">
         <h1>Grid view <small>TbGridView.php</small></h1>
@@ -507,7 +500,8 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
     <div class="bs-docs-example">
         <?php $this->widget('bootstrap.widgets.TbGridView', array(
-            'dataProvider' => $gridDataProvider,
+            'dataProvider' => $person->search(),
+            'filter' => $person,
             'template' => "{items}",
             'columns' => $gridColumns,
         )); ?>
@@ -515,13 +509,27 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
     <pre class="prettyprint linenums">
 &lt?php $this->widget('bootstrap.widgets.TbGridView', array(
-   'dataProvider' => $gridDataProvider,
+   'dataProvider' => $person->search(),
+   'filter' => $person,
    'template' => "{items}",
    'columns' => array(
-        array('name' => 'id', 'header' => '#', 'htmlOptions' => array('color' =>'width: 60px')),
-        array('name' => 'firstName', 'header' => 'First name'),
-        array('name' => 'lastName', 'header' => 'Last name'),
-        array('name' => 'username', 'header' => 'Username'),
+        array(
+            'name' => 'id',
+            'header' => '#',
+            'htmlOptions' => array('color' =>'width: 60px'),
+        ),
+        array(
+            'name' => 'firstName',
+            'header' => 'First name',
+        ),
+        array(
+            'name' => 'lastName',
+            'header' => 'Last name',
+        ),
+        array(
+            'name' => 'username',
+            'header' => 'Username',
+        ),
     ),
 )); ?></pre>
 
@@ -534,7 +542,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
     <div class="bs-docs-example">
         <?php $this->widget('bootstrap.widgets.TbGridView', array(
             'type' => TbHtml::GRID_TYPE_STRIPED,
-            'dataProvider' => $gridDataProvider,
+            'dataProvider' => $person->search(),
             'template' => "{items}",
             'columns' => $gridColumns,
         )); ?>
@@ -551,7 +559,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
     <div class="bs-docs-example">
         <?php $this->widget('bootstrap.widgets.TbGridView', array(
             'type' => TbHtml::GRID_TYPE_BORDERED,
-            'dataProvider' => $gridDataProvider,
+            'dataProvider' => $person->search(),
             'template' => "{items}",
             'columns' => $gridColumns,
         )); ?>
@@ -568,7 +576,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
     <div class="bs-docs-example">
         <?php $this->widget('bootstrap.widgets.TbGridView', array(
             'type' => TbHtml::GRID_TYPE_HOVER,
-            'dataProvider' => $gridDataProvider,
+            'dataProvider' => $person->search(),
             'template' => "{items}",
             'columns' => $gridColumns,
         )); ?>
@@ -576,7 +584,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
     <pre class="prettyprint linenums">
 &lt?php $this->widget('bootstrap.widgets.TbGridView', array(
-    'type' => TbHtml::GRID_HOVER,
+    'type' => TbHtml::GRID_TYPE_HOVER,
     ...
 )); ?></pre>
 
@@ -585,7 +593,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
     <div class="bs-docs-example">
         <?php $this->widget('bootstrap.widgets.TbGridView', array(
             'type' => TbHtml::GRID_TYPE_CONDENSED,
-            'dataProvider' => $gridDataProvider,
+            'dataProvider' => $person->search(),
             'template' => "{items}",
             'columns' => $gridColumns,
         )); ?>

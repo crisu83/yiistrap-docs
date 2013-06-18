@@ -25,6 +25,7 @@ return array(
 	'components' => array(
 		'bootstrap'	=> array(
 			'class' => 'bootstrap.components.TbApi',
+            'forceCopyAssets' => true,
 		),
 		'errorHandler' => array(
 			'errorAction' => 'site/error',
