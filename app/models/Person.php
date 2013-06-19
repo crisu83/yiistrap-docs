@@ -52,6 +52,9 @@ class Person extends CModel
                     unset($rawData[$i]);
 
         return new CArrayDataProvider($rawData, array(
+			'pagination' => array(
+				'pageSize' => 2,
+			),
             'sort' => array(
                 'attributes' => array('id', 'firstName', 'lastName', 'username'),
             ),
