@@ -506,7 +506,6 @@ $this->widget('bootstrap.widgets.TbNav', array(
         <?php $this->widget('bootstrap.widgets.TbGridView', array(
             'dataProvider' => $person->search(),
             'filter' => $person,
-            'template' => "{items}",
             'columns' => $gridColumns,
         )); ?>
     </div>
