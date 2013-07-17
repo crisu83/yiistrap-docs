@@ -4,10 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="generator" content="ApiGen 2.8.0" />
 
-	<title>Class TbGridView</title>
+	<title>Class TbGridView | YiiStrap</title>
 
-	<script type="text/javascript" src="resources/combined.js?438370167"></script>
-	<script type="text/javascript" src="elementlist.js?1980635744"></script>
+	<script type="text/javascript" src="resources/combined.js?1965618976"></script>
+	<script type="text/javascript" src="elementlist.js?1592328285"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -17,7 +17,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">Overview</a>
+				<a href="index.html" class="brand">YiiStrap</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -53,15 +53,17 @@
 			<ul>
 				<li class="active"><a href="package-bootstrap.html">bootstrap<span></span></a>
 						<ul>
+				<li><a href="package-bootstrap.behaviors.html">behaviors</a>
+						</li>
 				<li><a href="package-bootstrap.components.html">components</a>
+						</li>
+				<li><a href="package-bootstrap.gii.html">gii</a>
 						</li>
 				<li><a href="package-bootstrap.helpers.html">helpers</a>
 						</li>
 				<li class="active"><a href="package-bootstrap.widgets.html">widgets</a>
 						</li>
 							</ul></li>
-				<li><a href="package-None.html">None</a>
-						</li>
 			</ul>
 		</div>
 
@@ -76,6 +78,7 @@
 				<li><a href="class-TbButtonColumn.html">TbButtonColumn</a></li>
 				<li><a href="class-TbCollapse.html">TbCollapse</a></li>
 				<li><a href="class-TbDataColumn.html">TbDataColumn</a></li>
+				<li><a href="class-TbDetailView.html">TbDetailView</a></li>
 				<li class="active"><a href="class-TbGridView.html">TbGridView</a></li>
 				<li><a href="class-TbHeroUnit.html">TbHeroUnit</a></li>
 				<li><a href="class-TbListView.html">TbListView</a></li>
@@ -83,10 +86,10 @@
 				<li><a href="class-TbNav.html">TbNav</a></li>
 				<li><a href="class-TbNavbar.html">TbNavbar</a></li>
 				<li><a href="class-TbPager.html">TbPager</a></li>
+				<li><a href="class-TbScrollspy.html">TbScrollspy</a></li>
 				<li><a href="class-TbTabs.html">TbTabs</a></li>
 				<li><a href="class-TbThumbnails.html">TbThumbnails</a></li>
 				<li><a href="class-TbTypeAhead.html">TbTypeAhead</a></li>
-				<li><a href="class-TbWidget.html">TbWidget</a></li>
 			</ul>
 
 
@@ -148,7 +151,7 @@ href="mailto:ramirez.cobos&#64;gmail.com">ramirez.cobos&#64;<!---->gmail.com</a>
 				<b>Author:</b>
 				Christoffer Niska &lt;<a
 href="mailto:ChristofferNiska&#64;gmail.com">ChristofferNiska&#64;<!---->gmail.com</a>&gt;<br />
-		<b>Located at</b> <a href="source-class-TbGridView.html#15-108" title="Go to source code">widgets/TbGridView.php</a><br />
+		<b>Located at</b> <a href="source-class-TbGridView.html#15-101" title="Go to source code">widgets/TbGridView.php</a><br />
 	</div>
 
 
@@ -166,7 +169,7 @@ href="mailto:ChristofferNiska&#64;gmail.com">ChristofferNiska&#64;<!---->gmail.c
 
 			<td class="name"><div>
 			<a class="anchor" href="#_init">#</a>
-			<code><a href="source-class-TbGridView.html#48-70" title="Go to source code">init</a>( )</code>
+			<code><a href="source-class-TbGridView.html#45-68" title="Go to source code">init</a>( )</code>
 
 			<div class="description short">
 				
@@ -199,7 +202,7 @@ href="mailto:ChristofferNiska&#64;gmail.com">ChristofferNiska&#64;<!---->gmail.c
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initColumns">#</a>
-			<code><a href="source-class-TbGridView.html#72-84" title="Go to source code">initColumns</a>( )</code>
+			<code><a href="source-class-TbGridView.html#70-81" title="Go to source code">initColumns</a>( )</code>
 
 			<div class="description short">
 				
@@ -232,7 +235,7 @@ href="mailto:ChristofferNiska&#64;gmail.com">ChristofferNiska&#64;<!---->gmail.c
 
 			<td class="name"><div>
 			<a class="anchor" href="#_createDataColumn">#</a>
-			<code><a href="source-class-TbGridView.html#86-107" title="Go to source code">createDataColumn</a>( <span>mixed <var>$text</var></span> )</code>
+			<code><a href="source-class-TbGridView.html#83-100" title="Go to source code">createDataColumn</a>( <span>mixed <var>$text</var></span> )</code>
 
 			<div class="description short">
 				
@@ -282,29 +285,31 @@ href="mailto:ChristofferNiska&#64;gmail.com">ChristofferNiska&#64;<!---->gmail.c
 
 		<h2>Properties summary</h2>
 		<table class="summary table table-bordered table-striped" id="properties">
-		<tr data-order="style" id="$style">
+		<tr data-order="type" id="$type">
 			<td class="attributes"><code>
 				public  
 				string|array
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TbGridView.html#21-25" title="Go to source code"><var>$style</var></a>
+					<a href="source-class-TbGridView.html#20-25" title="Go to source code"><var>$type</var></a>
 			</td>
 			<td class="description"><div>
-				<a href="#$style" class="anchor">#</a>
+				<a href="#$type" class="anchor">#</a>
 
 				<div class="description short">
 					
-<p>the table style. Valid values are TbHtml::GRID_STRIPED,
-TbHtml::GRID_BORDERED, TbHtml::GRID_CONDENSED and/or TbHtml::GRID_HOVER</p>
+<p>the table style. Valid values are TbHtml::GRID_TYPE_STRIPED,
+TbHtml::GRID_TYPE_BORDERED, TbHtml::GRID_TYPE_CONDENSED and/or
+TbHtml::GRID_TYPE_HOVER.</p>
 
 				</div>
 
 				<div class="description detailed hidden">
 					
-<p>the table style. Valid values are TbHtml::GRID_STRIPED,
-TbHtml::GRID_BORDERED, TbHtml::GRID_CONDENSED and/or TbHtml::GRID_HOVER</p>
+<p>the table style. Valid values are TbHtml::GRID_TYPE_STRIPED,
+TbHtml::GRID_TYPE_BORDERED, TbHtml::GRID_TYPE_CONDENSED and/or
+TbHtml::GRID_TYPE_HOVER.</p>
 
 
 				</div>
@@ -317,7 +322,7 @@ TbHtml::GRID_BORDERED, TbHtml::GRID_CONDENSED and/or TbHtml::GRID_HOVER</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TbGridView.html#27-30" title="Go to source code"><var>$pagerCssClass</var></a>
+					<a href="source-class-TbGridView.html#26-29" title="Go to source code"><var>$pagerCssClass</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$pagerCssClass" class="anchor">#</a>
@@ -343,7 +348,7 @@ TbHtml::GRID_BORDERED, TbHtml::GRID_CONDENSED and/or TbHtml::GRID_HOVER</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TbGridView.html#32-36" title="Go to source code"><var>$pager</var></a>
+					<a href="source-class-TbGridView.html#30-34" title="Go to source code"><var>$pager</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$pager" class="anchor">#</a>
@@ -375,7 +380,7 @@ class="php-quote"&gt;'ext.bootstrap.widgets.TbPager'&lt;/span&gt;)</code>.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TbGridView.html#38-42" title="Go to source code"><var>$cssFile</var></a>
+					<a href="source-class-TbGridView.html#35-39" title="Go to source code"><var>$cssFile</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$cssFile" class="anchor">#</a>
@@ -403,7 +408,7 @@ that no CSS will be included.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TbGridView.html#43-46" title="Go to source code"><var>$template</var></a>
+					<a href="source-class-TbGridView.html#40-43" title="Go to source code"><var>$template</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$template" class="anchor">#</a>
@@ -435,7 +440,7 @@ view.</p>
 	</div>
 
 	<div id="footer">
-		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		YiiStrap API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

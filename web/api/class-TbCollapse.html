@@ -4,10 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="generator" content="ApiGen 2.8.0" />
 
-	<title>Class TbCollapse</title>
+	<title>Class TbCollapse | YiiStrap</title>
 
-	<script type="text/javascript" src="resources/combined.js?438370167"></script>
-	<script type="text/javascript" src="elementlist.js?1980635744"></script>
+	<script type="text/javascript" src="resources/combined.js?1965618976"></script>
+	<script type="text/javascript" src="elementlist.js?1592328285"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -17,7 +17,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">Overview</a>
+				<a href="index.html" class="brand">YiiStrap</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -53,15 +53,17 @@
 			<ul>
 				<li class="active"><a href="package-bootstrap.html">bootstrap<span></span></a>
 						<ul>
+				<li><a href="package-bootstrap.behaviors.html">behaviors</a>
+						</li>
 				<li><a href="package-bootstrap.components.html">components</a>
+						</li>
+				<li><a href="package-bootstrap.gii.html">gii</a>
 						</li>
 				<li><a href="package-bootstrap.helpers.html">helpers</a>
 						</li>
 				<li class="active"><a href="package-bootstrap.widgets.html">widgets</a>
 						</li>
 							</ul></li>
-				<li><a href="package-None.html">None</a>
-						</li>
 			</ul>
 		</div>
 
@@ -76,6 +78,7 @@
 				<li><a href="class-TbButtonColumn.html">TbButtonColumn</a></li>
 				<li class="active"><a href="class-TbCollapse.html">TbCollapse</a></li>
 				<li><a href="class-TbDataColumn.html">TbDataColumn</a></li>
+				<li><a href="class-TbDetailView.html">TbDetailView</a></li>
 				<li><a href="class-TbGridView.html">TbGridView</a></li>
 				<li><a href="class-TbHeroUnit.html">TbHeroUnit</a></li>
 				<li><a href="class-TbListView.html">TbListView</a></li>
@@ -83,10 +86,10 @@
 				<li><a href="class-TbNav.html">TbNav</a></li>
 				<li><a href="class-TbNavbar.html">TbNavbar</a></li>
 				<li><a href="class-TbPager.html">TbPager</a></li>
+				<li><a href="class-TbScrollspy.html">TbScrollspy</a></li>
 				<li><a href="class-TbTabs.html">TbTabs</a></li>
 				<li><a href="class-TbThumbnails.html">TbThumbnails</a></li>
 				<li><a href="class-TbTypeAhead.html">TbTypeAhead</a></li>
-				<li><a href="class-TbWidget.html">TbWidget</a></li>
 			</ul>
 
 
@@ -119,13 +122,6 @@ CWidget
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by" />
-			<a href="class-TbWidget.html"><span>TbWidget</span></a>
-			
-			
-			
-		</dd>
-		<dd style="padding-left:60px">
-			<img src="resources/inherit.png" alt="Extended by" />
 <b><span>TbCollapse</span></b>			
 			
 			
@@ -155,7 +151,7 @@ href="mailto:christoffer.niska&#64;gmail.com">christoffer.niska&#64;<!---->gmail
 				<b>See:</b>
 				<a
 href="http://twitter.github.com/bootstrap/javascript.html#collapse">http://twitter.github.com/bootstrap/javascript.html#collapse</a><br />
-		<b>Located at</b> <a href="source-class-TbCollapse.html#13-79" title="Go to source code">widgets/TbCollapse.php</a><br />
+		<b>Located at</b> <a href="source-class-TbCollapse.html#13-83" title="Go to source code">widgets/TbCollapse.php</a><br />
 	</div>
 
 
@@ -173,7 +169,7 @@ href="http://twitter.github.com/bootstrap/javascript.html#collapse">http://twitt
 
 			<td class="name"><div>
 			<a class="anchor" href="#_init">#</a>
-			<code><a href="source-class-TbCollapse.html#48-68" title="Go to source code">init</a>( )</code>
+			<code><a href="source-class-TbCollapse.html#52-72" title="Go to source code">init</a>( )</code>
 
 			<div class="description short">
 				
@@ -206,7 +202,7 @@ href="http://twitter.github.com/bootstrap/javascript.html#collapse">http://twitt
 
 			<td class="name"><div>
 			<a class="anchor" href="#_run">#</a>
-			<code><a href="source-class-TbCollapse.html#70-78" title="Go to source code">run</a>( )</code>
+			<code><a href="source-class-TbCollapse.html#74-82" title="Go to source code">run</a>( )</code>
 
 			<div class="description short">
 				
@@ -230,11 +226,6 @@ href="http://twitter.github.com/bootstrap/javascript.html#collapse">http://twitt
 		</tr>
 		</table>
 
-		<h3>Methods inherited from <a href="class-TbWidget.html#methods">TbWidget</a></h3>
-		<p class="elementList">
-			<code><a href="class-TbWidget.html#_registerEvents">registerEvents()</a></code>, 
-			<code><a href="class-TbWidget.html#_registerPlugin">registerPlugin()</a></code>
-		</p>
 
 
 		<h3>Magic methods summary</h3>
@@ -288,13 +279,39 @@ href="http://twitter.github.com/bootstrap/javascript.html#collapse">http://twitt
 
 				<div class="description short">
 					
-<p>the content text or path to a partial view with the content.</p>
+<p>the content text.</p>
 
 				</div>
 
 				<div class="description detailed hidden">
 					
-<p>the content text or path to a partial view with the content.</p>
+<p>the content text.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="view" id="$view">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-TbCollapse.html#27-30" title="Go to source code"><var>$view</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$view" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>the path to a partial view.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>the path to a partial view.</p>
 
 
 				</div>
@@ -307,7 +324,7 @@ href="http://twitter.github.com/bootstrap/javascript.html#collapse">http://twitt
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TbCollapse.html#27-30" title="Go to source code"><var>$parent</var></a>
+					<a href="source-class-TbCollapse.html#31-34" title="Go to source code"><var>$parent</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$parent" class="anchor">#</a>
@@ -333,7 +350,7 @@ href="http://twitter.github.com/bootstrap/javascript.html#collapse">http://twitt
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TbCollapse.html#31-34" title="Go to source code"><var>$toggle</var></a>
+					<a href="source-class-TbCollapse.html#35-38" title="Go to source code"><var>$toggle</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$toggle" class="anchor">#</a>
@@ -359,7 +376,7 @@ href="http://twitter.github.com/bootstrap/javascript.html#collapse">http://twitt
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TbCollapse.html#35-38" title="Go to source code"><var>$events</var></a>
+					<a href="source-class-TbCollapse.html#39-42" title="Go to source code"><var>$events</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$events" class="anchor">#</a>
@@ -385,7 +402,7 @@ href="http://twitter.github.com/bootstrap/javascript.html#collapse">http://twitt
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TbCollapse.html#39-42" title="Go to source code"><var>$htmlOptions</var></a>
+					<a href="source-class-TbCollapse.html#43-46" title="Go to source code"><var>$htmlOptions</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$htmlOptions" class="anchor">#</a>
@@ -411,7 +428,7 @@ href="http://twitter.github.com/bootstrap/javascript.html#collapse">http://twitt
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-TbCollapse.html#43-46" title="Go to source code"><var>$viewData</var></a>
+					<a href="source-class-TbCollapse.html#47-50" title="Go to source code"><var>$viewData</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$viewData" class="anchor">#</a>
@@ -441,7 +458,7 @@ href="http://twitter.github.com/bootstrap/javascript.html#collapse">http://twitt
 	</div>
 
 	<div id="footer">
-		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		YiiStrap API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

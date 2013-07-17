@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0" />
 	<meta name="robots" content="noindex" />
 
-	<title>File widgets/TbListView.php</title>
+	<title>File widgets/TbListView.php | YiiStrap</title>
 
-	<script type="text/javascript" src="resources/combined.js?438370167"></script>
-	<script type="text/javascript" src="elementlist.js?1980635744"></script>
+	<script type="text/javascript" src="resources/combined.js?1965618976"></script>
+	<script type="text/javascript" src="elementlist.js?1592328285"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -18,7 +18,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">Overview</a>
+				<a href="index.html" class="brand">YiiStrap</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -55,15 +55,17 @@
 			<ul>
 				<li class="active"><a href="package-bootstrap.html">bootstrap<span></span></a>
 						<ul>
+				<li><a href="package-bootstrap.behaviors.html">behaviors</a>
+						</li>
 				<li><a href="package-bootstrap.components.html">components</a>
+						</li>
+				<li><a href="package-bootstrap.gii.html">gii</a>
 						</li>
 				<li><a href="package-bootstrap.helpers.html">helpers</a>
 						</li>
 				<li class="active"><a href="package-bootstrap.widgets.html">widgets</a>
 						</li>
 							</ul></li>
-				<li><a href="package-None.html">None</a>
-						</li>
 			</ul>
 		</div>
 
@@ -78,6 +80,7 @@
 				<li><a href="class-TbButtonColumn.html">TbButtonColumn</a></li>
 				<li><a href="class-TbCollapse.html">TbCollapse</a></li>
 				<li><a href="class-TbDataColumn.html">TbDataColumn</a></li>
+				<li><a href="class-TbDetailView.html">TbDetailView</a></li>
 				<li><a href="class-TbGridView.html">TbGridView</a></li>
 				<li><a href="class-TbHeroUnit.html">TbHeroUnit</a></li>
 				<li class="active"><a href="class-TbListView.html">TbListView</a></li>
@@ -85,10 +88,10 @@
 				<li><a href="class-TbNav.html">TbNav</a></li>
 				<li><a href="class-TbNavbar.html">TbNavbar</a></li>
 				<li><a href="class-TbPager.html">TbPager</a></li>
+				<li><a href="class-TbScrollspy.html">TbScrollspy</a></li>
 				<li><a href="class-TbTabs.html">TbTabs</a></li>
 				<li><a href="class-TbThumbnails.html">TbThumbnails</a></li>
 				<li><a href="class-TbTypeAhead.html">TbTypeAhead</a></li>
-				<li><a href="class-TbWidget.html">TbWidget</a></li>
 			</ul>
 
 
@@ -137,12 +140,21 @@
 </span></span><span id="32" class="l"><a class="l" href="#32">32 </a><span class="php-comment">     * @var string the template to be used to control the layout of various sections in the view.
 </span></span><span id="33" class="l"><a class="l" href="#33">33 </a><span class="php-comment">     */</span>
 </span><span id="34" class="l"><a class="l" href="#34">34 </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$template" href="#$template">$template</a></span> = <span class="php-quote">&quot;{items}\n&lt;div class=\&quot;row-fluid\&quot;&gt;&lt;div class=\&quot;span6\&quot;&gt;{pager}&lt;/div&gt;&lt;div class=\&quot;span6\&quot;&gt;{summary}&lt;/div&gt;&lt;/div&gt;&quot;</span>;
-</span><span id="35" class="l"><a class="l" href="#35">35 </a>}
-</span><span id="36" class="l"><a class="l" href="#36">36 </a></span></code></pre>
+</span><span id="35" class="l"><a class="l" href="#35">35 </a>
+</span><span id="36" class="l"><a class="l" href="#36">36 </a>    <span class="php-comment">/**
+</span></span><span id="37" class="l"><a class="l" href="#37">37 </a><span class="php-comment">     * Renders the empty message when there is no data.
+</span></span><span id="38" class="l"><a class="l" href="#38">38 </a><span class="php-comment">     */</span>
+</span><span id="39" class="l"><a class="l" href="#39">39 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_renderEmptyText" href="#_renderEmptyText">renderEmptyText</a>()
+</span><span id="40" class="l"><a class="l" href="#40">40 </a>    {
+</span><span id="41" class="l"><a class="l" href="#41">41 </a>        <span class="php-var">$emptyText</span> = <span class="php-var">$this</span>-&gt;emptyText === <span class="php-keyword1">null</span> ? Yii::t(<span class="php-quote">'zii'</span>, <span class="php-quote">'No results found.'</span>) : <span class="php-var">$this</span>-&gt;emptyText;
+</span><span id="42" class="l"><a class="l" href="#42">42 </a>        <span class="php-keyword1">echo</span> TbHtml::tag(<span class="php-quote">'div'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'empty'</span>, <span class="php-quote">'span'</span> =&gt; <span class="php-num">12</span>), <span class="php-var">$emptyText</span>);
+</span><span id="43" class="l"><a class="l" href="#43">43 </a>    }
+</span><span id="44" class="l"><a class="l" href="#44">44 </a>}
+</span><span id="45" class="l"><a class="l" href="#45">45 </a></span></code></pre>
 	</div>
 
 	<div id="footer">
-		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		YiiStrap API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

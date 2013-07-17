@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0" />
 	<meta name="robots" content="noindex" />
 
-	<title>File widgets/TbNavbar.php</title>
+	<title>File widgets/TbNavbar.php | YiiStrap</title>
 
-	<script type="text/javascript" src="resources/combined.js?438370167"></script>
-	<script type="text/javascript" src="elementlist.js?1980635744"></script>
+	<script type="text/javascript" src="resources/combined.js?1965618976"></script>
+	<script type="text/javascript" src="elementlist.js?1592328285"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -18,7 +18,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">Overview</a>
+				<a href="index.html" class="brand">YiiStrap</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -55,15 +55,17 @@
 			<ul>
 				<li class="active"><a href="package-bootstrap.html">bootstrap<span></span></a>
 						<ul>
+				<li><a href="package-bootstrap.behaviors.html">behaviors</a>
+						</li>
 				<li><a href="package-bootstrap.components.html">components</a>
+						</li>
+				<li><a href="package-bootstrap.gii.html">gii</a>
 						</li>
 				<li><a href="package-bootstrap.helpers.html">helpers</a>
 						</li>
 				<li class="active"><a href="package-bootstrap.widgets.html">widgets</a>
 						</li>
 							</ul></li>
-				<li><a href="package-None.html">None</a>
-						</li>
 			</ul>
 		</div>
 
@@ -78,6 +80,7 @@
 				<li><a href="class-TbButtonColumn.html">TbButtonColumn</a></li>
 				<li><a href="class-TbCollapse.html">TbCollapse</a></li>
 				<li><a href="class-TbDataColumn.html">TbDataColumn</a></li>
+				<li><a href="class-TbDetailView.html">TbDetailView</a></li>
 				<li><a href="class-TbGridView.html">TbGridView</a></li>
 				<li><a href="class-TbHeroUnit.html">TbHeroUnit</a></li>
 				<li><a href="class-TbListView.html">TbListView</a></li>
@@ -85,10 +88,10 @@
 				<li><a href="class-TbNav.html">TbNav</a></li>
 				<li class="active"><a href="class-TbNavbar.html">TbNavbar</a></li>
 				<li><a href="class-TbPager.html">TbPager</a></li>
+				<li><a href="class-TbScrollspy.html">TbScrollspy</a></li>
 				<li><a href="class-TbTabs.html">TbTabs</a></li>
 				<li><a href="class-TbThumbnails.html">TbThumbnails</a></li>
 				<li><a href="class-TbTypeAhead.html">TbTypeAhead</a></li>
-				<li><a href="class-TbWidget.html">TbWidget</a></li>
 			</ul>
 
 
@@ -121,9 +124,9 @@
 </span><span id="16" class="l"><a class="l" href="#16"> 16 </a><span class="php-keyword1">class</span> <a id="TbNavbar" href="#TbNavbar">TbNavbar</a> <span class="php-keyword1">extends</span> CWidget
 </span><span id="17" class="l"><a class="l" href="#17"> 17 </a>{
 </span><span id="18" class="l"><a class="l" href="#18"> 18 </a>    <span class="php-comment">/**
-</span></span><span id="19" class="l"><a class="l" href="#19"> 19 </a><span class="php-comment">     * @var string the navbar style.
+</span></span><span id="19" class="l"><a class="l" href="#19"> 19 </a><span class="php-comment">     * @var string the navbar color.
 </span></span><span id="20" class="l"><a class="l" href="#20"> 20 </a><span class="php-comment">     */</span>
-</span><span id="21" class="l"><a class="l" href="#21"> 21 </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$style" href="#$style">$style</a></span>;
+</span><span id="21" class="l"><a class="l" href="#21"> 21 </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$color" href="#$color">$color</a></span>;
 </span><span id="22" class="l"><a class="l" href="#22"> 22 </a>    <span class="php-comment">/**
 </span></span><span id="23" class="l"><a class="l" href="#23"> 23 </a><span class="php-comment">     * @var string the brand label text.
 </span></span><span id="24" class="l"><a class="l" href="#24"> 24 </a><span class="php-comment">     */</span>
@@ -139,7 +142,7 @@
 </span><span id="34" class="l"><a class="l" href="#34"> 34 </a>    <span class="php-comment">/**
 </span></span><span id="35" class="l"><a class="l" href="#35"> 35 </a><span class="php-comment">     * @var string nanvbar display type.
 </span></span><span id="36" class="l"><a class="l" href="#36"> 36 </a><span class="php-comment">     */</span>
-</span><span id="37" class="l"><a class="l" href="#37"> 37 </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$display" href="#$display">$display</a></span> = TbHtml::NAVBAR_FIXED_TOP;
+</span><span id="37" class="l"><a class="l" href="#37"> 37 </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$display" href="#$display">$display</a></span> = TbHtml::NAVBAR_DISPLAY_FIXEDTOP;
 </span><span id="38" class="l"><a class="l" href="#38"> 38 </a>    <span class="php-comment">/**
 </span></span><span id="39" class="l"><a class="l" href="#39"> 39 </a><span class="php-comment">     * @var boolean whether the navbar spans over the whole page.
 </span></span><span id="40" class="l"><a class="l" href="#40"> 40 </a><span class="php-comment">     */</span>
@@ -174,68 +177,67 @@
 </span><span id="69" class="l"><a class="l" href="#69"> 69 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;brandUrl))
 </span><span id="70" class="l"><a class="l" href="#70"> 70 </a>                <span class="php-var">$this</span>-&gt;brandUrl = Yii::app()-&gt;homeUrl;
 </span><span id="71" class="l"><a class="l" href="#71"> 71 </a>        }
-</span><span id="72" class="l"><a class="l" href="#72"> 72 </a>        <span class="php-comment">// todo: somehow the style attribute in htmlOptions is ignored completely, fix.</span>
-</span><span id="73" class="l"><a class="l" href="#73"> 73 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;style))
-</span><span id="74" class="l"><a class="l" href="#74"> 74 </a>            <span class="php-var">$this</span>-&gt;htmlOptions = TbHtml::defaultOption(<span class="php-quote">'style'</span>, <span class="php-var">$this</span>-&gt;style, <span class="php-var">$this</span>-&gt;htmlOptions);
-</span><span id="75" class="l"><a class="l" href="#75"> 75 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;display !== <span class="php-keyword1">false</span>)
-</span><span id="76" class="l"><a class="l" href="#76"> 76 </a>            <span class="php-var">$this</span>-&gt;htmlOptions = TbHtml::defaultOption(<span class="php-quote">'display'</span>, <span class="php-var">$this</span>-&gt;display, <span class="php-var">$this</span>-&gt;htmlOptions);
-</span><span id="77" class="l"><a class="l" href="#77"> 77 </a>    }
-</span><span id="78" class="l"><a class="l" href="#78"> 78 </a>
-</span><span id="79" class="l"><a class="l" href="#79"> 79 </a>    <span class="php-comment">/**
-</span></span><span id="80" class="l"><a class="l" href="#80"> 80 </a><span class="php-comment">     * Runs the widget.
-</span></span><span id="81" class="l"><a class="l" href="#81"> 81 </a><span class="php-comment">     */</span>
-</span><span id="82" class="l"><a class="l" href="#82"> 82 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_run" href="#_run">run</a>()
-</span><span id="83" class="l"><a class="l" href="#83"> 83 </a>    {
-</span><span id="84" class="l"><a class="l" href="#84"> 84 </a>        <span class="php-var">$brand</span> = <span class="php-var">$this</span>-&gt;brandLabel !== <span class="php-keyword1">false</span>
-</span><span id="85" class="l"><a class="l" href="#85"> 85 </a>            ? TbHtml::navbarBrandLink(<span class="php-var">$this</span>-&gt;brandLabel, <span class="php-var">$this</span>-&gt;brandUrl, <span class="php-var">$this</span>-&gt;brandOptions)
-</span><span id="86" class="l"><a class="l" href="#86"> 86 </a>            : <span class="php-quote">''</span>;
-</span><span id="87" class="l"><a class="l" href="#87"> 87 </a>        <span class="php-keyword2">ob_start</span>();
-</span><span id="88" class="l"><a class="l" href="#88"> 88 </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;items <span class="php-keyword1">as</span> <span class="php-var">$item</span>)
-</span><span id="89" class="l"><a class="l" href="#89"> 89 </a>        {
-</span><span id="90" class="l"><a class="l" href="#90"> 90 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$item</span>))
-</span><span id="91" class="l"><a class="l" href="#91"> 91 </a>                <span class="php-keyword1">echo</span> <span class="php-var">$item</span>;
-</span><span id="92" class="l"><a class="l" href="#92"> 92 </a>            <span class="php-keyword1">else</span>
-</span><span id="93" class="l"><a class="l" href="#93"> 93 </a>            {
-</span><span id="94" class="l"><a class="l" href="#94"> 94 </a>                <span class="php-var">$widgetClassName</span> = TbHtml::popOption(<span class="php-quote">'class'</span>, <span class="php-var">$item</span>);
-</span><span id="95" class="l"><a class="l" href="#95"> 95 </a>                <span class="php-keyword1">if</span> (<span class="php-var">$widgetClassName</span> !== <span class="php-keyword1">null</span>)
-</span><span id="96" class="l"><a class="l" href="#96"> 96 </a>                    <span class="php-var">$this</span>-&gt;controller-&gt;widget(<span class="php-var">$widgetClassName</span>, <span class="php-var">$item</span>);
-</span><span id="97" class="l"><a class="l" href="#97"> 97 </a>            }
-</span><span id="98" class="l"><a class="l" href="#98"> 98 </a>        }
-</span><span id="99" class="l"><a class="l" href="#99"> 99 </a>        <span class="php-var">$items</span> = <span class="php-keyword2">ob_get_clean</span>();
-</span><span id="100" class="l"><a class="l" href="#100">100 </a>        <span class="php-keyword2">ob_start</span>();
-</span><span id="101" class="l"><a class="l" href="#101">101 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;collapse !== <span class="php-keyword1">false</span>)
-</span><span id="102" class="l"><a class="l" href="#102">102 </a>        {
-</span><span id="103" class="l"><a class="l" href="#103">103 </a>            <span class="php-var">$this</span>-&gt;collapseOptions = TbHtml::addClassName(<span class="php-quote">'nav-collapse'</span>, <span class="php-var">$this</span>-&gt;collapseOptions);
-</span><span id="104" class="l"><a class="l" href="#104">104 </a>            <span class="php-comment">// todo: fix collapse, currently it cannot be clicked when within a navbar</span>
-</span><span id="105" class="l"><a class="l" href="#105">105 </a>            <span class="php-keyword2">ob_start</span>();
-</span><span id="106" class="l"><a class="l" href="#106">106 </a>            <span class="php-comment">/* @var TbCollapse $collapseWidget */</span>
-</span><span id="107" class="l"><a class="l" href="#107">107 </a>            <span class="php-var">$collapseWidget</span> = <span class="php-var">$this</span>-&gt;controller-&gt;widget(<span class="php-quote">'bootstrap.widgets.TbCollapse'</span>, <span class="php-keyword1">array</span>(
-</span><span id="108" class="l"><a class="l" href="#108">108 </a>                    <span class="php-quote">'toggle'</span> =&gt; <span class="php-keyword1">false</span>, <span class="php-comment">// navbars are collapsed by default</span>
-</span><span id="109" class="l"><a class="l" href="#109">109 </a>                    <span class="php-quote">'content'</span> =&gt; <span class="php-var">$items</span>,
-</span><span id="110" class="l"><a class="l" href="#110">110 </a>                    <span class="php-quote">'htmlOptions'</span> =&gt; <span class="php-var">$this</span>-&gt;collapseOptions,
-</span><span id="111" class="l"><a class="l" href="#111">111 </a>                ));
-</span><span id="112" class="l"><a class="l" href="#112">112 </a>            <span class="php-var">$collapseContent</span> = <span class="php-keyword2">ob_get_clean</span>();
-</span><span id="113" class="l"><a class="l" href="#113">113 </a>            <span class="php-keyword1">echo</span> TbHtml::collapseIcon(<span class="php-quote">'#'</span> . <span class="php-var">$collapseWidget</span>-&gt;getId());
-</span><span id="114" class="l"><a class="l" href="#114">114 </a>            <span class="php-keyword1">echo</span> <span class="php-var">$brand</span> . <span class="php-var">$collapseContent</span>;
-</span><span id="115" class="l"><a class="l" href="#115">115 </a>
-</span><span id="116" class="l"><a class="l" href="#116">116 </a>        }
-</span><span id="117" class="l"><a class="l" href="#117">117 </a>        <span class="php-keyword1">else</span>
-</span><span id="118" class="l"><a class="l" href="#118">118 </a>            <span class="php-keyword1">echo</span> <span class="php-var">$brand</span> . <span class="php-var">$items</span>;
-</span><span id="119" class="l"><a class="l" href="#119">119 </a>        <span class="php-var">$containerContent</span> = <span class="php-keyword2">ob_get_clean</span>();
-</span><span id="120" class="l"><a class="l" href="#120">120 </a>        <span class="php-var">$containerOptions</span> = TbHtml::popOption(<span class="php-quote">'containerOptions'</span>, <span class="php-var">$this</span>-&gt;htmlOptions, <span class="php-keyword1">array</span>());
-</span><span id="121" class="l"><a class="l" href="#121">121 </a>        <span class="php-var">$containerOptions</span> = TbHtml::addClassName(<span class="php-var">$this</span>-&gt;fluid ? <span class="php-quote">'container-fluid'</span> : <span class="php-quote">'container'</span>, <span class="php-var">$containerOptions</span>);
-</span><span id="122" class="l"><a class="l" href="#122">122 </a>        <span class="php-keyword2">ob_start</span>();
-</span><span id="123" class="l"><a class="l" href="#123">123 </a>        <span class="php-keyword1">echo</span> CHtml::openTag(<span class="php-quote">'div'</span>, <span class="php-var">$containerOptions</span>);
-</span><span id="124" class="l"><a class="l" href="#124">124 </a>        <span class="php-keyword1">echo</span> <span class="php-var">$containerContent</span>;
-</span><span id="125" class="l"><a class="l" href="#125">125 </a>        <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;/div&gt;'</span>;
-</span><span id="126" class="l"><a class="l" href="#126">126 </a>        <span class="php-var">$content</span> = <span class="php-keyword2">ob_get_clean</span>();
-</span><span id="127" class="l"><a class="l" href="#127">127 </a>        <span class="php-keyword1">echo</span> TbHtml::navbar(<span class="php-var">$content</span>, <span class="php-var">$this</span>-&gt;htmlOptions);
-</span><span id="128" class="l"><a class="l" href="#128">128 </a>    }
-</span><span id="129" class="l"><a class="l" href="#129">129 </a></span>}</code></pre>
+</span><span id="72" class="l"><a class="l" href="#72"> 72 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;color))
+</span><span id="73" class="l"><a class="l" href="#73"> 73 </a>            <span class="php-var">$this</span>-&gt;htmlOptions = TbHtml::defaultOption(<span class="php-quote">'color'</span>, <span class="php-var">$this</span>-&gt;color, <span class="php-var">$this</span>-&gt;htmlOptions);
+</span><span id="74" class="l"><a class="l" href="#74"> 74 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;display) &amp;&amp; <span class="php-var">$this</span>-&gt;display !== TbHtml::NAVBAR_DISPLAY_NONE)
+</span><span id="75" class="l"><a class="l" href="#75"> 75 </a>            <span class="php-var">$this</span>-&gt;htmlOptions = TbHtml::defaultOption(<span class="php-quote">'display'</span>, <span class="php-var">$this</span>-&gt;display, <span class="php-var">$this</span>-&gt;htmlOptions);
+</span><span id="76" class="l"><a class="l" href="#76"> 76 </a>    }
+</span><span id="77" class="l"><a class="l" href="#77"> 77 </a>
+</span><span id="78" class="l"><a class="l" href="#78"> 78 </a>    <span class="php-comment">/**
+</span></span><span id="79" class="l"><a class="l" href="#79"> 79 </a><span class="php-comment">     * Runs the widget.
+</span></span><span id="80" class="l"><a class="l" href="#80"> 80 </a><span class="php-comment">     */</span>
+</span><span id="81" class="l"><a class="l" href="#81"> 81 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_run" href="#_run">run</a>()
+</span><span id="82" class="l"><a class="l" href="#82"> 82 </a>    {
+</span><span id="83" class="l"><a class="l" href="#83"> 83 </a>        <span class="php-var">$brand</span> = <span class="php-var">$this</span>-&gt;brandLabel !== <span class="php-keyword1">false</span>
+</span><span id="84" class="l"><a class="l" href="#84"> 84 </a>            ? TbHtml::navbarBrandLink(<span class="php-var">$this</span>-&gt;brandLabel, <span class="php-var">$this</span>-&gt;brandUrl, <span class="php-var">$this</span>-&gt;brandOptions)
+</span><span id="85" class="l"><a class="l" href="#85"> 85 </a>            : <span class="php-quote">''</span>;
+</span><span id="86" class="l"><a class="l" href="#86"> 86 </a>        <span class="php-keyword2">ob_start</span>();
+</span><span id="87" class="l"><a class="l" href="#87"> 87 </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;items <span class="php-keyword1">as</span> <span class="php-var">$item</span>)
+</span><span id="88" class="l"><a class="l" href="#88"> 88 </a>        {
+</span><span id="89" class="l"><a class="l" href="#89"> 89 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$item</span>))
+</span><span id="90" class="l"><a class="l" href="#90"> 90 </a>                <span class="php-keyword1">echo</span> <span class="php-var">$item</span>;
+</span><span id="91" class="l"><a class="l" href="#91"> 91 </a>            <span class="php-keyword1">else</span>
+</span><span id="92" class="l"><a class="l" href="#92"> 92 </a>            {
+</span><span id="93" class="l"><a class="l" href="#93"> 93 </a>                <span class="php-var">$widgetClassName</span> = TbHtml::popOption(<span class="php-quote">'class'</span>, <span class="php-var">$item</span>);
+</span><span id="94" class="l"><a class="l" href="#94"> 94 </a>                <span class="php-keyword1">if</span> (<span class="php-var">$widgetClassName</span> !== <span class="php-keyword1">null</span>)
+</span><span id="95" class="l"><a class="l" href="#95"> 95 </a>                    <span class="php-var">$this</span>-&gt;controller-&gt;widget(<span class="php-var">$widgetClassName</span>, <span class="php-var">$item</span>);
+</span><span id="96" class="l"><a class="l" href="#96"> 96 </a>            }
+</span><span id="97" class="l"><a class="l" href="#97"> 97 </a>        }
+</span><span id="98" class="l"><a class="l" href="#98"> 98 </a>        <span class="php-var">$items</span> = <span class="php-keyword2">ob_get_clean</span>();
+</span><span id="99" class="l"><a class="l" href="#99"> 99 </a>        <span class="php-keyword2">ob_start</span>();
+</span><span id="100" class="l"><a class="l" href="#100">100 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;collapse !== <span class="php-keyword1">false</span>)
+</span><span id="101" class="l"><a class="l" href="#101">101 </a>        {
+</span><span id="102" class="l"><a class="l" href="#102">102 </a>            <span class="php-var">$this</span>-&gt;collapseOptions = TbHtml::addClassName(<span class="php-quote">'nav-collapse'</span>, <span class="php-var">$this</span>-&gt;collapseOptions);
+</span><span id="103" class="l"><a class="l" href="#103">103 </a>            <span class="php-comment">// todo: fix collapse, currently it cannot be clicked when within a navbar</span>
+</span><span id="104" class="l"><a class="l" href="#104">104 </a>            <span class="php-keyword2">ob_start</span>();
+</span><span id="105" class="l"><a class="l" href="#105">105 </a>            <span class="php-comment">/* @var TbCollapse $collapseWidget */</span>
+</span><span id="106" class="l"><a class="l" href="#106">106 </a>            <span class="php-var">$collapseWidget</span> = <span class="php-var">$this</span>-&gt;controller-&gt;widget(<span class="php-quote">'bootstrap.widgets.TbCollapse'</span>, <span class="php-keyword1">array</span>(
+</span><span id="107" class="l"><a class="l" href="#107">107 </a>                    <span class="php-quote">'toggle'</span> =&gt; <span class="php-keyword1">false</span>, <span class="php-comment">// navbars are collapsed by default</span>
+</span><span id="108" class="l"><a class="l" href="#108">108 </a>                    <span class="php-quote">'content'</span> =&gt; <span class="php-var">$items</span>,
+</span><span id="109" class="l"><a class="l" href="#109">109 </a>                    <span class="php-quote">'htmlOptions'</span> =&gt; <span class="php-var">$this</span>-&gt;collapseOptions,
+</span><span id="110" class="l"><a class="l" href="#110">110 </a>                ));
+</span><span id="111" class="l"><a class="l" href="#111">111 </a>            <span class="php-var">$collapseContent</span> = <span class="php-keyword2">ob_get_clean</span>();
+</span><span id="112" class="l"><a class="l" href="#112">112 </a>            <span class="php-keyword1">echo</span> TbHtml::collapseIcon(<span class="php-quote">'#'</span> . <span class="php-var">$collapseWidget</span>-&gt;getId());
+</span><span id="113" class="l"><a class="l" href="#113">113 </a>            <span class="php-keyword1">echo</span> <span class="php-var">$brand</span> . <span class="php-var">$collapseContent</span>;
+</span><span id="114" class="l"><a class="l" href="#114">114 </a>
+</span><span id="115" class="l"><a class="l" href="#115">115 </a>        }
+</span><span id="116" class="l"><a class="l" href="#116">116 </a>        <span class="php-keyword1">else</span>
+</span><span id="117" class="l"><a class="l" href="#117">117 </a>            <span class="php-keyword1">echo</span> <span class="php-var">$brand</span> . <span class="php-var">$items</span>;
+</span><span id="118" class="l"><a class="l" href="#118">118 </a>        <span class="php-var">$containerContent</span> = <span class="php-keyword2">ob_get_clean</span>();
+</span><span id="119" class="l"><a class="l" href="#119">119 </a>        <span class="php-var">$containerOptions</span> = TbHtml::popOption(<span class="php-quote">'containerOptions'</span>, <span class="php-var">$this</span>-&gt;htmlOptions, <span class="php-keyword1">array</span>());
+</span><span id="120" class="l"><a class="l" href="#120">120 </a>        <span class="php-var">$containerOptions</span> = TbHtml::addClassName(<span class="php-var">$this</span>-&gt;fluid ? <span class="php-quote">'container-fluid'</span> : <span class="php-quote">'container'</span>, <span class="php-var">$containerOptions</span>);
+</span><span id="121" class="l"><a class="l" href="#121">121 </a>        <span class="php-keyword2">ob_start</span>();
+</span><span id="122" class="l"><a class="l" href="#122">122 </a>        <span class="php-keyword1">echo</span> TbHtml::openTag(<span class="php-quote">'div'</span>, <span class="php-var">$containerOptions</span>);
+</span><span id="123" class="l"><a class="l" href="#123">123 </a>        <span class="php-keyword1">echo</span> <span class="php-var">$containerContent</span>;
+</span><span id="124" class="l"><a class="l" href="#124">124 </a>        <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;/div&gt;'</span>;
+</span><span id="125" class="l"><a class="l" href="#125">125 </a>        <span class="php-var">$content</span> = <span class="php-keyword2">ob_get_clean</span>();
+</span><span id="126" class="l"><a class="l" href="#126">126 </a>        <span class="php-keyword1">echo</span> TbHtml::navbar(<span class="php-var">$content</span>, <span class="php-var">$this</span>-&gt;htmlOptions);
+</span><span id="127" class="l"><a class="l" href="#127">127 </a>    }
+</span><span id="128" class="l"><a class="l" href="#128">128 </a></span>}</code></pre>
 	</div>
 
 	<div id="footer">
-		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		YiiStrap API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>
