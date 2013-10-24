@@ -15,7 +15,7 @@ $this->pageTitle = param('pageTitle');
             <li><a href="http://github.com/Crisu83/yiistrap"
                    onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'GitHub project']);">GitHub
                     project</a></li>
-            <li>Version 1.0.0 RC1</li>
+            <li>Version 1.2.0</li>
         </ul>
     </div>
 </div>
@@ -64,26 +64,32 @@ $this->pageTitle = param('pageTitle');
     <div class="marketing">
 
         <h1>Introducing Yiistrap</h1>
-
-        <p class="marketing-byline">Yiistrap is the new generation of the Yii-Bootstrap extension.</p>
+        <p class="marketing-byline">The ultimate Twitter Bootstrap extension for Yii.</p>
 
         <div class="row-fluid">
             <div class="span4">
-                <h2>Faster</h2>
+                <h2>More robust.</h2>
                 <p style="text-align:justify">
-                    <a href="http://www.cniska.net/yii-bootstrap/" target="_blank">Yii-Bootstrap</a> was an awesome extension library, but it was too widget hierarchical, thus slow compared to this new approach. We though that we could replace all that with a robust html helper, and to tell you truth, we are very happy with the results.
+                    Yiistrap is a complete rewrite of the popular <a href="http://www.cniska.net/yii-bootstrap/" target="_blank">yii-bootstrap</a> extension.
+                    Yii-Bootstrap was more or less a collection of widget which made it almost possible to extend.
+                    We have learned from our mistakes built Yiistrap on robust helper classes to make it easy to work with.
                 </p>
             </div>
             <div class="span4">
-                <h2>Easier</h2>
+                <h2>Easy to use.</h2>
                 <p style="text-align:justify">
-                    The decision of removing the hierarchy of widgets made the codebase of the extension cleaner, easier to understand, to improve and to extend from. We expect that this new version is for you the ultimate tool to include <a href="twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a> in your Yii projects.
+                    You can <?php echo l('get started', array('/site/started')); ?> with Yiistrap in no time,
+                    even without any prior knowledge in <a href="http://getbootstrap.com/2.3.2/" target="_blank">Twitter Bootstrap</a> itself.
+                    Yiistrap provides helper methods for all Bootstrap components as well as widgets for the more complex components.
+                    You can also use the helpers to build your own widgets.
                 </p>
             </div>
             <div class="span4">
-                <h2>Better</h2>
+                <h2>More widgets.</h2>
                 <p style="text-align:justify">
-                    In the past other libraries extended from the old <a href="http://www.cniska.net/yii-bootstrap/" target="_blank">Yii-Bootstrap</a> and confused the community as there was two versions of nearly the same extension. Yiistrap has combined forces with <a href="http://2amigos.us" target="_blank">2amigOS!</a> to have its own enhanced library: <a href="http://yiiwheels.2amigos.us" target="_blank">YiiWheels</a>.
+                    Yiistrap has its own extension library <a href="http://github.com/Crisu83/yiistrap-widgets" target="_blank">yiistrap-widgets</a>,
+                    which already includes some useful widgets for <a href="http://ivaynberg.github.io/select2/select2-latest.html" target="_blank">Select2</a>, <a href="http://www.malot.fr/bootstrap-datetimepicker/" target="_blank">DateTime Picker</a>, <a href="http://jhollingworth.github.io/bootstrap-wysihtml5/" target="_blank">Wysihtml5</a> and <a href="http://blueimp.github.io/jQuery-File-Upload/" target="_blank">jQuery File Upload</a>.
+                    <a href="http://2amigos.us" target="_blank">2amigOS!</a> also maintain their own extension library called <a href="http://yiiwheels.2amigos.us" target="_blank">YiiWheels</a> that includes many more widgets.
                 </p>
             </div>
         </div>

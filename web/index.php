@@ -1,25 +1,20 @@
 <?php
-date_default_timezone_set('UTC');
 
-$debugger = __DIR__ . '/../vendor/crisu83/yii-debug/helpers/Debugger.php';
+ini_set('display_errors', 1);
 
-require_once($debugger);
-
-Debugger::init(__DIR__ . '/../app/runtime/debug');
-
-$yii = __DIR__ . '/../vendor/yiisoft/yii/framework/yii.php';
-$global = __DIR__ . '/../app/helpers/global.php';
-$builder = __DIR__ . '/../vendor/crisu83/yii-configbuilder/helpers/ConfigBuilder.php';
+$root       = dirname(__DIR__);
+$yii        = $root . '/vendor/yiisoft/yii/framework/yiilite.php';
+$global     = $root . '/app/helpers/global.php';
+$builder    = $root . '/vendor/crisu83/yii-consoletools/helpers/ConfigHelper.php';
 
 require_once($yii);
 require_once($global);
 require_once($builder);
 
-$config = ConfigBuilder::buildForEnv(array(
-	__DIR__ . '/../app/config/main.php',
-	__DIR__ . '/../app/config/web.php',
-	__DIR__ . '/../app/config/environments/{environment}.php',
-	__DIR__ . '/../app/config/local.php',
-), __DIR__ . '/../app/runtime/environment');
+$config = ConfigHelper::merge(array(
+    $root . '/app/config/main.php',
+    $root . '/app/config/web.php',
+    $root . '/app/config/local.php',
+));
 
 Yii::createWebApplication($config)->run();

@@ -2,7 +2,7 @@
 // application configuration
 return array(
 	// application base path
-	'basePath' => realpath(__DIR__ . DIRECTORY_SEPARATOR . '..'),
+	'basePath' => dirname(__DIR__),
 	// application name
 	'name' => 'Yiistrap',
 	// application language
@@ -11,15 +11,17 @@ return array(
 	'preload' => array('log'),
 	// path aliases
 	'aliases' => array(
-		'app' => 'application',
-		'vendor' => realpath(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '../vendor'),
+        'root' => dirname(dirname(__DIR__)),
+		'app' => 'root.app',
+		'vendor' => 'root.vendor',
 		'bootstrap' => 'vendor.crisu83.yiistrap',
 	),
 	// paths to import
 	'import' => array(
-		'application.models.*',
-		'application.components.*',
-		'bootstrap.helpers.*',
+		'app.models.*',
+		'app.components.*',
+        'bootstrap.form.*',
+        'bootstrap.helpers.*',
 	),
 	// application components
 	'components' => array(

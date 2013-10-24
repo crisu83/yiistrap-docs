@@ -16,17 +16,10 @@
 			"homepage": "http://www.ramirezcobos.com/"
 		}
 	],
-	"repositories": [
-		{
-			"type": "composer",
-			"url": "http://packages.phundament.com"
-		}
-	],
 	"require": {
-		"crisu83/yii-configbuilder": "dev-master",
-		"crisu83/yii-debug": "dev-master",
-		"crisu83/yiistrap": "dev-master",
-		"yiisoft/yii": "1.1.13"
+        "crisu83/yii-consoletools": "1.0.*",
+		"crisu83/yiistrap": "dev-develop",
+		"yiisoft/yii": ">=1.1.13"
 	},
-	"minimum-stability": "dev"
+    "minimum-stability": "dev"
 }

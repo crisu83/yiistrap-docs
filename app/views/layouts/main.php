@@ -1,6 +1,6 @@
 <?php /* @var $this Controller */ ?>
-<?php Yii::app()->bootstrap->registerYiistrapCss(); ?>
-<?php Yii::app()->bootstrap->registerAllScripts(); ?>
+<?php app()->bootstrap->registerYiistrapCss(); ?>
+<?php app()->bootstrap->registerAllScripts(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +11,8 @@
     <?php css('css/responsive.css'); ?>
     <?php css('css/styles.css'); ?>
     <?php css('css/prettify.css'); ?>
-    <?php js('js/prettify.js'); ?>
-    <?php js('js/holder.js'); ?>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/holder/2.0/holder.js"></script>
 	<?php js('js/app.js', CClientScript::POS_END); ?>
     <title><?php echo e($this->pageTitle); ?></title>
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -33,7 +33,7 @@
 <body class="layout-main" data-spy="scroll" data-target=".bs-docs-sidebar">
 <!-- Navbar -->
 <?php $this->widget('bootstrap.widgets.TbNavbar', array(
-	'brandLabel' => img('images/logo-navbar.png') . ' ' . e(Yii::app()->name) . ' <small>RC1</small>',
+	'brandLabel' => img('images/logo-navbar.png') . ' ' . e(Yii::app()->name) . ' <small>1.2.0</small>',
 	'brandUrl' => baseUrl('site/index'),
 	'collapse' => true,
 	'items' => array(

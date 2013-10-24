@@ -4,48 +4,18 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="generator" content="ApiGen 2.8.0" />
 
-	<title>Class TbWidget | YiiStrap</title>
+	<title>Class TbWidget | Yiistrap</title>
 
-	<script type="text/javascript" src="resources/combined.js?1965618976"></script>
-	<script type="text/javascript" src="elementlist.js?1592328285"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
+	<script type="text/javascript" src="resources/combined.js?394153670"></script>
+	<script type="text/javascript" src="elementlist.js?2795876055"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
 
 <body>
-	<div id="navigation" class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a href="index.html" class="brand">YiiStrap</a>
-				<div class="nav-collapse">
-					<ul class="nav">
-						<li>
-							<a href="package-bootstrap.behaviors.html" title="Summary of bootstrap\behaviors"><span>Package</span></a>
-						</li>
-						<li class="active">
-<span>Class</span>						</li>
-
-						<li class="divider-vertical"></li>
-
-						<li>
-							<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
-						</li>
-
-
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="left">
+<div id="left">
 	<div id="menu">
-		<form id="search" class="form-search">
-			<input type="hidden" name="cx" value="" />
-			<input type="hidden" name="ie" value="UTF-8" />
-			<input type="text" name="q" class="search-query" placeholder="Search" />
-		</form>
+		<a href="index.html" title="Overview"><span>Overview</span></a>
 
 
 		<div id="groups">
@@ -57,6 +27,8 @@
 						</li>
 				<li><a href="package-bootstrap.components.html">components</a>
 						</li>
+				<li><a href="package-bootstrap.form.html">form</a>
+						</li>
 				<li><a href="package-bootstrap.gii.html">gii</a>
 						</li>
 				<li><a href="package-bootstrap.helpers.html">helpers</a>
@@ -66,6 +38,8 @@
 							</ul></li>
 			</ul>
 		</div>
+
+		<hr />
 
 
 		<div id="elements">
@@ -85,7 +59,34 @@
 <div id="splitter"></div>
 
 <div id="right">
-	<div id="rightInner">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-bootstrap.behaviors.html" title="Summary of bootstrap\behaviors"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
 <div id="content" class="class">
 	<h1>Class TbWidget</h1>
 
@@ -96,7 +97,7 @@
 
 	</div>
 
-	<dl class="tree well">
+	<dl class="tree">
 		<dd style="padding-left:0px">
 CBehavior
 			
@@ -117,7 +118,7 @@ CBehavior
 
 
 
-	<div class="alert alert-info">
+	<div class="info">
 		
 		
 		
@@ -129,197 +130,451 @@ CBehavior
 				<a href="http://www.opensource.org/licenses/bsd-license.php">New BSD License</a><br />
 				<b>Author:</b>
 				Christoffer Niska &lt;<a
-href="mailto:christoffer.niska&#64;gmail.com">christoffer.niska&#64;<!---->gmail.com</a>&gt;<br />
-		<b>Located at</b> <a href="source-class-TbWidget.html#13-78" title="Go to source code">behaviors/TbWidget.php</a><br />
+href="mailto:christoffer.niska&#64;gmail.com">christoffer.niska&#64;<!-- -->gmail.com</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-TbWidget.html#13-172" title="Go to source code">behaviors/TbWidget.php</a><br />
 	</div>
 
 
 
-		<h2>Methods summary</h2>
-		<table class="summary table table-bordered table-striped" id="methods">
-		<tr data-order="copyId" id="_copyId">
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="resolveId" id="_resolveId">
 
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
 
-			<td class="name"><div>
-			<a class="anchor" href="#_copyId">#</a>
-			<code><a href="source-class-TbWidget.html#21-30" title="Go to source code">copyId</a>( )</code>
+		<td class="name"><div>
+		<a class="anchor" href="#_resolveId">#</a>
+		<code><a href="source-class-TbWidget.html#23-39" title="Go to source code">resolveId</a>( <span>string <var>$id</var> = <span class="php-keyword1">null</span></span> )</code>
 
-			<div class="description short">
-				
-<p>Copies the id to the widget HTML attributes or vise versa.</p>
+		<div class="description short">
+			
+<p>Returns the widget id and copies it to HTML attributes or vice versa.</p>
 
-			</div>
+		</div>
 
-			<div class="description detailed hidden">
-				
-<p>Copies the id to the widget HTML attributes or vise versa.</p>
-
-
+		<div class="description detailed hidden">
+			
+<p>Returns the widget id and copies it to HTML attributes or vice versa.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>string</code><br>$id the widget id.</dd>
+				</dl></div>
 
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="registerPlugin" id="_registerPlugin">
-
-			<td class="attributes"><code>
-				 public 
-				boolean
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_registerPlugin">#</a>
-			<code><a href="source-class-TbWidget.html#32-48" title="Go to source code">registerPlugin</a>( <span>string <var>$name</var></span>, <span>string <var>$selector</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span>, <span>integer <var>$position</var> = CClientScript::POS_END</span> )</code>
-
-			<div class="description short">
-				
-<p>Registers the given plugin with the API.</p>
-
-			</div>
-
-			<div class="description detailed hidden">
-				
-<p>Registers the given plugin with the API.</p>
-
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$name</var></dt>
-						<dd><code>string</code><br>$name the plugin name.</dd>
-						<dt><var>$selector</var></dt>
-						<dd><code>string</code><br>$selector the CSS selector.</dd>
-						<dt><var>$options</var></dt>
-						<dd><code>array</code><br>$options the JavaScript options for the plugin.</dd>
-						<dt><var>$position</var></dt>
-						<dd><code>integer</code><br>$position the position of the JavaScript code.</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						<code>boolean</code><br>whether the plugin was registered.<br />
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="registerEvents" id="_registerEvents">
-
-			<td class="attributes"><code>
-				 public 
-				boolean
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_registerEvents">#</a>
-			<code><a href="source-class-TbWidget.html#50-65" title="Go to source code">registerEvents</a>( <span>string <var>$selector</var></span>, <span>string[] <var>$events</var></span>, <span>integer <var>$position</var> = CClientScript::POS_END</span> )</code>
-
-			<div class="description short">
-				
-<p>Registers plugin events with the API.</p>
-
-			</div>
-
-			<div class="description detailed hidden">
-				
-<p>Registers plugin events with the API.</p>
-
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$selector</var></dt>
-						<dd><code>string</code><br>$selector the CSS selector.</dd>
-						<dt><var>$events</var></dt>
-						<dd><code>string[]</code><br>$events the JavaScript event configuration (name=&gt;handler).</dd>
-						<dt><var>$position</var></dt>
-						<dd><code>integer</code><br>$position the position of the JavaScript code.</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						<code>boolean</code><br>whether the events were registered.<br />
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		</table>
-
-
-
-		<h3>Magic methods summary</h3>
-
-
-
-
-
-
-
-
-		<h2>Properties summary</h2>
-
-
-
-		<h3>Magic properties</h3>
-		<table class="summary table table-bordered table-striped" id="magicProperties">
-		<tr data-order="owner" id="m$owner">
-			<td class="attributes"><code>
-				public  
-				mixed
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-TbWidget.html#15" title="Go to source code"><var>$owner</var></a>
-			</td>
-			<td class="value"><code></code></td>
-			<td class="description"><div>
-				<a href="#m$owner" class="anchor">#</a>
-
-				<div class="description short">
-					
-<p>CWidget</p>
-
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the widget id.<br />
 				</div>
 
-				<div class="description detailed hidden">
-					
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="publishAssets" id="_publishAssets">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_publishAssets">#</a>
+		<code><a href="source-class-TbWidget.html#55-71" title="Go to source code">publishAssets</a>( <span>string <var>$path</var></span>, <span>boolean <var>$forceCopy</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Publishes an asset path.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Publishes an asset path.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code><br>$path the assets path.</dd>
+					<dt><var>$forceCopy</var></dt>
+					<dd><code>boolean</code><br>$forceCopy whether we should copy the asset files even if they are already
+published before.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the url.<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>CException</code><br>if the asset manager cannot be located.<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerCssFile" id="_registerCssFile">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerCssFile">#</a>
+		<code><a href="source-class-TbWidget.html#73-84" title="Go to source code">registerCssFile</a>( <span>string <var>$url</var></span>, <span>string <var>$media</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Registers a CSS file.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registers a CSS file.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd><code>string</code><br>$url URL of the CSS file.</dd>
+					<dt><var>$media</var></dt>
+					<dd><code>string</code><br>$media media that the CSS file should be applied to.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerScriptFile" id="_registerScriptFile">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerScriptFile">#</a>
+		<code><a href="source-class-TbWidget.html#86-97" title="Go to source code">registerScriptFile</a>( <span>string <var>$url</var></span>, <span>integer <var>$position</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Registers a JavaScript file.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registers a JavaScript file.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd><code>string</code><br>$url URL of the javascript file.</dd>
+					<dt><var>$position</var></dt>
+					<dd><code>integer</code><br>$position the position of the JavaScript code.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="resolveScriptVersion" id="_resolveScriptVersion">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_resolveScriptVersion">#</a>
+		<code><a href="source-class-TbWidget.html#99-109" title="Go to source code">resolveScriptVersion</a>( <span>string <var>$filename</var></span>, <span>boolean <var>$minified</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the name of the correct script file to use.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the name of the correct script file to use.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filename</var></dt>
+					<dd><code>string</code><br>$filename the base file name.</dd>
+					<dt><var>$minified</var></dt>
+					<dd><code>boolean</code><br>$minified whether to include the minified version (defaults to false).</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the full filename.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerPlugin" id="_registerPlugin">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerPlugin">#</a>
+		<code><a href="source-class-TbWidget.html#111-126" title="Go to source code">registerPlugin</a>( <span>string <var>$name</var></span>, <span>string <var>$selector</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span>, <span>integer <var>$position</var> = CClientScript::POS_END</span> )</code>
+
+		<div class="description short">
+			
+<p>Registers the given plugin with the API.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registers the given plugin with the API.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name the plugin name.</dd>
+					<dt><var>$selector</var></dt>
+					<dd><code>string</code><br>$selector the CSS selector.</dd>
+					<dt><var>$options</var></dt>
+					<dd><code>array</code><br>$options the JavaScript options for the plugin.</dd>
+					<dt><var>$position</var></dt>
+					<dd><code>integer</code><br>$position the position of the JavaScript code.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether the plugin was registered.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerEvents" id="_registerEvents">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerEvents">#</a>
+		<code><a href="source-class-TbWidget.html#128-142" title="Go to source code">registerEvents</a>( <span>string <var>$selector</var></span>, <span>string[] <var>$events</var></span>, <span>integer <var>$position</var> = CClientScript::POS_END</span> )</code>
+
+		<div class="description short">
+			
+<p>Registers plugin events with the API.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registers plugin events with the API.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$selector</var></dt>
+					<dd><code>string</code><br>$selector the CSS selector.</dd>
+					<dt><var>$events</var></dt>
+					<dd><code>string[]</code><br>$events the JavaScript event configuration (name=&gt;handler).</dd>
+					<dt><var>$position</var></dt>
+					<dd><code>integer</code><br>$position the position of the JavaScript code.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether the events were registered.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getApi" id="_getApi">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TbApi.html">TbApi</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getApi">#</a>
+		<code><a href="source-class-TbWidget.html#144-155" title="Go to source code">getApi</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the API instance.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the API instance.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TbApi.html">TbApi</a></code></code><br>the api.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getClientScript" id="_getClientScript">
+
+		<td class="attributes"><code>
+			 protected 
+			CClientScript
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getClientScript">#</a>
+		<code><a href="source-class-TbWidget.html#157-171" title="Go to source code">getClientScript</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the client script component.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the client script component.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>CClientScript</code><br>the component.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="magicProperties">
+	<caption>Magic properties summary</caption>
+	<tr data-order="owner" id="m$owner">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-TbWidget.html#15" title="Go to source code"><var>$owner</var></a>
+		</td>
+		<td class="description"><div>
+			<a href="#m$owner" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>CWidget</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
 <p>CWidget</p>
 
 
-				</div>
-			</div></td>
-		</tr>
-		</table>
+			</div>
+		</div></td>
+	</tr>
+	</table>
 
 
 
 </div>
-	</div>
 
 	<div id="footer">
-		YiiStrap API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Yiistrap API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
+</div>
 </div>
 </body>
 </html>

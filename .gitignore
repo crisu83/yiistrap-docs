@@ -1,14 +1,13 @@
 # composer
 composer.phar
-composer.lock
-/vendor
+/vendor/*
 
 # project files
-/.buildpath
-/.idea
-/.project
-/.settings
-/nbproject
+/.buildpath/*
+/.idea/*
+/.project/*
+/.settings/*
+/nbproject/*
 
 # cache directories
 Thumbs.db
@@ -20,11 +19,11 @@ switch
 index
 
 # runtime and cache directories
-/app/runtime
-/web/assets
+/app/runtime/*
+/web/assets/*
 
 # vagrant
-.vagrant
+.vagrant/*
 
 # node modules
 node_modules/*

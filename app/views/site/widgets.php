@@ -642,7 +642,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
             <legend>Legend</legend>
 
             <?php echo $form->textFieldControlGroup($model, 'textField', array('help' => 'In addition to freeform text, any HTML5 text-based input appears like so.')); ?>
-            <?php echo $form->dropDownListControlGroup($model, 'dropDown', array('1', '2', '3', '4', '5'), array('empty' => 'Something ...')); ?>
+            <?php echo $form->dropDownListControlGroup($model, 'dropDown', array('1', '2', '3', '4', '5'), array('empty' => 'Something...')); ?>
             <?php echo $form->dropDownListControlGroup($model, 'multiDropDown', array('1', '2', '3', '4', '5'), array('multiple' => true)); ?>
             <?php echo $form->fileFieldControlGroup($model, 'fileField'); ?>
             <?php echo $form->textAreaControlGroup($model, 'textArea', array('span' => 8, 'rows' => 5)); ?>
@@ -685,7 +685,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
     &lt;?php echo $form->textFieldControlGroup($model, 'textField',
         array('help' => 'In addition to freeform text, any HTML5 text-based input appears like so.')); ?>
     &lt;?php echo $form->dropDownListControlGroup($model, 'dropDown',
-        array('1', '2', '3', '4', '5'), array('empty' => 'Something ...')); ?>
+        array('1', '2', '3', '4', '5'), array('empty' => 'Something...')); ?>
     &lt;?php echo $form->dropDownListControlGroup($model, 'multiDropDown',
         array('1', '2', '3', '4', '5'), array('multiple' => true)); ?>
     &lt;?php echo $form->fileFieldControlGroup($model, 'fileField'); ?>
@@ -716,6 +716,78 @@ $this->widget('bootstrap.widgets.TbNav', array(
 )); ?>
 
 &lt;?php $this->endWidget(); ?></pre>
+
+    <h2>Form builder</h2>
+
+    <div class="bs-docs-example">
+        <?php /** @var TbForm $form */
+        $form = new TbForm(array(
+            'layout' => TbHtml::FORM_LAYOUT_HORIZONTAL,
+            'elements' => array(
+                'textField' => array(
+                    'type' => TbHtml::INPUT_TYPE_TEXT,
+                    'help' => 'In addition to freeform text, any HTML5 text-based input appears like so.',
+                ),
+                'dropDown' => array(
+                    'type' => TbHtml::INPUT_TYPE_DROPDOWNLIST,
+                    'items' => array('1', '2', '3', '4', '5'),
+                    'attributes' => array('empty' => 'Something...')
+                ),
+                'multiDropDown' => array(
+                    'type' => TbHtml::INPUT_TYPE_DROPDOWNLIST,
+                    'items' => array('1', '2', '3', '4', '5'),
+                    'attributes' => array('multiple' => true),
+                ),
+            ),
+            'buttons' => array(
+                'submit' => array(
+                    'type' => TbHtml::BUTTON_TYPE_SUBMIT,
+                    'label' => 'Submit',
+                    'attributes' => array('color' => TbHtml::BUTTON_COLOR_PRIMARY),
+                ),
+                'reset' => array(
+                    'type' => TbHtml::BUTTON_TYPE_RESET,
+                    'label' => 'Reset',
+                ),
+            ),
+        ), $model); ?>
+
+        <?php echo $form; ?>
+    </div>
+
+    <pre class="prettyprint linenums">
+&lt;?php $form = new TbForm(array(
+    'layout' => TbHtml::FORM_LAYOUT_HORIZONTAL,
+    'elements' => array(
+        'textField' => array(
+            'type' => TbHtml::INPUT_TYPE_TEXT,
+            'help' => 'In addition to freeform text, any HTML5 text-based input appears like so.',
+        ),
+        'dropDown' => array(
+            'type' => TbHtml::INPUT_TYPE_DROPDOWNLIST,
+            'items' => array('1', '2', '3', '4', '5'),
+            'attributes' => array('empty' => 'Something...')
+        ),
+        'multiDropDown' => array(
+            'type' => TbHtml::INPUT_TYPE_DROPDOWNLIST,
+            'items' => array('1', '2', '3', '4', '5'),
+            'attributes' => array('multiple' => true),
+        ),
+    ),
+    'buttons' => array(
+        'submit' => array(
+            'type' => TbHtml::BUTTON_TYPE_SUBMIT,
+            'label' => 'Submit',
+            'attributes' => array('color' => TbHtml::BUTTON_COLOR_PRIMARY),
+        ),
+        'reset' => array(
+            'type' => TbHtml::BUTTON_TYPE_RESET,
+            'label' => 'Reset',
+        ),
+    ),
+), $model); ?>
+
+&lt;?php echo $form; ?></pre>
 
 </section>
 
