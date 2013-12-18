@@ -15,18 +15,18 @@ $this->pageTitle = 'Basics - ' . param('pageTitle');
 <!-- Docs nav
 ================================================== -->
 <div class="row">
-<div class="span3 bs-docs-sidebar">
+<div class="col-md-3 bs-docs-sidebar">
     <ul class="nav nav-list bs-docs-sidenav">
-        <li><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
-        <li><a href="#code"><i class="icon-chevron-right"></i> Code</a></li>
-        <li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
-        <li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
-        <li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li>
-        <li><a href="#icons"><i class="icon-chevron-right"></i> Icons</a></li>
+        <li><a href="#typography"><i class="glyphicon glyphicon-chevron-right"></i> Typography</a></li>
+        <li><a href="#code"><i class="glyphicon glyphicon-chevron-right"></i> Code</a></li>
+        <li><a href="#forms"><i class="glyphicon glyphicon-chevron-right"></i> Forms</a></li>
+        <li><a href="#buttons"><i class="glyphicon glyphicon-chevron-right"></i> Buttons</a></li>
+        <li><a href="#images"><i class="glyphicon glyphicon-chevron-right"></i> Images</a></li>
+        <li><a href="#icons"><i class="glyphicon glyphicon-chevron-right"></i> Icons</a></li>
     </ul>
 </div>
 
-<div class="span9">
+<div class="col-md-9">
 
 <!-- Typography
     ================================================== -->
@@ -600,7 +600,7 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
             <?php echo TbHtml::textFieldControlGroup('text', '', array(
                 'label' => 'Input with info',
                 'help' => 'Username is taken',
-                'color' => TbHtml::INPUT_COLOR_INFO,
+                'color' => TbHtml::INPUT_COLOR_DEFAULT,
             )); ?>
             <?php echo TbHtml::textFieldControlGroup('text', '', array(
                 'label' => 'Input with success',
@@ -754,13 +754,13 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 
     <div class="bs-docs-example">
         <div class="row-fluid" style="text-align: center; width: 450px;">
-            <div class="span4">
+            <div class="col-md-4">
                 <?php echo TbHtml::imageRounded('holder.js/140x140'); ?>
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <?php echo TbHtml::imageCircle('holder.js/140x140'); ?>
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <?php echo TbHtml::imagePolaroid('holder.js/140x140'); ?>
             </div>
         </div>
@@ -904,7 +904,7 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
         <li><?php echo TbHtml::icon(TbHtml::ICON_HDD); ?> <small>ICON_HDD</small></li>
         <li><?php echo TbHtml::icon(TbHtml::ICON_BULLHORN); ?> <small>ICON_BULLHORN</small></li>
         <li><?php echo TbHtml::icon(TbHtml::ICON_BELL); ?> <small>ICON_BELL</small></li>
-        <li><?php echo TbHtml::icon(TbHtml::ICON_CERTFICATE); ?> <small>ICON_CERTFICATE</small></li>
+<!--        <li>--><?php //echo TbHtml::icon(TbHtml::ICON_CERTFICATE); ?><!-- <small>ICON_CERTFICATE</small></li>-->
         <li><?php echo TbHtml::icon(TbHtml::ICON_THUMBS_UP); ?> <small>ICON_THUMBS_UP</small></li>
         <li><?php echo TbHtml::icon(TbHtml::ICON_THUMBS_DOWN); ?> <small>ICON_THUMBS_DOWN</small></li>
         <li><?php echo TbHtml::icon(TbHtml::ICON_HAND_RIGHT); ?> <small>ICON_HAND_RIGHT</small></li>

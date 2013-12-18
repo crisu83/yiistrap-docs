@@ -15,27 +15,27 @@ $this->pageTitle = 'Components - ' . param('pageTitle');
 <!-- Docs nav
 ================================================== -->
 <div class="row">
-<div class="span3 bs-docs-sidebar">
+<div class="col-md-3 bs-docs-sidebar">
    <ul class="nav nav-list bs-docs-sidenav">
-      <li><a href="#buttonGroups"><i class="icon-chevron-right"></i> Button groups</a></li>
-      <li><a href="#buttonDropdowns"><i class="icon-chevron-right"></i> Button dropdowns</a></li>
-      <li><a href="#navs"><i class="icon-chevron-right"></i> Navs</a></li>
-      <li><a href="#pagination"><i class="icon-chevron-right"></i> Pagination</a></li>
-      <li><a href="#breadcrumbs"><i class="icon-chevron-right"></i> Breadcrumbs</a></li>
-      <li><a href="#labels-badges"><i class="icon-chevron-right"></i> Labels and badges</a></li>
-      <li><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
-      <li><a href="#thumbnails"><i class="icon-chevron-right"></i> Thumbnails</a></li>
-      <li><a href="#tooltips"><i class="icon-chevron-right"></i> Tooltip</a></li>
-      <li><a href="#popovers"><i class="icon-chevron-right"></i> Popover</a></li>
-      <li><a href="#alerts"><i class="icon-chevron-right"></i> Alerts</a></li>
-      <li><a href="#progress"><i class="icon-chevron-right"></i> Progress bars</a></li>
-      <li><a href="#media"><i class="icon-chevron-right"></i> Media object</a></li>
-      <li><a href="#carousel"><i class="icon-chevron-right"></i> Carousel</a></li>
-      <li><a href="#misc"><i class="icon-chevron-right"></i> Misc</a></li>
+      <li><a href="#buttonGroups"><i class="glyphicon glyphicon-chevron-right"></i> Button groups</a></li>
+      <li><a href="#buttonDropdowns"><i class="glyphicon glyphicon-chevron-right"></i> Button dropdowns</a></li>
+      <li><a href="#navs"><i class="glyphicon glyphicon-chevron-right"></i> Navs</a></li>
+      <li><a href="#pagination"><i class="glyphicon glyphicon-chevron-right"></i> Pagination</a></li>
+      <li><a href="#breadcrumbs"><i class="glyphicon glyphicon-chevron-right"></i> Breadcrumbs</a></li>
+      <li><a href="#labels-badges"><i class="glyphicon glyphicon-chevron-right"></i> Labels and badges</a></li>
+      <li><a href="#typography"><i class="glyphicon glyphicon-chevron-right"></i> Typography</a></li>
+      <li><a href="#thumbnails"><i class="glyphicon glyphicon-chevron-right"></i> Thumbnails</a></li>
+      <li><a href="#tooltips"><i class="glyphicon glyphicon-chevron-right"></i> Tooltip</a></li>
+      <li><a href="#popovers"><i class="glyphicon glyphicon-chevron-right"></i> Popover</a></li>
+      <li><a href="#alerts"><i class="glyphicon glyphicon-chevron-right"></i> Alerts</a></li>
+      <li><a href="#progress"><i class="glyphicon glyphicon-chevron-right"></i> Progress bars</a></li>
+      <li><a href="#media"><i class="glyphicon glyphicon-chevron-right"></i> Media object</a></li>
+      <li><a href="#carousel"><i class="glyphicon glyphicon-chevron-right"></i> Carousel</a></li>
+      <li><a href="#misc"><i class="glyphicon glyphicon-chevron-right"></i> Misc</a></li>
    </ul>
 </div>
 
-<div class="span9">
+<div class="col-md-9">
 
 <!-- Button Groups
    ================================================== -->
@@ -852,7 +852,7 @@ echo TbHtml::buttonGroup(array(
    <h2>Hero unit</h2>
 
    <div class="bs-docs-example">
-      <?php echo TbHtml::heroUnit('Hello, world!', '<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>' . TbHtml::button('Learn more', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE))); ?>
+      <?php echo TbHtml::jumbotron('Hello, world!', '<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>' . TbHtml::button('Learn more', array('color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE))); ?>
    </div>
 
    <pre class="prettyprint linenums">
