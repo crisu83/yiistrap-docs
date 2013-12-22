@@ -90,7 +90,7 @@ $this->pageTitle = 'Basics - ' . param('pageTitle');
 
     <hr class="bs-docs-separator">
 
-    <h2>Abbrivations</h2>
+    <h2>Abbreviations</h2>
 
     <div class="bs-docs-example">
         An abbreviation of the word attribute is <?php echo TbHtml::abbr('attr', 'attribute'); ?>.
@@ -480,9 +480,9 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <h4>Grid sizing</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('text', '', array('placeholder' => '.span1', 'span' => 1)); ?><br>
-        <?php echo TbHtml::textField('text', '', array('placeholder' => '.span2', 'span' => 2)); ?><br>
-        <?php echo TbHtml::textField('text', '', array('placeholder' => '.span3', 'span' => 3)); ?><br>
+        <?php echo TbHtml::textFieldControlGroup('text', '', array('placeholder' => '.span1', 'span' => 1)); ?><br>
+        <?php echo TbHtml::textFieldControlGroup('text', '', array('placeholder' => '.span2', 'span' => 2)); ?><br>
+        <?php echo TbHtml::textFieldControlGroup('text', '', array('placeholder' => '.span3', 'span' => 3)); ?><br>
         <?php echo TbHtml::dropDownList('dropDown', '', array('1'), array('span' => 1)); ?><br>
         <?php echo TbHtml::dropDownList('dropDown', '', array('1'), array('span' => 2)); ?><br>
         <?php echo TbHtml::dropDownList('dropDown', '', array('1'), array('span' => 3)); ?>
@@ -761,14 +761,14 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
                 <?php echo TbHtml::imageCircle('holder.js/140x140'); ?>
             </div>
             <div class="col-md-4">
-                <?php echo TbHtml::imagePolaroid('holder.js/140x140'); ?>
+                <?php echo TbHtml::imageThumbnail('holder.js/140x140'); ?>
             </div>
         </div>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::imageRounded('holder.js/140x140'); ?>
 &lt;?php echo TbHtml::imageCircle('holder.js/140x140'); ?>
-&lt;?php echo TbHtml::imagePolaroid('holder.js/140x140'); ?></pre>
+&lt;?php echo TbHtml::imageThumbnail('holder.js/140x140'); ?></pre>
 
 </section>
 
@@ -904,7 +904,6 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
         <li><?php echo TbHtml::icon(TbHtml::ICON_HDD); ?> <small>ICON_HDD</small></li>
         <li><?php echo TbHtml::icon(TbHtml::ICON_BULLHORN); ?> <small>ICON_BULLHORN</small></li>
         <li><?php echo TbHtml::icon(TbHtml::ICON_BELL); ?> <small>ICON_BELL</small></li>
-<!--        <li>--><?php //echo TbHtml::icon(TbHtml::ICON_CERTFICATE); ?><!-- <small>ICON_CERTFICATE</small></li>-->
         <li><?php echo TbHtml::icon(TbHtml::ICON_THUMBS_UP); ?> <small>ICON_THUMBS_UP</small></li>
         <li><?php echo TbHtml::icon(TbHtml::ICON_THUMBS_DOWN); ?> <small>ICON_THUMBS_DOWN</small></li>
         <li><?php echo TbHtml::icon(TbHtml::ICON_HAND_RIGHT); ?> <small>ICON_HAND_RIGHT</small></li>

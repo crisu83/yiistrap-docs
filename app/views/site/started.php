@@ -44,12 +44,12 @@ $this->pageTitle = 'Getting started - ' . param('pageTitle');
 		<div class="col-md-6">
 			<h2>Download</h2>
 			<p><strong>Fastest way to get started:</strong> get the extension and unzip its contents in your extensions folder and configure it.</p>
-			<p><a class="btn btn-large btn-primary" href="https://github.com/Crisu83/yiistrap/archive/master.zip">Download Yiistrap</a></p>
+			<p><a class="btn btn-lg btn-primary" href="https://github.com/Crisu83/yiistrap/archive/master.zip">Download Yiistrap</a></p>
 		</div>
 		<div class="col-md-6">
 			<h2>Clone</h2>
 			<p>You can also clone the git repository by heading to the GitHub project page and following the instructions there.</p>
-			<p><a class="btn btn-large" href="https://github.com/Crisu83/yiistrap">Yiistrap on GitHub</a></p>
+			<p><a class="btn btn-lg btn-default" href="https://github.com/Crisu83/yiistrap">Yiistrap on GitHub</a></p>
 		</div>
 	</div>
 
@@ -157,8 +157,8 @@ return array(
 	<p class="lead">Head to the docs for examples or take a look at the API.</p>
 
 	<p class="lead">
-		<a class="btn btn-large btn-primary" href="<?php echo $this->createUrl('basics'); ?>" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Visit docs']);">Visit the Yiistrap docs</a>
-		<a class="btn btn-large" href="<?php echo $this->createUrl('/api'); ?>"  onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Visit API']);">Open the Yiistrap API</a>
+		<a class="btn btn-lg btn-primary" href="<?php echo $this->createUrl('basics'); ?>" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Visit docs']);">Visit the Yiistrap docs</a>
+		<a class="btn btn-lg btn-default" href="<?php echo $this->createUrl('/api'); ?>"  onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Visit API']);">Open the Yiistrap API</a>
 	</p>
 </section>
 

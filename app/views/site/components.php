@@ -175,7 +175,7 @@ echo TbHtml::buttonGroup(array(
          <?php echo TbHtml::buttonDropdown('Warning', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_WARNING)); ?>
          <?php echo TbHtml::buttonDropdown('Success', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_SUCCESS)); ?>
          <?php echo TbHtml::buttonDropdown('Info', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_INFO)); ?>
-         <?php echo TbHtml::buttonDropdown('Inverse', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_INVERSE)); ?>
+         <?php echo TbHtml::buttonDropdown('Default', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_DEFAULT)); ?>
       </div>
 
    </div>
@@ -226,7 +226,7 @@ echo TbHtml::buttonGroup(array(
          <?php echo TbHtml::buttonDropdown('Warning',   $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_WARNING, 'split' => true)); ?>
          <?php echo TbHtml::buttonDropdown('Success', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_SUCCESS, 'split' => true)); ?>
          <?php echo TbHtml::buttonDropdown('Info', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_INFO, 'split' => true)); ?>
-         <?php echo TbHtml::buttonDropdown('Inverse', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_INVERSE, 'split' => true)); ?>
+         <?php echo TbHtml::buttonDropdown('Default', $dropdownConfig, array('color' => TbHtml::BUTTON_COLOR_DEFAULT, 'split' => true)); ?>
       </div>
    </div>
 
@@ -285,6 +285,7 @@ echo TbHtml::buttonGroup(array(
       )); ?>
    </div>
 
+   <div class="code">
    <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::tabs(array(
     array('label' => 'Home', 'url' => '#', 'active' => true),
@@ -292,6 +293,8 @@ echo TbHtml::buttonGroup(array(
     array('label' => 'Messages', 'url' => '#',),
 )); ?>
 </pre>
+   </div>
+
 
    <h3>Basic pills</h3>
 
@@ -333,7 +336,7 @@ echo TbHtml::buttonGroup(array(
 
    <h2>Stackable</h2>
 
-   <h3>Stacked tabs</h3>
+   <h3>Stacked tabs <small>@deprecated</small></h3>
 
    <div class="bs-docs-example">
       <?php echo TbHtml::stackedTabs(array(
@@ -477,7 +480,7 @@ echo TbHtml::buttonGroup(array(
 
     <h3>Tabbable in any direction</h3>
 
-    <h4>Tabs on the bottom</h4>
+    <h4>Tabs on the bottom <small>@deprecated</small></h4>
 
     <div class="bs-docs-example">
         <?php echo TbHtml::tabbableTabs(array(
@@ -710,7 +713,7 @@ echo TbHtml::buttonGroup(array(
       <tbody>
       <tr>
          <td>
-            <span class="label">Default</span>
+             <?php echo TbHtml::labelTb('Default', array('color' =>  TbHtml::LABEL_COLOR_DEFAULT)); ?>
          </td>
          <td>
             <code>&lt;?php echo TbHtml::labelTb('Default'); ?></code>
@@ -718,11 +721,27 @@ echo TbHtml::buttonGroup(array(
       </tr>
       <tr>
          <td>
-            <?php echo TbHtml::labelTb('Success', array('color' =>  TbHtml::LABEL_COLOR_SUCCESS)); ?>
+            <?php echo TbHtml::labelTb('Primary', array('color' =>  TbHtml::LABEL_COLOR_PRIMARY)); ?>
          </td>
          <td>
-            <code>&lt;?php echo TbHtml::labelTb('Success', array('color' =>  TbHtml::LABEL_COLOR_SUCCESS)); ?></code>
+            <code>&lt;?php echo TbHtml::labelTb('Primary', array('color' =>  TbHtml::LABEL_COLOR_PRIMARY)); ?></code>
          </td>
+      </tr>
+      <tr>
+          <td>
+              <?php echo TbHtml::labelTb('Success', array('color' =>  TbHtml::LABEL_COLOR_SUCCESS)); ?>
+          </td>
+          <td>
+              <code>&lt;?php echo TbHtml::labelTb('Success', array('color' =>  TbHtml::LABEL_COLOR_SUCCESS)); ?></code>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <?php echo TbHtml::labelTb('Info', array('color' =>  TbHtml::LABEL_COLOR_INFO)); ?>
+          </td>
+          <td>
+              <code>&lt;?php echo TbHtml::labelTb('Info', array('color' =>  TbHtml::LABEL_COLOR_INFO)); ?></code>
+          </td>
       </tr>
       <tr>
          <td>
@@ -734,26 +753,10 @@ echo TbHtml::buttonGroup(array(
       </tr>
       <tr>
          <td>
-            <?php echo TbHtml::labelTb('Important', array('color' =>  TbHtml::LABEL_COLOR_IMPORTANT)); ?>
+            <?php echo TbHtml::labelTb('Danger', array('color' =>  TbHtml::LABEL_COLOR_DANGER)); ?>
          </td>
          <td>
             <code>&lt;?php echo TbHtml::labelTb('Important', array('color' =>  TbHtml::LABEL_COLOR_IMPORTANT)); ?></code>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <?php echo TbHtml::labelTb('Info', array('color' =>  TbHtml::LABEL_COLOR_INFO)); ?>
-         </td>
-         <td>
-            <code>&lt;?php echo TbHtml::labelTb('Info', array('color' =>  TbHtml::LABEL_COLOR_INFO)); ?></code>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <?php echo TbHtml::labelTb('Inverse', array('color' =>  TbHtml::LABEL_COLOR_INVERSE)); ?>
-         </td>
-         <td>
-            <code>&lt;?php echo TbHtml::labelTb('Inverse', array('color' =>  TbHtml::LABEL_COLOR_INVERSE)); ?></code>
          </td>
       </tr>
       </tbody>
@@ -761,83 +764,13 @@ echo TbHtml::buttonGroup(array(
 
    <h3>Badges</h3>
 
-   <table class="table table-bordered table-striped">
-      <thead>
-      <tr>
-         <th>Name</th>
-         <th>Example</th>
-         <th>Code</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-         <td>
-            Default
-         </td>
-         <td>
-            <?php echo TbHtml::badge('1'); ?>
-         </td>
-         <td>
-            <code>&lt;?php echo TbHtml::badge('1'); ?></code>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            Success
-         </td>
-         <td>
-            <?php echo TbHtml::badge('2', array('color' =>  TbHtml::BADGE_COLOR_SUCCESS)); ?>
-         </td>
-         <td>
-            <code>&lt;?php echo TbHtml::badge('2', array('color' =>  TbHtml::BADGE_COLOR_SUCCESS)); ?></code>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            Warning
-         </td>
-         <td>
-            <?php echo TbHtml::badge('4', array('color' =>  TbHtml::BADGE_COLOR_WARNING)); ?>
-         </td>
-         <td>
-            <code>&lt;?php echo TbHtml::badge('4', array('color' =>  TbHtml::BADGE_COLOR_WARNING)); ?></code>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            Important
-         </td>
-         <td>
-            <?php echo TbHtml::badge('6', array('color' =>  TbHtml::BADGE_COLOR_IMPORTANT)); ?>
-         </td>
-         <td>
-            <code>&lt;?php echo TbHtml::badge('6', array('color' =>  TbHtml::BADGE_COLOR_IMPORTANT)); ?></code>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            Info
-         </td>
-         <td>
-            <?php echo TbHtml::badge('8', array('color' =>  TbHtml::BADGE_COLOR_INFO)); ?>
-         </td>
-         <td>
-            <code>&lt;?php echo TbHtml::badge('8', array('color' =>  TbHtml::BADGE_COLOR_INFO)); ?></code>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            Inverse
-         </td>
-         <td>
-            <?php echo TbHtml::badge('10', array('color' =>  TbHtml::BADGE_COLOR_INVERSE)); ?>
-         </td>
-         <td>
-            <code>&lt;?php echo TbHtml::badge('10', array('color' =>  TbHtml::BADGE_COLOR_INVERSE)); ?></code>
-         </td>
-      </tr>
-      </tbody>
-   </table>
+    <div class="bs-docs-example">
+        <a href="#">Inbox </a> <?php echo TbHtml::badge('19'); ?>
+    </div>
+    <pre class="prettyprint linenums">
+&lt;?php echo TbHtml::badge('19')?>
+</pre>
+
 
 </section>
 
