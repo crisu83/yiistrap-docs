@@ -480,47 +480,94 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <h4>Grid sizing</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textFieldControlGroup('text', '', array('placeholder' => '.span1', 'span' => 1)); ?><br>
-        <?php echo TbHtml::textFieldControlGroup('text', '', array('placeholder' => '.span2', 'span' => 2)); ?><br>
-        <?php echo TbHtml::textFieldControlGroup('text', '', array('placeholder' => '.span3', 'span' => 3)); ?><br>
-        <?php echo TbHtml::dropDownList('dropDown', '', array('1'), array('span' => 1)); ?><br>
-        <?php echo TbHtml::dropDownList('dropDown', '', array('1'), array('span' => 2)); ?><br>
-        <?php echo TbHtml::dropDownList('dropDown', '', array('1'), array('span' => 3)); ?>
+        <div class="row">
+            <?php echo TbHtml::textField('text', '', array('placeholder' => '.span2', 'span' => 2)); ?>
+        </div>
+        <br>
+        <div class="row">
+            <?php echo TbHtml::textField('text', '', array('placeholder' => '.span4', 'span' => 4)); ?>
+        </div>
+        <br>
+        <div class="row">
+            <?php echo TbHtml::textField('text', '', array('placeholder' => '.span6', 'span' => 6)); ?>
+        </div>
+        <br>
+        <div class="row">
+            <?php echo TbHtml::dropDownList('dropDown', '', array('1'), array('span' => 2)); ?>
+        </div>
+        <br>
+        <div class="row">
+            <?php echo TbHtml::dropDownList('dropDown', '', array('1'), array('span' => 4)); ?>
+        </div>
+        <br>
+        <div class="row">
+            <?php echo TbHtml::dropDownList('dropDown', '', array('1'), array('span' => 6)); ?>
+        </div>
+
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::textField('text', '', array('placeholder' => '.span1', 'span' => 1)); ?>
-&lt;?php echo TbHtml::textField('text', '', array('placeholder' => '.span2', 'span' => 2)); ?
-&lt;?php echo TbHtml::textField('text', '', array('placeholder' => '.span3', 'span' => 3)); ?>
-&lt;?php echo TbHtml::dropDownList('dropDown', '', array('1'), array('span' => 1)); ?>
+&lt;?php echo TbHtml::textField('text', '', array('placeholder' => '.span2', 'span' => 2)); ?>
+&lt;?php echo TbHtml::textField('text', '', array('placeholder' => '.span4', 'span' => 4)); ?>
+&lt;?php echo TbHtml::textField('text', '', array('placeholder' => '.span6', 'span' => 6)); ?>
 &lt;?php echo TbHtml::dropDownList('dropDown', '', array('1'), array('span' => 2)); ?>
-&lt;?php echo TbHtml::dropDownList('dropDown', '', array('1'), array('span' => 3)); ?></pre>
+&lt;?php echo TbHtml::dropDownList('dropDown', '', array('1'), array('span' => 4)); ?>
+&lt;?php echo TbHtml::dropDownList('dropDown', '', array('1'), array('span' => 6)); ?>
+</pre>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::controls(TbHtml::textField('text', '', array('placeholder' => '.span5', 'span' => 5))); ?>
-        <?php echo TbHtml::controlsRow(array(
-            TbHtml::textField('text', '', array('placeholder' => '.span4', 'span' => 4)),
-            TbHtml::textField('text', '', array('placeholder' => '.span1', 'span' => 1)),
-        )); ?>
-        <?php echo TbHtml::controlsRow(array(
-            TbHtml::textField('text', '', array('placeholder' => '.span3', 'span' => 3)),
-            TbHtml::textField('text', '', array('placeholder' => '.span2', 'span' => 2)),
-        )); ?>
-        <?php echo TbHtml::controlsRow(array(
-            TbHtml::textField('text', '', array('placeholder' => '.span2', 'span' => 2)),
-            TbHtml::textField('text', '', array('placeholder' => '.span3', 'span' => 3)),
-        )); ?>
-        <?php echo TbHtml::controlsRow(array(
-            TbHtml::textField('text', '', array('placeholder' => '.span1', 'span' => 1)),
-            TbHtml::textField('text', '', array('placeholder' => '.span4', 'span' => 4)),
-        )); ?>
+        <div class="row">
+            <?php echo TbHtml::textField('text', '', array('placeholder' => '.span9', 'span' => 9)); ?>
+        </div>
+        <br>
+        <div class="row">
+            <?php
+            echo TbHtml::textField('text', '', array('placeholder' => '.span6', 'span' => 6));
+            echo TbHtml::textField('text', '', array('placeholder' => '.span3', 'span' => 3));
+            ?>
+        </div>
+        <br>
+        <div class="row">
+            <?php
+            echo TbHtml::textField('text', '', array('placeholder' => '.span5', 'span' => 5));
+            echo TbHtml::textField('text', '', array('placeholder' => '.span4', 'span' => 4));
+            ?>
+        </div>
+        <br>
+        <div class="row">
+            <?php
+            echo TbHtml::textField('text', '', array('placeholder' => '.span4', 'span' => 4));
+            echo TbHtml::textField('text', '', array('placeholder' => '.span5', 'span' => 5));
+            ?>
+        </div>
+        <br>
+        <div class="row">
+            <?php
+            echo TbHtml::textField('text', '', array('placeholder' => '.span3', 'span' => 3));
+            echo TbHtml::textField('text', '', array('placeholder' => '.span6', 'span' => 6));
+            ?>
+        </div>
     </div>
     <pre class="prettyprint linenums">
-&lt;?php echo TbHtml::controls(TbHtml::textField('text', '', array('placeholder' => '.span5', 'span' => 5))); ?>
-&lt;?php echo TbHtml::controlsRow(array(
-    TbHtml::textField('text', '', array('placeholder' => '.span4', 'span' => 4)),
-    TbHtml::textField('text', '', array('placeholder' => '.span1', 'span' => 1)),
-)); ?>
-...</pre>
+&lt;div class="row">
+    &lt;?php echo TbHtml::textField('text', '', array('placeholder' => '.span9', 'span' => 9)); ?>
+&lt;/div>
+&lt;div class="row">
+    &lt;?php echo TbHtml::textField('text', '', array('placeholder' => '.span6', 'span' => 6)); ?>
+    &lt;?php echo TbHtml::textField('text', '', array('placeholder' => '.span3', 'span' => 3)); ?>
+&lt;/div>
+&lt;div class="row">
+    &lt;?php echo TbHtml::textField('text', '', array('placeholder' => '.span5', 'span' => 5)); ?>
+    &lt;?php echo TbHtml::textField('text', '', array('placeholder' => '.span4', 'span' => 4)); ?>
+&lt;/div>
+&lt;div class="row">
+    &lt;?php echo TbHtml::textField('text', '', array('placeholder' => '.span4', 'span' => 4)); ?>
+    &lt;?php echo TbHtml::textField('text', '', array('placeholder' => '.span5', 'span' => 5)); ?>
+&lt;/div>
+&lt;div class="row">
+    &lt;?php echo TbHtml::textField('text', '', array('placeholder' => '.span3', 'span' => 3)); ?>
+    &lt;?php echo TbHtml::textField('text', '', array('placeholder' => '.span6', 'span' => 6)); ?>
+&lt;/div>
+</pre>
 
     <h3>Uneditable inputs</h3>
 
