@@ -665,7 +665,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
         </fieldset>
 
-        <?php echo TbHtml::formActions(array(
+        <?php echo $form->createFormActions(array(
             TbHtml::submitButton('Submit', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)),
             TbHtml::resetButton('Reset'),
         )); ?>
@@ -710,7 +710,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 &lt;/fieldset>
 
-&lt;?php echo TbHtml::formActions(array(
+&lt;?php echo $form->createFormActions(array(
     TbHtml::submitButton('Submit', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)),
     TbHtml::resetButton('Reset'),
 )); ?>

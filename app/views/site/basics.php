@@ -356,59 +356,59 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <h4>Default options</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('prependedInput', '', array('placeholder' => 'Username', 'prepend' => '@', 'span' => 2)); ?>
+        <?php echo TbHtml::textField('prependedInput', '', array('placeholder' => 'Username', 'prepend' => '@', 'md' => 6)); ?>
         <br>
-        <?php echo TbHtml::textField('appendedInput', '', array('append' => '.00', 'span' => 2)); ?>
+        <?php echo TbHtml::textField('appendedInput', '', array('append' => '.00', 'md' => 6)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('prependedInput', '',
-    array('placeholder' => 'Username', 'prepend' => '@', 'span' => 2)); ?>
+    array('placeholder' => 'Username', 'prepend' => '@', 'md' => 6)); ?>
 &lt;?php echo TbHtml::textField('appendedInput', '',
-    array('append' => '.00', 'span' => 2)); ?></pre>
+    array('append' => '.00', 'md' => 6)); ?></pre>
 
     <h4>Combined</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('appendedPrependedInput', '', array('prepend' => '$', 'append' => '.00', 'span' => 2)); ?>
+        <?php echo TbHtml::textField('appendedPrependedInput', '', array('prepend' => '$', 'append' => '.00', 'md' => 4)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('appendedPrependedInput', '',
-    array('prepend' => '$', 'append' => '.00', 'span' => 2)); ?></pre>
+    array('prepend' => '$', 'append' => '.00', 'md' => 4)); ?></pre>
 
     <h4>Buttons instead of text</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('appendedInputButton', '', array('append' => TbHtml::button('Go!'), 'span' => 2)); ?>
+        <?php echo TbHtml::textField('appendedInputButton', '', array('append' => TbHtml::button('Go!'), 'span' => 4)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('appendedInputButton', '',
-    array('append' => TbHtml::button('Go!'), 'span' => 2)); ?></pre>
+    array('append' => TbHtml::button('Go!'), 'span' => 4)); ?></pre>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('appendedInputButtons', '', array('append' => TbHtml::button('Search') . ' ' . TbHtml::button('Options'), 'span' => 2)); ?>
+        <?php echo TbHtml::textField('appendedInputButtons', '', array('append' => TbHtml::button('Search') . ' ' . TbHtml::button('Options'), 'md' => 6)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('appendedInputButtons', '',
-    array('append' => TbHtml::button('Search') . ' ' . TbHtml::button('Options'), 'span' => 2)); ?></pre>
+    array('append' => TbHtml::button('Search') . ' ' . TbHtml::button('Options'), 'md' => 4)); ?></pre>
 
     <h4>Button dropdowns</h4>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('appendedDropdownButton', '', array('append' => TbHtml::buttonDropdown('Action', $dropdownConfig), 'span' => 2)); ?>
+        <?php echo TbHtml::textField('appendedDropdownButton', '', array('append' => TbHtml::buttonDropdown('Action', $dropdownConfig), 'md' => 4)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('appendedDropdownButton', '',
-    array('append' => TbHtml::buttonDropdown('Action', array(...)), 'span' => 2)); ?></pre>
+    array('append' => TbHtml::buttonDropdown('Action', array(...)), 'md' => 6)); ?></pre>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('prependedDropdownButton', '', array('prepend' => TbHtml::buttonDropdown('Action', $dropdownConfig), 'span' => 2)); ?>
+        <?php echo TbHtml::textField('prependedDropdownButton', '', array('prepend' => TbHtml::buttonDropdown('Action', $dropdownConfig), 'md' => 6)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('prependedDropdownButton', '',
-    array('prepend' => TbHtml::buttonDropdown('Action', array(...)), 'span' => 2)); ?></pre>
+    array('prepend' => TbHtml::buttonDropdown('Action', array(...)), 'md' => 6)); ?></pre>
 
     <div class="bs-docs-example">
-        <?php echo TbHtml::textField('appendedPrependedDropdownButton', '', array('prepend' => TbHtml::buttonDropdown('Action', $dropdownConfig), 'append' => TbHtml::buttonDropdown('Action', $dropdownConfig), 'span' => 2)); ?>
+        <?php echo TbHtml::textField('appendedPrependedDropdownButton', '', array('prepend' => TbHtml::buttonDropdown('Action', $dropdownConfig), 'append' => TbHtml::buttonDropdown('Action', $dropdownConfig), 'md' => 6)); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('appendedPrependedDropdownButton', '', array(
@@ -419,6 +419,7 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 
     <div class="bs-docs-example">
         <?php echo TbHtml::textField('prependedSplitDropdownButton', '', array('prepend' => TbHtml::splitButtonDropdown('Action', $dropdownConfig))); ?>
+        <br>
         <?php echo TbHtml::textField('appendedSplitDropdownButton', '', array('append' => TbHtml::splitButtonDropdown('Action', $dropdownConfig))); ?>
     </div>
 <pre class="prettyprint linenums">
@@ -431,16 +432,17 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
 
     <div class="bs-docs-example">
         <?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_SEARCH); ?>
-        <?php echo TbHtml::searchQueryField('appendedSearch', '', array('append' => TbHtml::submitButton('Search'), 'span' => 2)); ?>
-        <?php echo TbHtml::searchQueryField('prependedSearch', '', array('prepend' => TbHtml::submitButton('Search'), 'span' => 2)); ?>
+        <?php echo TbHtml::searchQueryField('appendedSearch', '', array('append' => TbHtml::submitButton('Search'), 'md' => 6)); ?>
+        <br>
+        <?php echo TbHtml::searchQueryField('prependedSearch', '', array('prepend' => TbHtml::submitButton('Search'), 'md' => 6)); ?>
         <?php echo TbHtml::endForm(); ?>
     </div>
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::beginFormTb(TbHtml::FORM_LAYOUT_SEARCH); ?>
 &lt;?php echo TbHtml::searchQuery('appendedSearch', '',
-    array('append' => TbHtml::submitButton('Search'), 'span' => 2)); ?>
+    array('append' => TbHtml::submitButton('Search'), 'md' => 6)); ?>
 &lt;?php echo TbHtml::searchQuery('prependedSearch', '',
-    array('prepend' => TbHtml::submitButton('Search'), 'span' => 2)); ?>
+    array('prepend' => TbHtml::submitButton('Search'), 'md' => 6)); ?>
 &lt;?php echo TbHtml::endForm(); ?></pre>
 
     <h3>Control sizing</h3>
@@ -453,7 +455,7 @@ For example, &lt;?php echo TbHtml::code('&lt;section>'); ?> should be wrapped as
     <pre class="prettyprint linenums">
 &lt;?php echo TbHtml::textField('text', '', array('placeholder' => '.input-block-level', 'block' => true)); ?></pre>
 
-    <h4>Relative sizing</h4>
+    <h4>Relative sizing <small>@deprecated</small></h4>
 
     <div class="bs-docs-example">
         <?php echo TbHtml::textField('text', '', array('placeholder' => '.input-mini', 'size' => TbHtml::INPUT_SIZE_MINI)); ?><br>

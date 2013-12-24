@@ -8,7 +8,6 @@
     <meta name="language" content="en"/>
     <meta name="keywords" content="yii framework, yii application, yii application development, php framework, yii bootstrap, yii framework tutorial, yii php framework, yii bootstrap, yiistrap"/>
     <?php css('css/main.css'); ?>
-    <?php css('css/responsive.css'); ?>
     <?php css('css/styles.css'); ?>
     <?php css('css/prettify.css'); ?>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
