@@ -67,7 +67,7 @@ $this->pageTitle = param('pageTitle');
         <p class="marketing-byline">The ultimate Twitter Bootstrap extension for Yii.</p>
 
         <div class="row-fluid">
-            <div class="span4">
+            <div class="col-md-4">
                 <h2>More robust.</h2>
                 <p style="text-align:justify">
                     Yiistrap is a complete rewrite of the popular <a href="http://www.cniska.net/yii-bootstrap/" target="_blank">yii-bootstrap</a> extension.
@@ -75,7 +75,7 @@ $this->pageTitle = param('pageTitle');
                     We have learned from our mistakes built Yiistrap on robust helper classes to make it easy to work with.
                 </p>
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <h2>Easy to use.</h2>
                 <p style="text-align:justify">
                     You can <?php echo l('get started', array('/site/started')); ?> with Yiistrap in no time,
@@ -84,7 +84,7 @@ $this->pageTitle = param('pageTitle');
                     You can also use the helpers to build your own widgets.
                 </p>
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <h2>More widgets.</h2>
                 <p style="text-align:justify">
                     Yiistrap has its own extension library <a href="http://github.com/Crisu83/yiistrap-widgets" target="_blank">yiistrap-widgets</a>,

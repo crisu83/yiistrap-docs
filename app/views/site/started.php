@@ -18,17 +18,17 @@ $this->pageTitle = 'Getting started - ' . param('pageTitle');
    ================================================== -->
     <div class="row">
 
-        <div class="span3 bs-docs-sidebar">
+        <div class="col-md-3 bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav">
-                <li><a href="#download-bootstrap"><i class="icon-chevron-right"></i> Download</a></li>
-                <li><a href="#configuration"><i class="icon-chevron-right"></i> Configuration</a></li>
-                <li><a href="#contents"><i class="icon-chevron-right"></i> What's included</a></li>
-                <li><a href="#basic-layout"><i class="icon-chevron-right"></i> Basic layout</a></li>
-                <li><a href="#what-next"><i class="icon-chevron-right"></i> What next?</a></li>
+                <li><a href="#download-bootstrap"><i class="glyphicon glyphicon-chevron-right"></i> Download</a></li>
+                <li><a href="#configuration"><i class="glyphicon glyphicon-chevron-right"></i> Configuration</a></li>
+                <li><a href="#contents"><i class="glyphicon glyphicon-chevron-right"></i> What's included</a></li>
+                <li><a href="#basic-layout"><i class="glyphicon glyphicon-chevron-right"></i> Basic layout</a></li>
+                <li><a href="#what-next"><i class="glyphicon glyphicon-chevron-right"></i> What next?</a></li>
             </ul>
         </div>
 
-<div class="span9">
+<div class="col-md-9">
 
 <!-- Download
 	================================================== -->
@@ -41,15 +41,15 @@ $this->pageTitle = 'Getting started - ' . param('pageTitle');
 	<p class="lead">Download the package and unzip its contents in your extensions folder. We highly recommend the use of <a href="http://getcomposer.org" target="_blank">Composer</a> to manage your dependencies. If you have problems to install it, you can check the preconfigured project boilerplates, <a href="http://www.yiiframework.com/wiki/446/kickstart-development-with-yii-app/" target="_blank">Yii-app</a>	or <a href="http://yiinitializr.2amigos.us" target="_blank">Yiinitializr</a>.</p>
 
 	<div class="row-fluid">
-		<div class="span6">
+		<div class="col-md-6">
 			<h2>Download</h2>
 			<p><strong>Fastest way to get started:</strong> get the extension and unzip its contents in your extensions folder and configure it.</p>
-			<p><a class="btn btn-large btn-primary" href="https://github.com/Crisu83/yiistrap/archive/master.zip">Download Yiistrap</a></p>
+			<p><a class="btn btn-lg btn-primary" href="https://github.com/Crisu83/yiistrap/archive/master.zip">Download Yiistrap</a></p>
 		</div>
-		<div class="span6">
+		<div class="col-md-6">
 			<h2>Clone</h2>
 			<p>You can also clone the git repository by heading to the GitHub project page and following the instructions there.</p>
-			<p><a class="btn btn-large" href="https://github.com/Crisu83/yiistrap">Yiistrap on GitHub</a></p>
+			<p><a class="btn btn-lg btn-default" href="https://github.com/Crisu83/yiistrap">Yiistrap on GitHub</a></p>
 		</div>
 	</div>
 
@@ -157,8 +157,8 @@ return array(
 	<p class="lead">Head to the docs for examples or take a look at the API.</p>
 
 	<p class="lead">
-		<a class="btn btn-large btn-primary" href="<?php echo $this->createUrl('basics'); ?>" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Visit docs']);">Visit the Yiistrap docs</a>
-		<a class="btn btn-large" href="<?php echo $this->createUrl('/api'); ?>"  onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Visit API']);">Open the Yiistrap API</a>
+		<a class="btn btn-lg btn-primary" href="<?php echo $this->createUrl('basics'); ?>" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Visit docs']);">Visit the Yiistrap docs</a>
+		<a class="btn btn-lg btn-default" href="<?php echo $this->createUrl('/api'); ?>"  onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Visit API']);">Open the Yiistrap API</a>
 	</p>
 </section>
 

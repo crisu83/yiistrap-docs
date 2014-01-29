@@ -19,25 +19,25 @@ $this->pageTitle = 'Widgets - ' . param('pageTitle');
     <!-- Docs nav
     ================================================== -->
     <div class="row">
-    <div class="span3 bs-docs-sidebar">
+    <div class="col-md-3 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav">
-            <li><a href="#navs"><i class="icon-chevron-right"></i> Nav</a></li>
-            <li><a href="#navbar"><i class="icon-chevron-right"></i> Navbar</a></li>
-            <li><a href="#breadcrumb"><i class="icon-chevron-right"></i> Breadcrumb</a></li>
-            <li><a href="#herounit"><i class="icon-chevron-right"></i> Hero unit</a></li>
-            <li><a href="#gridview"><i class="icon-chevron-right"></i> Grid view</a></li>
-            <li><a href="#forms"><i class="icon-chevron-right"></i> Form</a></li>
-            <li><a href="#modals"><i class="icon-chevron-right"></i> Modal</a></li>
-            <li><a href="#scrollspy"><i class="icon-chevron-right"></i> Scrollspy</a></li>
-            <li><a href="#tabs"><i class="icon-chevron-right"></i> Tab</a></li>
-            <li><a href="#alert"><i class="icon-chevron-right"></i> Alert</a></li>
-            <li><a href="#collapse"><i class="icon-chevron-right"></i> Collapse</a></li>
-            <li><a href="#carousel"><i class="icon-chevron-right"></i> Carousel</a></li>
-            <li><a href="#typeahead"><i class="icon-chevron-right"></i> Typeahead</a></li>
-            <li><a href="#affix"><i class="icon-chevron-right"></i> Affix</a></li>
+            <li><a href="#navs"><i class="glyphicon glyphicon-chevron-right"></i> Nav</a></li>
+            <li><a href="#navbar"><i class="glyphicon glyphicon-chevron-right"></i> Navbar</a></li>
+            <li><a href="#breadcrumb"><i class="glyphicon glyphicon-chevron-right"></i> Breadcrumb</a></li>
+            <li><a href="#herounit"><i class="glyphicon glyphicon-chevron-right"></i> Hero unit</a></li>
+            <li><a href="#gridview"><i class="glyphicon glyphicon-chevron-right"></i> Grid view</a></li>
+            <li><a href="#forms"><i class="glyphicon glyphicon-chevron-right"></i> Form</a></li>
+            <li><a href="#modals"><i class="glyphicon glyphicon-chevron-right"></i> Modal</a></li>
+            <li><a href="#scrollspy"><i class="glyphicon glyphicon-chevron-right"></i> Scrollspy</a></li>
+            <li><a href="#tabs"><i class="glyphicon glyphicon-chevron-right"></i> Tab</a></li>
+            <li><a href="#alert"><i class="glyphicon glyphicon-chevron-right"></i> Alert</a></li>
+            <li><a href="#collapse"><i class="glyphicon glyphicon-chevron-right"></i> Collapse</a></li>
+            <li><a href="#carousel"><i class="glyphicon glyphicon-chevron-right"></i> Carousel</a></li>
+            <li><a href="#typeahead"><i class="glyphicon glyphicon-chevron-right"></i> Typeahead</a></li>
+            <li><a href="#affix"><i class="glyphicon glyphicon-chevron-right"></i> Affix</a></li>
         </ul>
     </div>
-    <div class="span9">
+    <div class="col-md-9">
 
 <!-- Navigation
 ================================================== -->
@@ -469,7 +469,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
     </div>
 
     <div class="bs-docs-example">
-        <?php $this->widget('bootstrap.widgets.TbHeroUnit', array(
+        <?php $this->widget('bootstrap.widgets.TbJumbotron', array(
             'heading' => 'Hello, world!',
             'content' => '<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>' . TbHtml::button('Learn more', array('color' =>TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)),
         )); ?>
@@ -665,7 +665,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
         </fieldset>
 
-        <?php echo TbHtml::formActions(array(
+        <?php echo $form->createFormActions(array(
             TbHtml::submitButton('Submit', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)),
             TbHtml::resetButton('Reset'),
         )); ?>
@@ -710,7 +710,7 @@ $this->widget('bootstrap.widgets.TbNav', array(
 
 &lt;/fieldset>
 
-&lt;?php echo TbHtml::formActions(array(
+&lt;?php echo $form->createFormActions(array(
     TbHtml::submitButton('Submit', array('color' => TbHtml::BUTTON_COLOR_PRIMARY)),
     TbHtml::resetButton('Reset'),
 )); ?>
